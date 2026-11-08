@@ -1,0 +1,8 @@
+ping from iputils 20250605
+Nmap version 7.99 ( https://nmap.org )
+ss utility, iproute2-7.0.0
+net-tools 2.10
+DiG 9.20.30
+BIND 9.20.30 (Stable Release) <id:769c3fb>
+curl 8.23.0
+ip utility, iproute2-7.0.0, libbpf 1.7.0

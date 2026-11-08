@@ -1,0 +1,4 @@
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 127.0.0.1:PPPPP         127.0.0.1:22            ESTABLISHED
+tcp        0      0 127.0.0.1:22            127.0.0.1:PPPPP         ESTABLISHED

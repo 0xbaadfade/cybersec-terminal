@@ -1,0 +1,8 @@
+Starting Nmap 7.99 ( https://nmap.org ) at D
+Nmap scan report for 127.0.0.4
+Host is up (Ls latency).
+Nmap scan report for 127.0.0.6
+Host is up (Ls latency).
+Nmap scan report for 127.0.0.7
+Host is up (Ls latency).
+Nmap done: 4 IP addresses (3 hosts up) scanned in Ts seconds

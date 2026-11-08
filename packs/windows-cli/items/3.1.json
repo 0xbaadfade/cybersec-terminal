@@ -1,0 +1,333 @@
+[
+  {
+    "type": "terminal",
+    "difficulty": 3,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-office-01",
+    "id": "win-m-04",
+    "concept_ids": [
+      "3.1.nslookup"
+    ],
+    "stem": "Which DNS server answers this Windows workstation's lookups? Give its host name. (nslookup names the server it asked.)",
+    "answer": {
+      "accept": [
+        "dc-01",
+        "dc-01.office.lan"
+      ]
+    },
+    "explain": "nslookup fs-01 prints the server it asked: Server: dc-01.office.lan, Address: 192.168.10.5. ipconfig /all lists the same address under DNS Servers. Knowing which resolver a machine uses matters when DNS is filtered, logged or poisoned."
+  },
+  {
+    "id": "win-q-dns-1",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.nslookup"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which server answered this lookup?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "nslookup fs-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "fs-01.office.lan, the name that was looked up",
+        "why": "That is the name that was looked up, in the answer below."
+      },
+      {
+        "id": "b",
+        "text": "gw-01, the default gateway of the network",
+        "why": "The gateway did not answer; the Server line names the resolver."
+      },
+      {
+        "id": "c",
+        "text": "ws-win, the PC that ran the lookup",
+        "why": "That is this PC."
+      },
+      {
+        "id": "d",
+        "text": "dc-01.office.lan at 192.168.10.5"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "The Server and Address lines at the top show the resolver asked. The Name and Address lines below are the answer."
+  },
+  {
+    "id": "win-q-dns-2",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.nslookup"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the Aliases line mean?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "nslookup files.office.lan"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "files.office.lan is another name for fs-01.office.lan"
+      },
+      {
+        "id": "b",
+        "text": "files.office.lan is a separate server from fs-01",
+        "why": "The answer is the same host, fs-01."
+      },
+      {
+        "id": "c",
+        "text": "fs-01 is down, so the lookup used another server",
+        "why": "An answer was returned with its address."
+      },
+      {
+        "id": "d",
+        "text": "The name was found in the hosts file on this PC, not DNS",
+        "why": "The answer came from the DNS server named at the top."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "An alias is a CNAME record. The lookup follows it and returns the real name and address."
+  },
+  {
+    "id": "win-q-dns-3",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.nslookup"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What kind of lookup is this, and what does it return?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "nslookup 192.168.10.5"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "A forward lookup: the address of dc-01 is 192.168.10.5, found by name",
+        "why": "The query is an address, so it is a reverse lookup."
+      },
+      {
+        "id": "b",
+        "text": "A reverse lookup: the name of 192.168.10.5 is dc-01.office.lan"
+      },
+      {
+        "id": "c",
+        "text": "A mail lookup: the mail server responsible for office.lan",
+        "why": "That would need an MX query."
+      },
+      {
+        "id": "d",
+        "text": "A failed lookup: the server returned no answer",
+        "why": "A name was returned."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "Giving nslookup an IP address asks for its PTR record, mapping an address back to a name."
+  },
+  {
+    "id": "win-q-dns-4",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.nslookup"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which server does nslookup ask by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The default gateway, since routers forward every request",
+        "why": "The gateway forwards packets; it is not necessarily a DNS server."
+      },
+      {
+        "id": "b",
+        "text": "The first host that answers a ping on the local network",
+        "why": "nslookup does not search for servers by pinging."
+      },
+      {
+        "id": "c",
+        "text": "The DNS server configured on the PC, shown by ipconfig /all"
+      },
+      {
+        "id": "d",
+        "text": "The DHCP server, always, whatever the PC is configured to use",
+        "why": "Only if that is what the PC was configured to use."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "nslookup uses the configured resolver unless you name another, as in nslookup fs-01 192.168.10.5."
+  },
+  {
+    "id": "win-q-ping-1",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.ping"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Both pings below timed out. Is print-01 definitely down?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ping -n 2 print-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Yes, a timeout always means the host is switched off",
+        "why": "Many devices and firewalls drop ping."
+      },
+      {
+        "id": "b",
+        "text": "Yes, because the DNS server returned the wrong address",
+        "why": "The name resolved to 192.168.10.40."
+      },
+      {
+        "id": "c",
+        "text": "No, because Windows ping never gives a timeout message",
+        "why": "Timeouts are normal when nothing answers."
+      },
+      {
+        "id": "d",
+        "text": "No: it may be up but ignoring ICMP echo requests"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "Request timed out means no echo reply came back. It is a reason to try another probe (a port check), not proof the host is off."
+  },
+  {
+    "id": "win-q-ping-2",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.ping"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does TTL=128 in the replies suggest about dc-01?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ping -n 2 dc-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Probably a Windows host: 128 is the usual Windows starting TTL"
+      },
+      {
+        "id": "b",
+        "text": "Probably a Linux host, because Linux machines reply with a TTL of 128",
+        "why": "Linux usually starts at 64."
+      },
+      {
+        "id": "c",
+        "text": "It is 128 router hops away from this PC across the network",
+        "why": "TTL falls as packets cross routers; 128 is a starting value, not a distance."
+      },
+      {
+        "id": "d",
+        "text": "It will stay reachable for the next 128 seconds only",
+        "why": "TTL on a packet is hops, not time."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "Different systems start with different TTLs (commonly 64 for Linux, 128 for Windows, 255 for network gear). It is a hint only; it can be changed."
+  },
+  {
+    "id": "win-q-ping-3",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.ping"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "On Windows, which ping option sets the number of echo requests?",
+    "options": [
+      {
+        "id": "a",
+        "text": "-c count",
+        "why": "-c is the Linux option."
+      },
+      {
+        "id": "b",
+        "text": "-n count"
+      },
+      {
+        "id": "c",
+        "text": "-l count",
+        "why": "-l sets the payload size in bytes."
+      },
+      {
+        "id": "d",
+        "text": "-w count",
+        "why": "-w is the timeout per reply in milliseconds."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "ping -n 4 dc-01 sends four requests. Windows sends four by default; Linux ping runs until stopped."
+  },
+  {
+    "id": "win-q-ping-4",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.ping"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which line summarises packet loss?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ping -n 2 dc-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Pinging dc-01.office.lan [192.168.10.5] with 32 bytes of data:",
+        "why": "That line only says what is being pinged."
+      },
+      {
+        "id": "b",
+        "text": "Reply from 192.168.10.5: bytes=32 time<1ms TTL=128",
+        "why": "That is one reply."
+      },
+      {
+        "id": "c",
+        "text": "Packets: Sent = 2, Received = 2, Lost = 0 (0% loss)"
+      },
+      {
+        "id": "d",
+        "text": "Minimum = 0ms, Maximum = 0ms, Average = 0ms",
+        "why": "Those are round-trip times."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "The statistics block counts sent, received and lost packets. Loss is the first thing to check when a connection feels unreliable."
+  }
+]

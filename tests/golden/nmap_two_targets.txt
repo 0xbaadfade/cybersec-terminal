@@ -1,0 +1,14 @@
+Starting Nmap 7.99 ( https://nmap.org ) at D
+Nmap scan report for 127.0.0.1
+Host is up (Ls latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 127.0.0.2
+Host is up (Ls latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in Ts seconds

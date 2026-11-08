@@ -1,0 +1,11 @@
+Starting Nmap 7.99 ( https://nmap.org ) at D
+Nmap scan report for 127.0.0.1
+Host is up (Ls latency).
+Not shown: 65531 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE
+22/tcp   open     ssh
+23/tcp   open     telnet
+80/tcp   open     http
+8080/tcp filtered http-proxy
+
+Nmap done: 1 IP address (1 host up) scanned in Ts seconds

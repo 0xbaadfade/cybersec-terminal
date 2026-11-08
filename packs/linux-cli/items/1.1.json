@@ -1,0 +1,587 @@
+[
+  {
+    "id": "lin-m-01",
+    "type": "terminal",
+    "concept_ids": [
+      "1.1.ping"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Three hosts of the web tier were reported up: 10.20.0.10, 10.20.0.11 and 10.20.0.30. One of them never answers ping. Which one? (Read notes.txt if you want a hint about where to look.)",
+    "lab": "lab-dmz-01",
+    "answer": {
+      "accept": [
+        "10.20.0.30",
+        "printer-01",
+        "printer-01.corp.local"
+      ]
+    },
+    "explain": "printer-01 (10.20.0.30) is up but drops ICMP echo requests, so ping reports 100% packet loss. Unanswered pings do not prove a host is down: firewalls and devices often ignore ICMP, which is why a ping sweep can undercount hosts and why discovery uses other probes too."
+  },
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-02",
+    "concept_ids": [
+      "1.1.ping"
+    ],
+    "stem": "How many hosts on 10.20.0.0/24 are up? Count your own workstation. (Give a number.)",
+    "answer": {
+      "accept": [
+        "7",
+        "seven"
+      ]
+    },
+    "explain": "nmap -sn 10.20.0.0/24 reports 7 hosts up: six servers and devices plus analyst-ws. printer-01 is among them even though it never answers ping: nmap's up/down check is not just ICMP. As an ordinary user it connects to ports 80 and 443 (printer-01 has 80 open); as root on the local network it uses ARP. Pinging each address would have found only six."
+  },
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-03",
+    "concept_ids": [
+      "1.1.port-scan"
+    ],
+    "stem": "Exactly one host on 10.20.0.0/24 accepts connections on telnet (23/tcp). Find it and give its IP address.",
+    "answer": {
+      "accept": [
+        "10.20.0.10",
+        "web-03",
+        "web-03.corp.local"
+      ]
+    },
+    "explain": "web-03 (10.20.0.10) is the only host with port 23 open. One command finds it: nmap -p 23 --open 10.20.0.0/24 scans that port across the whole network and lists only the hosts that answer. Telnet sends everything, passwords included, in clear text, so an open telnet port is a finding: disable it and use SSH."
+  },
+  {
+    "type": "terminal",
+    "difficulty": 3,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-04",
+    "concept_ids": [
+      "1.1.service-versions"
+    ],
+    "stem": "What software and version is listening on port 80 of web-03? (A plain port scan only says the port is open; ask the service itself.)",
+    "answer": {
+      "accept": [
+        "apache httpd 2.4.6",
+        "apache 2.4.6",
+        "2.4.6",
+        "apache/2.4.6",
+        "apache httpd 2.4.6 ((centos))"
+      ]
+    },
+    "explain": "nmap -sV -p 80 10.20.0.10 asks the service to identify itself and reports Apache httpd 2.4.6. The version is what a vulnerability scan or an analyst looks up next: an old release means known vulnerabilities and missing fixes. Without -sV nmap only guesses a name from the port number."
+  },
+  {
+    "id": "lin-r-03",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.service-versions"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "This scan of web-03 shows three open ports. Which one is a remote login service that sends everything, passwords included, in clear text and should be replaced by an encrypted one?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nmap -sV -p 22,23,80 web-03"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "telnet on 23, replaced by SSH"
+      },
+      {
+        "id": "b",
+        "text": "ssh on 22",
+        "why": "SSH is the encrypted replacement for telnet, not the problem."
+      },
+      {
+        "id": "c",
+        "text": "http on 80, replaced by SSH",
+        "why": "HTTP is a web service, not a remote login service, and SSH would not replace it (HTTPS would)."
+      },
+      {
+        "id": "d",
+        "text": "None: all three are encrypted",
+        "why": "Only SSH is encrypted by default; telnet and plain HTTP are not."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "Telnet (23/tcp) carries the whole session, including the login, unencrypted, so anyone who can capture the traffic reads the password. SSH on 22 does the same job with encryption. Closing unneeded or insecure services is the core of hardening a host."
+  },
+  {
+    "id": "lin-q-ping-1",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ping"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "The ping below got no replies. What can you conclude?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ping -c 2 printer-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Nothing certain: printer-01 may be up but ignoring ICMP echo requests"
+      },
+      {
+        "id": "b",
+        "text": "printer-01 is powered off, because it did not answer the pings",
+        "why": "No reply does not prove that. Firewalls and many devices drop ICMP on purpose."
+      },
+      {
+        "id": "c",
+        "text": "DNS could not find printer-01, so the pings never left this machine",
+        "why": "The first line shows the name resolved to 10.20.0.30, so DNS worked."
+      },
+      {
+        "id": "d",
+        "text": "The cable between you and the printer is cut, or the switch port is down",
+        "why": "A silent ping cannot tell you where, or whether, anything is broken."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "100% packet loss only means no echo replies came back. printer-01 is up (the notes say its ICMP is disabled), so an unanswered ping can undercount live hosts."
+  },
+  {
+    "id": "lin-q-ping-2",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ping"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which statement does this output support?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ping -c 2 web-03"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "web-03's web server is running and serving pages",
+        "why": "An ICMP reply comes from the host's network stack. It says nothing about which services listen."
+      },
+      {
+        "id": "b",
+        "text": "web-03 is up and answered both echo requests"
+      },
+      {
+        "id": "c",
+        "text": "web-03 has no firewall, since ping got through it",
+        "why": "A host can answer ping and still filter other traffic."
+      },
+      {
+        "id": "d",
+        "text": "The DNS server is down, so the name was not resolved",
+        "why": "The name resolved to 10.20.0.10, as the first line shows."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "2 packets transmitted, 2 received, 0% packet loss: the host answered. Ping shows reachability and round-trip time, nothing about open ports or services."
+  },
+  {
+    "id": "lin-q-ping-3",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ping"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "On Linux, which ping option limits how many echo requests are sent?",
+    "options": [
+      {
+        "id": "a",
+        "text": "-n count",
+        "why": "On Linux -n means numeric output (no name lookups). Windows uses -n for the count."
+      },
+      {
+        "id": "b",
+        "text": "-s count",
+        "why": "-s sets the payload size in bytes."
+      },
+      {
+        "id": "c",
+        "text": "-c count"
+      },
+      {
+        "id": "d",
+        "text": "-W count",
+        "why": "-W is how long to wait for each reply, in seconds."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Linux ping runs until stopped unless -c is given: ping -c 4 web-03 sends four requests. On Windows the count option is -n."
+  },
+  {
+    "id": "lin-q-ping-4",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ping"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "The scan below reports printer-01 as up, yet a plain ping to it gets no reply. How can both be true?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nmap -sn 10.20.0.0/24"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "nmap reports every address in the range as up, whether or not it answers",
+        "why": "The summary shows 7 hosts up out of 256 addresses scanned."
+      },
+      {
+        "id": "b",
+        "text": "ping and nmap ask different DNS servers, so they resolve different addresses",
+        "why": "DNS plays no part in whether a host answers a probe."
+      },
+      {
+        "id": "c",
+        "text": "printer-01 only answers from other networks, not from this workstation's subnet",
+        "why": "Nothing in the output suggests that; the difference is in the probes used."
+      },
+      {
+        "id": "d",
+        "text": "nmap probes with more than ICMP echo, so it finds hosts that ignore ping"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "A ping sweep sends only ICMP echo. nmap -sn also tries other probes, so it can find a host like printer-01 that drops echo requests. Neither method is perfect."
+  },
+  {
+    "id": "lin-q-scan-1",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.port-scan"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the line 'Not shown: 997 closed tcp ports (conn-refused)' mean?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nmap web-03"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "nmap tried its default 1000 ports; 997 refused the connection"
+      },
+      {
+        "id": "b",
+        "text": "997 ports are filtered by a firewall that silently drops the probes",
+        "why": "Filtered ports give no answer. 'Closed' means the host actively refused."
+      },
+      {
+        "id": "c",
+        "text": "997 hosts were scanned and none of them answered the probe",
+        "why": "Only one host, web-03, was scanned."
+      },
+      {
+        "id": "d",
+        "text": "997 services are open but hidden behind the firewall from the scan",
+        "why": "Open ports are listed in the table; these are closed."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "By default nmap scans the 1000 most common TCP ports. The three open ones are listed (22, 23, 80); the other 997 sent back a refusal, so they are summarised."
+  },
+  {
+    "id": "lin-q-scan-2",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.port-scan"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which statement about db-02 is correct?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nmap -p 22,23,80 db-02"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "db-02 is down, because its web port 80 is closed",
+        "why": "A closed port means the host answered with a refusal, so the host is up."
+      },
+      {
+        "id": "b",
+        "text": "SSH is open; the telnet and web ports are closed"
+      },
+      {
+        "id": "c",
+        "text": "Telnet is open, but SSH and the web port are closed",
+        "why": "Port 23 shows closed."
+      },
+      {
+        "id": "d",
+        "text": "All three ports are filtered by a firewall on db-02",
+        "why": "Filtered would give no answer; these show open or closed."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "open means a service accepted the connection, closed means the host refused it. Either way the host replied, so it is up."
+  },
+  {
+    "id": "lin-q-scan-3",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.port-scan"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "In an nmap report, what does the state 'filtered' mean?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The port is open, but the service is busy and cannot answer in time",
+        "why": "That would still be reported as open."
+      },
+      {
+        "id": "b",
+        "text": "The port is closed and the host sent back a refusal to the probe",
+        "why": "That is the closed state; filtered ports give no answer at all."
+      },
+      {
+        "id": "c",
+        "text": "nmap cannot tell whether it is open, because a firewall drops the probe"
+      },
+      {
+        "id": "d",
+        "text": "The port is open, and the traffic through it is encrypted by the service",
+        "why": "nmap's state says nothing about encryption."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Filtered means no answer came back, typically because a firewall drops the packets. It is different from closed, where the host sends an explicit refusal."
+  },
+  {
+    "id": "lin-q-scan-4",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.port-scan"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which command only checks which hosts are up on 10.20.0.0/24, without scanning their ports?",
+    "options": [
+      {
+        "id": "a",
+        "text": "nmap -sV 10.20.0.0/24",
+        "why": "-sV probes the services on open ports, which is a port scan with extra work."
+      },
+      {
+        "id": "b",
+        "text": "nmap -p 80 10.20.0.0/24",
+        "why": "-p 80 scans port 80 on every host."
+      },
+      {
+        "id": "c",
+        "text": "ping 10.20.0.0/24",
+        "why": "ping takes one host, not a network range."
+      },
+      {
+        "id": "d",
+        "text": "nmap -sn 10.20.0.0/24"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "-sn is a ping scan (host discovery only). It answers 'who is there?' before you decide what to scan."
+  },
+  {
+    "id": "lin-q-ver-1",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.service-versions"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What software is the name server on dns-01 running, according to this scan?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nmap -sV -p 53 dns-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "ISC BIND 9.18"
+      },
+      {
+        "id": "b",
+        "text": "Apache httpd 2.4.6",
+        "why": "That is the web server on web-03, not this scan."
+      },
+      {
+        "id": "c",
+        "text": "OpenSSH 8.9p1",
+        "why": "The scan asked only about port 53; the VERSION column shows BIND."
+      },
+      {
+        "id": "d",
+        "text": "Microsoft DNS",
+        "why": "Nothing in the output names Microsoft software."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The VERSION column comes from asking the service itself. Knowing a name server runs BIND 9.18 lets you look for known issues in that release."
+  },
+  {
+    "id": "lin-q-ver-2",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.service-versions"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Why does nmap -sV take longer than a plain port scan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "It scans all 65,535 ports instead of only the default 1,000 ports",
+        "why": "-sV does not change which ports are scanned."
+      },
+      {
+        "id": "b",
+        "text": "It talks to each open service to identify the software version"
+      },
+      {
+        "id": "c",
+        "text": "It waits for the DNS server to answer a lookup for every host",
+        "why": "Name resolution is not what takes the time."
+      },
+      {
+        "id": "d",
+        "text": "It sends ICMP echo requests to every address, then waits for replies",
+        "why": "Host discovery is a different step."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "Version detection sends extra probes to each open service and reads its reply (banner). More conversation per port means a slower scan."
+  },
+  {
+    "id": "lin-q-ver-3",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.service-versions"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Port 23 shows no version information. What is the most reasonable reading?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nmap -sV -p 22,23,80 web-03"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "The port is closed, so nothing is listening there at all",
+        "why": "The STATE column says open."
+      },
+      {
+        "id": "b",
+        "text": "The service is fully patched, so it hides its version number",
+        "why": "A blank version only means nmap could not determine one; it says nothing about patching."
+      },
+      {
+        "id": "c",
+        "text": "The port is open, but nmap could not identify the software"
+      },
+      {
+        "id": "d",
+        "text": "Telnet has no version number because it is a simple protocol",
+        "why": "Every program has a version; nmap just could not read it here."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "open with a blank VERSION means the service answered but nmap could not fingerprint it. Telnet itself is the finding: it sends logins in clear text."
+  },
+  {
+    "id": "lin-q-ver-4",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.service-versions"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Why does a security team care that a scan shows 'Apache httpd 2.4.6'?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nmap -sV -p 22,23,80 web-03"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Apache is no longer a supported web server, so it must be removed",
+        "why": "Apache is widely used; the concern is the old version."
+      },
+      {
+        "id": "b",
+        "text": "The version number shows who administers the server and who installed it",
+        "why": "Version numbers say nothing about the administrator."
+      },
+      {
+        "id": "c",
+        "text": "It proves the server is already compromised by an attacker",
+        "why": "A banner shows what is running, not that anything went wrong."
+      },
+      {
+        "id": "d",
+        "text": "The exact version lets them look up its known vulnerabilities"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "Version strings map directly to vulnerability databases. An old release such as 2.4.6 tells an attacker which known flaws to try, and tells a defender what to patch."
+  }
+]

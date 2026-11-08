@@ -1,0 +1,254 @@
+[
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-office-01",
+    "id": "win-m-05",
+    "concept_ids": [
+      "4.1.curl-headers"
+    ],
+    "stem": "The IP camera cam-01 has a web page. Which web server software does its Server header name?",
+    "answer": {
+      "accept": [
+        "boa/0.94.14rc21",
+        "boa 0.94.14rc21",
+        "boa"
+      ]
+    },
+    "explain": "curl -I http://cam-01 shows Server: Boa/0.94.14rc21. Boa is an embedded web server that has not been maintained since 2005 and has known vulnerabilities, a typical weakness of cheap cameras and other IoT devices. Banner reading is the first step of identifying what is exposed; the finding is to isolate or replace the device. (cam-01 also has telnet open.)"
+  },
+  {
+    "id": "win-q-curl-1",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.curl-headers"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which line names the web server software on the camera?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "curl -I http://cam-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Content-Type: text/html",
+        "why": "That is the type of the page."
+      },
+      {
+        "id": "b",
+        "text": "HTTP/1.1 200 OK",
+        "why": "That is the status line."
+      },
+      {
+        "id": "c",
+        "text": "Content-Length: 73",
+        "why": "That is the size of the body."
+      },
+      {
+        "id": "d",
+        "text": "Server: Boa/0.94.14rc21"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "The Server header announces the software and version. Boa is a small server found in embedded devices."
+  },
+  {
+    "id": "win-q-curl-2",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.curl-headers"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What should an assessor note about 'Boa/0.94.14rc21' on an IP camera?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "curl -I http://cam-01"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Old embedded web software is exposed and may have known vulnerabilities"
+      },
+      {
+        "id": "b",
+        "text": "Nothing, because cameras never run web servers of their own, only firmware",
+        "why": "This one does, and the header proves it."
+      },
+      {
+        "id": "c",
+        "text": "The camera's traffic is encrypted end to end by default",
+        "why": "A plain http response shows no encryption."
+      },
+      {
+        "id": "d",
+        "text": "The camera is also acting as the domain controller for the site",
+        "why": "The header says nothing about that."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "Embedded devices often run outdated software that is rarely patched. Find the version, then check the vendor for fixes or isolate the device."
+  },
+  {
+    "id": "win-q-curl-3",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.curl-headers"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does 'Failed to connect to 192.168.10.1:80' tell you?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "curl -I http://192.168.10.1"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "The gateway is certainly powered off, because its web server refused us",
+        "why": "A failed connection on one port does not show that."
+      },
+      {
+        "id": "b",
+        "text": "Port 80 refused or did not answer; that alone does not prove the host is down"
+      },
+      {
+        "id": "c",
+        "text": "The web server answered, but with a 404 error for the page that was requested",
+        "why": "A 404 would mean a server answered."
+      },
+      {
+        "id": "d",
+        "text": "The DNS lookup failed because the name could not be resolved",
+        "why": "The address was given as numbers, so no lookup was needed."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "curl error 7 means the TCP connection could not be made: the port is closed or filtered. Another port, such as 443, may well be open."
+  },
+  {
+    "id": "win-q-file-1",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.reading-files"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "According to the file, where does this PC get its gateway and DNS settings?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "type readme.txt"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "They are typed in by hand on each PC",
+        "why": "The readme says they come from DHCP."
+      },
+      {
+        "id": "b",
+        "text": "From the file server",
+        "why": "The file does not mention it."
+      },
+      {
+        "id": "c",
+        "text": "From DHCP"
+      },
+      {
+        "id": "d",
+        "text": "From the camera",
+        "why": "The file does not mention it."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "type prints a text file. Reading local notes is often the quickest way to learn how a machine is set up."
+  },
+  {
+    "id": "win-q-file-2",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.reading-files"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which Windows command prints the contents of a text file, like cat on Linux?",
+    "options": [
+      {
+        "id": "a",
+        "text": "hostname",
+        "why": "That prints the computer's name."
+      },
+      {
+        "id": "b",
+        "text": "ipconfig",
+        "why": "That shows network settings."
+      },
+      {
+        "id": "c",
+        "text": "netstat",
+        "why": "That shows connections."
+      },
+      {
+        "id": "d",
+        "text": "type"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "type readme.txt prints the file. The Linux counterpart is cat."
+  },
+  {
+    "id": "win-q-file-3",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.reading-files"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which Windows command searches text for a string, like grep on Linux?",
+    "options": [
+      {
+        "id": "a",
+        "text": "findstr"
+      },
+      {
+        "id": "b",
+        "text": "hostname",
+        "why": "That prints the computer's name."
+      },
+      {
+        "id": "c",
+        "text": "ipconfig",
+        "why": "That shows network settings."
+      },
+      {
+        "id": "d",
+        "text": "netstat",
+        "why": "That shows connections."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "findstr prints the lines that contain a string, for example: findstr DHCP readme.txt."
+  }
+]

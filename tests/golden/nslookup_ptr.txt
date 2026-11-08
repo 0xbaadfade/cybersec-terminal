@@ -1,0 +1,2 @@
+30.0.20.10.in-addr.arpa	name = printer-01.corp.local.
+

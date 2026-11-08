@@ -1,0 +1,3 @@
+Starting Nmap 7.99 ( https://nmap.org ) at D
+You cannot use -F (fast scan) or -p (explicit port selection) when not doing a port scan
+QUITTING!

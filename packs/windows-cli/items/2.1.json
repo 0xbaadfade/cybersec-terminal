@@ -1,0 +1,332 @@
+[
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-office-01",
+    "id": "win-m-03",
+    "concept_ids": [
+      "2.1.listening-ports"
+    ],
+    "stem": "Remote Desktop (TCP 3389) is listening on this workstation. Which process id owns that listener?",
+    "answer": {
+      "accept": [
+        "1876"
+      ]
+    },
+    "explain": "netstat -ano lists every listening and established socket with the owning process id (the PID column): TCP 0.0.0.0:3389 LISTENING 1876. Bound to 0.0.0.0, it accepts connections from the whole network. Remote Desktop exposed to the network is a frequent way in for attackers, so unless it is needed it is switched off or restricted by a firewall rule; the PID is how you find the program behind the port (tasklist, on a real machine)."
+  },
+  {
+    "id": "win-r-01",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.listening-ports"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "This is part of a Windows workstation's netstat output. What does the line for port 3389 tell you?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "netstat -ano"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Remote Desktop listens on all addresses, so anyone who can reach the PC can try to connect"
+      },
+      {
+        "id": "b",
+        "text": "Someone is connected over Remote Desktop right now, and the session is still open",
+        "why": "A live session would show ESTABLISHED with a foreign address; this line is LISTENING with 0.0.0.0:0."
+      },
+      {
+        "id": "c",
+        "text": "Remote Desktop is bound to the machine itself, so it cannot be reached from the network at all",
+        "why": "Local-only would show 127.0.0.1:3389; 0.0.0.0 means all interfaces."
+      },
+      {
+        "id": "d",
+        "text": "Port 3389 is blocked by the firewall, so nothing can connect to it",
+        "why": "netstat lists sockets, not firewall rules; a listening socket can still be blocked or allowed by the firewall."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "TCP 0.0.0.0:3389 with state LISTENING and foreign address 0.0.0.0:0 is a service waiting for connections on all interfaces, owned by the process id in the last column. Whether the network can really reach it depends on the firewall, but the exposure is there. Disable Remote Desktop if it is not needed, or restrict it by firewall rule and use network-level authentication."
+  },
+  {
+    "id": "win-q-lis-1",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.listening-ports"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Port 445 is listening on all interfaces. What is it, and who owns it?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "netstat -ano"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "SMB file sharing, owned by the System process (PID 4)"
+      },
+      {
+        "id": "b",
+        "text": "Remote Desktop, owned by the svchost service process",
+        "why": "Remote Desktop is port 3389."
+      },
+      {
+        "id": "c",
+        "text": "LDAP directory lookups, owned by the lsass process",
+        "why": "LDAP is port 389 and appears in a connection, not a listener."
+      },
+      {
+        "id": "d",
+        "text": "Time sync, owned by svchost, the Windows time service",
+        "why": "Time sync (NTP) is UDP port 123."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "445 is SMB (Windows file sharing). PID 4 is the System process. SMB exposed to the network is a common target for worms and lateral movement."
+  },
+  {
+    "id": "win-q-lis-2",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.listening-ports"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the -o option add to netstat -an?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The name of the user account that opened each connection",
+        "why": "-o adds the process ID, not a user name."
+      },
+      {
+        "id": "b",
+        "text": "The ID of the process that owns each connection (PID)"
+      },
+      {
+        "id": "c",
+        "text": "Only the connections that are open, hiding listeners",
+        "why": "-o does not filter; it adds a column."
+      },
+      {
+        "id": "d",
+        "text": "The amount of traffic sent over each connection",
+        "why": "netstat does not show traffic volume here."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "netstat -ano shows addresses and ports as numbers, all states, plus the PID. Look the PID up in Task Manager or tasklist to find the program."
+  },
+  {
+    "id": "win-q-lis-3",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.listening-ports"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Why does 0.0.0.0:3389 LISTENING deserve a hardening note?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "netstat -ano"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "3389 is used only by the operating system itself and cannot be abused by attackers",
+        "why": "Exposed Remote Desktop is a frequent attack target."
+      },
+      {
+        "id": "b",
+        "text": "Because the PID is 1876, which is unusually high for a Windows service",
+        "why": "The PID is just which process owns the port."
+      },
+      {
+        "id": "c",
+        "text": "It accepts connections from any address, so access should be limited or firewalled"
+      },
+      {
+        "id": "d",
+        "text": "Because it is a UDP port, and UDP traffic cannot be firewalled at all",
+        "why": "The line is TCP."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "0.0.0.0 means every interface. Restricting RDP with firewall rules, a VPN and strong authentication is standard hardening."
+  },
+  {
+    "id": "win-q-con-1",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.connections"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which line shows this PC talking LDAP to the domain controller (dc-01, 192.168.10.5)?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "netstat -ano"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "TCP 192.168.10.50:49722 to 192.168.10.20:445, ESTABLISHED",
+        "why": "That is SMB to the file server fs-01."
+      },
+      {
+        "id": "b",
+        "text": "TCP 192.168.10.50:49790 to 192.168.10.60:80, TIME_WAIT",
+        "why": "That is a closed web connection to the camera."
+      },
+      {
+        "id": "c",
+        "text": "UDP 0.0.0.0:123",
+        "why": "That is the local time-sync listener."
+      },
+      {
+        "id": "d",
+        "text": "TCP 192.168.10.50:49731 to 192.168.10.5:389, ESTABLISHED"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "Match the remote address and port: 192.168.10.5 is dc-01 and 389 is LDAP, used for directory lookups and logins."
+  },
+  {
+    "id": "win-q-con-2",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.connections"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "The connection to 192.168.10.20:445 is ESTABLISHED. What is it?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "netstat -ano"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "An open SMB session to the file server fs-01"
+      },
+      {
+        "id": "b",
+        "text": "A web page being served from this PC to a browser",
+        "why": "Port 445 is SMB, and this PC is the client."
+      },
+      {
+        "id": "c",
+        "text": "A remote desktop session opened to this PC by someone else",
+        "why": "Remote Desktop is port 3389."
+      },
+      {
+        "id": "d",
+        "text": "A DNS lookup in progress on the local network",
+        "why": "DNS uses port 53 and is short-lived."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "192.168.10.20 is fs-01 and 445 is SMB: the PC has a file-sharing session open to it."
+  },
+  {
+    "id": "win-q-con-3",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.connections"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does TIME_WAIT mean for the connection to 192.168.10.60:80?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "netstat -ano"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "The camera is refusing connections from this PC right now",
+        "why": "A refusal would not create a TIME_WAIT entry."
+      },
+      {
+        "id": "b",
+        "text": "The web connection to the camera just closed and is being held briefly"
+      },
+      {
+        "id": "c",
+        "text": "A download from the camera is still in progress and has not yet finished",
+        "why": "A running transfer shows ESTABLISHED."
+      },
+      {
+        "id": "d",
+        "text": "This PC is waiting for the camera to answer a ping request",
+        "why": "TIME_WAIT is a TCP state, unrelated to ping."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "TIME_WAIT is normal after a connection closes. It does not mean anything is wrong."
+  },
+  {
+    "id": "win-q-con-4",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.connections"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the -n option do for netstat?",
+    "options": [
+      {
+        "id": "a",
+        "text": "It shows only new connections and hides the ones that are already old",
+        "why": "-n does not filter by age."
+      },
+      {
+        "id": "b",
+        "text": "It hides the process IDs and the owning program names",
+        "why": "PIDs come from -o."
+      },
+      {
+        "id": "c",
+        "text": "It shows addresses and ports as numbers, with no name lookups"
+      },
+      {
+        "id": "d",
+        "text": "It shows only network statistics, not connections",
+        "why": "Statistics are -s."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "-n keeps output fast and unambiguous: you see real addresses and port numbers, not names."
+  }
+]

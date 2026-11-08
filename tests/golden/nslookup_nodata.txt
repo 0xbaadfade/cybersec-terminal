@@ -1,0 +1,5 @@
+Server:		10.20.0.2
+Address:	10.20.0.2#53
+
+*** Can't find web-03.corp.local: No answer
+

@@ -1,0 +1,54 @@
+name: Publish web version
+
+# Every push to main (or a manual run from the Actions tab) checks the packs, builds the browser version and
+# publishes it on GitHub Pages. One-time repository setting: Settings > Pages > Source: "GitHub Actions".
+# This runs on main, not on tags: the github-pages environment only accepts deployments from the default branch.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-godot
+        with:
+          templates: 'true'
+
+      - name: Import the project
+        run: '"$GODOT" --headless --path . --import'
+
+      - name: Validate every pack and the track list
+        run: '"$GODOT" --headless --path . -s res://tools/validate_pack.gd'
+
+      - name: Build the web version
+        run: bash tools/export.sh
+
+      - name: Stage it for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

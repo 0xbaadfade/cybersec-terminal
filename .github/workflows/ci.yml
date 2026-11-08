@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-godot
+
+      - name: Import the project
+        run: '"$GODOT" --headless --path . --import'
+
+      - name: Validate every pack and the track list
+        run: '"$GODOT" --headless --path . -s res://tools/validate_pack.gd'
+
+      - name: Validate the pack template
+        run: '"$GODOT" --headless --path . -s res://tools/validate_pack.gd -- res://templates/pack'
+
+      - name: Boot the game headless
+        run: '"$GODOT" --headless --path . --quit'

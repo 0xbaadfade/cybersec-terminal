@@ -1,0 +1,392 @@
+{
+  "ping": {
+    "summary": "Send ICMP echo requests to see whether a host answers and how long replies take.",
+    "usage": "ping [-c count] [-i seconds] [-W seconds] [-s bytes] [-n] [-q] <host>",
+    "flags": [
+      [
+        "-c N",
+        "stop after N requests (without it the simulator sends 4, then prints ^C)"
+      ],
+      [
+        "-i s",
+        "seconds between requests"
+      ],
+      [
+        "-W s",
+        "seconds to wait for each reply"
+      ],
+      [
+        "-s bytes",
+        "payload size"
+      ],
+      [
+        "-n",
+        "numeric output: no host names"
+      ],
+      [
+        "-q",
+        "quiet: statistics only"
+      ]
+    ],
+    "note": "No reply does not mean the host is down: firewalls often drop ICMP, so a ping sweep can undercount.",
+    "concepts": [
+      "1.1.ping"
+    ]
+  },
+  "grep": {
+    "summary": "Show only the lines that match a pattern (from a pipe or a file).",
+    "usage": "grep [-i] [-v] [-c] [-n] [-E] <pattern> [file]",
+    "flags": [
+      [
+        "-i",
+        "ignore case"
+      ],
+      [
+        "-v",
+        "show lines that do not match"
+      ],
+      [
+        "-c",
+        "count the matching lines"
+      ],
+      [
+        "-n",
+        "number the lines"
+      ],
+      [
+        "-E",
+        "extended regular expressions"
+      ]
+    ]
+  },
+  "head": {
+    "summary": "Show the first lines of a file or a pipe.",
+    "usage": "head [-n N] [file]",
+    "flags": [
+      [
+        "-n N",
+        "how many lines (default 10)"
+      ]
+    ]
+  },
+  "tail": {
+    "summary": "Show the last lines of a file or a pipe.",
+    "usage": "tail [-n N] [file]",
+    "flags": [
+      [
+        "-n N",
+        "how many lines (default 10)"
+      ]
+    ]
+  },
+  "wc": {
+    "summary": "Count lines, words and bytes.",
+    "usage": "wc [-l] [-w] [-c] [file]",
+    "flags": [
+      [
+        "-l",
+        "lines"
+      ],
+      [
+        "-w",
+        "words"
+      ],
+      [
+        "-c",
+        "bytes"
+      ]
+    ]
+  },
+  "cat": {
+    "summary": "Print files from your own machine (or pass a pipe through).",
+    "usage": "cat [-n] [file...]",
+    "flags": [
+      [
+        "-n",
+        "number the lines"
+      ]
+    ]
+  },
+  "ls": {
+    "summary": "List the files on your own machine.",
+    "usage": "ls [-1] [file...]",
+    "flags": [
+      [
+        "-1",
+        "one name per line"
+      ]
+    ]
+  },
+  "nmap": {
+    "summary": "Find which hosts are up and which ports accept connections.",
+    "usage": "nmap [-sn] [-sV] [-Pn] [-n] [--open] [-p ports] <target...>",
+    "flags": [
+      [
+        "-p ports",
+        "ports to scan: 22,80  or  1-1024  or  - for all (default: the common ports)"
+      ],
+      [
+        "-sn",
+        "ping scan: list the hosts that are up, no port scan"
+      ],
+      [
+        "-sV",
+        "ask each open service for its version"
+      ],
+      [
+        "-Pn",
+        "skip the up/down check and scan anyway"
+      ],
+      [
+        "-n",
+        "do not look up host names"
+      ],
+      [
+        "--open",
+        "show only open ports (and only hosts that have some)"
+      ]
+    ],
+    "note": "Targets: a name, an address, a network (10.20.0.0/24) or a range (10.20.0.1-30). You are an ordinary user here, so scans use ordinary connections; options that need root (-sS, -sU, -O) are refused, as on a real machine. The up/down check connects to ports 80 and 443; as root on the local network nmap would use ARP instead.",
+    "concepts": [
+      "1.1.port-scan",
+      "1.1.service-versions"
+    ]
+  },
+  "ss": {
+    "summary": "List the sockets on this machine: listening ports and open connections.",
+    "usage": "ss [-t] [-u] [-l] [-a] [-n] [-p]",
+    "flags": [
+      [
+        "-t / -u",
+        "TCP / UDP sockets only (default: both)"
+      ],
+      [
+        "-l",
+        "listening sockets only"
+      ],
+      [
+        "-a",
+        "listening and connected sockets"
+      ],
+      [
+        "-n",
+        "show port numbers, not service names"
+      ],
+      [
+        "-p",
+        "show the process (only for sockets you own)"
+      ]
+    ],
+    "note": "A socket bound to 127.0.0.1 can only be reached from this machine; one bound to 0.0.0.0 is reachable from the network.",
+    "concepts": [
+      "3.1.listening-ports",
+      "3.1.connections"
+    ]
+  },
+  "netstat": {
+    "summary": "The older tool for the same job as ss.",
+    "usage": "netstat [-t] [-u] [-l] [-a] [-n] [-p]",
+    "flags": [
+      [
+        "-t / -u",
+        "TCP / UDP only (default: both)"
+      ],
+      [
+        "-l",
+        "listening sockets only"
+      ],
+      [
+        "-a",
+        "all sockets"
+      ],
+      [
+        "-n",
+        "numbers, not names"
+      ],
+      [
+        "-p",
+        "process (only for sockets you own)"
+      ]
+    ],
+    "note": "Many systems now ship ss instead of netstat; the information is the same.",
+    "concepts": [
+      "3.1.listening-ports",
+      "3.1.connections"
+    ]
+  },
+  "dig": {
+    "summary": "Ask a name server a question and see the whole answer: records, flags, which server replied.",
+    "usage": "dig [@server] <name> [A|AAAA|CNAME|MX|NS|PTR|SOA|TXT] [-t type] [-x address] [+short] [+noall +answer]",
+    "flags": [
+      [
+        "@server",
+        "ask this server instead of the lab's resolver"
+      ],
+      [
+        "-x address",
+        "reverse lookup: the name that owns an address (PTR)"
+      ],
+      [
+        "-t type",
+        "record type (or put it after the name)"
+      ],
+      [
+        "+short",
+        "print only the answers"
+      ],
+      [
+        "+noall +answer",
+        "print only the ANSWER section"
+      ]
+    ],
+    "note": "The status line tells the story: NOERROR with an answer, NOERROR with none (the name exists but has no record of that type), NXDOMAIN (no such name), SERVFAIL (the server could not find out). The aa flag means the server owns the zone.",
+    "concepts": [
+      "2.1.forward-lookup",
+      "2.1.record-types"
+    ]
+  },
+  "nslookup": {
+    "summary": "A quick name lookup: the server asked, then the answer (one question per command here).",
+    "usage": "nslookup [-type=A|AAAA|CNAME|MX|NS|PTR|SOA|TXT] <name or address> [server address]",
+    "flags": [
+      [
+        "-type=T",
+        "record type to ask for"
+      ],
+      [
+        "<address>",
+        "an address is looked up in reverse (PTR)"
+      ],
+      [
+        "server",
+        "the address of the name server to ask"
+      ]
+    ],
+    "note": "A name without a dot gets the search domain added first (web-03 becomes web-03.corp.local). Interactive mode is not available in the simulator.",
+    "concepts": [
+      "2.1.forward-lookup",
+      "2.1.reverse-lookup"
+    ]
+  },
+  "curl": {
+    "summary": "Fetch a web page, or just its headers, and see what the server announces about itself.",
+    "usage": "curl [-I] [-i] [-s] [-S] [-m seconds] [--connect-timeout seconds] <http://host[:port]/path>",
+    "flags": [
+      [
+        "-I",
+        "send HEAD and show only the response headers"
+      ],
+      [
+        "-i",
+        "show the headers and then the page"
+      ],
+      [
+        "-s",
+        "silent: no error messages (-S shows them again)"
+      ],
+      [
+        "-m s",
+        "give up after s seconds"
+      ],
+      [
+        "--connect-timeout s",
+        "give up connecting after s seconds"
+      ]
+    ],
+    "note": "Headers such as Server and X-Powered-By tell an attacker the software and its version. Plain http only: https, -L (follow redirects) and -v are not simulated.",
+    "concepts": [
+      "4.1.http-headers"
+    ]
+  },
+  "ip": {
+    "summary": "Show this machine's network cards, addresses and routes (the modern ifconfig and route).",
+    "usage": "ip [-4] [-br] address|link|route [show [dev <name>]]",
+    "flags": [
+      [
+        "address",
+        "IP addresses on each interface (a for short)"
+      ],
+      [
+        "link",
+        "the cards themselves: state and MAC address"
+      ],
+      [
+        "route",
+        "where traffic goes; the default route is the gateway"
+      ],
+      [
+        "-br",
+        "brief: one line per interface"
+      ],
+      [
+        "-4",
+        "IPv4 only"
+      ]
+    ],
+    "note": "The line starting default via is this machine's gateway. Commands that change anything (add, del, set) are refused in the simulator.",
+    "concepts": [
+      "3.1.interfaces"
+    ]
+  },
+  "file": {
+    "summary": "Identify what kind of file something is by its header, not its name (binary exploitation skill only: no mission here uses it).",
+    "usage": "file <path>",
+    "flags": []
+  },
+  "nm": {
+    "summary": "List a binary's symbol table (binary exploitation skill only: no mission here uses it).",
+    "usage": "nm <path>",
+    "flags": []
+  },
+  "strings": {
+    "summary": "Show the printable text embedded in a binary (binary exploitation skill only: no mission here uses it).",
+    "usage": "strings [-n min-len] <path>",
+    "flags": [
+      [
+        "-n N",
+        "only strings at least N characters long"
+      ]
+    ]
+  },
+  "readelf": {
+    "summary": "Show one part of an ELF binary's own description of itself (binary exploitation skill only: no mission here uses it).",
+    "usage": "readelf (-h|-l|-d) <path>",
+    "flags": [
+      [
+        "-h",
+        "the ELF header (type, entry point)"
+      ],
+      [
+        "-l",
+        "program headers / segments"
+      ],
+      [
+        "-d",
+        "the dynamic section"
+      ]
+    ]
+  },
+  "objdump": {
+    "summary": "Disassemble one function of a binary (binary exploitation skill only: no mission here uses it).",
+    "usage": "objdump -d -M intel --disassemble=<function> <path>",
+    "flags": [
+      [
+        "-d",
+        "disassemble"
+      ],
+      [
+        "-M intel",
+        "Intel syntax (the only one this simulator prints)"
+      ],
+      [
+        "--disassemble=NAME",
+        "only this function"
+      ]
+    ]
+  },
+  "checksec": {
+    "summary": "A short report of a binary's exploit mitigations (binary exploitation skill only: no mission here uses it).",
+    "usage": "checksec <path>",
+    "flags": []
+  }
+}

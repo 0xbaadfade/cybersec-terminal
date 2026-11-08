@@ -1,0 +1,7 @@
+Server:		10.20.0.2
+Address:	10.20.0.2#53
+
+www.corp.local	canonical name = web-03.corp.local.
+Name:	web-03.corp.local
+Address: 10.20.0.10
+

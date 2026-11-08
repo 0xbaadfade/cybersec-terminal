@@ -1,0 +1,222 @@
+[
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-10",
+    "concept_ids": [
+      "4.1.http-headers"
+    ],
+    "stem": "web-03's web server announces more about itself than it needs to. Apart from the server software, which scripting language and version does it disclose in its HTTP response headers?",
+    "answer": {
+      "accept": [
+        "php/5.4.16",
+        "php 5.4.16",
+        "5.4.16"
+      ]
+    },
+    "explain": "curl -I http://web-03 prints the response headers: Server: Apache/2.4.6 (CentOS) and X-Powered-By: PHP/5.4.16. Reading banners like these is a basic identification step: the versions tell an analyst (or an attacker) which known vulnerabilities to look for, and PHP 5.4 stopped receiving security fixes in 2015. Hardening removes the detail (for example ServerTokens Prod in Apache and expose_php = Off in PHP) and, more importantly, patches the software."
+  },
+  {
+    "id": "lin-r-01",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.http-headers"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "A tester ran the command below against web-03. Which finding would a vulnerability assessment report first?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "curl -I http://web-03"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "The server discloses its software and versions, both out of date"
+      },
+      {
+        "id": "b",
+        "text": "The page was modified recently, which suggests it may be unreviewed",
+        "why": "Last-Modified only says when the content changed; it is not a vulnerability."
+      },
+      {
+        "id": "c",
+        "text": "HTTP/1.1 is in use, which is an obsolete and insecure protocol version",
+        "why": "HTTP/1.1 is normal; the response shows nothing wrong with the protocol version."
+      },
+      {
+        "id": "d",
+        "text": "The server returned status 200, meaning it answered with an error",
+        "why": "A 200 OK is a healthy answer, not a finding."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The Server and X-Powered-By headers give away Apache/2.4.6 and PHP/5.4.16, both long out of support, which tells an attacker exactly which known vulnerabilities to try. Removing the banners is minor hardening; patching or replacing the software is the real fix."
+  },
+  {
+    "id": "lin-q-http-1",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.http-headers"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the status line of this response mean?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "curl -I http://web-03/admin"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "The page does not exist, so the server returned a not-found error",
+        "why": "That would be 404 Not Found."
+      },
+      {
+        "id": "b",
+        "text": "The page moved to another address and the browser must follow it",
+        "why": "A move is a 3xx status such as 301."
+      },
+      {
+        "id": "c",
+        "text": "The server crashed while answering and sent back an error page",
+        "why": "A server error is a 5xx status."
+      },
+      {
+        "id": "d",
+        "text": "403 Forbidden: the server understood but refuses access"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "4xx statuses are client-side: 403 means access is refused (the page exists), 404 means it was not found."
+  },
+  {
+    "id": "lin-q-http-2",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.http-headers"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Where does the server send a browser that asks for /old?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "curl -I http://web-03/old"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "To https://web-03.corp.local/, by a permanent redirect"
+      },
+      {
+        "id": "b",
+        "text": "To /admin on the same server, by a temporary redirect",
+        "why": "The Location header names a different address."
+      },
+      {
+        "id": "c",
+        "text": "Nowhere: the page is missing, so the server returns an error",
+        "why": "A missing page would be a 404 with no Location header."
+      },
+      {
+        "id": "d",
+        "text": "To the DNS server, which then resolves the new address",
+        "why": "Redirects name a URL, not a DNS server."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "301 Moved Permanently with a Location header tells clients the new address. This one also moves from http to https."
+  },
+  {
+    "id": "lin-q-http-3",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.http-headers"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which status does the server give for a page that does not exist?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "curl -I http://web-03/missing"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "403 Forbidden",
+        "why": "That means the page exists but access is refused."
+      },
+      {
+        "id": "b",
+        "text": "404 Not Found"
+      },
+      {
+        "id": "c",
+        "text": "301 Moved Permanently",
+        "why": "That is a redirect."
+      },
+      {
+        "id": "d",
+        "text": "200 OK",
+        "why": "That means the request succeeded."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "The first line of the response, HTTP/1.1 404 Not Found, is the status. curl -I fetches only the headers."
+  },
+  {
+    "id": "lin-q-http-4",
+    "type": "mcq",
+    "concept_ids": [
+      "4.1.http-headers"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Why do hardening guides tell administrators to hide the Server and X-Powered-By headers?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "curl -I http://web-03/admin"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "They slow the server down because each response has to carry the larger headers",
+        "why": "The headers are tiny; the concern is what they reveal."
+      },
+      {
+        "id": "b",
+        "text": "They break caching in browsers and proxies, which key their entries on those headers",
+        "why": "Caching does not depend on those headers."
+      },
+      {
+        "id": "c",
+        "text": "They reveal the exact software and versions, helping an attacker find known flaws"
+      },
+      {
+        "id": "d",
+        "text": "They must be kept secret by law, under every compliance standard that applies",
+        "why": "There is no such rule; it is a hardening measure."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Banners such as Apache/2.4.6 and PHP/5.4.16 give a free fingerprint. Hiding them is minor hardening; patching old software is the real fix."
+  }
+]

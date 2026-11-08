@@ -1,0 +1,12 @@
+Server:		10.20.0.2
+Address:	10.20.0.2#53
+
+corp.local
+	origin = dns-01.corp.local
+	mail addr = hostmaster.corp.local
+	serial = 2026110501
+	refresh = 3600
+	retry = 600
+	expire = 86400
+	minimum = 300
+

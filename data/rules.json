@@ -1,0 +1,41 @@
+{
+  "round_size": 9,
+  "max_new_concepts_per_round": 5,
+  "xp_per_difficulty": [10, 15, 20],
+  "streak_bonus_per_step": 0.10,
+  "streak_bonus_cap": 0.50,
+  "trace": { "miss_full": 20, "relief_on_correct": 5, "limit": 100 },
+  "box_interval_days": [0, 1, 2, 4, 8, 16],
+  "requeue_gap": [3, 6],
+  "unlock_known_fraction": 0.5,
+  "auto_advance_correct": true,
+  "terminal": { "second_try_percent": 50, "xp_multiplier": 2 },
+  "economy": {
+    "active_multiplier": 1.0,
+    "repeat_percent": 25,
+    "rate_per_min_by_box": [0, 1, 2, 4, 8, 15],
+    "stale_percent": 25,
+    "idle_cap_seconds": 300,
+    "save_every_seconds": 30,
+    "exam_pass_cycles": 250
+  },
+  "perks": [
+    { "id": "round_length", "title": "Longer rounds", "kind": "max_questions", "base": 20, "levels": [40, 100, 200],
+      "base_cost": 150, "growth": 2.5 },
+    { "id": "exam_time", "title": "Exam time", "kind": "exam_minutes", "per_level": 10, "max_level": 3,
+      "base_cost": 200, "growth": 2.0 },
+    { "id": "answer_yield", "title": "Answer yield", "kind": "yield", "per_level": 10, "max_level": 10,
+      "base_cost": 100, "growth": 1.5 },
+    { "id": "node_output", "title": "Node output", "kind": "node_output", "per_level": 10, "max_level": 10,
+      "base_cost": 120, "growth": 1.6 },
+    { "id": "stale_floor", "title": "Stale floor", "kind": "stale_floor", "per_level": 10, "max_level": 3,
+      "base_cost": 180, "growth": 1.8 },
+    { "id": "repeat_payout", "title": "Repeat payout", "kind": "repeat_payout", "per_level": 10, "max_level": 3,
+      "base_cost": 100, "growth": 1.7 }
+  ],
+  "evidence": { "line_percent": 70, "reason_percent": 30, "false_flag_percent": 15, "xp_multiplier": 2 },
+  "ranks": [
+    ["Script Kiddie", 0], ["Packet Monkey", 100], ["Net Runner", 300], ["Sysop", 700],
+    ["Blue Teamer", 1400], ["Threat Hunter", 2500], ["Root", 4000]
+  ]
+}

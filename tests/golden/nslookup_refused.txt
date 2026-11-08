@@ -1,0 +1,6 @@
+;; Got SERVFAIL reply from 10.20.0.2
+Server:		10.20.0.2
+Address:	10.20.0.2#53
+
+** server can't find example.com: SERVFAIL
+

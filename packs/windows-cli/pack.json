@@ -1,0 +1,92 @@
+{
+  "id": "windows-cli",
+  "title": "Windows Command Line",
+  "short": "WINDOWS CLI",
+  "version": 1,
+  "rounds_include_labs": true,
+  "exam": { "questions": 20, "minutes": 20, "pass_percent": 70 },
+  "domains": [
+    {
+      "id": "1",
+      "title": "This PC",
+      "weight": 25
+    },
+    {
+      "id": "2",
+      "title": "Ports and connections",
+      "weight": 25
+    },
+    {
+      "id": "3",
+      "title": "Names and reachability",
+      "weight": 25
+    },
+    {
+      "id": "4",
+      "title": "Web and files",
+      "weight": 25
+    }
+  ],
+  "objectives": [
+    {
+      "id": "1.1",
+      "domain": "1",
+      "title": "Read this PC's network settings",
+      "concepts": [
+        {
+          "id": "1.1.ipconfig",
+          "title": "ipconfig"
+        },
+        {
+          "id": "1.1.physical-address",
+          "title": "The physical address"
+        }
+      ]
+    },
+    {
+      "id": "2.1",
+      "domain": "2",
+      "title": "See what is listening and connected",
+      "concepts": [
+        {
+          "id": "2.1.listening-ports",
+          "title": "Listening ports"
+        },
+        {
+          "id": "2.1.connections",
+          "title": "Connections"
+        }
+      ]
+    },
+    {
+      "id": "3.1",
+      "domain": "3",
+      "title": "Look up names and test reachability",
+      "concepts": [
+        {
+          "id": "3.1.nslookup",
+          "title": "nslookup"
+        },
+        {
+          "id": "3.1.ping",
+          "title": "ping"
+        }
+      ]
+    },
+    {
+      "id": "4.1",
+      "domain": "4",
+      "title": "Read web headers and files",
+      "concepts": [
+        {
+          "id": "4.1.curl-headers",
+          "title": "curl headers"
+        },
+        {
+          "id": "4.1.reading-files",
+          "title": "Reading files"
+        }
+      ]
+    }
+  ]
+}

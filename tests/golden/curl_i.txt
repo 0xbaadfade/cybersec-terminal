@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Date: DATE
+Server: Apache/2.4.6 (CentOS)
+X-Powered-By: PHP/5.4.16
+Last-Modified: Mon, 02 Nov 2026 09:14:03 GMT
+ETag: "4d-5f2c1a7c0b4d3"
+Accept-Ranges: bytes
+Content-Length: 77
+Content-Type: text/html; charset=UTF-8
+
+<html><head><title>Corp web tier</title></head><body>It works.</body></html>

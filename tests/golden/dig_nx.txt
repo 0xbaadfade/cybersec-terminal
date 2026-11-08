@@ -1,0 +1,23 @@
+
+; <<>> DiG 9.20.30 <<>> nosuch.corp.local
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: ID
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: C (good)
+;; QUESTION SECTION:
+;nosuch.corp.local.		IN	A
+
+;; AUTHORITY SECTION:
+corp.local.		300	IN	SOA	dns-01.corp.local. hostmaster.corp.local. 2026110501 3600 600 86400 300
+
+;; Query time: Q msec
+;; SERVER: 10.20.0.2#53(10.20.0.2) (UDP)
+;; WHEN: W
+;; MSG SIZE  rcvd: 128
+

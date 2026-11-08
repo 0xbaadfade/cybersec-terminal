@@ -1,0 +1,64 @@
+name: Set up Godot
+description: >
+  Download the pinned Godot (4.6.3-stable, Linux x86_64) from godotengine/godot-builds, check its SHA-512,
+  and cache it. Optionally install the export templates for the single-threaded web build.
+  Sets GODOT to the executable.
+
+inputs:
+  templates:
+    description: "Also install the export templates (needed to export, not to validate or test)"
+    default: "false"
+
+runs:
+  using: composite
+  steps:
+    - name: Cache Godot
+      id: cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/godot-cache
+          ~/.local/share/godot/export_templates/4.6.3.stable
+        key: godot-4.6.3-stable-templates-${{ inputs.templates }}-web-v2
+
+    - name: Download and verify
+      if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
+      env:
+        VERSION: 4.6.3-stable
+        WANT_TEMPLATES: ${{ inputs.templates }}
+      run: |
+        set -euo pipefail
+        base="https://github.com/godotengine/godot-builds/releases/download/${VERSION}"
+        work="$(mktemp -d)"
+        cd "$work"
+        curl -fsSL -o SHA512-SUMS.txt "$base/SHA512-SUMS.txt"
+
+        fetch() {
+          curl -fsSL -o "$1" "$base/$1"
+          grep " $1\$" SHA512-SUMS.txt | sha512sum -c -
+        }
+
+        fetch "Godot_v${VERSION}_linux.x86_64.zip"
+        mkdir -p "$HOME/godot-cache"
+        unzip -q -o "Godot_v${VERSION}_linux.x86_64.zip" -d "$HOME/godot-cache"
+        mv "$HOME/godot-cache/Godot_v${VERSION}_linux.x86_64" "$HOME/godot-cache/godot"
+        chmod +x "$HOME/godot-cache/godot"
+
+        if [ "$WANT_TEMPLATES" = "true" ]; then
+          fetch "Godot_v${VERSION}_export_templates.tpz"
+          dest="$HOME/.local/share/godot/export_templates/4.6.3.stable"
+          mkdir -p "$dest"
+          # Only what this project exports (the single-threaded web build); the full file holds every platform.
+          unzip -q -o -j "Godot_v${VERSION}_export_templates.tpz" \
+            'templates/version.txt' \
+            'templates/web_nothreads_release.zip' 'templates/web_nothreads_debug.zip' \
+            -d "$dest"
+          ls -la "$dest"
+        fi
+
+    - name: Expose GODOT
+      shell: bash
+      run: |
+        echo "GODOT=$HOME/godot-cache/godot" >> "$GITHUB_ENV"
+        "$HOME/godot-cache/godot" --version

@@ -1,0 +1,275 @@
+{
+  "id": "lab-dmz-01",
+  "title": "DMZ sweep",
+  "seed": 7,
+  "you": {
+    "ip": "10.20.0.50",
+    "name": "analyst-ws",
+    "os": "linux",
+    "user": "analyst",
+    "ports": [
+      {
+        "port": 22,
+        "proto": "tcp",
+        "state": "open",
+        "service": "ssh",
+        "bind": "0.0.0.0",
+        "process": "sshd",
+        "owner": "root",
+        "backlog": 128
+      },
+      {
+        "port": 5432,
+        "proto": "tcp",
+        "state": "open",
+        "service": "postgresql",
+        "bind": "127.0.0.1",
+        "process": "postgres",
+        "owner": "analyst",
+        "backlog": 244
+      },
+      {
+        "port": 68,
+        "proto": "udp",
+        "state": "open",
+        "service": "dhcpc",
+        "bind": "0.0.0.0",
+        "process": "dhclient",
+        "owner": "root"
+      }
+    ],
+    "connections": [
+      {
+        "proto": "tcp",
+        "local_port": 51514,
+        "remote_ip": "10.20.0.10",
+        "remote_port": 22,
+        "state": "ESTABLISHED",
+        "process": "ssh",
+        "owner": "analyst"
+      },
+      {
+        "proto": "tcp",
+        "local_port": 40422,
+        "remote_ip": "10.20.0.10",
+        "remote_port": 80,
+        "state": "TIME_WAIT"
+      }
+    ],
+    "mac": "52:54:00:a3:7c:19"
+  },
+  "network": {
+    "cidr": "10.20.0.0/24",
+    "gateway": "10.20.0.1",
+    "dns": "10.20.0.2",
+    "domain": "corp.local"
+  },
+  "hosts": [
+    {
+      "ip": "10.20.0.1",
+      "name": "fw-01",
+      "os": "network",
+      "latency_ms": 0.3,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "version": "OpenSSH 8.9p1"
+        }
+      ]
+    },
+    {
+      "ip": "10.20.0.2",
+      "name": "dns-01",
+      "os": "linux",
+      "latency_ms": 0.4,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "version": "OpenSSH 8.9p1"
+        },
+        {
+          "port": 53,
+          "proto": "tcp",
+          "state": "open",
+          "service": "domain",
+          "version": "ISC BIND 9.18"
+        },
+        {
+          "port": 53,
+          "proto": "udp",
+          "state": "open",
+          "service": "domain",
+          "version": "ISC BIND 9.18"
+        }
+      ]
+    },
+    {
+      "ip": "10.20.0.10",
+      "name": "web-03",
+      "os": "linux",
+      "latency_ms": 0.4,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "version": "OpenSSH 7.4 (protocol 2.0)"
+        },
+        {
+          "port": 23,
+          "proto": "tcp",
+          "state": "open",
+          "service": "telnet"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "state": "open",
+          "service": "http",
+          "version": "Apache httpd 2.4.6 ((CentOS))",
+          "http": {
+            "server": "Apache/2.4.6 (CentOS)",
+            "headers": {
+              "X-Powered-By": "PHP/5.4.16"
+            },
+            "pages": {
+              "/": {
+                "status": 200,
+                "headers": {
+                  "Last-Modified": "Mon, 02 Nov 2026 09:14:03 GMT",
+                  "ETag": "\"4d-5f2c1a7c0b4d3\"",
+                  "Accept-Ranges": "bytes"
+                },
+                "type": "text/html; charset=UTF-8",
+                "body": "<html><head><title>Corp web tier</title></head><body>It works.</body></html>\n"
+              },
+              "/old": {
+                "status": 301,
+                "headers": {
+                  "Location": "https://web-03.corp.local/"
+                },
+                "type": "text/html; charset=iso-8859-1",
+                "body": "<html><body>Moved: <a href=\"https://web-03.corp.local/\">here</a>.</body></html>\n"
+              },
+              "/admin": {
+                "status": 403,
+                "headers": {},
+                "type": "text/html; charset=iso-8859-1",
+                "body": "<html><body>Forbidden.</body></html>\n"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ip": "10.20.0.11",
+      "name": "db-02",
+      "os": "linux",
+      "latency_ms": 0.5,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "version": "OpenSSH 7.4 (protocol 2.0)"
+        },
+        {
+          "port": 3306,
+          "proto": "tcp",
+          "state": "open",
+          "service": "mysql",
+          "version": "MySQL 5.7.40"
+        }
+      ]
+    },
+    {
+      "ip": "10.20.0.20",
+      "name": "files-01",
+      "os": "linux",
+      "latency_ms": 0.6,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "version": "OpenSSH 8.9p1"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "state": "open",
+          "service": "netbios-ssn",
+          "version": "Samba smbd 4"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "state": "open",
+          "service": "microsoft-ds",
+          "version": "Samba smbd 4"
+        }
+      ]
+    },
+    {
+      "ip": "10.20.0.30",
+      "name": "printer-01",
+      "os": "network",
+      "latency_ms": 1.8,
+      "icmp": false,
+      "ports": [
+        {
+          "port": 80,
+          "proto": "tcp",
+          "state": "open",
+          "service": "http",
+          "http": {
+            "server": "Embedded HTTP Server 1.0",
+            "headers": {},
+            "pages": {
+              "/": {
+                "status": 200,
+                "headers": {},
+                "type": "text/html",
+                "body": "<html><head><title>Printer</title></head><body>Status: ready</body></html>\n"
+              }
+            }
+          }
+        },
+        {
+          "port": 9100,
+          "proto": "tcp",
+          "state": "open",
+          "service": "jetdirect"
+        }
+      ]
+    }
+  ],
+  "dns": [
+    {
+      "name": "www.corp.local",
+      "type": "CNAME",
+      "value": "web-03.corp.local"
+    },
+    {
+      "name": "corp.local",
+      "type": "TXT",
+      "value": "v=spf1 ip4:10.20.0.0/24 -all"
+    }
+  ],
+  "files": {
+    "analyst-ws": {
+      "notes.txt": "Web tier reported up: web-03, db-02, printer-01.\nPrinter vendor says ICMP is disabled in the default config.\n",
+      "scope.txt": "Authorised scope: 10.20.0.0/24 only.\n"
+    }
+  }
+}

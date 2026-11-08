@@ -1,0 +1,251 @@
+{
+  "id": "lab-office-01",
+  "title": "Office workstation (Windows)",
+  "seed": 11,
+  "you": {
+    "ip": "192.168.10.50",
+    "name": "ws-win",
+    "os": "windows",
+    "user": "mia",
+    "mac": "52:54:00:5e:1c:88",
+    "ports": [
+      {
+        "port": 135,
+        "proto": "tcp",
+        "state": "open",
+        "service": "msrpc",
+        "process": "svchost",
+        "owner": "SYSTEM",
+        "pid": 1204
+      },
+      {
+        "port": 445,
+        "proto": "tcp",
+        "state": "open",
+        "service": "microsoft-ds",
+        "process": "System",
+        "owner": "SYSTEM",
+        "pid": 4
+      },
+      {
+        "port": 3389,
+        "proto": "tcp",
+        "state": "open",
+        "service": "ms-wbt-server",
+        "process": "svchost",
+        "owner": "SYSTEM",
+        "pid": 1876
+      },
+      {
+        "port": 5040,
+        "proto": "tcp",
+        "state": "open",
+        "service": "unknown",
+        "process": "svchost",
+        "owner": "SYSTEM",
+        "pid": 3060
+      },
+      {
+        "port": 123,
+        "proto": "udp",
+        "state": "open",
+        "service": "ntp",
+        "process": "svchost",
+        "owner": "SYSTEM",
+        "pid": 1052
+      }
+    ],
+    "connections": [
+      {
+        "proto": "tcp",
+        "local_port": 49722,
+        "remote_ip": "192.168.10.20",
+        "remote_port": 445,
+        "state": "ESTABLISHED",
+        "process": "System",
+        "owner": "SYSTEM",
+        "pid": 4
+      },
+      {
+        "proto": "tcp",
+        "local_port": 49731,
+        "remote_ip": "192.168.10.5",
+        "remote_port": 389,
+        "state": "ESTABLISHED",
+        "process": "lsass",
+        "owner": "SYSTEM",
+        "pid": 652
+      },
+      {
+        "proto": "tcp",
+        "local_port": 49790,
+        "remote_ip": "192.168.10.60",
+        "remote_port": 80,
+        "state": "TIME_WAIT"
+      }
+    ]
+  },
+  "network": {
+    "cidr": "192.168.10.0/24",
+    "gateway": "192.168.10.1",
+    "dns": "192.168.10.5",
+    "domain": "office.lan"
+  },
+  "hosts": [
+    {
+      "ip": "192.168.10.1",
+      "name": "gw-01",
+      "os": "network",
+      "latency_ms": 0.5,
+      "ports": [
+        {
+          "port": 443,
+          "proto": "tcp",
+          "state": "open",
+          "service": "https"
+        }
+      ]
+    },
+    {
+      "ip": "192.168.10.5",
+      "name": "dc-01",
+      "os": "windows",
+      "latency_ms": 0.6,
+      "ports": [
+        {
+          "port": 53,
+          "proto": "tcp",
+          "state": "open",
+          "service": "domain"
+        },
+        {
+          "port": 53,
+          "proto": "udp",
+          "state": "open",
+          "service": "domain"
+        },
+        {
+          "port": 88,
+          "proto": "tcp",
+          "state": "open",
+          "service": "kerberos-sec"
+        },
+        {
+          "port": 135,
+          "proto": "tcp",
+          "state": "open",
+          "service": "msrpc"
+        },
+        {
+          "port": 389,
+          "proto": "tcp",
+          "state": "open",
+          "service": "ldap"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "state": "open",
+          "service": "microsoft-ds"
+        }
+      ]
+    },
+    {
+      "ip": "192.168.10.20",
+      "name": "fs-01",
+      "os": "windows",
+      "latency_ms": 0.7,
+      "ports": [
+        {
+          "port": 135,
+          "proto": "tcp",
+          "state": "open",
+          "service": "msrpc"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "state": "open",
+          "service": "microsoft-ds"
+        },
+        {
+          "port": 3389,
+          "proto": "tcp",
+          "state": "open",
+          "service": "ms-wbt-server"
+        }
+      ]
+    },
+    {
+      "ip": "192.168.10.40",
+      "name": "print-01",
+      "os": "network",
+      "latency_ms": 1.6,
+      "icmp": false,
+      "ports": [
+        {
+          "port": 80,
+          "proto": "tcp",
+          "state": "open",
+          "service": "http"
+        },
+        {
+          "port": 9100,
+          "proto": "tcp",
+          "state": "open",
+          "service": "jetdirect"
+        }
+      ]
+    },
+    {
+      "ip": "192.168.10.60",
+      "name": "cam-01",
+      "os": "network",
+      "latency_ms": 2.4,
+      "ports": [
+        {
+          "port": 23,
+          "proto": "tcp",
+          "state": "open",
+          "service": "telnet"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "state": "open",
+          "service": "http",
+          "http": {
+            "server": "Boa/0.94.14rc21",
+            "headers": {},
+            "pages": {
+              "/": {
+                "status": 200,
+                "headers": {},
+                "type": "text/html",
+                "body": "<html><head><title>IP Camera</title></head><body>Live view</body></html>\n"
+              }
+            }
+          }
+        },
+        {
+          "port": 554,
+          "proto": "tcp",
+          "state": "open",
+          "service": "rtsp"
+        }
+      ]
+    }
+  ],
+  "dns": [
+    {
+      "name": "files.office.lan",
+      "type": "CNAME",
+      "value": "fs-01.office.lan"
+    }
+  ],
+  "files": {
+    "ws-win": {
+      "readme.txt": "IT onboarding: this PC is joined to office.lan. Gateway and DNS come from DHCP.\n"
+    }
+  }
+}

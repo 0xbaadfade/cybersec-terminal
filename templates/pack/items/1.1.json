@@ -1,0 +1,227 @@
+[
+  {
+    "id": "tpl-001",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.passwords"
+    ],
+    "difficulty": 1,
+    "source": "hand",
+    "reviewed": false,
+    "stem": "Why should a website store a salted hash of each password instead of the password itself?",
+    "options": [
+      {
+        "id": "a",
+        "text": "If the database leaks, the passwords are not directly readable"
+      },
+      {
+        "id": "b",
+        "text": "A hash can be turned back into the password whenever the user forgets it",
+        "why": "Hashing is one-way; that is the point. Resetting a password is the right recovery path."
+      },
+      {
+        "id": "c",
+        "text": "Hashing makes the login page load faster",
+        "why": "Hashing adds a little work; it is done for security, not speed."
+      },
+      {
+        "id": "d",
+        "text": "Hashed passwords never need to be changed",
+        "why": "Users should still change a password they suspect is exposed."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "A salted hash cannot be reversed into the password, and the unique salt stops attackers reusing one precomputed table against every account. A leaked database then gives them much less than a list of plain passwords.",
+    "references": [
+      {
+        "title": "OWASP Password Storage Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+      }
+    ]
+  },
+  {
+    "id": "tpl-002",
+    "type": "multi",
+    "concept_ids": [
+      "1.1.passwords"
+    ],
+    "difficulty": 2,
+    "source": "hand",
+    "reviewed": false,
+    "stem": "Which TWO choices make a password harder to guess?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Making it longer"
+      },
+      {
+        "id": "b",
+        "text": "Using the same password on every site",
+        "why": "Reuse means one breach exposes all your accounts."
+      },
+      {
+        "id": "c",
+        "text": "Using a different password for each site"
+      },
+      {
+        "id": "d",
+        "text": "Basing it on your pet's name",
+        "why": "Personal details are among the first things an attacker tries."
+      }
+    ],
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explain": "Length and uniqueness matter most. Reuse and personal details make guessing and credential stuffing easy. A password manager makes long, unique passwords practical."
+  },
+  {
+    "id": "tpl-003",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.passwords"
+    ],
+    "difficulty": 2,
+    "source": "hand",
+    "reviewed": false,
+    "stem": "An attacker steals a list of leaked passwords from one site and tries them on many other sites. What is this attack called?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Credential stuffing"
+      },
+      {
+        "id": "b",
+        "text": "Phishing",
+        "why": "Phishing tricks a person into giving up a password; it does not replay a leaked list."
+      },
+      {
+        "id": "c",
+        "text": "Shoulder surfing",
+        "why": "That is watching someone type; no leaked list is involved."
+      },
+      {
+        "id": "d",
+        "text": "Tailgating",
+        "why": "That is following someone through a physical door."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "Credential stuffing replays leaked username and password pairs against other services, and it works because people reuse passwords. Unique passwords per site defeat it."
+  },
+  {
+    "id": "tpl-004",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.mfa"
+    ],
+    "difficulty": 1,
+    "source": "hand",
+    "reviewed": false,
+    "stem": "What makes a login multi-factor?",
+    "options": [
+      {
+        "id": "a",
+        "text": "It needs two or more different kinds of proof, such as a password and a code from your phone"
+      },
+      {
+        "id": "b",
+        "text": "It asks for a long password",
+        "why": "One long password is still a single factor (something you know)."
+      },
+      {
+        "id": "c",
+        "text": "It asks for the password twice",
+        "why": "Two entries of the same factor are still one factor."
+      },
+      {
+        "id": "d",
+        "text": "It locks the account after three wrong tries",
+        "why": "Lockout limits guessing but is not a second factor."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The factors are something you know, something you have and something you are. Multi-factor combines different kinds, so stealing a password alone is not enough.",
+    "references": [
+      "NIST SP 800-63B, Digital Identity Guidelines: Authentication and Lifecycle Management"
+    ]
+  },
+  {
+    "id": "tpl-005",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.mfa"
+    ],
+    "difficulty": 2,
+    "source": "hand",
+    "reviewed": false,
+    "stem": "A code generated by an authenticator app on your phone is which kind of factor?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Something you have"
+      },
+      {
+        "id": "b",
+        "text": "Something you know",
+        "why": "A password or PIN is something you know; the code comes from your device."
+      },
+      {
+        "id": "c",
+        "text": "Something you are",
+        "why": "That is a fingerprint, face or similar trait."
+      },
+      {
+        "id": "d",
+        "text": "Somewhere you are",
+        "why": "That is a location factor, not a code from an app."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The code proves you hold the enrolled device, so it is something you have. Pair it with a password (something you know) for two different factors."
+  },
+  {
+    "id": "tpl-006",
+    "type": "multi",
+    "concept_ids": [
+      "1.1.mfa"
+    ],
+    "difficulty": 2,
+    "source": "hand",
+    "reviewed": false,
+    "stem": "Which TWO pairs count as multi-factor authentication?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Password and a fingerprint"
+      },
+      {
+        "id": "b",
+        "text": "Password and a security question",
+        "why": "Both are something you know, so this is one factor used twice."
+      },
+      {
+        "id": "c",
+        "text": "Smart card and a PIN"
+      },
+      {
+        "id": "d",
+        "text": "Two different passwords",
+        "why": "Two passwords are still the same kind of factor."
+      }
+    ],
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explain": "Each correct pair mixes two different kinds: know plus are, and have plus know. Two things from the same kind are not multi-factor."
+  }
+]

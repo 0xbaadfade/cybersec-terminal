@@ -1,0 +1,5 @@
+Server:		10.20.0.2
+Address:	10.20.0.2#53
+
+corp.local	text = "v=spf1 ip4:10.20.0.0/24 -all"
+

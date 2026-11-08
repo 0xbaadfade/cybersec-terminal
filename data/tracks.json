@@ -1,0 +1,34 @@
+{
+  "legacy_track": "secplus-sy0-701",
+  "sections": [
+    { "id": "foundations", "title": "FOUNDATIONS", "tracks": [
+      { "id": "foundations", "title": "Foundations", "kind": "stub" }
+    ] },
+    { "id": "cert", "title": "CERTIFICATIONS", "tracks": [
+      { "id": "secplus-sy0-701", "title": "CompTIA Security+ SY0-701", "pack": "secplus-sy0-701",
+        "requires": [ { "track": "foundations", "percent": 60 } ] },
+      { "id": "netplus", "title": "CompTIA Network+",
+        "requires": [ { "track": "networking-fundamentals", "percent": 60 } ] },
+      { "id": "cysaplus", "title": "CompTIA CySA+",
+        "requires": [ { "track": "secplus-sy0-701", "percent": 60 } ] }
+    ] },
+    { "id": "skill", "title": "SKILLS", "tracks": [
+      { "id": "malware-analysis", "title": "Malware Analysis",
+        "requires": [ { "track": "binary-analysis", "percent": 60 } ] },
+      { "id": "binary-analysis", "title": "Binary Analysis",
+        "requires": [ { "track": "linux-cli", "percent": 60 } ] },
+      { "id": "binary-exploitation", "title": "Binary Exploitation", "pack": "binary-exploitation", "price": 1000,
+        "requires": [ { "track": "linux-cli", "percent": 60 }, { "track": "secplus-sy0-701", "percent": 60 } ] },
+      { "id": "wireless-security", "title": "Wireless Security", "pack": "wireless-security", "price": 600,
+        "requires": [ { "track": "secplus-sy0-701", "percent": 60 } ] },
+      { "id": "digital-forensics", "title": "Digital Forensics",
+        "requires": [ { "track": "secplus-sy0-701", "percent": 60 }, { "track": "linux-cli", "percent": 40 } ] },
+      { "id": "linux-cli", "title": "Linux Command Line", "pack": "linux-cli",
+        "requires": [ { "track": "foundations", "percent": 60 } ] },
+      { "id": "windows-cli", "title": "Windows Command Line", "pack": "windows-cli",
+        "requires": [ { "track": "foundations", "percent": 60 } ] },
+      { "id": "networking-fundamentals", "title": "Networking Fundamentals",
+        "requires": [ { "track": "foundations", "percent": 60 } ] }
+    ] }
+  ]
+}

@@ -1,0 +1,5 @@
+Server:		10.20.0.2
+Address:	10.20.0.2#53
+
+corp.local	nameserver = dns-01.corp.local.
+

@@ -1,0 +1,8 @@
+HTTP/1.1 301 Moved Permanently
+Date: DATE
+Server: Apache/2.4.6 (CentOS)
+X-Powered-By: PHP/5.4.16
+Location: https://web-03.corp.local/
+Content-Length: 80
+Content-Type: text/html; charset=iso-8859-1
+

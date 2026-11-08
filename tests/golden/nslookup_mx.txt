@@ -1,0 +1,5 @@
+Server:		10.20.0.2
+Address:	10.20.0.2#53
+
+corp.local	mail exchanger = 10 web-03.corp.local.
+

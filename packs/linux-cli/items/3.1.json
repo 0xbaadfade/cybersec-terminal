@@ -1,0 +1,506 @@
+[
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-08",
+    "concept_ids": [
+      "3.1.interfaces"
+    ],
+    "stem": "A secure-baseline checklist for workstations asks for the MAC address of the network card. What is analyst-ws's MAC address?",
+    "answer": {
+      "accept": [
+        "52:54:00:a3:7c:19"
+      ]
+    },
+    "explain": "ip link (or ip addr) shows link/ether 52:54:00:a3:7c:19 on eth0. Recording MAC addresses belongs to an asset inventory and a baseline: switch port security, DHCP reservations and network access control all key off it. A MAC address is easy to change, so it identifies a device for convenience, not for security."
+  },
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-09",
+    "concept_ids": [
+      "3.1.listening-ports"
+    ],
+    "stem": "One service on analyst-ws accepts connections only from the machine itself, not from the network. Which TCP port is it?",
+    "answer": {
+      "accept": [
+        "5432"
+      ]
+    },
+    "explain": "ss -tln shows 127.0.0.1:5432 (postgres): bound to the loopback address, so only local programs can connect. The other TCP listener, 0.0.0.0:22, is open to the network; scanning analyst-ws from outside shows port 22 and not 5432. Binding a service to loopback is a basic hardening step when only local programs need it."
+  },
+  {
+    "id": "lin-q-if-1",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.interfaces"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What is this workstation's IPv4 address and prefix length on eth0?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ip addr"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "127.0.0.1/8",
+        "why": "That is the loopback interface lo, only used inside this machine."
+      },
+      {
+        "id": "b",
+        "text": "10.20.0.255/24",
+        "why": "That is the broadcast address (brd) of the network."
+      },
+      {
+        "id": "c",
+        "text": "fe80::5054:ff:fea3:7c19/64",
+        "why": "That is the link-local IPv6 address, not IPv4."
+      },
+      {
+        "id": "d",
+        "text": "10.20.0.50/24"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "The inet line under eth0 is the IPv4 address: 10.20.0.50 with a /24 prefix, so the network is 10.20.0.0/24."
+  },
+  {
+    "id": "lin-q-if-2",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.interfaces"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which value is eth0's MAC address?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ip addr"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "52:54:00:a3:7c:19"
+      },
+      {
+        "id": "b",
+        "text": "ff:ff:ff:ff:ff:ff",
+        "why": "That is the link-layer broadcast address on the same line, not this card's address."
+      },
+      {
+        "id": "c",
+        "text": "00:00:00:00:00:00",
+        "why": "That is the loopback interface's placeholder address."
+      },
+      {
+        "id": "d",
+        "text": "10.20.0.255",
+        "why": "That is the IP broadcast address, not a MAC."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The link/ether line gives the card's MAC address; brd is the broadcast address. MAC addresses identify a card on the local network."
+  },
+  {
+    "id": "lin-q-if-3",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.interfaces"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Where does this machine send a packet for 8.8.8.8?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ip route"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Directly out eth0, to 8.8.8.8 itself with no gateway",
+        "why": "Only addresses in 10.20.0.0/24 are reached directly."
+      },
+      {
+        "id": "b",
+        "text": "To 10.20.0.1, the default gateway, out eth0"
+      },
+      {
+        "id": "c",
+        "text": "To 10.20.0.2, the DNS server, which forwards it on",
+        "why": "10.20.0.2 is not a gateway in this table."
+      },
+      {
+        "id": "d",
+        "text": "Nowhere: there is no route to 8.8.8.8 in the table",
+        "why": "The default route covers every address that has no more specific route."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "default via 10.20.0.1 is the route of last resort. Anything outside the local network goes to that router."
+  },
+  {
+    "id": "lin-q-if-4",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.interfaces"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the line '10.20.0.0/24 dev eth0 proto kernel scope link' tell you?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ip route"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "All traffic for any network must go through the gateway",
+        "why": "Only traffic with no more specific route uses the default gateway."
+      },
+      {
+        "id": "b",
+        "text": "The network 10.20.0.0/24 is blocked by the firewall",
+        "why": "A route says where to send packets, not whether they are allowed."
+      },
+      {
+        "id": "c",
+        "text": "Hosts in 10.20.0.0/24 are reached directly on eth0"
+      },
+      {
+        "id": "d",
+        "text": "eth0 is down, so the network is unreachable",
+        "why": "eth0 shows state UP in ip addr; this is a normal connected route."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "The kernel adds a connected route for the interface's own network. Packets for local hosts are delivered straight to them on that link."
+  },
+  {
+    "id": "lin-q-lis-1",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.listening-ports"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which of these services can other machines on the network reach?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ss -tln"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "PostgreSQL on port 5432, the database server",
+        "why": "It listens on 127.0.0.1, so only this machine can connect."
+      },
+      {
+        "id": "b",
+        "text": "Both services, SSH and PostgreSQL, from any host",
+        "why": "Only the one bound to 0.0.0.0 accepts outside connections."
+      },
+      {
+        "id": "c",
+        "text": "Neither service can be reached from the network",
+        "why": "Port 22 is bound to every interface."
+      },
+      {
+        "id": "d",
+        "text": "SSH on port 22, which listens on 0.0.0.0"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "The Local Address column shows where a service listens. 0.0.0.0 means all interfaces (reachable from the network); 127.0.0.1 means loopback only."
+  },
+  {
+    "id": "lin-q-lis-2",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.listening-ports"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the Local Address 127.0.0.1:5432 mean for the database?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ss -tln"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "It accepts connections only from this machine"
+      },
+      {
+        "id": "b",
+        "text": "It accepts connections from any host on the network",
+        "why": "That would be 0.0.0.0:5432."
+      },
+      {
+        "id": "c",
+        "text": "It runs as the root user instead of a service account",
+        "why": "The address says nothing about the account."
+      },
+      {
+        "id": "d",
+        "text": "It is blocked by the firewall for outside hosts",
+        "why": "Binding to loopback is a service setting, not a firewall rule."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "A service bound to the loopback address cannot be reached from the network. It is a simple way to reduce exposure for something only local programs need."
+  },
+  {
+    "id": "lin-q-lis-3",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.listening-ports"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What do the options in ss -tln stand for?",
+    "options": [
+      {
+        "id": "a",
+        "text": "TCP sockets, in all states, with the timers shown on each",
+        "why": "-l limits the list to listening sockets; timers are -o."
+      },
+      {
+        "id": "b",
+        "text": "TCP sockets, listening only, shown as numbers not names"
+      },
+      {
+        "id": "c",
+        "text": "Traffic counters, taken over the last number of minutes",
+        "why": "ss shows sockets, not traffic counters."
+      },
+      {
+        "id": "d",
+        "text": "Terminal output, long format, with no header line at the top",
+        "why": "The letters are t for TCP, l for listening and n for numeric."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "ss -tln: t = TCP, l = listening, n = numeric ports and addresses. Add -p (with privileges) to see which process owns each socket."
+  },
+  {
+    "id": "lin-q-lis-4",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.listening-ports"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "A database is used only by a program on the same machine. Where should it listen to limit exposure?",
+    "options": [
+      {
+        "id": "a",
+        "text": "0.0.0.0",
+        "why": "That accepts connections on every interface, including from the network."
+      },
+      {
+        "id": "b",
+        "text": "The default gateway's address",
+        "why": "A service binds to its own addresses, not to the router's."
+      },
+      {
+        "id": "c",
+        "text": "127.0.0.1"
+      },
+      {
+        "id": "d",
+        "text": "10.20.0.255",
+        "why": "That is the broadcast address; a service does not listen there."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Binding to the loopback address is part of hardening: a service nobody remote needs should not be reachable remotely."
+  },
+  {
+    "id": "lin-q-con-1",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.connections"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What is the state of the connection to 10.20.0.10 port 22, and what is it?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ss -tn"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "TIME-WAIT: a closed session that is being held briefly",
+        "why": "TIME-WAIT is the line to port 80, not port 22."
+      },
+      {
+        "id": "b",
+        "text": "LISTEN: an SSH server on this workstation waiting for a client",
+        "why": "LISTEN would be a listening socket, and these are connections."
+      },
+      {
+        "id": "c",
+        "text": "CLOSED: a failed attempt that never connected to web-03",
+        "why": "ss lists live connections; a failed attempt would not be ESTAB."
+      },
+      {
+        "id": "d",
+        "text": "ESTAB: an open SSH session from this workstation to web-03"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "ESTAB (established) means both sides have an open TCP connection. Port 22 is SSH, and 10.20.0.10 is web-03."
+  },
+  {
+    "id": "lin-q-con-2",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.connections"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the TIME-WAIT line to port 80 show?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ss -tn"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "A web connection that just closed and is held briefly by the OS"
+      },
+      {
+        "id": "b",
+        "text": "An active download of a web page that is still running",
+        "why": "An active transfer would be ESTAB."
+      },
+      {
+        "id": "c",
+        "text": "A web server listening on this host for new web requests from clients",
+        "why": "Listeners show up with ss -l, and this is a connection to web-03."
+      },
+      {
+        "id": "d",
+        "text": "A blocked connection that the firewall refused to allow",
+        "why": "TIME-WAIT is a normal state after a connection closes."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "After one side closes, TCP lingers in TIME-WAIT so late packets are not mistaken for a new connection. It is normal and clears by itself."
+  },
+  {
+    "id": "lin-q-con-3",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.connections"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Who chose the port number 51514 in the first line?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "ss -tn"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "web-03: it is the port number the server uses for SSH",
+        "why": "The server's side is port 22."
+      },
+      {
+        "id": "b",
+        "text": "This workstation: a temporary (ephemeral) client port"
+      },
+      {
+        "id": "c",
+        "text": "The DNS server assigned it when the name resolved",
+        "why": "DNS does not assign ports."
+      },
+      {
+        "id": "d",
+        "text": "It is the port registered to the SSH service on web-03",
+        "why": "SSH's well-known port is 22; 51514 is a short-lived client port."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "A client opens a connection from a high, temporary port to the server's well-known port. The pair (address and port on each side) identifies the connection."
+  },
+  {
+    "id": "lin-q-con-4",
+    "type": "mcq",
+    "concept_ids": [
+      "3.1.connections"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which command lists current TCP connections rather than listeners?",
+    "options": [
+      {
+        "id": "a",
+        "text": "ss -tln",
+        "why": "-l limits the list to listening sockets."
+      },
+      {
+        "id": "b",
+        "text": "ip addr",
+        "why": "That shows addresses on the interfaces."
+      },
+      {
+        "id": "c",
+        "text": "ss -tn"
+      },
+      {
+        "id": "d",
+        "text": "ping -c 4 web-03",
+        "why": "ping tests reachability; it does not list connections."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Without -l, ss shows sockets that are connected. Together with -l it can show both views of the same machine."
+  }
+]

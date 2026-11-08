@@ -1,0 +1,353 @@
+[
+  {
+    "type": "terminal",
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-office-01",
+    "id": "win-m-01",
+    "concept_ids": [
+      "1.1.ipconfig"
+    ],
+    "stem": "This is a Windows workstation. What is its default gateway?",
+    "answer": {
+      "accept": [
+        "192.168.10.1",
+        "gw-01",
+        "gw-01.office.lan"
+      ]
+    },
+    "explain": "ipconfig lists the Ethernet adapter's settings; the Default Gateway line is 192.168.10.1 (gw-01), the router every packet for another network is sent to. ipconfig is the Windows counterpart of ip addr and ip route. Recording the gateway, address and DNS servers belongs to a workstation's configuration baseline; a wrong gateway or DNS server is a common sign of tampering or a rogue DHCP server."
+  },
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-office-01",
+    "id": "win-m-02",
+    "concept_ids": [
+      "1.1.physical-address"
+    ],
+    "stem": "Asset inventories and switch port security identify a network card by its physical (MAC) address. What is this workstation's physical address? (Windows writes it with dashes; either form is accepted.)",
+    "answer": {
+      "accept": [
+        "52-54-00-5e-1c-88",
+        "52:54:00:5e:1c:88"
+      ]
+    },
+    "explain": "ipconfig /all adds the details plain ipconfig leaves out: Physical Address 52-54-00-5E-1C-88, the DHCP server, the lease times and the DNS servers. A MAC address is easy to change, so it is a convenient identifier for inventories and port security but not proof of identity."
+  },
+  {
+    "id": "win-q-ip-1",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ipconfig"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which line shows the router this PC uses to reach other networks?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ipconfig"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Default Gateway: 192.168.10.1"
+      },
+      {
+        "id": "b",
+        "text": "IPv4 Address: 192.168.10.50",
+        "why": "That is this PC's own address."
+      },
+      {
+        "id": "c",
+        "text": "Subnet Mask: 255.255.255.0",
+        "why": "The mask says which addresses are local, not where the router is."
+      },
+      {
+        "id": "d",
+        "text": "Connection-specific DNS Suffix: office.lan",
+        "why": "That is the domain suffix added to short names."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The default gateway is where packets for other networks are sent. A wrong gateway is a common sign of misconfiguration or a rogue DHCP server."
+  },
+  {
+    "id": "win-q-ip-2",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ipconfig"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the subnet mask 255.255.255.0 tell you?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ipconfig"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "The PC can only talk to 255 hosts in total, no matter where they are",
+        "why": "The mask limits the local network, not the total number of hosts you can reach."
+      },
+      {
+        "id": "b",
+        "text": "The first three numbers name the network, so 192.168.10.x is local"
+      },
+      {
+        "id": "c",
+        "text": "The router's address is 255.255.255.0, shown on the gateway line",
+        "why": "The router is the default gateway line."
+      },
+      {
+        "id": "d",
+        "text": "The PC is on a network of 255 separate subnets, one per host number",
+        "why": "The mask describes one network (a /24)."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "255.255.255.0 is the same as /24: addresses that match in the first three octets are on the local network and reached directly."
+  },
+  {
+    "id": "win-q-ip-3",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ipconfig"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which lines show that this PC got its address automatically?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ipconfig /all"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "Node Type: Hybrid, the NetBIOS name resolution setting",
+        "why": "Node type is how NetBIOS names are resolved."
+      },
+      {
+        "id": "b",
+        "text": "Host Name: ws-win, the name the computer calls itself",
+        "why": "The host name is the computer's name."
+      },
+      {
+        "id": "c",
+        "text": "DHCP Enabled: Yes, with the DHCP Server 192.168.10.1"
+      },
+      {
+        "id": "d",
+        "text": "Physical Address: 52-54-00-5E-1C-88, the address of the network card",
+        "why": "The physical address is fixed in the network card."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "DHCP Enabled and the lease lines show the address was leased from a DHCP server. The readme on this PC says gateway and DNS come from DHCP too."
+  },
+  {
+    "id": "win-q-ip-4",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.ipconfig"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which line shows the server this PC asks to resolve names?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ipconfig /all"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "DHCP Server: 192.168.10.1",
+        "why": "That hands out addresses, it does not answer DNS questions."
+      },
+      {
+        "id": "b",
+        "text": "Default Gateway: 192.168.10.1",
+        "why": "That is the router."
+      },
+      {
+        "id": "c",
+        "text": "Primary Dns Suffix: (blank)",
+        "why": "A suffix is a domain name, not a server."
+      },
+      {
+        "id": "d",
+        "text": "DNS Servers: 192.168.10.5"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "DNS Servers lists the resolvers in use: 192.168.10.5. nslookup asks the same server unless you name another."
+  },
+  {
+    "id": "win-q-mac-1",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.physical-address"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What is this PC's physical (MAC) address?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ipconfig /all"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "52-54-00-5E-1C-88"
+      },
+      {
+        "id": "b",
+        "text": "192.168.10.50",
+        "why": "That is the IPv4 address."
+      },
+      {
+        "id": "c",
+        "text": "00-01-00-01-5F-05-94-9B-03-EF-84-60-48-32",
+        "why": "That is the DHCPv6 DUID, a client identifier, not the MAC."
+      },
+      {
+        "id": "d",
+        "text": "fe80::87e6:e3e8:faaf:621b",
+        "why": "That is the link-local IPv6 address."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "Windows writes MAC addresses with dashes on the Physical Address line. The DUID looks similar but is a different identifier."
+  },
+  {
+    "id": "win-q-mac-2",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.physical-address"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Why do switch port security and asset inventories use MAC addresses?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A MAC address never changes and cannot be faked, so it proves which device it is",
+        "why": "MAC addresses can be spoofed, so they are a weak control on their own."
+      },
+      {
+        "id": "b",
+        "text": "A MAC address names the network card, so a switch can allow only known devices"
+      },
+      {
+        "id": "c",
+        "text": "A MAC address shows who the user is, so the switch can allow only that person",
+        "why": "It identifies a card, not a person."
+      },
+      {
+        "id": "d",
+        "text": "A MAC address is routed across the internet, so it can be checked from anywhere",
+        "why": "MACs only matter on the local network segment."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "MAC addresses make a convenient device identifier, but spoofing is easy, so they support a defence rather than replace authentication."
+  },
+  {
+    "id": "win-q-mac-3",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.physical-address"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which command shows the physical address on a Windows PC?",
+    "options": [
+      {
+        "id": "a",
+        "text": "ipconfig",
+        "why": "Plain ipconfig leaves out the physical address."
+      },
+      {
+        "id": "b",
+        "text": "ipconfig /release",
+        "why": "That gives up the DHCP lease."
+      },
+      {
+        "id": "c",
+        "text": "ipconfig /all"
+      },
+      {
+        "id": "d",
+        "text": "ipconfig /flushdns",
+        "why": "That clears the local DNS cache."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "ipconfig on its own prints a short summary; /all adds the host name, physical address, DHCP and DNS details."
+  },
+  {
+    "id": "win-q-mac-4",
+    "type": "mcq",
+    "concept_ids": [
+      "1.1.physical-address"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "How far does the MAC address of this PC travel?",
+    "show": {
+      "lab": "lab-office-01",
+      "command": "ipconfig /all"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "All the way to the web server on the internet, unchanged",
+        "why": "Each router rewrites the link-layer addresses."
+      },
+      {
+        "id": "b",
+        "text": "Only inside the PC, between the network card and the system",
+        "why": "It is used on the wire to reach the switch and the gateway."
+      },
+      {
+        "id": "c",
+        "text": "To the DNS server only, and not to anything else on the network",
+        "why": "It is used for all local delivery, not just DNS."
+      },
+      {
+        "id": "d",
+        "text": "Only across the local segment; each router replaces it"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "Layer 2 addresses are for the next hop on the local link; IP addresses are the end-to-end ones."
+  }
+]

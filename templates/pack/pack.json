@@ -1,0 +1,35 @@
+{
+  "id": "my-first-pack",
+  "title": "My First Pack",
+  "short": "MY PACK",
+  "version": 1,
+  "exam": {
+    "questions": 6,
+    "minutes": 6,
+    "pass_percent": 70
+  },
+  "domains": [
+    {
+      "id": "1",
+      "title": "Accounts and logins",
+      "weight": 100
+    }
+  ],
+  "objectives": [
+    {
+      "id": "1.1",
+      "domain": "1",
+      "title": "Protect an account",
+      "concepts": [
+        {
+          "id": "1.1.passwords",
+          "title": "Password storage and strength"
+        },
+        {
+          "id": "1.1.mfa",
+          "title": "Multi-factor authentication"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+
+; <<>> DiG 9.20.30 <<>> example.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: ID
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: C (good)
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; Query time: Q msec
+;; SERVER: 10.20.0.2#53(10.20.0.2) (UDP)
+;; WHEN: W
+;; MSG SIZE  rcvd: 68
+

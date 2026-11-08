@@ -1,0 +1,100 @@
+{
+  "id": "linux-cli",
+  "title": "Linux Command Line",
+  "short": "LINUX CLI",
+  "version": 1,
+  "rounds_include_labs": true,
+  "exam": { "questions": 30, "minutes": 30, "pass_percent": 70 },
+  "domains": [
+    {
+      "id": "1",
+      "title": "Reachability",
+      "weight": 25
+    },
+    {
+      "id": "2",
+      "title": "Names and DNS",
+      "weight": 25
+    },
+    {
+      "id": "3",
+      "title": "Your own machine",
+      "weight": 25
+    },
+    {
+      "id": "4",
+      "title": "Web servers",
+      "weight": 25
+    }
+  ],
+  "objectives": [
+    {
+      "id": "1.1",
+      "domain": "1",
+      "title": "Find hosts and see what they run",
+      "concepts": [
+        {
+          "id": "1.1.ping",
+          "title": "Ping and reachability"
+        },
+        {
+          "id": "1.1.port-scan",
+          "title": "Port scans"
+        },
+        {
+          "id": "1.1.service-versions",
+          "title": "Service versions"
+        }
+      ]
+    },
+    {
+      "id": "2.1",
+      "domain": "2",
+      "title": "Look up and read DNS answers",
+      "concepts": [
+        {
+          "id": "2.1.forward-lookup",
+          "title": "Looking up a name"
+        },
+        {
+          "id": "2.1.record-types",
+          "title": "Record types"
+        },
+        {
+          "id": "2.1.reverse-lookup",
+          "title": "Reverse lookups"
+        }
+      ]
+    },
+    {
+      "id": "3.1",
+      "domain": "3",
+      "title": "Inspect your own host",
+      "concepts": [
+        {
+          "id": "3.1.interfaces",
+          "title": "Addresses, MAC and routes"
+        },
+        {
+          "id": "3.1.listening-ports",
+          "title": "Listening services"
+        },
+        {
+          "id": "3.1.connections",
+          "title": "Connections"
+        }
+      ]
+    },
+    {
+      "id": "4.1",
+      "domain": "4",
+      "title": "Talk to a web server",
+      "concepts": [
+        {
+          "id": "4.1.http-headers",
+          "title": "Status codes and headers"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=T ms
+64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=T ms
+
+--- localhost ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time Tms
+rtt min/avg/max/mdev = R ms

@@ -1,0 +1,220 @@
+{
+  "ping": {
+    "summary": "Send ICMP echo requests to see whether a host answers and how long replies take.",
+    "usage": "ping [-c count] [-i seconds] [-W seconds] [-s bytes] [-n] [-q] <host>",
+    "flags": [
+      [
+        "-c N",
+        "stop after N requests (without it the simulator sends 4, then prints ^C)"
+      ],
+      [
+        "-i s",
+        "seconds between requests"
+      ],
+      [
+        "-W s",
+        "seconds to wait for each reply"
+      ],
+      [
+        "-s bytes",
+        "payload size"
+      ],
+      [
+        "-n",
+        "numeric output: no host names"
+      ],
+      [
+        "-q",
+        "quiet: statistics only"
+      ]
+    ],
+    "note": "No reply does not mean the host is down: firewalls often drop ICMP, so a ping sweep can undercount.",
+    "windows": {
+      "usage": "ping [-n count] [-l bytes] [-w ms] <host>",
+      "flags": [
+        [
+          "-n N",
+          "send N requests (the default is 4)"
+        ],
+        [
+          "-l bytes",
+          "payload size (the default is 32)"
+        ],
+        [
+          "-w ms",
+          "milliseconds to wait for each reply"
+        ]
+      ],
+      "note": "No reply does not mean the host is down: firewalls often drop ICMP, so a ping sweep can undercount. Note that Windows counts \"Destination host unreachable\" replies from your own address as received."
+    },
+    "concepts": [
+      "3.1.ping"
+    ]
+  },
+  "netstat": {
+    "summary": "The older tool for the same job as ss.",
+    "usage": "netstat [-t] [-u] [-l] [-a] [-n] [-p]",
+    "flags": [
+      [
+        "-t / -u",
+        "TCP / UDP only (default: both)"
+      ],
+      [
+        "-l",
+        "listening sockets only"
+      ],
+      [
+        "-a",
+        "all sockets"
+      ],
+      [
+        "-n",
+        "numbers, not names"
+      ],
+      [
+        "-p",
+        "process (only for sockets you own)"
+      ]
+    ],
+    "note": "Many systems now ship ss instead of netstat; the information is the same.",
+    "windows": {
+      "summary": "List the connections and listening ports of this workstation, with the owning process id.",
+      "usage": "netstat -an | -ano   (-n is required here)",
+      "flags": [
+        [
+          "-a",
+          "all: listening ports as well as established connections"
+        ],
+        [
+          "-n",
+          "numeric addresses and ports"
+        ],
+        [
+          "-o",
+          "add the PID column: the process that owns the socket"
+        ]
+      ],
+      "note": "State LISTENING with foreign address 0.0.0.0:0 is a service waiting for connections; 0.0.0.0 in the local address means every interface, 127.0.0.1 only this machine. -b (program names) needs an administrator and is refused."
+    },
+    "concepts": [
+      "2.1.listening-ports",
+      "2.1.connections"
+    ]
+  },
+  "nslookup": {
+    "summary": "A quick name lookup: the server asked, then the answer (one question per command here).",
+    "usage": "nslookup [-type=A|AAAA|CNAME|MX|NS|PTR|SOA|TXT] <name or address> [server address]",
+    "flags": [
+      [
+        "-type=T",
+        "record type to ask for"
+      ],
+      [
+        "<address>",
+        "an address is looked up in reverse (PTR)"
+      ],
+      [
+        "server",
+        "the address of the name server to ask"
+      ]
+    ],
+    "note": "A name without a dot gets the search domain added first (web-03 becomes web-03.corp.local). Interactive mode is not available in the simulator.",
+    "windows": {
+      "usage": "nslookup [-type=A|AAAA|CNAME|MX|NS|PTR|SOA|TXT] <name or address> [server address]",
+      "note": "On Windows the server is shown by its name. A name without a dot gets the search domain added first. Interactive mode is not available in the simulator."
+    },
+    "concepts": [
+      "3.1.nslookup"
+    ]
+  },
+  "curl": {
+    "summary": "Fetch a web page, or just its headers, and see what the server announces about itself.",
+    "usage": "curl [-I] [-i] [-s] [-S] [-m seconds] [--connect-timeout seconds] <http://host[:port]/path>",
+    "flags": [
+      [
+        "-I",
+        "send HEAD and show only the response headers"
+      ],
+      [
+        "-i",
+        "show the headers and then the page"
+      ],
+      [
+        "-s",
+        "silent: no error messages (-S shows them again)"
+      ],
+      [
+        "-m s",
+        "give up after s seconds"
+      ],
+      [
+        "--connect-timeout s",
+        "give up connecting after s seconds"
+      ]
+    ],
+    "note": "Headers such as Server and X-Powered-By tell an attacker the software and its version. Plain http only: https, -L (follow redirects) and -v are not simulated.",
+    "concepts": [
+      "4.1.curl-headers"
+    ]
+  },
+  "ipconfig": {
+    "summary": "Show this workstation's network settings: address, mask, gateway, DNS servers, MAC.",
+    "usage": "ipconfig [/all]",
+    "flags": [
+      [
+        "(none)",
+        "address, subnet mask and default gateway of each adapter"
+      ],
+      [
+        "/all",
+        "adds host name, physical (MAC) address, DHCP details and DNS servers"
+      ]
+    ],
+    "note": "The Windows counterpart of ip addr and ip route. /release, /renew and /flushdns change the system and are not available in the simulator.",
+    "concepts": [
+      "1.1.ipconfig",
+      "1.1.physical-address"
+    ]
+  },
+  "findstr": {
+    "summary": "Search text for lines containing a word (the Windows grep).",
+    "usage": "findstr [/i] [/v] [/n] [/c:\"text\"] <word> [file]",
+    "flags": [
+      [
+        "/i",
+        "ignore case"
+      ],
+      [
+        "/v",
+        "print the lines that do NOT match"
+      ],
+      [
+        "/n",
+        "number the lines"
+      ],
+      [
+        "/c:\"a b\"",
+        "search for the exact phrase"
+      ]
+    ],
+    "note": "Use it behind a pipe: netstat -ano | findstr 3389. Several words separated by spaces match any of them. Searches are literal in the simulator.",
+    "concepts": [
+      "4.1.reading-files"
+    ]
+  },
+  "type": {
+    "summary": "Print a file.",
+    "usage": "type <file>",
+    "flags": [],
+    "note": "The Windows counterpart of cat. It reads the workstation's own files only.",
+    "concepts": [
+      "4.1.reading-files"
+    ]
+  },
+  "hostname": {
+    "summary": "Print this workstation's name.",
+    "usage": "hostname",
+    "flags": [],
+    "note": ""
+  }
+}

@@ -1,0 +1,527 @@
+[
+  {
+    "type": "terminal",
+    "difficulty": 3,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-05",
+    "concept_ids": [
+      "2.1.forward-lookup"
+    ],
+    "stem": "analyst-ws asks a DNS server whenever it looks up a name. Which host is that DNS server? (Give its host name; the lookup tools show its address.)",
+    "answer": {
+      "accept": [
+        "dns-01",
+        "dns-01.corp.local"
+      ]
+    },
+    "explain": "nslookup web-03 (or dig web-03.corp.local) names the server that answered: 10.20.0.2. A reverse lookup of that address (dig -x 10.20.0.2) gives dns-01.corp.local. Knowing which resolver a machine uses matters when DNS is filtered, logged or poisoned: whoever runs the resolver sees, and can alter, every name the machine looks up."
+  },
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-06",
+    "concept_ids": [
+      "2.1.record-types"
+    ],
+    "stem": "www.corp.local is an alias, not a server of its own. Which host name does it really point to?",
+    "answer": {
+      "accept": [
+        "web-03.corp.local",
+        "web-03"
+      ]
+    },
+    "explain": "dig www.corp.local shows a CNAME record (www.corp.local -> web-03.corp.local) followed by the A record of web-03. A CNAME is an alias: asking for the alias returns the real name and then that name's address. When a finding is reported against www, this is how you learn which machine to fix."
+  },
+  {
+    "type": "terminal",
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "lab": "lab-dmz-01",
+    "id": "lin-m-07",
+    "concept_ids": [
+      "2.1.reverse-lookup"
+    ],
+    "stem": "An unknown device at 10.20.0.30 showed up in a scan. What host name does DNS give for that address (a reverse lookup)?",
+    "answer": {
+      "accept": [
+        "printer-01.corp.local",
+        "printer-01"
+      ]
+    },
+    "explain": "dig -x 10.20.0.30 (or nslookup 10.20.0.30) asks for the PTR record of 30.0.20.10.in-addr.arpa and gets printer-01.corp.local. Reverse DNS turns the addresses in scan results into names, which helps decide whether a device is expected on the network. A missing PTR record (NXDOMAIN) proves nothing either way: reverse zones are often incomplete."
+  },
+  {
+    "id": "lin-r-02",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.record-types"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Read the DNS answer below. What does it tell you about www.corp.local?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "dig www.corp.local"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "It is a CNAME alias of web-03.corp.local, so the address is web-03's"
+      },
+      {
+        "id": "b",
+        "text": "It is a separate server with its own address, 10.20.0.10",
+        "why": "The address is web-03's: the CNAME line shows www points at web-03.corp.local."
+      },
+      {
+        "id": "c",
+        "text": "The name does not exist in the zone, so the query failed",
+        "why": "The status is NOERROR and the answer section has records; a missing name shows NXDOMAIN."
+      },
+      {
+        "id": "d",
+        "text": "The answer came from another server's cache, not from the zone's owner",
+        "why": "The aa flag in the header means authoritative: the server answered from its own zone."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The ANSWER SECTION holds two records: a CNAME (www.corp.local to web-03.corp.local) and then the A record of web-03. The flags line shows aa (authoritative answer) and the status is NOERROR. An alias lets one server answer to several names; findings about www are findings about web-03."
+  },
+  {
+    "id": "lin-q-fwd-1",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.forward-lookup"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What address does this lookup return for web-03?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nslookup web-03"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "10.20.0.10"
+      },
+      {
+        "id": "b",
+        "text": "10.20.0.2",
+        "why": "That is the DNS server that answered (the Server line), not web-03."
+      },
+      {
+        "id": "c",
+        "text": "10.20.0.50",
+        "why": "That is this workstation's own address."
+      },
+      {
+        "id": "d",
+        "text": "10.20.0.1",
+        "why": "That is the gateway, which is not the host that was looked up."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "The Server and Address lines at the top name the DNS server asked; the Name and Address lines below are the answer: web-03.corp.local is 10.20.0.10."
+  },
+  {
+    "id": "lin-q-fwd-2",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.forward-lookup"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "In this dig output, what does the line in the ANSWER SECTION tell you?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "dig web-03.corp.local"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "web-03.corp.local is an alias of another host name defined in the same zone",
+        "why": "An alias would be a CNAME record; this is an A record."
+      },
+      {
+        "id": "b",
+        "text": "web-03.corp.local is IPv4 address 10.20.0.10, cacheable for 3600 seconds"
+      },
+      {
+        "id": "c",
+        "text": "The name does not exist, so the server returned an error status",
+        "why": "The status is NOERROR and an answer was returned."
+      },
+      {
+        "id": "d",
+        "text": "10.20.0.10 is the DNS server that answered this query for us",
+        "why": "The DNS server is shown on the SERVER line near the end."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "The A record maps a name to an IPv4 address. 3600 is the TTL: how long, in seconds, resolvers may cache the answer."
+  },
+  {
+    "id": "lin-q-fwd-3",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.forward-lookup"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which line of this dig output shows the DNS server that answered?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "dig web-03.corp.local"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": ";; QUESTION SECTION:",
+        "why": "That section shows what was asked, not who answered."
+      },
+      {
+        "id": "b",
+        "text": ";; Query time: 2 msec",
+        "why": "That is how long the query took."
+      },
+      {
+        "id": "c",
+        "text": ";; SERVER: 10.20.0.2#53(10.20.0.2) (UDP)"
+      },
+      {
+        "id": "d",
+        "text": ";; flags: qr aa rd ra; QUERY: 1, ANSWER: 1",
+        "why": "Those are header flags and counts for the reply."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "SERVER names the resolver that gave the answer and the port (53) and transport (UDP) used. It is the first place to look when an answer seems wrong."
+  },
+  {
+    "id": "lin-q-fwd-4",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.forward-lookup"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the +short option do for dig?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "dig +short www.corp.local"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "It asks the server for a shorter TTL on the answers",
+        "why": "+short changes only how the result is printed."
+      },
+      {
+        "id": "b",
+        "text": "It looks up only the first record of a name and stops",
+        "why": "It prints every answer, just without the extra text."
+      },
+      {
+        "id": "c",
+        "text": "It skips the DNS server and uses the local cache instead",
+        "why": "The query is sent as usual; only the output is shorter."
+      },
+      {
+        "id": "d",
+        "text": "It prints only the answers, without headers or sections"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "dig +short is handy in scripts and quick checks. Here it shows the CNAME target and then its address."
+  },
+  {
+    "id": "lin-q-rec-1",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.record-types"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does this TXT record publish?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "dig corp.local TXT"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "An SPF policy: which addresses may send email for corp.local"
+      },
+      {
+        "id": "b",
+        "text": "The address of the mail server that accepts email for the domain",
+        "why": "That would be an MX record, with the server's name."
+      },
+      {
+        "id": "c",
+        "text": "The names of the name servers that are authoritative for the domain",
+        "why": "Name servers are published in NS records."
+      },
+      {
+        "id": "d",
+        "text": "An alias that points the domain at the web server's name",
+        "why": "Aliases are CNAME records."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "SPF is published as a TXT record. v=spf1 ip4:10.20.0.0/24 -all means mail from that range is allowed and everything else should be rejected. It helps against forged senders."
+  },
+  {
+    "id": "lin-q-rec-2",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.record-types"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which DNS record type maps a name to an IPv4 address?",
+    "options": [
+      {
+        "id": "a",
+        "text": "AAAA",
+        "why": "AAAA holds an IPv6 address."
+      },
+      {
+        "id": "b",
+        "text": "A"
+      },
+      {
+        "id": "c",
+        "text": "PTR",
+        "why": "PTR maps an address back to a name (reverse lookup)."
+      },
+      {
+        "id": "d",
+        "text": "CNAME",
+        "why": "CNAME makes one name an alias of another."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "A = IPv4 address, AAAA = IPv6 address, CNAME = alias, PTR = reverse, MX = mail, NS = name servers, TXT = free text such as SPF."
+  },
+  {
+    "id": "lin-q-rec-3",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.record-types"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which record type tells other servers where to deliver email for a domain?",
+    "options": [
+      {
+        "id": "a",
+        "text": "TXT",
+        "why": "TXT can carry mail policy such as SPF, but it does not say where to deliver mail."
+      },
+      {
+        "id": "b",
+        "text": "PTR",
+        "why": "PTR is for reverse lookups."
+      },
+      {
+        "id": "c",
+        "text": "MX"
+      },
+      {
+        "id": "d",
+        "text": "A",
+        "why": "A maps a name to an address; it does not mark a mail server."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "MX (mail exchanger) records name the servers that accept mail for the domain, with a priority."
+  },
+  {
+    "id": "lin-q-rev-1",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.reverse-lookup"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "What does the answer say about 10.20.0.30?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "dig -x 10.20.0.30"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "It is an alias of web-03, the web server",
+        "why": "The answer is a PTR record naming printer-01.corp.local; nothing mentions web-03."
+      },
+      {
+        "id": "b",
+        "text": "It does not have a name registered in DNS",
+        "why": "The status is NOERROR and a PTR answer is returned."
+      },
+      {
+        "id": "c",
+        "text": "It is the DNS server that answered",
+        "why": "The DNS server is shown on the SERVER line: 10.20.0.2."
+      },
+      {
+        "id": "d",
+        "text": "Its name is printer-01.corp.local"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "A reverse lookup (dig -x) asks for the PTR record of an address. Here it returns printer-01.corp.local."
+  },
+  {
+    "id": "lin-q-rev-2",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.reverse-lookup"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Why would an analyst run a reverse lookup on an unknown address found in a scan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The name its owner gave it hints at what the device is"
+      },
+      {
+        "id": "b",
+        "text": "It shows which user is currently logged in to the device",
+        "why": "DNS records name addresses, not users."
+      },
+      {
+        "id": "c",
+        "text": "It lists every open port and the version of each service",
+        "why": "That is what a port scan does."
+      },
+      {
+        "id": "d",
+        "text": "It proves the device is safe because it has a name",
+        "why": "A name says nothing about safety, and PTR records can be wrong."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "Names like printer-01 or cam-01 tell you a lot quickly. Remember it is only a hint: whoever controls the zone controls the name."
+  },
+  {
+    "id": "lin-q-rev-3",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.reverse-lookup"
+    ],
+    "difficulty": 2,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "The answer below shows 10.0.20.10.in-addr.arpa for the address 10.20.0.10. Why are the numbers backwards?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "nslookup 10.20.0.10"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "The address was mistyped, so dig reversed the octets while trying to correct it",
+        "why": "The address typed was 10.20.0.10; the reversal is how reverse lookups are named."
+      },
+      {
+        "id": "b",
+        "text": "Reverse zones list octets backwards so each network owner controls its branch"
+      },
+      {
+        "id": "c",
+        "text": "To hide the address from attackers, since reversed numbers are harder to read",
+        "why": "It hides nothing; it is a naming rule."
+      },
+      {
+        "id": "d",
+        "text": "The host is on the other side of the gateway, so its path runs in reverse",
+        "why": "Location has nothing to do with it."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "DNS names get more specific from right to left, while IP addresses get more specific from left to right. Reversing the octets makes the network part the 'parent' name."
+  },
+  {
+    "id": "lin-q-rev-4",
+    "type": "mcq",
+    "concept_ids": [
+      "2.1.reverse-lookup"
+    ],
+    "difficulty": 1,
+    "source": "ai",
+    "reviewed": false,
+    "stem": "Which record type does a reverse lookup return?",
+    "show": {
+      "lab": "lab-dmz-01",
+      "command": "dig -x 10.20.0.30"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": "A",
+        "why": "A records go from a name to an address, the forward direction."
+      },
+      {
+        "id": "b",
+        "text": "CNAME",
+        "why": "CNAME records are aliases."
+      },
+      {
+        "id": "c",
+        "text": "PTR"
+      },
+      {
+        "id": "d",
+        "text": "TXT",
+        "why": "TXT records carry free text."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "The QUESTION section shows 30.0.20.10.in-addr.arpa asked for IN PTR, and the answer is a PTR record."
+  }
+]

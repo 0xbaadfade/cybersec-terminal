@@ -1,0 +1,4 @@
+Starting Nmap 7.99 ( https://nmap.org ) at D
+Failed to resolve "nosuchhost.invalid".
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in Ts seconds

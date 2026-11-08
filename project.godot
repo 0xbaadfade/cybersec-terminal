@@ -1,0 +1,30 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="Cybersec Terminal"
+run/main_scene="res://src/view/main.tscn"
+config/features=PackedStringArray("4.6")
+
+[autoload]
+
+; Data loads packs/, Game owns the profile store and the command router.
+Data="*res://src/game/data.gd"
+Game="*res://src/game/game.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
+[rendering]
+
+; The compatibility renderer runs on weak integrated GPUs and in the browser.
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

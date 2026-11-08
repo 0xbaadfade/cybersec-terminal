@@ -1,0 +1,23 @@
+
+; <<>> DiG 9.20.30 <<>> corp.local TXT
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ID
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: C (good)
+;; QUESTION SECTION:
+;corp.local.			IN	TXT
+
+;; ANSWER SECTION:
+corp.local.		3600	IN	TXT	"v=spf1 ip4:10.20.0.0/24 -all"
+
+;; Query time: Q msec
+;; SERVER: 10.20.0.2#53(10.20.0.2) (UDP)
+;; WHEN: W
+;; MSG SIZE  rcvd: 108
+

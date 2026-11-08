@@ -1,0 +1,2 @@
+Starting Nmap 7.99 ( https://nmap.org ) at D
+Nmap done: 1 IP address (1 host up) scanned in Ts seconds

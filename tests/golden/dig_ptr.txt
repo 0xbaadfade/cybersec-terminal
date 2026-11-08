@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.20.30 <<>> -x 10.20.0.30
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ID
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: C (good)
+;; QUESTION SECTION:
+;30.0.20.10.in-addr.arpa.	IN	PTR
+
+;; ANSWER SECTION:
+30.0.20.10.in-addr.arpa. 3600	IN	PTR	printer-01.corp.local.
+
+;; Query time: Q msec
+;; SERVER: 10.20.0.2#53(10.20.0.2) (UDP)
+;; WHEN: W
+;; MSG SIZE  rcvd: 115
+
