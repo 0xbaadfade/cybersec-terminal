@@ -129,8 +129,8 @@ func title_line() -> String:
 
 
 func banner() -> Array:
+	# The title bar already shows the name and version, so the scrollback does not repeat it.
 	var out: Array = []
-	out.append(_l("CYBERSEC-TERMINAL v%s" % VERSION, S_ACCENT))
 	if pack != null:
 		out.append(_l("%s  //  %d items loaded" % [pack.title, pack.items.size()], S_DIM))
 	else:

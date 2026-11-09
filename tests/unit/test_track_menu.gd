@@ -180,6 +180,10 @@ func test_banner_counts_ready_tracks_without_a_pack() -> void:
 	assert_string_contains(_text(_router.banner()), "2 of 4 tracks ready")
 
 
+func test_banner_does_not_repeat_the_title_bar() -> void:
+	assert_false(_text(_router.banner()).contains("CYBERSEC-TERMINAL"))
+
+
 func test_choosing_a_number_enters_that_track() -> void:
 	_login()
 	var out := _router.handle("3")
