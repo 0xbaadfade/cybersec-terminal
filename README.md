@@ -15,6 +15,11 @@ A question with simulated tool output, and the feedback after a wrong answer:
 ![A Linux question that shows a simulated nmap scan](docs/screenshots/terminal-question.png)
 ![Feedback after a wrong answer, with the explanation and when the concept comes back](docs/screenshots/feedback.png)
 
+Packs are plain folders of JSON, so the game can also play question banks you add yourself. This is a Security+ pack kept
+locally (it is not part of this repository), in the same terminal:
+
+![A Security+ question answered correctly, with XP and cycles awarded](docs/screenshots/secplus-question.png)
+
 ## What is in it
 
 Content comes in *packs*: a folder of JSON with the questions for one certification or skill. This repository ships:
