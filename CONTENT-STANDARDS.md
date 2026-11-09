@@ -1,0 +1,93 @@
+# Content standards
+
+Cybersec Terminal is a free, curated bank of cybersecurity knowledge for practitioners at every level, from a first Linux
+command to expert work. It began as the maintainer's own study bank: new items are added as they research and learn a
+topic. Anyone is welcome to add their own to benefit the community. This page says what a good item is, how items are
+labelled, and what "curated" means here, so a reader can tell how far to trust a question.
+
+## Who it is for
+
+Any cybersecurity practitioner: someone starting out, someone preparing for a certification, someone changing
+specialism, someone already senior who wants to keep a skill sharp. A pack should eventually cover its skill from
+beginner to expert. `difficulty` is a guide to that (1, 2 or 3):
+
+| Difficulty | A person who can answer it |
+|---|---|
+| 1 | has learned the basics and can recall or recognise them |
+| 2 | has used the skill and can apply it to a normal situation |
+| 3 | has real experience and can choose between close options, or spot a subtle flaw |
+
+## The two labels
+
+Every item carries both, and they are honest labels, not marks of quality by themselves.
+
+- **`source`**: `hand` if a person wrote it, `ai` if an AI tool wrote it or helped write it.
+- **`reviewed`**: `true` only if a person has checked it as described below; otherwise `false`.
+
+## AI-assisted content
+
+AI help is welcome. It is a fast way to draft questions, and plenty of good items will start that way. It is also a way
+to produce confident, wrong answers, so the rule is about checking, not about banning:
+
+- Label it `"source": "ai"`, even if you edited it heavily. If a tool helped, say so.
+- It stays `"reviewed": false` until the maintainer has checked it. Unreviewed items are not part of the curated bank.
+- Do not paste in anything an AI produced from a book, exam or course you do not own (see "Sources and licensing").
+
+## What "reviewed" means
+
+The maintainer does the reviewing. An item is `reviewed: true` only when the maintainer has done all of this:
+
+1. Checked that the marked answer is correct and that every wrong option is actually wrong, against an authoritative
+   source: a standard, vendor documentation, an RFC, a manual page, or a recognised textbook. Memory alone is not a check.
+2. Checked that the explanation is true and says why, not only what.
+3. Checked that nothing is copied from a source the contributor does not own.
+4. Checked that the difficulty is reasonable and the question has one defensible answer (or, for `multi`, exactly the
+   stated number).
+
+The source goes in the item's `references`, so anyone can verify the check for themselves. That is the safeguard: the
+maintainer reviews their own items as well as contributed ones, and a reviewed item always shows what it was checked against.
+Contributors leave their own items `reviewed: false` and the maintainer sets the flag after checking. Readers who disagree
+are encouraged to say so: see "Corrections".
+
+**If a reviewed item is changed** (a fix, a rewording, a new answer), it goes back to `reviewed: false` until someone
+checks it again.
+
+## What a good item looks like
+
+- **One idea per question.** The stem is clear without the options and has no trick wording.
+- **Plausible wrong options.** Each wrong option is something a learner might really believe. Fill in `why` for them:
+  that is where the learning happens.
+- **An `explain`** that says why the right answer is right and why the tempting wrong one is wrong.
+- **`references`** (a book, a standard, a web page) wherever a fact could be disputed or will change.
+- **Up to date.** If an answer depends on a version or a date, say which in the stem.
+- **Tied to a concept.** `concept_ids` link the item to the pack's objectives, so the spaced-repetition scheduler and
+  the skill tree can use it.
+
+`docs/making-packs.md` has the file format and `validate-pack` checks it.
+
+## Sources and licensing
+
+The packs are licensed CC BY 4.0 (`packs/LICENSE.md`). By contributing you say the content is yours to license that way.
+
+- Write in your own words. Do **not** copy questions, explanations or answer keys from exams, exam dumps, practice-test
+  books, video courses or other question banks, even if you own a copy: owning a licence to use a book is not a licence to
+  republish it. Questions that can only be rebuilt from such a source do not belong here.
+- Facts and public standards are free to use; their wording is not always. Paraphrase, and cite.
+- Keep it safe to publish. Labs and tool output are simulated. Do not include working exploit code for live systems,
+  real credentials, real people's data, or real targets.
+- Certification and vendor names are used only to say what a pack helps you study for. The project is independent and is
+  not approved by any certification body.
+
+## Corrections
+
+A wrong or outdated answer is a real defect. Use the "Report a wrong answer" issue form, or open a pull request with the
+fix. Say what is wrong and give a source. Corrections are welcome from anyone, and they are also the second pair of eyes
+that a single reviewer needs.
+
+## What is promised, and what is not
+
+- Items are labelled by how they were made and whether a person has checked them. The counts per pack are in
+  `ROADMAP.md`, and `validate-pack` prints them.
+- Reviewed items are served with priority over unreviewed ones when the game builds a round.
+- No item is guaranteed correct. Reviewed means the maintainer checked it against the cited source, not that it is beyond
+  doubt. For an exam, always check the exam's own current objectives.

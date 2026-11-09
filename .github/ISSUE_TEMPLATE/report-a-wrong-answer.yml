@@ -1,0 +1,43 @@
+name: Report a wrong answer
+description: A question, answer or explanation is wrong, unclear or out of date.
+title: "Wrong answer: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you. A wrong answer teaches the wrong thing, so these reports are valuable. Please give a source.
+  - type: input
+    id: pack
+    attributes:
+      label: Pack
+      description: For example "Linux Command Line".
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: The question
+      description: Paste the question text (and the item id if you know it) so it can be found.
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong
+      options:
+        - The marked answer is wrong
+        - Another option is also correct
+        - The explanation is wrong or misleading
+        - The question is unclear
+        - It is out of date
+        - It looks copied from a book or exam
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it should say, and where you checked
+      description: A link or a book and page is ideal.
+    validations:
+      required: true

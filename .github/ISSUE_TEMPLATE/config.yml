@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How content is reviewed and labelled
+    url: https://github.com/0xbaadfade/cybersec-terminal/blob/main/CONTENT-STANDARDS.md
+    about: Read this before proposing questions or reporting an error.

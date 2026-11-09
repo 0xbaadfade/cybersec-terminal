@@ -65,8 +65,9 @@ The per-option `why` (the reason a wrong option is wrong) was always optional an
 types (`match`, `order`, `evidence`) the explanations *inside* the item, on each pair, step or flaw, are required: they
 are what the item teaches.
 
-`source` and `reviewed` are honest labels: items made with AI help and not yet checked by a person should say
-`"source": "ai", "reviewed": false`. Unreviewed AI items are served with lower priority.
+`source` and `reviewed` are honest labels: items made with AI help and not yet checked by the maintainer should say
+`"source": "ai", "reviewed": false`. Unreviewed AI items are served with lower priority. `CONTENT-STANDARDS.md` (at the top
+of the repository) says what `reviewed` means, who may set it, and what makes a good item.
 
 The two simplest types, used by `templates/pack/`:
 

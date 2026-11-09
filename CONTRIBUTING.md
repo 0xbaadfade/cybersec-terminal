@@ -17,8 +17,9 @@ Please:
 - An `explain` is optional but worth writing: a good one says why the right answer is right and why the tempting wrong
   one is wrong, which is where the learning happens. `references` (a book, a standard, a web page) are optional too.
   The checker notes items that have no explanation.
-- Label items honestly: `"source": "hand"` if you wrote it, `"source": "ai"` if an AI tool helped, and
-  `"reviewed": true` only after a person has checked the facts.
+- Label items honestly: `"source": "hand"` if you wrote it, `"source": "ai"` if an AI tool helped (AI help is welcome,
+  but say so). Leave your own new items `"reviewed": false`: `true` means the maintainer checked them against a
+  cited source. `CONTENT-STANDARDS.md` says exactly what that means and what a good item looks like.
 - Keep to one pack, or a few related changes, per pull request.
 
 ## Code changes

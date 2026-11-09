@@ -1,0 +1,53 @@
+name: Propose a pack
+description: Offer to write questions for a skill or certification, or ask for one to be started.
+title: "Pack: "
+labels: ["pack"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. A pack is a folder of questions for one skill or certification. See `ROADMAP.md` for the branches that are
+        wanted and `docs/making-packs.md` for the format. Write your own questions: do not copy from exams, books or courses
+        (see `CONTENT-STANDARDS.md`).
+  - type: input
+    id: skill
+    attributes:
+      label: Skill or certification
+      description: What the pack covers, for example "Digital forensics" or "Network+".
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Levels it would cover
+      multiple: true
+      options:
+        - Beginner (difficulty 1)
+        - Practitioner (difficulty 2)
+        - Expert (difficulty 3)
+    validations:
+      required: true
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who would write it?
+      options:
+        - I will write it
+        - I will write part of it
+        - I am asking someone else to
+    validations:
+      required: true
+  - type: textarea
+    id: outline
+    attributes:
+      label: Outline
+      description: Domains or objectives, and the sources you would check facts against (standards, vendor docs, textbooks).
+  - type: checkboxes
+    id: ok
+    attributes:
+      label: Before we start
+      options:
+        - label: "I will write the questions myself, or tell the reviewers which tool helped (source: ai)."
+          required: true
+        - label: "I will not copy questions or answer keys from exams, books or courses."
+          required: true
