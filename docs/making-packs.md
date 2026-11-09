@@ -82,7 +82,7 @@ The richer types (`evidence`, `terminal`, `match`, `order`) are not documented h
 godot --headless --path . -s res://tools/validate_pack.gd -- res://packs/<pack-id>
 ```
 
-(On the maintainer's NixOS machine: `./run.sh validate-pack res://packs/<pack-id>`.) It prints a report and exits
+It prints a report and exits
 with an error if the pack is broken. A concept with fewer than 3 items is reported as a gap, a warning only.
 With no folder given it checks every pack and `data/tracks.json`.
 

@@ -1,5 +1,5 @@
 extends SceneTree
-## ./run.sh validate-pack [DIR]
+## godot --headless --path . -s res://tools/validate_pack.gd -- [DIR]
 ## Loads a content pack (or every pack under res://packs/) and prints a report.
 ## With no argument it also checks data/tracks.json. Exit code 1 if any pack or the catalog has errors; coverage gaps are warnings only.
 
