@@ -1,0 +1,299 @@
+[
+  {
+    "id": "aiken-domain-5-008", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "A company is establishing a partnership with another organization to share marketing resources and client leads. The two entities want to document their shared intentions and broad goals before drafting legally binding contracts. Which agreement type BEST fits this situation?",
+    "options": [
+      { "id": "a", "text": "MSA" },
+      { "id": "b", "text": "SLA" },
+      { "id": "c", "text": "MOU" },
+      { "id": "d", "text": "BPA" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-009", "type": "mcq", "concept_ids": ["5.3.vendor-assessment"], "difficulty": 2,
+    "stem": "A company is preparing to outsource its payroll processing. Which is the MOST critical security factor to evaluate during the vendor assessment phase?",
+    "options": [
+      { "id": "a", "text": "The exact number of employees working in the vendor's human resources department" },
+      { "id": "b", "text": "The vendor's physical location relative to the company's headquarters" },
+      { "id": "c", "text": "The vendor's preferred project management methodology" },
+      { "id": "d", "text": "The vendor's data handling and encryption practices for personally identifiable information" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-012", "type": "mcq", "concept_ids": ["5.3.vendor-selection"], "difficulty": 2,
+    "stem": "A company's Chief Information Security Officer sits on the board of directors for a cybersecurity software vendor that is currently bidding for a contract with the company. What MUST be documented and managed to ensure a fair assessment?",
+    "options": [
+      { "id": "a", "text": "A conflict of interest" },
+      { "id": "b", "text": "A MOU" },
+      { "id": "c", "text": "A SLA" },
+      { "id": "d", "text": "A right-to-audit clause" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-033", "type": "mcq", "concept_ids": ["5.3.vendor-assessment"], "difficulty": 2,
+    "stem": "A highly regulated financial institution is assessing a new data storage vendor. The institution requires an objective, standardized evaluation of the vendor's security controls over a six-month period. What should the institution request?",
+    "options": [
+      { "id": "a", "text": "An internal audit charter" },
+      { "id": "b", "text": "A completed self-assessment questionnaire" },
+      { "id": "c", "text": "A SOC 2 Type II report" },
+      { "id": "d", "text": "A signed master service agreement" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-034", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "A large enterprise plans to use a cloud vendor for multiple distinct projects over the next five years. To avoid renegotiating general legal and security terms for every new project, which of the following should be established?",
+    "options": [
+      { "id": "a", "text": "A continuous right-to-audit clause" },
+      { "id": "b", "text": "A standard NDA" },
+      { "id": "c", "text": "A single SOW covering five years" },
+      { "id": "d", "text": "A MSA" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-036", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "A managed security service provider contract stipulates that critical security alerts must be triaged within 15 minutes. In which of the following documents is this metric MOST likely defined?",
+    "options": [
+      { "id": "a", "text": "Service-level agreement" },
+      { "id": "b", "text": "Memorandum of understanding" },
+      { "id": "c", "text": "Non-disclosure agreement" },
+      { "id": "d", "text": "Business partners agreement" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-038", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "A managed service provider (MSP) has an existing master service agreement with a client. The client now needs the MSP to install ten new wireless access points in a specific office building. Which document should be generated to specify the exact tasks, timeframe, and localized expectations for this single installation project?",
+    "options": [
+      { "id": "a", "text": "NDA" },
+      { "id": "b", "text": "MOA" },
+      { "id": "c", "text": "SLA" },
+      { "id": "d", "text": "WO" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-039", "type": "mcq", "concept_ids": ["5.3.questionnaires"], "difficulty": 2,
+    "stem": "A manufacturer is evaluating the cybersecurity risks of its component suppliers. Which of the following is the PRIMARY objective of conducting a supply chain analysis in this scenario?",
+    "options": [
+      { "id": "a", "text": "To negotiate bulk discounts for hardware components" },
+      { "id": "b", "text": "To identify potential vulnerabilities introduced by downstream suppliers and fourth-party vendors" },
+      { "id": "c", "text": "To establish the ROE for an upcoming physical penetration test" },
+      { "id": "d", "text": "To draft a MSA with the primary component supplier" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-048", "type": "mcq", "concept_ids": ["5.3.questionnaires"], "difficulty": 2,
+    "stem": "A recent breach at a cloud hosting provider exposed the data of several tenants. An affected tenant wants to send its own forensic team to inspect the provider's servers. What must be present in the original contract to allow this?",
+    "options": [
+      { "id": "a", "text": "A strict non-disclosure agreement" },
+      { "id": "b", "text": "A generalized memorandum of understanding" },
+      { "id": "c", "text": "A comprehensive right-to-audit clause" },
+      { "id": "d", "text": "An aggressive service-level agreement" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-061", "type": "mcq", "concept_ids": ["5.3.questionnaires"], "difficulty": 2,
+    "stem": "A security team is evaluating fifty potential vendors for a new software procurement. What is the MOST efficient initial method for gathering standardized information about each vendor's security controls?",
+    "options": [
+      { "id": "a", "text": "Performing active penetration tests" },
+      { "id": "b", "text": "Requesting daily system log exports" },
+      { "id": "c", "text": "Conducting on-site physical audits" },
+      { "id": "d", "text": "Distributing security questionnaires" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-088", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "An organization has an existing master service agreement with a penetration testing firm. The organization now wants the firm to test a newly deployed web application. Which document should be created to define the specific scope, timeline, and deliverables for this individual test?",
+    "options": [
+      { "id": "a", "text": "BPA" },
+      { "id": "b", "text": "SLA" },
+      { "id": "c", "text": "DNA" },
+      { "id": "d", "text": "SOW" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-099", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "Before a third-party cybersecurity firm begins an authorized attack simulation on a company's network, which of the following MUST be clearly defined to prevent operational disruptions?",
+    "options": [
+      { "id": "a", "text": "The MSA" },
+      { "id": "b", "text": "The ROE" },
+      { "id": "c", "text": "The BPA" },
+      { "id": "d", "text": "The SLA" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-102", "type": "mcq", "concept_ids": ["5.3.rules-of-engagement"], "difficulty": 2,
+    "stem": "During a penetration test, the assessors are provided with network diagrams, source code, and administrative credentials. Which testing environment does this describe?",
+    "options": [
+      { "id": "a", "text": "Known environment" },
+      { "id": "b", "text": "Unknown environment" },
+      { "id": "c", "text": "Partially known environment" },
+      { "id": "d", "text": "Regulatory environment" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-107", "type": "mcq", "concept_ids": ["5.3.vendor-assessment"], "difficulty": 2,
+    "stem": "During a third-party risk assessment, a security manager requests evidence of internal audits from a prospective cloud provider. What is the MOST likely reason for this request?",
+    "options": [
+      { "id": "a", "text": "To determine the profitability of the cloud provider's business model" },
+      { "id": "b", "text": "To map the cloud provider's internal network topology" },
+      { "id": "c", "text": "To verify that the provider actively monitors and enforces its own security controls" },
+      { "id": "d", "text": "To establish the boundaries for a collaborative penetration test" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-109", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "During the initial vendor selection process, a security manager plans to share proprietary network architectures with three potential vendors so they can propose tailored solutions. What should be signed FIRST to protect the confidentiality of the shared information?",
+    "options": [
+      { "id": "a", "text": "SLA" },
+      { "id": "b", "text": "BPA" },
+      { "id": "c", "text": "SOW" },
+      { "id": "d", "text": "NDA" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-111", "type": "mcq", "concept_ids": ["5.3.vendor-selection"], "difficulty": 2,
+    "stem": "During the vendor selection process, multiple candidates have submitted proposals. What should be the FIRST security-related step before making a final decision?",
+    "options": [
+      { "id": "a", "text": "Conducting initial due diligence to evaluate the security posture of each candidate" },
+      { "id": "b", "text": "Signing a MSA with all candidates" },
+      { "id": "c", "text": "Requesting the source code for each candidate's proprietary software" },
+      { "id": "d", "text": "Integrating the candidates' systems into the organization's network to test compatibility" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-124", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "Two companies are merging their supply chain operations and need a contract that specifies the sharing of profits, losses, and legal liabilities. Which of the following is MOST appropriate?",
+    "options": [
+      { "id": "a", "text": "MOU" },
+      { "id": "b", "text": "SOW" },
+      { "id": "c", "text": "SLA" },
+      { "id": "d", "text": "BPA" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-125", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "Two organizations are forming a partnership to share threat intelligence. They want to formalize their intention to work together without committing to legally binding financial contracts or specific technical metrics at this stage. Which of the following agreement types is MOST appropriate for this situation?",
+    "options": [
+      { "id": "a", "text": "MOU" },
+      { "id": "b", "text": "SLA" },
+      { "id": "c", "text": "NDA" },
+      { "id": "d", "text": "BPA" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-126", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "Two organizations decide to collaborate on a joint threat intelligence sharing initiative. They need a document that outlines the specific commitments, resources, and legal obligations of each party without forming a new legal entity. Which of the following BEST fits this requirement?",
+    "options": [
+      { "id": "a", "text": "NDA" },
+      { "id": "b", "text": "SOW" },
+      { "id": "c", "text": "MOA" },
+      { "id": "d", "text": "SLA" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-152", "type": "mcq", "concept_ids": ["5.3.vendor-assessment"], "difficulty": 2,
+    "stem": "What is the PRIMARY risk mitigated by requiring a third-party contractor to sign a non-disclosure agreement prior to granting them access to internal systems?",
+    "options": [
+      { "id": "a", "text": "The contractor failing to deliver the project on time" },
+      { "id": "b", "text": "The failure of the contractor to maintain acceptable network uptime" },
+      { "id": "c", "text": "The unauthorized sharing or leveraging of confidential company data" },
+      { "id": "d", "text": "The contractor introducing malware into the production environment" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-154", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "When establishing a new relationship with a third party, which agreement type is typically executed FIRST to protect sensitive information during initial discussions?",
+    "options": [
+      { "id": "a", "text": "SLA" },
+      { "id": "b", "text": "NDA" },
+      { "id": "c", "text": "SOW" },
+      { "id": "d", "text": "MSA" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-164", "type": "mcq", "concept_ids": ["5.3.questionnaires"], "difficulty": 2,
+    "stem": "Which BEST describes the strategic benefit of including a right-to-audit clause in a vendor contract?",
+    "options": [
+      { "id": "a", "text": "It provides the organization the authority to independently verify the vendor's compliance with security requirements" },
+      { "id": "b", "text": "It legally requires the vendor to use specific security hardware" },
+      { "id": "c", "text": "It prevents the vendor from sub-contracting work to fourth parties" },
+      { "id": "d", "text": "It automatically transfers all liability for data breaches to the vendor" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-166", "type": "mcq", "concept_ids": ["5.3.questionnaires"], "difficulty": 2,
+    "stem": "Which BEST explains the difference between due diligence and due care in the context of third-party risk management?",
+    "options": [
+      { "id": "a", "text": "Due diligence applies only to government contracts, while due care applies to private sector agreements" },
+      { "id": "b", "text": "Due diligence refers to financial audits, while due care refers strictly to physical security assessments" },
+      { "id": "c", "text": "Due diligence is the act of investigating a vendor's security, while due care is the continuous maintenance of security practices" },
+      { "id": "d", "text": "Due diligence is performed by the vendor, while due care is performed by the purchasing organization" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-187", "type": "mcq", "concept_ids": ["5.3.vendor-monitoring"], "difficulty": 2,
+    "stem": "Which of the following BEST describes the primary purpose of a SLA in third-party risk management?",
+    "options": [
+      { "id": "a", "text": "Outlining the overarching legal terms for all future engagements between two parties" },
+      { "id": "b", "text": "Defining specific performance metrics, uptime requirements, and penalties for non-compliance" },
+      { "id": "c", "text": "Protecting sensitive intellectual property discussed during the initial vendor assessment" },
+      { "id": "d", "text": "Establishing a formal partnership outlining financial contributions and profit sharing" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-188", "type": "mcq", "concept_ids": ["5.3.agreement-types"], "difficulty": 2,
+    "stem": "Which of the following BEST describes the purpose of a Memorandum of Understanding between two partnering organizations?",
+    "options": [
+      { "id": "a", "text": "It expresses a mutual intention to work together and outlines broad concepts of the partnership" },
+      { "id": "b", "text": "It legally binds both organizations to a specific set of operational security controls" },
+      { "id": "c", "text": "It details the exact technical steps required to integrate two separate directory services" },
+      { "id": "d", "text": "It establishes strict financial penalties for failing to meet system uptime guarantees" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-205", "type": "mcq", "concept_ids": ["5.3.vendor-monitoring"], "difficulty": 2,
+    "stem": "Why is continuous vendor monitoring considered superior to a point-in-time annual assessment?",
+    "options": [
+      { "id": "a", "text": "It guarantees that the vendor's financial standing remains stable" },
+      { "id": "b", "text": "It eliminates the need for any formal contractual agreements" },
+      { "id": "c", "text": "It detects changes in the vendor's risk profile as they occur throughout the relationship" },
+      { "id": "d", "text": "It transfers all regulatory compliance responsibilities to the vendor" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-209", "type": "mcq", "concept_ids": ["5.3.questionnaires"], "difficulty": 2,
+    "stem": "Why would an organization require third-party vendors to undergo regular penetration testing?",
+    "options": [
+      { "id": "a", "text": "To ensure the vendor complies with financial reporting standards" },
+      { "id": "b", "text": "To validate the background checks of the vendor's development team" },
+      { "id": "c", "text": "To verify that the vendor's application can withstand active, real-world cyber attacks" },
+      { "id": "d", "text": "To review the vendor's documented security policies and governance structures" }
+    ],
+    "answer": ["c"]
+  }
+]

@@ -1,0 +1,379 @@
+[
+  {
+    "id": "aiken-domain-1-003", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "A company conducts regular security awareness training to ensure employees know how to identify phishing emails. Under which category does this control PRIMARILY fall?",
+    "options": [
+      { "id": "a", "text": "Technical" },
+      { "id": "b", "text": "Managerial" },
+      { "id": "c", "text": "Operational" },
+      { "id": "d", "text": "Physical" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-007", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "A company suffers a ransomware attack that encrypts several files. The security team restores the affected files from an offline backup. Which control type was utilized to restore operations?",
+    "options": [
+      { "id": "a", "text": "Preventive" },
+      { "id": "b", "text": "Detective" },
+      { "id": "c", "text": "Corrective" },
+      { "id": "d", "text": "Compensating" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-008", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "A company wants to enforce a policy that restricts network access based on the time of day using router ACLs. Which BEST describes the category of control being implemented?",
+    "options": [
+      { "id": "a", "text": "Managerial" },
+      { "id": "b", "text": "Technical" },
+      { "id": "c", "text": "Physical" },
+      { "id": "d", "text": "Operational" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-021", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "A legacy application cannot support multi-factor authentication (MFA) as required by company policy. To mitigate this risk, the security team places the application on a strictly isolated network segment. What BEST describes this isolated network segment?",
+    "options": [
+      { "id": "a", "text": "Directive control" },
+      { "id": "b", "text": "Compensating control" },
+      { "id": "c", "text": "Deterrent control" },
+      { "id": "d", "text": "Detective control" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-022", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "A legacy application cannot support multi-factor authentication (MFA). To mitigate this risk, the security team implements strict IP white-listing and monitoring on the host. What control type is this?",
+    "options": [
+      { "id": "a", "text": "Corrective" },
+      { "id": "b", "text": "Compensating" },
+      { "id": "c", "text": "Directive" },
+      { "id": "d", "text": "Deterrent" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-025", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "A network engineer implements a firewall rule that blocks all incoming traffic from known malicious IP addresses. Which of the following control categories is being utilized?",
+    "options": [
+      { "id": "a", "text": "Managerial" },
+      { "id": "b", "text": "Physical" },
+      { "id": "c", "text": "Operational" },
+      { "id": "d", "text": "Technical" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-032", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "A security administrator is configuring an Intrusion Prevention System (IPS) to automatically drop packets that match known attack signatures. What control type is being implemented?",
+    "options": [
+      { "id": "a", "text": "Detective" },
+      { "id": "b", "text": "Preventive" },
+      { "id": "c", "text": "Corrective" },
+      { "id": "d", "text": "Compensating" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-037", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "A security architect is designing a defense-in-depth strategy. Which statement BEST contrasts a control category with a control type?",
+    "options": [
+      { "id": "a", "text": "A control category describes how a control is implemented, while a control type describes what the control is intended to achieve." },
+      { "id": "b", "text": "A control category mitigates vulnerabilities, while a control type focuses entirely on threat actors." },
+      { "id": "c", "text": "A control category defines the control's function, while a control type defines how it is implemented." },
+      { "id": "d", "text": "A control category is only used for physical assets, while a control type applies to digital assets." }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-043", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "A security manager performs a cost-benefit analysis before recommending a new security control. Under which control category does this analysis fall?",
+    "options": [
+      { "id": "a", "text": "Operational" },
+      { "id": "b", "text": "Technical" },
+      { "id": "c", "text": "Managerial" },
+      { "id": "d", "text": "Physical" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-044", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "A security policy requires all employees to wear their identification badges visibly at all times while on company premises. What control type is this policy itself?",
+    "options": [
+      { "id": "a", "text": "Technical" },
+      { "id": "b", "text": "Directive" },
+      { "id": "c", "text": "Corrective" },
+      { "id": "d", "text": "Compensating" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-046", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "A security team conducts monthly vulnerability scans and daily reviews of firewall logs. How do these activities differ from managerial controls?",
+    "options": [
+      { "id": "a", "text": "They utilize hardware and software mechanisms rather than physical deterrents." },
+      { "id": "b", "text": "They provide physical protection to the facility rather than logical access control." },
+      { "id": "c", "text": "They dictate the overarching security strategy rather than focusing on day-to-day operations." },
+      { "id": "d", "text": "They are executed by security personnel as routine procedures rather than high-level administrative policies." }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-054", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "A system administrator configures an automated script that performs daily backups of critical database servers. Which control category does this administrative action represent?",
+    "options": [
+      { "id": "a", "text": "Technical" },
+      { "id": "b", "text": "Managerial" },
+      { "id": "c", "text": "Operational" },
+      { "id": "d", "text": "Physical" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-069", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "After a ransomware infection, an IT team uses offline backups to restore the affected servers to their normal operating state. What type of control does the backup restoration process represent?",
+    "options": [
+      { "id": "a", "text": "Preventive" },
+      { "id": "b", "text": "Directive" },
+      { "id": "c", "text": "Corrective" },
+      { "id": "d", "text": "Detective" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-077", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "An administrator pushes a new Group Policy Object (GPO) to enforce complex passwords. A technical implication of this change might inadvertently cause which of the following?",
+    "options": [
+      { "id": "a", "text": "The automatic generation of a new standard operating procedure" },
+      { "id": "b", "text": "The immediate deprecation of the organization's legacy firewall" },
+      { "id": "c", "text": "A temporary spike in user account lockouts and helpdesk tickets" },
+      { "id": "d", "text": "An increase in unauthorized physical access to the datacenter" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-083", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "An auditor is mapping security mechanisms to their appropriate categories. How does a background check process contrast with an access control list (ACL)?",
+    "options": [
+      { "id": "a", "text": "A background check is a managerial control, while an ACL is an operational control." },
+      { "id": "b", "text": "A background check is an operational control, while an ACL is a technical control." },
+      { "id": "c", "text": "A background check is a physical control, while an ACL is a managerial control." },
+      { "id": "d", "text": "A background check is a technical control, while an ACL is a operational control." }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-092", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "An information security manager updates the company's employee handbook to include a policy regarding acceptable internet usage. What control category does this policy fall under?",
+    "options": [
+      { "id": "a", "text": "Technical" },
+      { "id": "b", "text": "Operational" },
+      { "id": "c", "text": "Managerial" },
+      { "id": "d", "text": "Physical" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-096", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "An organization deploys a security information and event management (SIEM) solution to aggregate and analyze logs. What is the MOST likely classification for this control?",
+    "options": [
+      { "id": "a", "text": "Corrective" },
+      { "id": "b", "text": "Preventive" },
+      { "id": "c", "text": "Deterrent" },
+      { "id": "d", "text": "Detective" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-097", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "An organization deploys motion-activated security cameras around its warehouse. Which of the following describes the category and type of this control?",
+    "options": [
+      { "id": "a", "text": "Technical and Preventive" },
+      { "id": "b", "text": "Physical and Detective" },
+      { "id": "c", "text": "Operational and Deterrent" },
+      { "id": "d", "text": "Managerial and Corrective" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-099", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "An organization installs bulletproof glass and concrete bollards around its data center. Which of the following control categories BEST describes these implementations?",
+    "options": [
+      { "id": "a", "text": "Technical" },
+      { "id": "b", "text": "Physical" },
+      { "id": "c", "text": "Managerial" },
+      { "id": "d", "text": "Operational" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-100", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "An organization installs high-intensity lighting around its perimeter fences. Which security control type and category does this implementation represent?",
+    "options": [
+      { "id": "a", "text": "Physical and Deterrent" },
+      { "id": "b", "text": "Technical and Preventive" },
+      { "id": "c", "text": "Operational and Detective" },
+      { "id": "d", "text": "Physical and Corrective" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-103", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "An organization places warning signs on its perimeter fences stating that trespassers will be prosecuted. Which control type is primary being represented by these signs?",
+    "options": [
+      { "id": "a", "text": "Preventive" },
+      { "id": "b", "text": "Deterrent" },
+      { "id": "c", "text": "Detective" },
+      { "id": "d", "text": "Corrective" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-110", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "An organization's security team reviews system logs weekly to identify unauthorized access attempts that occurred. What type of control is being used during this review?",
+    "options": [
+      { "id": "a", "text": "Detective" },
+      { "id": "b", "text": "Preventive" },
+      { "id": "c", "text": "Deterrent" },
+      { "id": "d", "text": "Directive" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-114", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "Company security guidelines require an automated account lockout policy after three failed password attempts. What control type is being illustrated here?",
+    "options": [
+      { "id": "a", "text": "Detective" },
+      { "id": "b", "text": "Preventive" },
+      { "id": "c", "text": "Corrective" },
+      { "id": "d", "text": "Directive" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-121", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "During an annual audit, a security analyst reviews the organization's AUP and risk management framework. What category of security control do these documents PRIMARILY represent?",
+    "options": [
+      { "id": "a", "text": "Technical" },
+      { "id": "b", "text": "Managerial" },
+      { "id": "c", "text": "Physical" },
+      { "id": "d", "text": "Operational" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-135", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "Management publishes a mandatory data classification policy that instructs all employees on how to properly label sensitive information. Which type of control does this policy MOST accurately represent?",
+    "options": [
+      { "id": "a", "text": "Corrective" },
+      { "id": "b", "text": "Directive" },
+      { "id": "c", "text": "Compensating" },
+      { "id": "d", "text": "Preventive" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-141", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "Under which circumstance would an organization MOST likely permit a deviation from the standard, multi-tiered change approval process?",
+    "options": [
+      { "id": "a", "text": "When updating the internal corporate branding on the employee intranet" },
+      { "id": "b", "text": "When deploying a routine weekly anti-malware signature update" },
+      { "id": "c", "text": "When scheduling a minor version upgrade for a non-critical internal tool" },
+      { "id": "d", "text": "When mitigating an actively exploited vulnerability on a public-facing web server" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-142", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "What distinguishes a managerial control from a technical control when addressing insider threats?",
+    "options": [
+      { "id": "a", "text": "Managerial controls establish the acceptable use policies, whereas technical controls enforce logical access restrictions." },
+      { "id": "b", "text": "Managerial controls physically prevent access to server rooms, whereas technical controls govern employee offboarding processes." },
+      { "id": "c", "text": "Managerial controls utilize software to monitor user actions, whereas technical controls rely on HR background checks." },
+      { "id": "d", "text": "Managerial controls restore data after an incident, whereas technical controls detect the incident as it happens." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-168", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "Which of the following BEST describes a control designed to protect facilities, equipment, and personnel from physical threats?",
+    "options": [
+      { "id": "a", "text": "Operational security" },
+      { "id": "b", "text": "Physical security" },
+      { "id": "c", "text": "Logistic security" },
+      { "id": "d", "text": "Managerial security" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-171", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "Which of the following BEST differentiates physical controls from technical controls?",
+    "options": [
+      { "id": "a", "text": "Physical controls limit access to tangible assets and locations, while technical controls restrict access to digital networks and data." },
+      { "id": "b", "text": "Physical controls are primarily used for corrective purposes, while technical controls are exclusively deterrents." },
+      { "id": "c", "text": "Physical controls dictate user behavior through guidelines, while technical controls require human intervention for enforcement." },
+      { "id": "d", "text": "Physical controls rely on written policies, while technical controls rely on hardware configuration." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-172", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "Which of the following BEST distinguishes a managerial control from an operational control?",
+    "options": [
+      { "id": "a", "text": "Managerial controls are designed to correct issues, while operational controls are designed to prevent them." },
+      { "id": "b", "text": "Managerial controls use hardware and software, while operational controls use administrative policies." },
+      { "id": "c", "text": "Managerial controls focus on physical security, while operational controls focus on technical implementation." },
+      { "id": "d", "text": "Managerial controls focus on risk assessment and policies, while operational controls focus on daily procedures and practices." }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-175", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "Which of the following control types is designed to reduce the impact of a security incident after it has occurred?",
+    "options": [
+      { "id": "a", "text": "Detective" },
+      { "id": "b", "text": "Corrective" },
+      { "id": "c", "text": "Deterrent" },
+      { "id": "d", "text": "Directive" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-180", "type": "mcq", "concept_ids": ["1.1.control-types"], "difficulty": 2,
+    "stem": "Which of the following is the BEST example of a technical control being used to achieve a preventive outcome?",
+    "options": [
+      { "id": "a", "text": "A firewall rule dropping incoming SSH connections from untrusted IP addresses." },
+      { "id": "b", "text": "Security guards checking ID badges at the main entrance." },
+      { "id": "c", "text": "A policy requiring employees to change passwords every 90 days." },
+      { "id": "d", "text": "An alarm system triggering when a secure door is forced open." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-181", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "Which of the following is the BEST example of an operational control type?",
+    "options": [
+      { "id": "a", "text": "Upgrading firewall firmware to patch a vulnerability" },
+      { "id": "b", "text": "Performing annual security awareness training for all staff" },
+      { "id": "c", "text": "Installing biometric scanners on the server room door" },
+      { "id": "d", "text": "Drafting a business continuity and disaster recovery plan" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-199", "type": "mcq", "concept_ids": ["1.1.categories"], "difficulty": 2,
+    "stem": "Why is it MOST important to identify and communicate with all relevant stakeholders before altering a core database structure?",
+    "options": [
+      { "id": "a", "text": "To ensure they can configure their own local firewalls to allow the new database traffic" },
+      { "id": "b", "text": "To provide them an opportunity to rewrite the organization's overarching security policy" },
+      { "id": "c", "text": "To transfer the ownership of the database system to the various department heads" },
+      { "id": "d", "text": "To prevent unintended operational outages in downstream departments that rely on the data" }
+    ],
+    "answer": ["d"]
+  }
+]

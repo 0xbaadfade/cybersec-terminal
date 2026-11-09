@@ -1,0 +1,387 @@
+[
+  {
+    "id": "aiken-domain-3-001", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "A call center application displays only the last four digits of a customer's Social Security Number on the representative's screen, hiding the rest of the digits with asterisks. Which data protection concept does this demonstrate?",
+    "options": [
+      { "id": "a", "text": "Obfuscation" },
+      { "id": "b", "text": "Masking" },
+      { "id": "c", "text": "Hashing" },
+      { "id": "d", "text": "Tokenization" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-004", "type": "mcq", "concept_ids": ["3.3.general-data-considerations"], "difficulty": 2,
+    "stem": "A company determines that certain data types must be processed locally within its regional offices rather than sent to the centralized global cloud, to comply with national privacy laws. This architecture decision is driven by:",
+    "options": [
+      { "id": "a", "text": "Masking requirements" },
+      { "id": "b", "text": "Data sovereignty" },
+      { "id": "c", "text": "Tokenization limits" },
+      { "id": "d", "text": "Hashing algorithms" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-014", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "A developer needs to securely store user passwords in a database. Which of the following methods MUST be used to protect the passwords from being read if the database is compromised?",
+    "options": [
+      { "id": "a", "text": "Symmetric encryption" },
+      { "id": "b", "text": "Obfuscation" },
+      { "id": "c", "text": "Hashing" },
+      { "id": "d", "text": "Masking" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-017", "type": "mcq", "concept_ids": ["3.3.data-types"], "difficulty": 2,
+    "stem": "A financial institution must comply with strict laws dictating how long customer loan applications must be retained. Which data classification BEST applies to these documents?",
+    "options": [
+      { "id": "a", "text": "Intellectual property" },
+      { "id": "b", "text": "Trade secret" },
+      { "id": "c", "text": "Regulated" },
+      { "id": "d", "text": "Public" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-019", "type": "mcq", "concept_ids": ["3.3.data-classifications"], "difficulty": 2,
+    "stem": "A government contractor handles documents that, if disclosed, could cause measurable damage to national security. The documents are restricted to personnel with specific clearances. Which of the following data classifications is the MOST appropriate for this information?",
+    "options": [
+      { "id": "a", "text": "Public data" },
+      { "id": "b", "text": "Financial data" },
+      { "id": "c", "text": "Confidential data" },
+      { "id": "d", "text": "Trade secret" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-021", "type": "mcq", "concept_ids": ["3.3.data-classifications"], "difficulty": 2,
+    "stem": "A healthcare provider collects patient names, home addresses, and personal phone numbers to maintain medical records. Which of the following data classifications is the FIRST consideration when designing a protection strategy for this information?",
+    "options": [
+      { "id": "a", "text": "Intellectual property" },
+      { "id": "b", "text": "Private data" },
+      { "id": "c", "text": "Public data" },
+      { "id": "d", "text": "Trade secret" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-022", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "A healthcare provider uses cryptographic algorithms to transform patient records into ciphertext on their hard drives to prevent unauthorized access if a physical drive is stolen. Which protection method is being applied?",
+    "options": [
+      { "id": "a", "text": "Encryption" },
+      { "id": "b", "text": "Hashing" },
+      { "id": "c", "text": "Obfuscation" },
+      { "id": "d", "text": "Segmentation" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-024", "type": "mcq", "concept_ids": ["3.3.data-types"], "difficulty": 2,
+    "stem": "A manufacturing company has developed a proprietary blueprint for a highly efficient motor. The blueprint gives the company a significant competitive advantage in the market. Which of the following data classifications BEST describes this blueprint?",
+    "options": [
+      { "id": "a", "text": "Financial data" },
+      { "id": "b", "text": "Regulated data" },
+      { "id": "c", "text": "Intellectual property" },
+      { "id": "d", "text": "Public data" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-026", "type": "mcq", "concept_ids": ["3.3.data-classifications"], "difficulty": 2,
+    "stem": "A multinational company discovers that one of its cloud storage buckets is publicly accessible, exposing internal employee performance reviews. What data classification was MOST likely compromised?",
+    "options": [
+      { "id": "a", "text": "Public" },
+      { "id": "b", "text": "Private" },
+      { "id": "c", "text": "Trade secret" },
+      { "id": "d", "text": "Financial" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-027", "type": "mcq", "concept_ids": ["3.3.general-data-considerations"], "difficulty": 2,
+    "stem": "A multinational corporation stores customer records in a European datacenter. Under local regulations, this data cannot be transferred to servers located in the United States. This scenario BEST illustrates which of the following concepts?",
+    "options": [
+      { "id": "a", "text": "Data at rest" },
+      { "id": "b", "text": "Data sovereignty" },
+      { "id": "c", "text": "Geolocation" },
+      { "id": "d", "text": "Tokenization" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-031", "type": "mcq", "concept_ids": ["3.3.data-types"], "difficulty": 2,
+    "stem": "A secret formula for a popular soft drink is stored securely on an air-gapped server. This data is BEST classified as which of the following?",
+    "options": [
+      { "id": "a", "text": "Trade secret" },
+      { "id": "b", "text": "Public" },
+      { "id": "c", "text": "Financial" },
+      { "id": "d", "text": "Regulated" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-032", "type": "mcq", "concept_ids": ["3.3.data-types"], "difficulty": 2,
+    "stem": "A security analyst is applying controls to a database containing proprietary source code and advanced product designs. Which data classification BEST applies to this information?",
+    "options": [
+      { "id": "a", "text": "Regulated" },
+      { "id": "b", "text": "Public" },
+      { "id": "c", "text": "Financial" },
+      { "id": "d", "text": "Intellectual property" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-3-040", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "A security team configures an application to verify a user's GPS coordinates and deny access if the user attempts to log in from a restricted country. Which of the following concepts is the team utilizing?",
+    "options": [
+      { "id": "a", "text": "Geolocation" },
+      { "id": "b", "text": "Tokenization" },
+      { "id": "c", "text": "Data sovereignty" },
+      { "id": "d", "text": "Hashing" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-042", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "A software developer alters the variable names and code structure of a proprietary application to make the source code difficult for a competitor to reverse-engineer, without changing the program's function. This technique is known as:",
+    "options": [
+      { "id": "a", "text": "Hashing" },
+      { "id": "b", "text": "Obfuscation" },
+      { "id": "c", "text": "Tokenization" },
+      { "id": "d", "text": "Encryption" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-043", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "A software development firm stores its proprietary source code in a central repository. If an unauthorized competitor gains access to this repository, the firm could lose its market dominance. Which of the following data protection methods is the BEST choice for safeguarding this intellectual property while it remains at rest?",
+    "options": [
+      { "id": "a", "text": "Transport Layer Security" },
+      { "id": "b", "text": "Full disk encryption" },
+      { "id": "c", "text": "Data masking" },
+      { "id": "d", "text": "Geographic restrictions" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-046", "type": "mcq", "concept_ids": ["3.3.data-types"], "difficulty": 2,
+    "stem": "A technology firm wants to protect its proprietary source code, which includes novel algorithms and design documents that give the company a competitive edge in the marketplace. Under which of the following data classifications should this source code BEST be categorized?",
+    "options": [
+      { "id": "a", "text": "Regulated data" },
+      { "id": "b", "text": "Intellectual property" },
+      { "id": "c", "text": "Financial data" },
+      { "id": "d", "text": "Public data" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-047", "type": "mcq", "concept_ids": ["3.3.data-classifications"], "difficulty": 2,
+    "stem": "A university publishes its academic calendar, campus map, and general admission requirements on its primary website. Which of the following classifications BEST describes this type of data?",
+    "options": [
+      { "id": "a", "text": "Confidential data" },
+      { "id": "b", "text": "Regulated data" },
+      { "id": "c", "text": "Public data" },
+      { "id": "d", "text": "Private data" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-049", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "An administrator restricts access to a sensitive payroll server so that only connections originating from IP addresses within the corporate headquarters are allowed. Which protection method is being implemented?",
+    "options": [
+      { "id": "a", "text": "Permission restrictions" },
+      { "id": "b", "text": "Segmentation" },
+      { "id": "c", "text": "Geographic restrictions" },
+      { "id": "d", "text": "Geolocation" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-051", "type": "mcq", "concept_ids": ["3.3.general-data-considerations"], "difficulty": 2,
+    "stem": "An application is processing decrypted financial transactions in the memory of a web server. Which data state does this represent?",
+    "options": [
+      { "id": "a", "text": "Data in transit" },
+      { "id": "b", "text": "Data at rest" },
+      { "id": "c", "text": "Data in use" },
+      { "id": "d", "text": "Data sovereignty" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-052", "type": "mcq", "concept_ids": ["3.3.data-types"], "difficulty": 2,
+    "stem": "An e-commerce platform processes daily transaction logs that include customer credit card numbers, banking routing details, and internal revenue forecasts. Which of the following classifications MOST accurately reflects the nature of these transaction logs?",
+    "options": [
+      { "id": "a", "text": "Financial data" },
+      { "id": "b", "text": "Public data" },
+      { "id": "c", "text": "Open-source data" },
+      { "id": "d", "text": "Intellectual property" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-059", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "An organization establishes isolated network VLANs to separate visitor Wi-Fi traffic from internal financial databases. Which strategy is being used to protect the data?",
+    "options": [
+      { "id": "a", "text": "Masking" },
+      { "id": "b", "text": "Segmentation" },
+      { "id": "c", "text": "Data sovereignty" },
+      { "id": "d", "text": "Obfuscation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-060", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "An organization grants read-only access to a specific folder on a shared drive for the marketing team, while denying all access to the sales team. Which data protection method is this?",
+    "options": [
+      { "id": "a", "text": "Segmentation" },
+      { "id": "b", "text": "Permission restrictions" },
+      { "id": "c", "text": "Obfuscation" },
+      { "id": "d", "text": "Geographic restrictions" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-062", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "An organization is auditing its data classifications to optimize storage costs. It finds a large volume of press releases, marketing brochures, and published job postings. Which of the following actions is the MOST appropriate regarding the protection of this data?",
+    "options": [
+      { "id": "a", "text": "Implement military-grade encryption for the data at rest" },
+      { "id": "b", "text": "Ensure high availability and integrity without requiring strict confidentiality controls" },
+      { "id": "c", "text": "Restrict access using multi-factor authentication and role-based access control" },
+      { "id": "d", "text": "Migrate the data to an isolated, air-gapped network segment" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-068", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "An organization processes credit card transactions. To comply with industry standards, the system replaces primary account numbers (PANs) with unique, randomly generated surrogate values for use in internal databases. Which protection method is being used?",
+    "options": [
+      { "id": "a", "text": "Hashing" },
+      { "id": "b", "text": "Encryption" },
+      { "id": "c", "text": "Tokenization" },
+      { "id": "d", "text": "Masking" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-069", "type": "mcq", "concept_ids": ["3.3.data-classifications"], "difficulty": 2,
+    "stem": "An organization relies on strict permission restrictions and obfuscation techniques to protect its strategic merger plans from being leaked before a public announcement. Which data classification applies BEST to these merger plans?",
+    "options": [
+      { "id": "a", "text": "Public data" },
+      { "id": "b", "text": "Private data" },
+      { "id": "c", "text": "Confidential data" },
+      { "id": "d", "text": "Regulated data" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-082", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "To ensure the integrity of a downloaded software update, a vendor provides a string of characters generated by the SHA-256 algorithm. This BEST describes which protection method?",
+    "options": [
+      { "id": "a", "text": "Masking" },
+      { "id": "b", "text": "Tokenization" },
+      { "id": "c", "text": "Hashing" },
+      { "id": "d", "text": "Encryption" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-085", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "To protect data against unauthorized access in the event that physical backup media is stolen during transit, which of the following controls is the MOST effective to implement?",
+    "options": [
+      { "id": "a", "text": "Geolocation tracking" },
+      { "id": "b", "text": "Data masking" },
+      { "id": "c", "text": "Network segmentation" },
+      { "id": "d", "text": "Backup encryption" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-3-088", "type": "mcq", "concept_ids": ["3.3.data-types"], "difficulty": 2,
+    "stem": "When classifying data, which of the following categories typically requires the HIGHEST level of protection due to stringent legal and financial penalties for a breach?",
+    "options": [
+      { "id": "a", "text": "Public" },
+      { "id": "b", "text": "Regulated" },
+      { "id": "c", "text": "Internal communication" },
+      { "id": "d", "text": "Obfuscated" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-103", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "Which of the following BEST explains the difference between masking and tokenization?",
+    "options": [
+      { "id": "a", "text": "Masking uses mathematical algorithms to secure data, while tokenization uses hashing" },
+      { "id": "b", "text": "Masking obscures parts of the data for display, while tokenization replaces data with a surrogate value for processing" },
+      { "id": "c", "text": "Masking ensures data integrity, while tokenization ensures data availability" },
+      { "id": "d", "text": "Masking is used exclusively for data in transit, while tokenization is used for data at rest" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-107", "type": "mcq", "concept_ids": ["3.3.general-data-considerations"], "difficulty": 2,
+    "stem": "Which of the following considerations is MOST critical when implementing data sovereignty policies for a cloud-hosted application?",
+    "options": [
+      { "id": "a", "text": "The cryptographic algorithms used for data masking" },
+      { "id": "b", "text": "The physical location of the cloud provider's storage arrays" },
+      { "id": "c", "text": "The network bandwidth available for encrypted tunnels" },
+      { "id": "d", "text": "The programming language used to develop the application" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-108", "type": "mcq", "concept_ids": ["3.3.data-classifications"], "difficulty": 2,
+    "stem": "Which of the following data classifications would MOST likely apply to a company's internal cafeteria menu and holiday schedule?",
+    "options": [
+      { "id": "a", "text": "Trade secret" },
+      { "id": "b", "text": "Confidential" },
+      { "id": "c", "text": "Public" },
+      { "id": "d", "text": "Sensitive" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-109", "type": "mcq", "concept_ids": ["3.3.general-data-considerations"], "difficulty": 2,
+    "stem": "Which of the following data states is MOST vulnerable to interception attacks such as man-in-the-middle (MitM) and requires protocols like TLS for protection?",
+    "options": [
+      { "id": "a", "text": "Data at rest" },
+      { "id": "b", "text": "Data in use" },
+      { "id": "c", "text": "Data in transit" },
+      { "id": "d", "text": "Data at rest and use" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-110", "type": "mcq", "concept_ids": ["3.3.general-data-considerations"], "difficulty": 2,
+    "stem": "Which of the following data states represents information actively being processed in random-access memory (RAM) by a central processing unit?",
+    "options": [
+      { "id": "a", "text": "Data at rest" },
+      { "id": "b", "text": "Data in transit" },
+      { "id": "c", "text": "Data in use" },
+      { "id": "d", "text": "Data in transit and rest" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-123", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "Which of the following protection methods strictly relies on irreversible mathematical functions to ensure data integrity rather than confidentiality?",
+    "options": [
+      { "id": "a", "text": "Encryption" },
+      { "id": "b", "text": "Hashing" },
+      { "id": "c", "text": "Tokenization" },
+      { "id": "d", "text": "Masking" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-127", "type": "mcq", "concept_ids": ["3.3.methods-to-secure-data"], "difficulty": 2,
+    "stem": "Which of the following strategies is the BEST approach to protect data at rest on mobile devices issued to corporate executives?",
+    "options": [
+      { "id": "a", "text": "Implement full disk encryption" },
+      { "id": "b", "text": "Enforce strict data in transit TLS rules" },
+      { "id": "c", "text": "Utilize tokenization for all local apps" },
+      { "id": "d", "text": "Deploy a web application firewall" }
+    ],
+    "answer": ["a"]
+  }
+]

@@ -1,0 +1,284 @@
+{
+  "id": "secplus-sy0-701",
+  "title": "CompTIA Security+ SY0-701",
+  "short": "SEC+ SY0-701",
+  "version": 1,
+  "evidence_reasons": [
+    { "key": "weak-auth", "label": "weak authentication" },
+    { "key": "excess-privilege", "label": "excess privilege" },
+    { "key": "exposure", "label": "needless exposure" },
+    { "key": "weak-crypto", "label": "weak or missing encryption" },
+    { "key": "no-logging", "label": "missing logging" }
+  ],
+  "exam": { "questions": 90, "minutes": 90, "pass_score": 750, "score_range": [100, 900], "pbqs": 4 },
+  "domains": [
+    { "id": "1", "title": "General Security Concepts", "weight": 12 },
+    { "id": "2", "title": "Threats, Vulnerabilities, and Mitigations", "weight": 22 },
+    { "id": "3", "title": "Security Architecture", "weight": 18 },
+    { "id": "4", "title": "Security Operations", "weight": 28 },
+    { "id": "5", "title": "Security Program Management and Oversight", "weight": 20 }
+  ],
+  "objectives": [
+    { "id": "1.1", "domain": "1", "title": "Compare and contrast various types of security controls",
+      "concepts": [
+        { "id": "1.1.categories", "title": "Categories" },
+        { "id": "1.1.control-types", "title": "Control types" }
+      ] },
+    { "id": "1.2", "domain": "1", "title": "Summarize fundamental security concepts",
+      "concepts": [
+        { "id": "1.2.cia", "title": "Confidentiality, Integrity, and Availability (CIA)" },
+        { "id": "1.2.non-repudiation", "title": "Non-repudiation" },
+        { "id": "1.2.aaa", "title": "Authentication, Authorization, and Accounting (AAA)" },
+        { "id": "1.2.gap-analysis", "title": "Gap analysis" },
+        { "id": "1.2.zero-trust", "title": "Zero Trust" },
+        { "id": "1.2.physical-security", "title": "Physical security" },
+        { "id": "1.2.deception-and-disruption-technology", "title": "Deception and disruption technology" }
+      ] },
+    { "id": "1.3", "domain": "1", "title": "Explain the importance of change management processes and the impact to security",
+      "concepts": [
+        { "id": "1.3.business-processes", "title": "Business processes impacting security operation" },
+        { "id": "1.3.technical-implications", "title": "Technical implications" },
+        { "id": "1.3.documentation", "title": "Documentation" },
+        { "id": "1.3.version-control", "title": "Version control" }
+      ] },
+    { "id": "1.4", "domain": "1", "title": "Explain the importance of using appropriate cryptographic solutions",
+      "concepts": [
+        { "id": "1.4.pki", "title": "Public key infrastructure (PKI)" },
+        { "id": "1.4.encryption", "title": "Encryption" },
+        { "id": "1.4.tools", "title": "Tools" },
+        { "id": "1.4.obfuscation", "title": "Obfuscation" },
+        { "id": "1.4.hashing", "title": "Hashing" },
+        { "id": "1.4.salting", "title": "Salting" },
+        { "id": "1.4.digital-signatures", "title": "Digital signatures" },
+        { "id": "1.4.key-stretching", "title": "Key stretching" },
+        { "id": "1.4.blockchain", "title": "Blockchain" },
+        { "id": "1.4.open-public-ledger", "title": "Open public ledger" },
+        { "id": "1.4.certificates", "title": "Certificates" }
+      ] },
+    { "id": "2.1", "domain": "2", "title": "Compare and contrast common threat actors and motivations",
+      "concepts": [
+        { "id": "2.1.threat-actors", "title": "Threat actors" },
+        { "id": "2.1.attributes-of-actors", "title": "Attributes of actors" },
+        { "id": "2.1.motivations", "title": "Motivations" }
+      ] },
+    { "id": "2.2", "domain": "2", "title": "Explain common threat vectors and attack surfaces",
+      "concepts": [
+        { "id": "2.2.message-based", "title": "Message-based" },
+        { "id": "2.2.image-based", "title": "Image-based" },
+        { "id": "2.2.file-based", "title": "File-based" },
+        { "id": "2.2.voice-call", "title": "Voice call" },
+        { "id": "2.2.removable-device", "title": "Removable device" },
+        { "id": "2.2.vulnerable-software", "title": "Vulnerable software" },
+        { "id": "2.2.unsupported-systems", "title": "Unsupported systems and applications" },
+        { "id": "2.2.unsecure-networks", "title": "Unsecure networks" },
+        { "id": "2.2.open-service-ports", "title": "Open service ports" },
+        { "id": "2.2.default-credentials", "title": "Default credentials" },
+        { "id": "2.2.supply-chain", "title": "Supply chain" },
+        { "id": "2.2.social-engineering", "title": "Human vectors/social engineering" }
+      ] },
+    { "id": "2.3", "domain": "2", "title": "Explain various types of vulnerabilities",
+      "concepts": [
+        { "id": "2.3.application", "title": "Application" },
+        { "id": "2.3.os-based", "title": "Operating system (OS)-based" },
+        { "id": "2.3.web-based", "title": "Web-based" },
+        { "id": "2.3.hardware", "title": "Hardware" },
+        { "id": "2.3.virtualization", "title": "Virtualization" },
+        { "id": "2.3.cloud-specific", "title": "Cloud-specific" },
+        { "id": "2.3.supply-chain", "title": "Supply chain" },
+        { "id": "2.3.cryptographic", "title": "Cryptographic" },
+        { "id": "2.3.misconfiguration", "title": "Misconfiguration" },
+        { "id": "2.3.mobile-device", "title": "Mobile device" },
+        { "id": "2.3.zero-day", "title": "Zero-day" }
+      ] },
+    { "id": "2.4", "domain": "2", "title": "Given a scenario, analyze indicators of malicious activity",
+      "concepts": [
+        { "id": "2.4.malware-attacks", "title": "Malware attacks" },
+        { "id": "2.4.physical-attacks", "title": "Physical attacks" },
+        { "id": "2.4.network-attacks", "title": "Network attacks" },
+        { "id": "2.4.application-attacks", "title": "Application attacks" },
+        { "id": "2.4.cryptographic-attacks", "title": "Cryptographic attacks" },
+        { "id": "2.4.password-attacks", "title": "Password attacks" },
+        { "id": "2.4.indicators", "title": "Indicators" }
+      ] },
+    { "id": "2.5", "domain": "2", "title": "Explain the purpose of mitigation techniques used to secure the enterprise",
+      "concepts": [
+        { "id": "2.5.segmentation", "title": "Segmentation" },
+        { "id": "2.5.access-control", "title": "Access control" },
+        { "id": "2.5.application-allow-list", "title": "Application allow list" },
+        { "id": "2.5.isolation", "title": "Isolation" },
+        { "id": "2.5.patching", "title": "Patching" },
+        { "id": "2.5.encryption", "title": "Encryption" },
+        { "id": "2.5.monitoring", "title": "Monitoring" },
+        { "id": "2.5.least-privilege", "title": "Least privilege" },
+        { "id": "2.5.configuration-enforcement", "title": "Configuration enforcement" },
+        { "id": "2.5.decommissioning", "title": "Decommissioning" },
+        { "id": "2.5.hardening-techniques", "title": "Hardening techniques" }
+      ] },
+    { "id": "3.1", "domain": "3", "title": "Compare and contrast security implications of different architecture models",
+      "concepts": [
+        { "id": "3.1.architecture", "title": "Architecture and infrastructure concepts" },
+        { "id": "3.1.considerations", "title": "Considerations" }
+      ] },
+    { "id": "3.2", "domain": "3", "title": "Given a scenario, apply security principles to secure enterprise infrastructure",
+      "concepts": [
+        { "id": "3.2.infrastructure-considerations", "title": "Infrastructure considerations" },
+        { "id": "3.2.secure-comms", "title": "Secure communication/access" },
+        { "id": "3.2.selection-of-effective-controls", "title": "Selection of effective controls" }
+      ] },
+    { "id": "3.3", "domain": "3", "title": "Compare and contrast concepts and strategies to protect data",
+      "concepts": [
+        { "id": "3.3.data-types", "title": "Data types" },
+        { "id": "3.3.data-classifications", "title": "Data classifications" },
+        { "id": "3.3.general-data-considerations", "title": "General data considerations" },
+        { "id": "3.3.methods-to-secure-data", "title": "Methods to secure data" }
+      ] },
+    { "id": "3.4", "domain": "3", "title": "Explain the importance of resilience and recovery in security architecture",
+      "concepts": [
+        { "id": "3.4.high-availability", "title": "High availability" },
+        { "id": "3.4.site-considerations", "title": "Site considerations" },
+        { "id": "3.4.platform-diversity", "title": "Platform diversity" },
+        { "id": "3.4.multi-cloud-systems", "title": "Multi-cloud systems" },
+        { "id": "3.4.continuity-of-operations", "title": "Continuity of operations" },
+        { "id": "3.4.capacity-planning", "title": "Capacity planning" },
+        { "id": "3.4.testing", "title": "Testing" },
+        { "id": "3.4.backups", "title": "Backups" },
+        { "id": "3.4.power", "title": "Power" }
+      ] },
+    { "id": "4.1", "domain": "4", "title": "Given a scenario, apply common security techniques to computing resources",
+      "concepts": [
+        { "id": "4.1.baselines", "title": "Secure baselines" },
+        { "id": "4.1.hardening-targets", "title": "Hardening targets" },
+        { "id": "4.1.wireless-install", "title": "Wireless devices: installation considerations" },
+        { "id": "4.1.mobile-solutions", "title": "Mobile solutions" },
+        { "id": "4.1.wireless-security", "title": "Wireless security settings" },
+        { "id": "4.1.app-security", "title": "Application security" },
+        { "id": "4.1.sandboxing", "title": "Sandboxing" },
+        { "id": "4.1.monitoring", "title": "Monitoring" }
+      ] },
+    { "id": "4.2", "domain": "4", "title": "Explain the security implications of proper hardware, software, and data asset management",
+      "concepts": [
+        { "id": "4.2.acquisition", "title": "Acquisition/procurement process" },
+        { "id": "4.2.assignment", "title": "Assignment/accounting" },
+        { "id": "4.2.asset-tracking", "title": "Monitoring/asset tracking" },
+        { "id": "4.2.disposal", "title": "Disposal/decommissioning" }
+      ] },
+    { "id": "4.3", "domain": "4", "title": "Explain various activities associated with vulnerability management",
+      "concepts": [
+        { "id": "4.3.identification", "title": "Identification methods" },
+        { "id": "4.3.analysis", "title": "Analysis" },
+        { "id": "4.3.response", "title": "Vulnerability response and remediation" },
+        { "id": "4.3.validation", "title": "Validation of remediation" },
+        { "id": "4.3.reporting", "title": "Reporting" }
+      ] },
+    { "id": "4.4", "domain": "4", "title": "Explain security alerting and monitoring concepts and tools",
+      "concepts": [
+        { "id": "4.4.monitoring-computing-resources", "title": "Monitoring computing resources" },
+        { "id": "4.4.activities", "title": "Activities" },
+        { "id": "4.4.tools", "title": "Tools" }
+      ] },
+    { "id": "4.5", "domain": "4", "title": "Given a scenario, modify enterprise capabilities to enhance security",
+      "concepts": [
+        { "id": "4.5.firewall", "title": "Firewall" },
+        { "id": "4.5.ids-ips", "title": "IDS/IPS" },
+        { "id": "4.5.web-filter", "title": "Web filter" },
+        { "id": "4.5.operating-system-security", "title": "Operating system security" },
+        { "id": "4.5.implementation-of-secure-protocols", "title": "Implementation of secure protocols" },
+        { "id": "4.5.file-integrity-monitoring", "title": "File integrity monitoring" },
+        { "id": "4.5.dlp", "title": "DLP" },
+        { "id": "4.5.nac", "title": "Network access control (NAC)" },
+        { "id": "4.5.edr-xdr", "title": "Endpoint detection and response (EDR)/extended detection and response (XDR)" },
+        { "id": "4.5.user-behavior-analytics", "title": "User behavior analytics" },
+        { "id": "4.5.dns-filtering", "title": "DNS filtering" },
+        { "id": "4.5.email-security", "title": "Email security" }
+      ] },
+    { "id": "4.6", "domain": "4", "title": "Given a scenario, implement and maintain identity and access management",
+      "concepts": [
+        { "id": "4.6.provisioning", "title": "Provisioning/de-provisioning user accounts" },
+        { "id": "4.6.permissions", "title": "Permission assignments and implications" },
+        { "id": "4.6.identity-proofing", "title": "Identity proofing" },
+        { "id": "4.6.federation", "title": "Federation" },
+        { "id": "4.6.single-sign-on", "title": "Single sign-on (SSO)" },
+        { "id": "4.6.interoperability", "title": "Interoperability" },
+        { "id": "4.6.attestation", "title": "Attestation" },
+        { "id": "4.6.access-controls", "title": "Access controls" },
+        { "id": "4.6.multifactor-authentication", "title": "Multifactor authentication" },
+        { "id": "4.6.password-concepts", "title": "Password concepts" },
+        { "id": "4.6.pam-tools", "title": "Privileged access management tools" }
+      ] },
+    { "id": "4.7", "domain": "4", "title": "Explain the importance of automation and orchestration related to secure operations",
+      "concepts": [
+        { "id": "4.7.automation-use-cases", "title": "Use cases of automation and scripting" },
+        { "id": "4.7.benefits", "title": "Benefits" },
+        { "id": "4.7.other-considerations", "title": "Other considerations" }
+      ] },
+    { "id": "4.8", "domain": "4", "title": "Explain appropriate incident response activities",
+      "concepts": [
+        { "id": "4.8.process", "title": "Process" },
+        { "id": "4.8.training", "title": "Training" },
+        { "id": "4.8.testing", "title": "Testing" },
+        { "id": "4.8.root-cause-analysis", "title": "Root cause analysis" },
+        { "id": "4.8.threat-hunting", "title": "Threat hunting" },
+        { "id": "4.8.digital-forensics", "title": "Digital forensics" }
+      ] },
+    { "id": "4.9", "domain": "4", "title": "Given a scenario, use data sources to support an investigation",
+      "concepts": [
+        { "id": "4.9.log-data", "title": "Log data" },
+        { "id": "4.9.data-sources", "title": "Data sources" }
+      ] },
+    { "id": "5.1", "domain": "5", "title": "Summarize elements of effective security governance",
+      "concepts": [
+        { "id": "5.1.guidelines", "title": "Guidelines" },
+        { "id": "5.1.policies", "title": "Policies" },
+        { "id": "5.1.standards", "title": "Standards" },
+        { "id": "5.1.procedures", "title": "Procedures" },
+        { "id": "5.1.external-considerations", "title": "External considerations" },
+        { "id": "5.1.monitoring-and-revision", "title": "Monitoring and revision" },
+        { "id": "5.1.governance-structures", "title": "Types of governance structures" },
+        { "id": "5.1.roles", "title": "Roles and responsibilities for systems and data" }
+      ] },
+    { "id": "5.2", "domain": "5", "title": "Explain elements of the risk management process",
+      "concepts": [
+        { "id": "5.2.risk-identification", "title": "Risk identification" },
+        { "id": "5.2.risk-assessment", "title": "Risk assessment" },
+        { "id": "5.2.risk-analysis", "title": "Risk analysis" },
+        { "id": "5.2.risk-register", "title": "Risk register" },
+        { "id": "5.2.risk-tolerance", "title": "Risk tolerance" },
+        { "id": "5.2.risk-appetite", "title": "Risk appetite" },
+        { "id": "5.2.risk-management-strategies", "title": "Risk management strategies" },
+        { "id": "5.2.risk-reporting", "title": "Risk reporting" },
+        { "id": "5.2.business-impact-analysis", "title": "Business impact analysis" }
+      ] },
+    { "id": "5.3", "domain": "5", "title": "Explain the processes associated with third-party risk assessment and management",
+      "concepts": [
+        { "id": "5.3.vendor-assessment", "title": "Vendor assessment" },
+        { "id": "5.3.vendor-selection", "title": "Vendor selection" },
+        { "id": "5.3.agreement-types", "title": "Agreement types" },
+        { "id": "5.3.vendor-monitoring", "title": "Vendor monitoring" },
+        { "id": "5.3.questionnaires", "title": "Questionnaires" },
+        { "id": "5.3.rules-of-engagement", "title": "Rules of engagement" }
+      ] },
+    { "id": "5.4", "domain": "5", "title": "Summarize elements of effective security compliance",
+      "concepts": [
+        { "id": "5.4.compliance-reporting", "title": "Compliance reporting" },
+        { "id": "5.4.consequences-of-non-compliance", "title": "Consequences of non-compliance" },
+        { "id": "5.4.compliance-monitoring", "title": "Compliance monitoring" },
+        { "id": "5.4.privacy", "title": "Privacy" }
+      ] },
+    { "id": "5.5", "domain": "5", "title": "Explain types and purposes of audits and assessments",
+      "concepts": [
+        { "id": "5.5.attestation", "title": "Attestation" },
+        { "id": "5.5.internal", "title": "Internal" },
+        { "id": "5.5.external", "title": "External" },
+        { "id": "5.5.penetration-testing", "title": "Penetration testing" }
+      ] },
+    { "id": "5.6", "domain": "5", "title": "Given a scenario, implement security awareness practices",
+      "concepts": [
+        { "id": "5.6.phishing", "title": "Phishing" },
+        { "id": "5.6.anomalous-behavior-recognition", "title": "Anomalous behavior recognition" },
+        { "id": "5.6.user-guidance-and-training", "title": "User guidance and training" },
+        { "id": "5.6.reporting-and-monitoring", "title": "Reporting and monitoring" },
+        { "id": "5.6.development", "title": "Development" },
+        { "id": "5.6.execution", "title": "Execution" }
+      ] }
+  ]
+}

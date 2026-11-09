@@ -19,7 +19,7 @@ Every item records whether it has been reviewed, and by whom: the maintainer (ag
 item was drafted does not matter, and AI help is welcome. Only person-reviewed items count as the *curated* bank; the rest are
 labelled and are served after them. `CONTENT-STANDARDS.md` says exactly what that means.
 
-**Where it stands:** 87 questions in 2 packs; 0 reviewed by a person, 0 by an AI tool. See `ROADMAP.md` for what is built and what
+**Where it stands:** 1029 questions in 3 packs; 76 reviewed by a person, 0 by an AI tool. See `ROADMAP.md` for what is built and what
 is wanted, and `CONTRIBUTING.md` to help.
 
 ![The skill tree: Foundations complete, Linux and Windows open, other branches coming soon](docs/screenshots/skill-tree.png)
@@ -29,8 +29,8 @@ A question with simulated tool output, and the feedback after a wrong answer:
 ![A Linux question that shows a simulated nmap scan](docs/screenshots/terminal-question.png)
 ![Feedback after a wrong answer, with the explanation and when the concept comes back](docs/screenshots/feedback.png)
 
-Packs are plain folders of JSON, so the game can also play question banks you add yourself. This is a Security+ pack kept
-locally (it is not part of this repository), in the same terminal:
+Packs are plain folders of JSON, so the game can also play question banks you add yourself. A Security+ question, in the
+same terminal:
 
 ![A Security+ question answered correctly, with XP and cycles awarded](docs/screenshots/secplus-question.png)
 
@@ -40,6 +40,7 @@ Content comes in *packs*: a folder of JSON with the questions for one certificat
 
 - Linux Command Line (`packs/linux-cli/`)
 - Windows Command Line (`packs/windows-cli/`)
+- CompTIA Security+ SY0-701 (`packs/secplus-sy0-701/`)
 
 The skill tree (`data/tracks.json`) also lists branches that are not built yet; they show as "coming soon".
 

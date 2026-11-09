@@ -1,0 +1,178 @@
+[
+  {
+    "id": "aiken-domain-4-011", "type": "mcq", "concept_ids": ["4.3.response"], "difficulty": 2,
+    "stem": "A company would like to automate their response when a virus is detected on company devices. Which of the following would be the BEST way to implement this function?",
+    "options": [
+      { "id": "a", "text": "SOAR" },
+      { "id": "b", "text": "Vulnerability scan" },
+      { "id": "c", "text": "IaaS" },
+      { "id": "d", "text": "Active footprinting" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-015", "type": "mcq", "concept_ids": ["4.3.identification"], "difficulty": 2,
+    "stem": "A cybersecurity analyst is tasked with conducting a comprehensive vulnerability assessment of the organization's network to identify potential security weaknesses. Which tool would be most effective for scanning the network for vulnerabilities, misconfigurations, and non-compliance with security policies?",
+    "options": [
+      { "id": "a", "text": "Wireshark" },
+      { "id": "b", "text": "Netstat" },
+      { "id": "c", "text": "Nessus" },
+      { "id": "d", "text": "tcpdump" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-031", "type": "mcq", "concept_ids": ["4.3.response"], "difficulty": 2,
+    "stem": "A security analyst has identified a number of sessions from a single IP address with a TTL equal to zero. One of the sessions has a destination of the Internet firewall, and a session immediately after has a destination of your DMZ server. Which of the following BEST describes this log information?",
+    "options": [
+      { "id": "a", "text": "Someone is performing a traceroute to the DMZ server" },
+      { "id": "b", "text": "A remote user is grabbing banners of the firewall and DMZ server" },
+      { "id": "c", "text": "Users are performing DNS lookups" },
+      { "id": "d", "text": "Someone is performing a vulnerability scan against the firewall and DMZ server" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-034", "type": "mcq", "concept_ids": ["4.3.reporting"], "difficulty": 2,
+    "stem": "A security manager must remain aware of the security posture of each system.  Which of the following supports this requirement?",
+    "options": [
+      { "id": "a", "text": "Disabling unnecessary services" },
+      { "id": "b", "text": "Establishing baseline reporting" },
+      { "id": "c", "text": "User awareness training" },
+      { "id": "d", "text": "Installing anti-malware software" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-042", "type": "mcq", "concept_ids": ["4.3.analysis"], "difficulty": 2,
+    "stem": "Alice, a cybersecurity analyst, is evaluating a vulnerability in a web application. The vulnerability characteristics are:• Exploitable remotely (network-based).• Requires low privileges and minimal user interaction.• Low attack complexity.• High impact on confidentiality, integrity, and availability.Task: Using the Common Vulnerability Scoring System (CVSS), how should Alice rate the severity of this vulnerability?",
+    "options": [
+      { "id": "a", "text": "Low Severity" },
+      { "id": "b", "text": "Medium Severity" },
+      { "id": "c", "text": "High Severity" },
+      { "id": "d", "text": "Critical Severity" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-4-043", "type": "mcq", "concept_ids": ["4.3.analysis"], "difficulty": 2,
+    "stem": "An administrator notices that the network's Intrusion Detection System (IDS) is incorrectly identifying malicious traffic as normal. What is this type of error called?",
+    "options": [
+      { "id": "a", "text": "True Positive" },
+      { "id": "b", "text": "False Positive" },
+      { "id": "c", "text": "True Negative" },
+      { "id": "d", "text": "False Negative" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-4-053", "type": "mcq", "concept_ids": ["4.3.analysis"], "difficulty": 2,
+    "stem": "Emily, a network security manager, investigates an IPS alert about unusual traffic from an internallP, 10.0.0.52, to a trusted external address. After reviewing the network setup and consulting staff, she finds it's just regular data backup traffic.What type of alert is this?",
+    "options": [
+      { "id": "a", "text": "True Positive" },
+      { "id": "b", "text": "True Negative" },
+      { "id": "c", "text": "False Positive" },
+      { "id": "d", "text": "False Negative" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-066", "type": "mcq", "concept_ids": ["4.3.identification"], "difficulty": 2,
+    "stem": "In cybersecurity, what term refers to a flaw or weakness in software, hardware, or a process that could be exploited by a threat?",
+    "options": [
+      { "id": "a", "text": "Risk" },
+      { "id": "b", "text": "Exploit" },
+      { "id": "c", "text": "Threat" },
+      { "id": "d", "text": "Vulnerability" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-4-076", "type": "mcq", "concept_ids": ["4.3.analysis"], "difficulty": 2,
+    "stem": "In the evaluation of a biometric system's performance, what does the Crossover Error Rate (CER) signify, and why is it an important metric?",
+    "options": [
+      { "id": "a", "text": "The rate at which the system's False Acceptance Rate (FAR) equals its False Rejection Rate (FRR)" },
+      { "id": "b", "text": "The frequency of successful authentications by unauthorized users" },
+      { "id": "c", "text": "The percentage of times the system accurately identifies registered users" },
+      { "id": "d", "text": "The rate at which biometric data is correctly encrypted and decrypted" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-085", "type": "mcq", "concept_ids": ["4.3.identification"], "difficulty": 2,
+    "stem": "Penetration testers otten employ both footprinting and fingerprinting during assessments. What is the primary objective of fingerprinting in the context of these activities?",
+    "options": [
+      { "id": "a", "text": "To gather a comprehensive overview of the target's network architecture." },
+      { "id": "b", "text": "To identify specific services and their versions running on individual systems." },
+      { "id": "c", "text": "To analyze the overall security posture of the target organization." },
+      { "id": "d", "text": "To map all the external IP addresses associated with the target network." }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-097", "type": "mcq", "concept_ids": ["4.3.identification"], "difficulty": 2,
+    "stem": "The security team of an organization seeks a tool that can aggregate information on known vulnerabilities, allocate standardized identifiers for each, and offer insights on their severity and potential implications. Which tool is best suited for fu these specific requirements?",
+    "options": [
+      { "id": "a", "text": "SCAP" },
+      { "id": "b", "text": "CVE" },
+      { "id": "c", "text": "SIEM" },
+      { "id": "d", "text": "Nessus" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-115", "type": "mcq", "concept_ids": ["4.3.analysis"], "difficulty": 2,
+    "stem": "When assessing the accuracy of a biometric system, which of the following metrics is most desirable for optimal performance?",
+    "options": [
+      { "id": "a", "text": "The lowest possible False Acceptance Rate (FAR)" },
+      { "id": "b", "text": "The highest possible False Acceptance Rate (FAR)" },
+      { "id": "c", "text": "The highest possible Crossover Error Rate (CER)" },
+      { "id": "d", "text": "The lowest possible Crossover Error Rate (CER)" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-4-116", "type": "mcq", "concept_ids": ["4.3.analysis"], "difficulty": 2,
+    "stem": "When implementing a biometric authentication system in a high-security environment, which metric is most critical to minimize to ensure unauthorized individuals are not granted access?",
+    "options": [
+      { "id": "a", "text": "False Acceptance Rate (FAR)" },
+      { "id": "b", "text": "False Rejection Rate (FRR)" },
+      { "id": "c", "text": "Crossover Error Rate (CER)" },
+      { "id": "d", "text": "True Acceptance Rate (TAR)" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-127", "type": "mcq", "concept_ids": ["4.3.response"], "difficulty": 2,
+    "stem": "Which of the following is an automated system designed to inspect a system for known weakness or misconfigurations?",
+    "options": [
+      { "id": "a", "text": "Anti-malware" },
+      { "id": "b", "text": "Penetration test" },
+      { "id": "c", "text": "Pop-up blocker" },
+      { "id": "d", "text": "Vulnerability scanner" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-4-132", "type": "mcq", "concept_ids": ["4.3.identification"], "difficulty": 2,
+    "stem": "Which of the following test multiple security configurations in the least invasive manner?",
+    "options": [
+      { "id": "a", "text": "Vulnerability scan" },
+      { "id": "b", "text": "Threat assessment" },
+      { "id": "c", "text": "Penetration test" },
+      { "id": "d", "text": "Ping sweep" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-139", "type": "mcq", "concept_ids": ["4.3.response"], "difficulty": 2,
+    "stem": "You are responsible for the security of a critical web application and its underlying database server. A recent vulnerability scan report indicates potential security issues with the database server. To accurately determine the server's current patch status and identify any missing security updates, which tool should you use?",
+    "options": [
+      { "id": "a", "text": "Tcpdump" },
+      { "id": "b", "text": "Nmap" },
+      { "id": "c", "text": "Wireshark" },
+      { "id": "d", "text": "Nessus" }
+    ],
+    "answer": ["d"]
+  }
+]

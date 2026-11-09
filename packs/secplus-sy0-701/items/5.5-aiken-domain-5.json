@@ -1,0 +1,255 @@
+[
+  {
+    "id": "aiken-domain-5-003", "type": "mcq", "concept_ids": ["5.5.attestation"], "difficulty": 2,
+    "stem": "A cloud service provider undergoes an extensive evaluation and receives a formal report validating its security controls. Customers use this report to verify the provider's security posture. What is this report called?",
+    "options": [
+      { "id": "a", "text": "Attestation report" },
+      { "id": "b", "text": "Defensive assessment" },
+      { "id": "c", "text": "Penetration testing report" },
+      { "id": "d", "text": "Internal self-assessment" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-010", "type": "mcq", "concept_ids": ["5.5.external"], "difficulty": 2,
+    "stem": "A company processes credit card transactions and must demonstrate adherence to PCI DSS. What type of assessment MUST the company pass to continue processing payments?",
+    "options": [
+      { "id": "a", "text": "Internal self-assessment" },
+      { "id": "b", "text": "Unknown environment penetration test" },
+      { "id": "c", "text": "Physical security assessment" },
+      { "id": "d", "text": "Compliance audit" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-022", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "A financial institution hires an external firm to assess its external web applications. The institution provides the testers with basic user-level credentials and architectural diagrams but withholds source code and administrative access. Which BEST describes the type of assessment being performed?",
+    "options": [
+      { "id": "a", "text": "Partially known environment testing" },
+      { "id": "b", "text": "Unknown environment testing" },
+      { "id": "c", "text": "Passive reconnaissance testing" },
+      { "id": "d", "text": "Known environment testing" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-030", "type": "mcq", "concept_ids": ["5.5.external"], "difficulty": 2,
+    "stem": "A healthcare organization undergoes a mandatory evaluation by a government body to ensure adherence to HIPAA. Which type of audit is this?",
+    "options": [
+      { "id": "a", "text": "Internal audit" },
+      { "id": "b", "text": "Self-assessment" },
+      { "id": "c", "text": "Offensive assessment" },
+      { "id": "d", "text": "Regulatory audit" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-054", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "A security analyst gathers information about a target company by reviewing public DNS records and social media profiles. Which type of reconnaissance is this?",
+    "options": [
+      { "id": "a", "text": "Passive reconnaissance" },
+      { "id": "b", "text": "Offensive exploitation" },
+      { "id": "c", "text": "Active reconnaissance" },
+      { "id": "d", "text": "Internal examination" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-065", "type": "mcq", "concept_ids": ["5.5.external"], "difficulty": 2,
+    "stem": "A software development company requires developers to sign a code of conduct, and also hires a third-party auditor to certify the security of its infrastructure. Which compliance concepts are being demonstrated?",
+    "options": [
+      { "id": "a", "text": "Due care and right to be forgotten" },
+      { "id": "b", "text": "Internal and external compliance mechanisms" },
+      { "id": "c", "text": "Local and global legal implications" },
+      { "id": "d", "text": "Automated and manual attestation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-068", "type": "mcq", "concept_ids": ["5.5.external"], "difficulty": 2,
+    "stem": "A team of assessors attempts to tailgate an employee through a secure door and visually inspects unlocked workstations. Which type of assessment is being conducted?",
+    "options": [
+      { "id": "a", "text": "Compliance audit" },
+      { "id": "b", "text": "Physical assessment" },
+      { "id": "c", "text": "Defensive assessment" },
+      { "id": "d", "text": "Regulatory examination" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-095", "type": "mcq", "concept_ids": ["5.5.attestation"], "difficulty": 2,
+    "stem": "An organization wants to verify a SaaS provider's security posture without conducting its own resource-intensive audit. Which of the following provides the BEST alternative?",
+    "options": [
+      { "id": "a", "text": "Reviewing the provider's marketing materials and security whitepapers" },
+      { "id": "b", "text": "Requesting the results of a recent independent assessment, such as a SOC 2 Type II report" },
+      { "id": "c", "text": "Executing a comprehensive supply chain analysis of the provider's hardware" },
+      { "id": "d", "text": "Asking the provider to sign a strict NDA" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-115", "type": "mcq", "concept_ids": ["5.5.internal"], "difficulty": 2,
+    "stem": "How does a security assessment typically differ from a formal security audit?",
+    "options": [
+      { "id": "a", "text": "Assessments result in punitive fines if vulnerabilities are discovered" },
+      { "id": "b", "text": "Assessments generally focus on identifying improvements rather than strict compliance" },
+      { "id": "c", "text": "Assessments require the organization to completely halt production operations" },
+      { "id": "d", "text": "Assessments are always conducted by external regulatory bodies" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-130", "type": "mcq", "concept_ids": ["5.5.external"], "difficulty": 2,
+    "stem": "What distinguishes an external audit from an internal audit?",
+    "options": [
+      { "id": "a", "text": "External audits solely focus on financial metrics rather than security policies" },
+      { "id": "b", "text": "External audits are typically conducted by the organization's own employees" },
+      { "id": "c", "text": "External audits are less formal and rarely produce a final report" },
+      { "id": "d", "text": "External audits provide an objective, third-party evaluation of security controls" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-133", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "What is a primary disadvantage of conducting a penetration test in an unknown environment?",
+    "options": [
+      { "id": "a", "text": "The assessment requires the organization to provide detailed network topography diagrams upfront" },
+      { "id": "b", "text": "The testing team may spend a significant portion of their allotted time strictly on reconnaissance" },
+      { "id": "c", "text": "The assessment focuses exclusively on defensive log analysis rather than exploitation" },
+      { "id": "d", "text": "The testing team has full access to the source code, reducing the realism of the attack" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-134", "type": "mcq", "concept_ids": ["5.5.internal"], "difficulty": 2,
+    "stem": "What is a significant limitation of relying entirely on security self-assessments?",
+    "options": [
+      { "id": "a", "text": "They require the involvement of hostile external attackers" },
+      { "id": "b", "text": "They are legally prohibited by most international privacy frameworks" },
+      { "id": "c", "text": "They may lack objectivity and fail to identify systemic flaws due to bias" },
+      { "id": "d", "text": "They are typically too expensive for small organizations to perform" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-140", "type": "mcq", "concept_ids": ["5.5.external"], "difficulty": 2,
+    "stem": "What is the PRIMARY benefit of utilizing an independent third-party audit?",
+    "options": [
+      { "id": "a", "text": "It eliminates the need for an internal security team" },
+      { "id": "b", "text": "It reduces the overall cost of deploying security infrastructure" },
+      { "id": "c", "text": "It guarantees that no vulnerabilities exist within the corporate network" },
+      { "id": "d", "text": "It provides an unbiased validation of controls that can be trusted by external partners" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-145", "type": "mcq", "concept_ids": ["5.5.attestation"], "difficulty": 2,
+    "stem": "What is the PRIMARY purpose of an attestation report in the context of security audits?",
+    "options": [
+      { "id": "a", "text": "To identify vulnerabilities within an organization's internal web applications" },
+      { "id": "b", "text": "To continuously monitor network traffic for anomalous behavior" },
+      { "id": "c", "text": "To actively exploit weaknesses in a targeted system to demonstrate risk" },
+      { "id": "d", "text": "To provide a formal declaration by an independent party regarding the validity of an organization's security controls" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-149", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "What is the primary purpose of the reconnaissance phase during an assessment?",
+    "options": [
+      { "id": "a", "text": "To gather intelligence and identify potential attack vectors before launching an exploit" },
+      { "id": "b", "text": "To review internal governance documents and business continuity plans" },
+      { "id": "c", "text": "To formally attest to the organization's compliance with industry regulations" },
+      { "id": "d", "text": "To exploit known vulnerabilities and establish persistence on the target network" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-155", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "When evaluating a vendor's security, what distinguishes a penetration test report from a vulnerability scan report?",
+    "options": [
+      { "id": "a", "text": "A penetration test verifies if identified flaws can be successfully exploited, while a vulnerability scan only identifies potential flaws" },
+      { "id": "b", "text": "A penetration test assesses physical security, while a vulnerability scan assesses network security" },
+      { "id": "c", "text": "A penetration test is always conducted continuously, while a vulnerability scan is a one-time event" },
+      { "id": "d", "text": "A penetration test relies solely on automated tools, while a vulnerability scan requires manual human intervention" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-157", "type": "mcq", "concept_ids": ["5.5.attestation"], "difficulty": 2,
+    "stem": "When is a security self-assessment MOST appropriate for an organization to perform?",
+    "options": [
+      { "id": "a", "text": "When a government agency formally requests a binding examination of security practices" },
+      { "id": "b", "text": "When management seeks an initial baseline of security posture before allocating budget" },
+      { "id": "c", "text": "When an independent attestation is required by a new enterprise customer" },
+      { "id": "d", "text": "When the organization needs to fulfill a regulatory mandate for external validation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-158", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "Which activity distinguishes active reconnaissance from passive reconnaissance?",
+    "options": [
+      { "id": "a", "text": "Searching through public job postings to identify technologies used by the target" },
+      { "id": "b", "text": "Reviewing a target organization's publicly filed financial reports" },
+      { "id": "c", "text": "Querying a public WHOIS database for domain registration details" },
+      { "id": "d", "text": "Interacting directly with the target's servers by running a port scan" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-165", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "Which BEST describes the value of testing in a partially known environment?",
+    "options": [
+      { "id": "a", "text": "It simulates an external attacker who has absolutely no prior knowledge of the target" },
+      { "id": "b", "text": "It entirely eliminates the reconnaissance phase of a typical penetration test" },
+      { "id": "c", "text": "It simulates an insider threat who has standard user access and limited architectural knowledge" },
+      { "id": "d", "text": "It tests the system exactly as a completely trusted internal administrator would see it" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-189", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "Which of the following BEST describes the purpose of formal security examinations?",
+    "options": [
+      { "id": "a", "text": "To quickly scan a network for missing software patches" },
+      { "id": "b", "text": "To train employees on recognizing phishing attempts" },
+      { "id": "c", "text": "To actively exploit a known environment using red team techniques" },
+      { "id": "d", "text": "To rigorously inspect and evaluate specific security controls for formal certification" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-203", "type": "mcq", "concept_ids": ["5.5.attestation"], "difficulty": 2,
+    "stem": "Who is MOST likely to conduct an internal audit of an organization's security controls?",
+    "options": [
+      { "id": "a", "text": "A law enforcement agency investigating a recent data breach" },
+      { "id": "b", "text": "An external consulting firm hired to provide a public attestation" },
+      { "id": "c", "text": "A specialized employee of the organization operating independently from the IT department" },
+      { "id": "d", "text": "A government regulatory inspector" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-206", "type": "mcq", "concept_ids": ["5.5.penetration-testing"], "difficulty": 2,
+    "stem": "Why would an organization choose an integrated assessment approach over isolated testing?",
+    "options": [
+      { "id": "a", "text": "To bypass the need for an external regulatory compliance audit" },
+      { "id": "b", "text": "To evaluate the defensive team's response to an active, simulated attack in real-time" },
+      { "id": "c", "text": "To ensure only technical vulnerabilities are identified without reviewing policies" },
+      { "id": "d", "text": "To minimize the cost by relying solely on automated vulnerability scanners" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-208", "type": "mcq", "concept_ids": ["5.5.external"], "difficulty": 2,
+    "stem": "Why would an organization choose to conduct an internal audit prior to an external regulatory assessment?",
+    "options": [
+      { "id": "a", "text": "To eliminate the need for future external regulatory examinations" },
+      { "id": "b", "text": "To legally certify compliance with international data privacy laws" },
+      { "id": "c", "text": "To transfer the financial risk of non-compliance to a third-party auditor" },
+      { "id": "d", "text": "To identify and remediate control deficiencies without public penalty" }
+    ],
+    "answer": ["d"]
+  }
+]

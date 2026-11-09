@@ -1,0 +1,277 @@
+[
+  {
+    "id": "aiken-domain-4-010", "type": "mcq", "concept_ids": ["4.5.email-security"], "difficulty": 2,
+    "stem": "A company wishes to assess its external web application to identify any outdated software that may present security risks. Which command would be BEST suited for this purpose?",
+    "options": [
+      { "id": "a", "text": "curl -I example.com" },
+      { "id": "b", "text": "wget --spider -S example.com" },
+      { "id": "c", "text": "nmap -sV example.com" },
+      { "id": "d", "text": "whois example.com" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-013", "type": "mcq", "concept_ids": ["4.5.edr-xdr"], "difficulty": 2,
+    "stem": "A corporation is looking to implement a security solution that continuously monitors and analyzes its endpoints for malicious activities and anomalies, and can respond to threats in real-time. Which technology would be most effective for this purpose?",
+    "options": [
+      { "id": "a", "text": "Network Access Control (NAC)" },
+      { "id": "b", "text": "Intrusion Detection System (IDS)" },
+      { "id": "c", "text": "Network Address Translation (NAT)" },
+      { "id": "d", "text": "Endpoint Detection and Response (EDR)" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-4-014", "type": "mcq", "concept_ids": ["4.5.dlp"], "difficulty": 2,
+    "stem": "A cybersecurity analyst is investigating an incident involving the sale of stolen corporate data. To locate the source of this data breach, which of the following platforms is the analyst most likely to scrutinize?",
+    "options": [
+      { "id": "a", "text": "Corporate intranet" },
+      { "id": "b", "text": "Social media networks" },
+      { "id": "c", "text": "Dark Web" },
+      { "id": "d", "text": "Public forums" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-020", "type": "mcq", "concept_ids": ["4.5.ids-ips"], "difficulty": 2,
+    "stem": "A network IPS has created this log entry:Frame 4: 937 bytes on wire (7496 bits), 937 bytes captured Ethernet II, Src: HewlettP_82:d8:31, Dst: Cisco_a1:b0:d1 Internet Protocol Version 4, Src: 172.16.22.7, Dst: 10.8.122.244 Transmission Control Protocol, Src Port: 3863, Dst Port: 1433 Application Data: SELECT * FROM users WHERE username='x' or 'x'='x' AND password='x' or 'x'='x'Which of the following would describe this log entry?",
+    "options": [
+      { "id": "a", "text": "SQL injection" },
+      { "id": "b", "text": "Phishing" },
+      { "id": "c", "text": "Brute force" },
+      { "id": "d", "text": "Cross-site scripting" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-022", "type": "mcq", "concept_ids": ["4.5.file-integrity-monitoring"], "difficulty": 2,
+    "stem": "A security administrator has been asked to respond to a potential security breach of the company’s databases, and they need to gather the most volatile data before powering down the database servers. In which order should they collect this information?",
+    "options": [
+      { "id": "a", "text": "CPU registers, memory, temporary files, remote monitoring data" },
+      { "id": "b", "text": "Memory, CPU registers, temporary files, remote monitoring data" },
+      { "id": "c", "text": "Memory, CPU registers, remote monitoring data, temporary files" },
+      { "id": "d", "text": "CPU registers, temporary files, memory, remote monitoring data" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-023", "type": "mcq", "concept_ids": ["4.5.email-security"], "difficulty": 2,
+    "stem": "A security administrator has gathered this information:Proto Recv-Q Send-Q Local Address Foreign Address (state)tcp6 416 0 2601:4c3:4080:82.63976 yv-in-x5e.1e100..https CLOSE_WAITtcp6 0 0 2601:4c3:4080:82.63908 atl14s80-in-x0a..https ESTABLISHEDtcp6 0 0 fe80::4de1:1d4:8.36253 fe80::38b0:a2b1:.1025 ESTABLISHEDtcp6 0 0 fe80::4de1:1d4:8.1024 fe80::38b0:a2b1:.1024 ESTABLISHEDWhich of the following is being used to create this information?",
+    "options": [
+      { "id": "a", "text": "netstat" },
+      { "id": "b", "text": "tracert" },
+      { "id": "c", "text": "dig" },
+      { "id": "d", "text": "netcat" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-028", "type": "mcq", "concept_ids": ["4.5.edr-xdr"], "difficulty": 2,
+    "stem": "A security administrator is viewing the logs on a laptop in the shipping and receiving department and identifies these events:8:55:30 AM | D:\\Downloads\\ChangeLog-5.0.4.scr | Quarantine Success9:22:54 AM | C:\\Program Files\\Photo Viewer\\ViewerBase.dll | Quarantine Failure9:44:05 AM | C:\\Sales\\Sample32.dat | Quarantine SuccessWhich of the following would BEST describe the circumstances surrounding these events?",
+    "options": [
+      { "id": "a", "text": "The antivirus application identified three viruses and quarantined two viruses" },
+      { "id": "b", "text": "The host-based firewall blocked two traffic flows" },
+      { "id": "c", "text": "A host-based whitelist has blocked two applications from executing" },
+      { "id": "d", "text": "A network-based IPS has identified two known vulnerabilities" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-032", "type": "mcq", "concept_ids": ["4.5.operating-system-security"], "difficulty": 2,
+    "stem": "A security analyst needs to determine the operating system of a remote host in the network. Which of the following tools will the analyst MOST likely use to accomplish this task effectively?",
+    "options": [
+      { "id": "a", "text": "nmap -0 192.168.1.10" },
+      { "id": "b", "text": "nslookup 192.168.1.10" },
+      { "id": "c", "text": "telnet 192.168.1.10" },
+      { "id": "d", "text": "tracert 192.168.1.10" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-033", "type": "mcq", "concept_ids": ["4.5.nac"], "difficulty": 2,
+    "stem": "A security engineer is capturing packets on an internal company network and is documenting the IP addresses and MAC addresses associated with the local network devices. Which of these commands would provide the MAC address of the default gateway at 10.11.1.1?",
+    "options": [
+      { "id": "a", "text": "ping 10.11.1.1 arp -a" },
+      { "id": "b", "text": "tracert 10.11.1.1" },
+      { "id": "c", "text": "dig 10.11.1.1" },
+      { "id": "d", "text": "ipconfig /all" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-073", "type": "mcq", "concept_ids": ["4.5.nac"], "difficulty": 2,
+    "stem": "In the context of port security on network switches, which identifier is primarily used to restrict which devices can connect to a specific port?",
+    "options": [
+      { "id": "a", "text": "IP Address" },
+      { "id": "b", "text": "MAC Address" },
+      { "id": "c", "text": "Device Serial Number" },
+      { "id": "d", "text": "User's Password" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-078", "type": "mcq", "concept_ids": ["4.5.edr-xdr"], "difficulty": 2,
+    "stem": "In the realm of cybersecurity, a comprehensive solution is needed to detect and respond to threats across various network domains, including email, endpoints, servers, cloud services, and networks. Which technology provides such extensive threat detection and response capabilities across different security layers?",
+    "options": [
+      { "id": "a", "text": "Intrusion Prevention System (IPS)" },
+      { "id": "b", "text": "Security Information and Event Management (SIEM)" },
+      { "id": "c", "text": "Extended Detection and Response (XDR)" },
+      { "id": "d", "text": "Firewall" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-080", "type": "mcq", "concept_ids": ["4.5.firewall"], "difficulty": 2,
+    "stem": "Linda, a network administrator, is configuring the firewall for a company's internal file server. The server uses TCP port 445 (SMB) for file sharing within the network and should not be accessible from outside the company. However, she notices that this port is currently open to external traffic.Which action should Linda take to adhere to best security practices?",
+    "options": [
+      { "id": "a", "text": "Close port 445 entirely" },
+      { "id": "b", "text": "Open port 443 instead of 445" },
+      { "id": "c", "text": "Block port 445 for external traffic" },
+      { "id": "d", "text": "Redirect external requests from port 445 to port 80" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-084", "type": "mcq", "concept_ids": ["4.5.firewall"], "difficulty": 2,
+    "stem": "On which of the following network devices can an administrator configure a set of rules that permits or denies network traffic based on TCP, UDP, ICMP, or IP and only works at Layer 3 of the OSI model?",
+    "options": [
+      { "id": "a", "text": "Hub" },
+      { "id": "b", "text": "Switch" },
+      { "id": "c", "text": "Router" },
+      { "id": "d", "text": "Firewall" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-086", "type": "mcq", "concept_ids": ["4.5.firewall"], "difficulty": 2,
+    "stem": "Rachel, a network security engineer, is tasked with revising the firewall settings for her organization's internal network to comply with updated security policies. The new policy mandates that only necessary internet protocols should be allowed, focusing on secure web and email traffic, while explicitly blocking all legacy, unsecured protocols.Task: Choose the firewall rule set that aligns with the organization's updated security policy.",
+    "options": [
+      { "id": "a", "text": "Allow: Any Any TCP 80 (HTTP)Allow: Any Any TCP 443 (HTTPS)Allow: Any Any TCP 25 (SMTP)Deny: Any Any TCP 23 (Telnet)" },
+      { "id": "b", "text": "Deny: Any Any TCP 80 (HTTP)Deny: Any Any TCP 443 (HTTPS)Allow: Any Any TCP 465 (SMTPS)Deny: Any Any TCP 23 (Telnet)" },
+      { "id": "c", "text": "Allow: Any Any TCP 443 (HTTPS)Allow: Any Any TCP 465 (SMTPS)Deny: Any Any TCP 80 (HTTP)Deny: Any Any TCP 23 (Telnet)" },
+      { "id": "d", "text": "Allow: Any Any TCP 80 (HTTP)Allow: Any Any TCP 25 (SMTP)Allow: Any Any TCP 23 (Telnet)Deny: Any Any TCP 443 (HTTPS)" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-089", "type": "mcq", "concept_ids": ["4.5.firewall"], "difficulty": 2,
+    "stem": "Sam, a network administrator, is updating the firewall configurations to meet the company's new security standards. He is instructed to ensure that web traffic and secure file transfer protocols are allowed while explicitly blocking unsecured file transfer protocols.Task: Identify the set of firewall rules that best align with the security objectives.",
+    "options": [
+      { "id": "a", "text": "Allow: Any Any TCP 80 (HTTP)Allow: Any Any TCP 443 (HTTPS)Deny: Any Any TCP 21 (FTP)" },
+      { "id": "b", "text": "Allow: Any Any TCP 22 (SSH/SFTP) Deny: Any Any TCP 21 (FTP)Deny: Any Any TCP 80 (HTTP)" },
+      { "id": "c", "text": "Allow: Any Any TCP 443 (HTTPS)Allow: Any Any TCP 22 (SSH/SFTP) Deny: Any Any TCP 21 (FTP)" },
+      { "id": "d", "text": "Allow: Any Any TCP 22 (SSH/SFTP) Allow: Any Any TCP 443 (HTTPS)Allow: Any Any TCP 21 (FTP)Deny: Any Any TCP 80 (HTTP)" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-090", "type": "mcq", "concept_ids": ["4.5.implementation-of-secure-protocols"], "difficulty": 2,
+    "stem": "Sarah, a network engineer, is tasked with identifying current active connections and listening ports on a company's server to audit its network security. She needs a command that can provide detailed information about all incoming and outgoing connections, as well as the protocol used, status of these connections, and the listening ports.Select the most suitable command for Sarah to use in order to gather detailed information about the server's network connections.",
+    "options": [
+      { "id": "a", "text": "ping" },
+      { "id": "b", "text": "traceroute" },
+      { "id": "c", "text": "netstat" },
+      { "id": "d", "text": "ifconfig" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-092", "type": "mcq", "concept_ids": ["4.5.dlp"], "difficulty": 2,
+    "stem": "Stan, the CIO for a large company, is looking for an automated security solution that works with the company's SIEM solution to detect and respond to certain types of attacks.  Which fo the following would be the best choice?",
+    "options": [
+      { "id": "a", "text": "RARP" },
+      { "id": "b", "text": "SOAR" },
+      { "id": "c", "text": "AIS" },
+      { "id": "d", "text": "SOA" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-094", "type": "mcq", "concept_ids": ["4.5.email-security"], "difficulty": 2,
+    "stem": "The DNS database records responsible for approved email senders is known as which of the following?  Select the BEST answer.",
+    "options": [
+      { "id": "a", "text": "SOA" },
+      { "id": "b", "text": "Text" },
+      { "id": "c", "text": "DKIM" },
+      { "id": "d", "text": "SPF" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-4-096", "type": "mcq", "concept_ids": ["4.5.dlp"], "difficulty": 2,
+    "stem": "The security policies in a manufacturing company prohibit the transmission of customer information. However, a security administrator has received an alert that credit card numbers were transmitted as an email attachment. Which of the following was the MOST likely source of this alert message?",
+    "options": [
+      { "id": "a", "text": "DLP" },
+      { "id": "b", "text": "IPS" },
+      { "id": "c", "text": "SMTP" },
+      { "id": "d", "text": "IPsec" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-104", "type": "mcq", "concept_ids": ["4.5.firewall"], "difficulty": 2,
+    "stem": "What 2 default ports allows a user to view HTML traffic via a web browser?",
+    "options": [
+      { "id": "a", "text": "80 and 443" },
+      { "id": "b", "text": "88 and 445" },
+      { "id": "c", "text": "80 and 400" },
+      { "id": "d", "text": "88 and 443" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-108", "type": "mcq", "concept_ids": ["4.5.nac"], "difficulty": 2,
+    "stem": "What is 'Lateral Movement' in the context of network penetration testing?",
+    "options": [
+      { "id": "a", "text": "The process of moving deeper into a network to gain more control." },
+      { "id": "b", "text": "The technique of switching between different network protocols." },
+      { "id": "c", "text": "Moving from one compromised system to another within the same network." },
+      { "id": "d", "text": "Escalating privileges from a user level to an administrative level." }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-112", "type": "mcq", "concept_ids": ["4.5.nac"], "difficulty": 2,
+    "stem": "What is the primary role of SCADA (Supervisory Control and Data Acquisition) systems?",
+    "options": [
+      { "id": "a", "text": "To manage employee payroll and scheduling" },
+      { "id": "b", "text": "To oversee and regulate industrial processes and control systems" },
+      { "id": "c", "text": "To handle customer service operations and interactions" },
+      { "id": "d", "text": "To provide corporate network and internet security" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-113", "type": "mcq", "concept_ids": ["4.5.nac"], "difficulty": 2,
+    "stem": "What technology provides a \"health assessment\" on devices requesting to join a network?",
+    "options": [
+      { "id": "a", "text": "CAN" },
+      { "id": "b", "text": "PAT" },
+      { "id": "c", "text": "NAC" },
+      { "id": "d", "text": "NAT" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-131", "type": "mcq", "concept_ids": ["4.5.email-security"], "difficulty": 2,
+    "stem": "Which of the following sets of protocols is MOST effective in achieving ALL of the following for email security:• Verifying the email content has not been altered during transit.• Authenticating the domain the email claims to be from.• Ensuring the email originates from a server authorized by the owner of the claimed domain.",
+    "options": [
+      { "id": "a", "text": "TLS (Transport Layer Security) and SSL (Secure Sockets Layer)" },
+      { "id": "b", "text": "DMARC (Domain-based Message Authentication, Reporting, and Conformance), DKIM (Domain Keys Identified Mail), SPF (Sender Policy Framework)" },
+      { "id": "c", "text": "PGP (Pretty Good Privacy) and S/MIME (Secure/Multipurpose Internet Mail Extensions)" },
+      { "id": "d", "text": "IPSec (Internet Protocol Security) and VPN (Virtual Private Network)" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-137", "type": "mcq", "concept_ids": ["4.5.edr-xdr"], "difficulty": 2,
+    "stem": "Which security solution is designed to unify and enhance threat detection, investigation, and response across different security layers, including endpoint, network, and cloud?",
+    "options": [
+      { "id": "a", "text": "Intrusion Detection System (IDS)" },
+      { "id": "b", "text": "Extended Detection and Response (XDR)" },
+      { "id": "c", "text": "Network Access Control (NAC)" },
+      { "id": "d", "text": "Security Information and Event Management (SIEM)" }
+    ],
+    "answer": ["b"]
+  }
+]

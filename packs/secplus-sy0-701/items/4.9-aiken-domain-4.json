@@ -1,0 +1,178 @@
+[
+  {
+    "id": "aiken-domain-4-004", "type": "mcq", "concept_ids": ["4.9.data-sources"], "difficulty": 2,
+    "stem": "A company has identified a compromised server, and the security team would like to know if an attacker has used this device to move between systems. Which of the following would be the BEST way to provide this information?",
+    "options": [
+      { "id": "a", "text": "NetFlow logs" },
+      { "id": "b", "text": "DNS server logs" },
+      { "id": "c", "text": "Penetration test" },
+      { "id": "d", "text": "Email header" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-019", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "A network administrator needs to identify all inbound connections to a Linux web server. Which of the following utilities would be the BEST choice for this task?",
+    "options": [
+      { "id": "a", "text": "netstat" },
+      { "id": "b", "text": "nmap" },
+      { "id": "c", "text": "net view" },
+      { "id": "d", "text": "netcat" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-021", "type": "mcq", "concept_ids": ["4.9.data-sources"], "difficulty": 2,
+    "stem": "A new malware variant takes advantage of a vulnerability in a popular email client. Once installed, the malware forwards all email attachments containing credit card information to an external email address. Which of the following would limit the scope of this attack?",
+    "options": [
+      { "id": "a", "text": "Scan outgoing traffic with DLP" },
+      { "id": "b", "text": "Enable MFA on the email client" },
+      { "id": "c", "text": "Require users to enable the VPN when using email" },
+      { "id": "d", "text": "Update the list of malicious URLs in the firewall" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-025", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "A security administrator is collecting information associated with a ransomware infection on the company's web servers. Which of the following log files would provide information regarding the memory contents of these servers?",
+    "options": [
+      { "id": "a", "text": "Dump" },
+      { "id": "b", "text": "Packet" },
+      { "id": "c", "text": "Web" },
+      { "id": "d", "text": "DNS" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-030", "type": "mcq", "concept_ids": ["4.9.data-sources"], "difficulty": 2,
+    "stem": "A security analyst has created a packet capture file named \"network_traffic_capture.pcap\". To perform a comprehensive analysis of this file, identifying the details of the network traffic it contains, which tool would be most appropriate?",
+    "options": [
+      { "id": "a", "text": "Wireshark" },
+      { "id": "b", "text": "Snort" },
+      { "id": "c", "text": "FTK Imager" },
+      { "id": "d", "text": "Nessus" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-038", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "A virus scanner has identified a macro virus in a word processing file attached to an email. Which of the following information could be obtained from the metadata of this file?",
+    "options": [
+      { "id": "a", "text": "Date and time when the file was created" },
+      { "id": "b", "text": "IPS signature name and number" },
+      { "id": "c", "text": "Operating system version" },
+      { "id": "d", "text": "Alert disposition" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-039", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "A Windows system administrator needs to investigate an issue where several users reported failed login attempts on their accounts. To review these security incidents, which log within the Windows Event Viewer should the administrator primarily examine?",
+    "options": [
+      { "id": "a", "text": "Application Log" },
+      { "id": "b", "text": "Security Log" },
+      { "id": "c", "text": "System Log" },
+      { "id": "d", "text": "Setup Log" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-045", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "An IPS report shows a series of exploit attempts were made against externally facing web servers. The system administrator of the web servers has identified a number of unusual log entries on each system. Which of the following would be the NEXT step in the incident response process?",
+    "options": [
+      { "id": "a", "text": "Disconnect the web servers from the network" },
+      { "id": "b", "text": "Disable any breached user accounts" },
+      { "id": "c", "text": "Create a plan for removing malware from the web servers" },
+      { "id": "d", "text": "Check the IPS logs for any other potential attacks" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-054", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "For logging and reviewing system events on Linux-based systems, what is the standard method used?",
+    "options": [
+      { "id": "a", "text": "Event Viewer" },
+      { "id": "b", "text": "Syslog" },
+      { "id": "c", "text": "SIEM" },
+      { "id": "d", "text": "Auditd" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-057", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "In a cybersecurity breach investigation, a digital forensics analyst examines data that reveals file creation, modification dates, authorship, size, and format. What is this type of data, which provides critical information about other data?",
+    "options": [
+      { "id": "a", "text": "System Logs" },
+      { "id": "b", "text": "Metadata" },
+      { "id": "c", "text": "Configuration Files" },
+      { "id": "d", "text": "Audit Trails" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-081", "type": "mcq", "concept_ids": ["4.9.data-sources"], "difficulty": 2,
+    "stem": "Lisa, a network administrator, has been tasked with investigating a report of intermittent network slowdowns affecting the corporate LAN. She needs to analyze the network traffic in real-time to identify any unusual activity or bandwidth hogs.Choose the most appropriate tool for Lisa to conduct a detailed analysis of the network's traffic.",
+    "options": [
+      { "id": "a", "text": "Nmap" },
+      { "id": "b", "text": "Wireshark" },
+      { "id": "c", "text": "Netcat" },
+      { "id": "d", "text": "Traceroute" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-088", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "Rodney, a security engineer, is viewing this record from the firewall logs:UTC 04/05/2018 03:09:15809 AV Gateway Alert136.127.92.171 80 -> 10.16.10.14 60818Gateway Anti-Virus Alert:XPACK.A_7854 (Trojan) blocked.Which of the following can be observed from this log information?",
+    "options": [
+      { "id": "a", "text": "The victim's IP address is 136.127.92.171" },
+      { "id": "b", "text": "A download was blocked from a web server" },
+      { "id": "c", "text": "A botnet DDoS attack was blocked" },
+      { "id": "d", "text": "The Trojan was blocked, but the file was not" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-103", "type": "mcq", "concept_ids": ["4.9.data-sources"], "difficulty": 2,
+    "stem": "Vala, a security analyst, has received an alert from her IPS regarding active exploit attempts from the Internet. Which of the following would provide detailed information about these exploit attempts?",
+    "options": [
+      { "id": "a", "text": "Wireshark" },
+      { "id": "b", "text": "Nessus" },
+      { "id": "c", "text": "Nmap" },
+      { "id": "d", "text": "Netstat" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-4-109", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "What is the IT industry standard for generating and collecting log information on various types of devices from different manufacturers?",
+    "options": [
+      { "id": "a", "text": "SIEM" },
+      { "id": "b", "text": "syslog" },
+      { "id": "c", "text": "UTM" },
+      { "id": "d", "text": "Nessus" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-4-118", "type": "mcq", "concept_ids": ["4.9.log-data"], "difficulty": 2,
+    "stem": "When troubleshooting an issue related to the Windows operating system itself, such as a service failing to start or a driver error, which log in the Windows Event Viewer should an IT professional check first?",
+    "options": [
+      { "id": "a", "text": "Application Log" },
+      { "id": "b", "text": "Security Log" },
+      { "id": "c", "text": "System Log" },
+      { "id": "d", "text": "Forwarded Events Log" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-4-140", "type": "mcq", "concept_ids": ["4.9.data-sources"], "difficulty": 2,
+    "stem": "You are troubleshooting a communication problem with an application that sends data to a remote system. What tool can you use to view the traffic being sent on the network by the application?",
+    "options": [
+      { "id": "a", "text": "Protocol analyzer" },
+      { "id": "b", "text": "Switch monitor" },
+      { "id": "c", "text": "Spectrum analyzer" },
+      { "id": "d", "text": "Frequency analyzer" }
+    ],
+    "answer": ["a"]
+  }
+]

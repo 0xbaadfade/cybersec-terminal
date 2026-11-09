@@ -1,0 +1,299 @@
+[
+  {
+    "id": "aiken-domain-3-002", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A Chief Information Officer is evaluating a shift from an on-premises architecture to a hybrid cloud model. Which of the following is the MOST significant security implication the organization must address during this transition?",
+    "options": [
+      { "id": "a", "text": "The shift of total data ownership to the cloud service provider" },
+      { "id": "b", "text": "The complexities of adapting to a shared responsibility model" },
+      { "id": "c", "text": "The elimination of all physical security requirements" },
+      { "id": "d", "text": "The guaranteed reduction in the overall attack surface" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-003", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A cloud customer is responsible for patching the guest operating system, while the cloud provider manages the hypervisor and physical hardware. This scenario BEST illustrates which of the following concepts?",
+    "options": [
+      { "id": "a", "text": "Infrastructure as Code" },
+      { "id": "b", "text": "Containerization" },
+      { "id": "c", "text": "Shared responsibility matrix" },
+      { "id": "d", "text": "Scalability" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-009", "type": "mcq", "concept_ids": ["3.1.considerations"], "difficulty": 2,
+    "stem": "A company must ensure its e-commerce platform remains available during massive, unexpected traffic spikes. Which of the following architectural considerations is MOST important?",
+    "options": [
+      { "id": "a", "text": "Risk transference" },
+      { "id": "b", "text": "Patch availability" },
+      { "id": "c", "text": "Scalability" },
+      { "id": "d", "text": "Fail-closed mechanisms" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-013", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A defense contractor uses specialized hardware that processes data strictly according to predefined timing deadlines. A delay of milliseconds could cause a catastrophic failure. Which of the following systems is being used?",
+    "options": [
+      { "id": "a", "text": "Microservices" },
+      { "id": "b", "text": "Real-time Operating System (RTOS)" },
+      { "id": "c", "text": "Serverless computing" },
+      { "id": "d", "text": "Container orchestration" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-020", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A healthcare company requires strict control over its hardware, software, and physical security due to regulatory mandates, and it has the budget to manage all infrastructure components. Which of the following architecture models is the MOST appropriate?",
+    "options": [
+      { "id": "a", "text": "Public cloud Platform as a Service" },
+      { "id": "b", "text": "On-premises" },
+      { "id": "c", "text": "Serverless architecture" },
+      { "id": "d", "text": "Third-party multi-tenant containerization" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-025", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A manufacturing facility relies on programmable logic controllers to manage physical assembly lines. Which of the following specialized systems MUST the security team secure?",
+    "options": [
+      { "id": "a", "text": "Serverless architectures" },
+      { "id": "b", "text": "Container orchestration engines" },
+      { "id": "c", "text": "Industrial Control Systems (ICS)" },
+      { "id": "d", "text": "Infrastructure as Code (IaC)" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-034", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A security architect is reviewing a containerized application deployment. Which of the following represents the MOST significant security risk compared to full virtualization?",
+    "options": [
+      { "id": "a", "text": "Containers share the host operating system kernel" },
+      { "id": "b", "text": "Containers require more physical memory to execute" },
+      { "id": "c", "text": "Containers cannot communicate over encrypted networks" },
+      { "id": "d", "text": "Containers lack support for continuous integration pipelines" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-037", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A security engineer is evaluating the risk transference benefits of moving to a public cloud model. Which of the following risks is MOST effectively transferred to the cloud provider?",
+    "options": [
+      { "id": "a", "text": "Misconfiguration of application user roles" },
+      { "id": "b", "text": "Physical failure of the datacenter cooling systems" },
+      { "id": "c", "text": "Unauthorized exfiltration of sensitive database records" },
+      { "id": "d", "text": "Poorly written code leading to injection vulnerabilities" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-038", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A security engineer is reviewing the deployment processes for a cloud environment. The organization currently provisions servers manually, which frequently leads to inconsistent security configurations and misaligned baselines. Which of the following architecture models would BEST ensure consistent and repeatable security configurations during deployment?",
+    "options": [
+      { "id": "a", "text": "Infrastructure as Code" },
+      { "id": "b", "text": "Microservices architecture" },
+      { "id": "c", "text": "Serverless computing" },
+      { "id": "d", "text": "Secure Access Service Edge" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-044", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "A startup wants to rapidly deploy an application with unpredictable workloads while minimizing the overhead of patching host operating systems. Which architecture model BEST fits this need?",
+    "options": [
+      { "id": "a", "text": "On-premises hardware" },
+      { "id": "b", "text": "Infrastructure as a Service (IaaS)" },
+      { "id": "c", "text": "Serverless" },
+      { "id": "d", "text": "Legacy mainframe" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-050", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "An application developer wants to deploy code without managing the underlying operating system or server infrastructure. Which of the following architecture models is the BEST choice?",
+    "options": [
+      { "id": "a", "text": "On-premises virtualization" },
+      { "id": "b", "text": "Containerization" },
+      { "id": "c", "text": "Serverless" },
+      { "id": "d", "text": "Traditional datacenter" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-055", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "An enterprise relies on virtualization to maximize hardware efficiency. Which of the following vulnerabilities is unique to this architecture model?",
+    "options": [
+      { "id": "a", "text": "Cross-site scripting (XSS)" },
+      { "id": "b", "text": "SQL injection" },
+      { "id": "c", "text": "VM escape" },
+      { "id": "d", "text": "Buffer overflow" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-063", "type": "mcq", "concept_ids": ["3.1.considerations"], "difficulty": 2,
+    "stem": "An organization is considering shifting its data backup operations to a cloud provider to reduce local hardware costs. Which architectural consideration is being prioritized?",
+    "options": [
+      { "id": "a", "text": "Resilience" },
+      { "id": "b", "text": "Risk transference" },
+      { "id": "c", "text": "Cost" },
+      { "id": "d", "text": "Attack surface reduction" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-064", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "An organization is migrating its monolithic application to a microservices architecture. Which of the following is the MOST likely security implication of this transition?",
+    "options": [
+      { "id": "a", "text": "The attack surface increases due to inter-service network communications" },
+      { "id": "b", "text": "The application becomes completely immune to denial-of-service attacks" },
+      { "id": "c", "text": "Code vulnerabilities are automatically mitigated by the orchestration platform" },
+      { "id": "d", "text": "The need for data encryption in transit is completely eliminated" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-072", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "An organization wants complete control over its physical hardware and data, accepting full responsibility for maintenance, power, and physical security. Which of the following architecture models BEST aligns with these requirements?",
+    "options": [
+      { "id": "a", "text": "Public cloud" },
+      { "id": "b", "text": "On-premises" },
+      { "id": "c", "text": "Infrastructure as Code" },
+      { "id": "d", "text": "Serverless" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-073", "type": "mcq", "concept_ids": ["3.1.considerations"], "difficulty": 2,
+    "stem": "An organization wants to improve the resilience of its web applications by ensuring that compute resources automatically expand during high traffic periods. Which of the following architectural concepts BEST addresses this requirement?",
+    "options": [
+      { "id": "a", "text": "Cost transference" },
+      { "id": "b", "text": "Patch availability" },
+      { "id": "c", "text": "Scalability" },
+      { "id": "d", "text": "Geographic dispersion" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-078", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "In an on-premises environment, which of the following is an exclusive responsibility of the organization's security team?",
+    "options": [
+      { "id": "a", "text": "Managing hypervisor security patches for a public cloud provider" },
+      { "id": "b", "text": "Securing the physical perimeter and facility access controls" },
+      { "id": "c", "text": "Developing the operating system source code" },
+      { "id": "d", "text": "Providing multi-tenant logical isolation for third-party clients" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-087", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "When applying security principles to enterprise infrastructure, which of the following BEST describes the purpose of a device placement strategy?",
+    "options": [
+      { "id": "a", "text": "To guarantee that all network traffic uses TLS 1.3 encryption" },
+      { "id": "b", "text": "To ensure hardware is positioned where it can most effectively enforce security policies" },
+      { "id": "c", "text": "To automate the deployment of operating system updates across domains" },
+      { "id": "d", "text": "To replace traditional firewalls with cloud-native SASE solutions" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-089", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "When designing a hybrid cloud architecture, which of the following is the MOST critical consideration for managing the shared responsibility model?",
+    "options": [
+      { "id": "a", "text": "Ensuring the cloud provider implements physical security for on-premises servers" },
+      { "id": "b", "text": "Clearly defining boundary controls and compliance obligations between environments" },
+      { "id": "c", "text": "Relying entirely on the cloud provider for data classification and governance" },
+      { "id": "d", "text": "Eliminating the use of virtual private networks for inter-site communication" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-091", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "When evaluating the security implications of different architecture models, which of the following BEST describes a primary benefit of using microservices?",
+    "options": [
+      { "id": "a", "text": "They share a single memory space, reducing the risk of buffer overflows" },
+      { "id": "b", "text": "They allow for isolated failure domains, improving overall application resilience" },
+      { "id": "c", "text": "They eliminate the need for API security gateways and load balancers" },
+      { "id": "d", "text": "They require identical technology stacks for all underlying components" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-097", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "Which of the following architectural approaches BEST supports the principle of \"infrastructure as code\" (IaC)?",
+    "options": [
+      { "id": "a", "text": "Manually configuring servers via a centralized graphical user interface" },
+      { "id": "b", "text": "Storing declarative configuration files in a version control repository" },
+      { "id": "c", "text": "Outsourcing server configuration to a managed security service provider" },
+      { "id": "d", "text": "Using standalone hardware appliances for network routing" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-101", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "Which of the following BEST describes the primary security advantage of using Infrastructure as Code (IaC) in a cloud environment?",
+    "options": [
+      { "id": "a", "text": "It eliminates the need for identity and access management controls" },
+      { "id": "b", "text": "It ensures consistent security configurations across all deployments" },
+      { "id": "c", "text": "It automatically patches operating systems without downtime" },
+      { "id": "d", "text": "It transfers all security responsibilities to the cloud provider" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-104", "type": "mcq", "concept_ids": ["3.1.considerations"], "difficulty": 2,
+    "stem": "Which of the following BEST explains why patch availability is a critical consideration in Industrial Control Systems (ICS) and SCADA environments?",
+    "options": [
+      { "id": "a", "text": "Vendors frequently release daily patches that must be automated" },
+      { "id": "b", "text": "Systems are often legacy and lack ongoing vendor support or updates" },
+      { "id": "c", "text": "Cloud providers automatically apply patches which can break operations" },
+      { "id": "d", "text": "Open-source communities mandate immediate patching for compliance" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-114", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "Which of the following is a primary security concern specific to Real-time Operating Systems (RTOS) used in critical infrastructure?",
+    "options": [
+      { "id": "a", "text": "Inability to meet strict timing constraints during a denial-of-service attack" },
+      { "id": "b", "text": "Excessive power consumption leading to rapid hardware degradation" },
+      { "id": "c", "text": "The requirement to use complex, high-latency cryptographic algorithms" },
+      { "id": "d", "text": "Frequent automated feature updates that disrupt legacy integrations" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-115", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "Which of the following is the MOST critical security challenge when deploying thousands of IoT devices across a smart city?",
+    "options": [
+      { "id": "a", "text": "Managing physical hardware repairs for datacenter servers" },
+      { "id": "b", "text": "Ensuring timely firmware updates and credential management at scale" },
+      { "id": "c", "text": "Configuring advanced BGP routing protocols on each sensor" },
+      { "id": "d", "text": "Maintaining active directory domains on all connected endpoints" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-120", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "Which of the following MUST be considered FIRST when evaluating the ease of recovery for a heavily containerized microservices environment?",
+    "options": [
+      { "id": "a", "text": "The physical location of the underlying hardware components" },
+      { "id": "b", "text": "The availability of current container images and configuration scripts" },
+      { "id": "c", "text": "The patch levels of the legacy on-premises mainframe systems" },
+      { "id": "d", "text": "The power consumption of the local uninterruptible power supplies" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-125", "type": "mcq", "concept_ids": ["3.1.architecture"], "difficulty": 2,
+    "stem": "Which of the following specialized systems is MOST commonly associated with managing the electrical grid and water treatment facilities?",
+    "options": [
+      { "id": "a", "text": "SCADA" },
+      { "id": "b", "text": "Serverless" },
+      { "id": "c", "text": "Embedded systems" },
+      { "id": "d", "text": "Wearable IoT" }
+    ],
+    "answer": ["a"]
+  }
+]
