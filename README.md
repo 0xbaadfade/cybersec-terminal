@@ -8,6 +8,13 @@ are plain JSON files that anyone can read and edit.
 **Play it:** https://0xbaadfade.github.io/cybersec-terminal/ (nothing to install; your progress is saved in your browser,
 on that computer)
 
+![The skill tree: Foundations complete, Linux and Windows open, other branches coming soon](docs/screenshots/skill-tree.png)
+
+A question with simulated tool output, and the feedback after a wrong answer:
+
+![A Linux question that shows a simulated nmap scan](docs/screenshots/terminal-question.png)
+![Feedback after a wrong answer, with the explanation and when the concept comes back](docs/screenshots/feedback.png)
+
 ## What is in it
 
 Content comes in *packs*: a folder of JSON with the questions for one certification or skill. This repository ships:
