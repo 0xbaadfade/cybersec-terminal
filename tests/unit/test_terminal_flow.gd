@@ -417,7 +417,7 @@ func test_the_shipped_pack_validates_with_its_lab_and_tool_pages() -> void:
 	for t in shell.tool_names():
 		assert_true(pack.tool_docs.has(t), "every tool the shell offers has a manual page: %s" % t)
 	assert_eq(pack.items["lin-m-01"]["lab"], "lab-dmz-01")
-	assert_false(pack.items["lin-m-01"]["reviewed"])
+	assert_false(pack.items["lin-m-01"].has("reviewed_by"))
 
 
 func test_the_shipped_mission_can_be_solved_with_the_tools_it_has() -> void:
@@ -451,8 +451,7 @@ func test_all_shipped_linux_missions_are_terminal_items_on_the_linux_lab() -> vo
 			"lin-m-09", "lin-m-10"])
 	for id in ids:
 		assert_eq(pack.items[id]["lab"], "lab-dmz-01", id)
-		assert_false(pack.items[id]["reviewed"], id)
-		assert_eq(pack.items[id]["source"], "ai", id)
+		assert_false(pack.items[id].has("reviewed_by"), id)
 
 
 func test_all_shipped_windows_missions_are_terminal_items_on_the_office_lab() -> void:
@@ -463,5 +462,4 @@ func test_all_shipped_windows_missions_are_terminal_items_on_the_office_lab() ->
 	assert_eq(ids, ["win-m-01", "win-m-02", "win-m-03", "win-m-04", "win-m-05"])
 	for id in ids:
 		assert_eq(pack.items[id]["lab"], "lab-office-01", id)
-		assert_false(pack.items[id]["reviewed"], id)
-		assert_eq(pack.items[id]["source"], "ai", id)
+		assert_false(pack.items[id].has("reviewed_by"), id)

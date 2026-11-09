@@ -47,7 +47,7 @@ body:
     attributes:
       label: Before we start
       options:
-        - label: "I will write the questions myself, or tell the reviewers which tool helped (source: ai)."
+        - label: "The questions will be my own work (AI help is fine) and I will check the facts."
           required: true
         - label: "I will not copy questions or answer keys from exams, books or courses."
           required: true

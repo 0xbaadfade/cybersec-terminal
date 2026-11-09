@@ -2,8 +2,6 @@
   {
     "type": "terminal",
     "difficulty": 3,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-office-01",
     "id": "win-m-04",
     "concept_ids": [
@@ -25,8 +23,6 @@
       "3.1.nslookup"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which server answered this lookup?",
     "show": {
       "lab": "lab-office-01",
@@ -65,8 +61,6 @@
       "3.1.nslookup"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the Aliases line mean?",
     "show": {
       "lab": "lab-office-01",
@@ -105,8 +99,6 @@
       "3.1.nslookup"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What kind of lookup is this, and what does it return?",
     "show": {
       "lab": "lab-office-01",
@@ -145,8 +137,6 @@
       "3.1.nslookup"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which server does nslookup ask by default?",
     "options": [
       {
@@ -181,8 +171,6 @@
       "3.1.ping"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Both pings below timed out. Is print-01 definitely down?",
     "show": {
       "lab": "lab-office-01",
@@ -221,8 +209,6 @@
       "3.1.ping"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does TTL=128 in the replies suggest about dc-01?",
     "show": {
       "lab": "lab-office-01",
@@ -261,8 +247,6 @@
       "3.1.ping"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "On Windows, which ping option sets the number of echo requests?",
     "options": [
       {
@@ -297,8 +281,6 @@
       "3.1.ping"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which line summarises packet loss?",
     "show": {
       "lab": "lab-office-01",

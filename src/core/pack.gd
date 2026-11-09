@@ -25,7 +25,7 @@ const ARTIFACT_KINDS: Array = ["config", "log"]
 const MAX_ARTIFACT_LINES := 60
 const MAX_REASONS := 8
 const MAX_REFERENCES := 8
-const SOURCES: Array = ["hand", "ai"]
+const REVIEWERS: Array = ["human", "ai"]
 const MIN_ITEMS_PER_CONCEPT := 3
 
 var dir := ""
@@ -40,7 +40,7 @@ var concepts: Dictionary = {}  # concept id -> {id, title, objective}
 var items: Dictionary = {}  # item id -> item Dictionary (valid items only)
 var ranks: Array = []  # optional [[name, xp], ...] replacing the engine's ladder
 var rounds_include_labs := false  # a skill pack: terminal missions are served in rounds
-var codex: Dictionary = {}  # concept id -> {definition, source, reviewed}
+var codex: Dictionary = {}  # concept id -> {definition}
 var evidence_reasons: Array = []  # [{key, label}] menu for evidence hunts
 var artifacts: Dictionary = {}  # item id -> Array of the artifact's lines
 var labs: Dictionary = {}  # lab id -> SimLab (valid labs only)
@@ -159,20 +159,29 @@ func lab_only_concepts() -> Array:
 func stats() -> Dictionary:
 	var s := {"domains": domains.size(), "objectives": objectives.size(),
 			"concepts": concepts.size(), "items": items.size(),
-			"ai": 0, "hand": 0, "reviewed": 0}
+			"human": 0, "ai": 0}
 	for item in items.values():
-		s[item["source"]] += 1
-		if item["reviewed"]:
-			s["reviewed"] += 1
+		if item.has("reviewed_by"):
+			s[item["reviewed_by"]] += 1
 	return s
+
+
+## 0 for an item a person reviewed, 1 for one an AI reviewed, 2 for one nobody has reviewed: lower is served first.
+static func review_rank(item: Dictionary) -> int:
+	match item.get("reviewed_by", ""):
+		"human":
+			return 0
+		"ai":
+			return 1
+	return 2
 
 
 func report() -> String:
 	var lines: Array = []
 	var s := stats()
 	lines.append("pack %s  \"%s\"  v%d" % [id, title, version])
-	lines.append("  %d domains, %d objectives, %d concepts, %d items (hand %d, ai %d, reviewed %d)" % [
-			s["domains"], s["objectives"], s["concepts"], s["items"], s["hand"], s["ai"], s["reviewed"]])
+	lines.append("  %d domains, %d objectives, %d concepts, %d items (reviewed by a person %d, by AI %d)" % [
+			s["domains"], s["objectives"], s["concepts"], s["items"], s["human"], s["ai"]])
 	lines.append("  codex: %d of %d concepts have a definition" % [codex.size(), concepts.size()])
 	var pbq := pbq_counts()
 	if int(pbq["evidence"]) + int(pbq["match"]) + int(pbq["order"]) > 0:
@@ -591,10 +600,10 @@ func _validate_item(item: Variant, label: String) -> bool:
 				problems.append("unknown concept id '%s'" % cid)
 	if not _whole(item.get("difficulty")) or int(item.get("difficulty", 0)) < 1 or int(item.get("difficulty", 0)) > 3:
 		problems.append("'difficulty' must be 1, 2 or 3")
-	if not SOURCES.has(item.get("source")):
-		problems.append("'source' must be one of %s" % ", ".join(SOURCES))
-	if typeof(item.get("reviewed")) != TYPE_BOOL:
-		problems.append("'reviewed' must be true or false")
+	if item.has("source") or item.has("reviewed"):
+		problems.append("'source' and 'reviewed' are gone: leave them out, or set 'reviewed_by' to one of %s" % ", ".join(REVIEWERS))
+	if item.has("reviewed_by") and not REVIEWERS.has(item["reviewed_by"]):
+		problems.append("'reviewed_by' must be one of %s (or left out when nobody has reviewed the item)" % ", ".join(REVIEWERS))
 	if not _text(item.get("stem")):
 		problems.append("'stem' must be a non-empty string")
 	if item.has("explain") and typeof(item["explain"]) != TYPE_STRING:

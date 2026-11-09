@@ -2,8 +2,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-dmz-01",
     "id": "lin-m-08",
     "concept_ids": [
@@ -20,8 +18,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-dmz-01",
     "id": "lin-m-09",
     "concept_ids": [
@@ -42,8 +38,6 @@
       "3.1.interfaces"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What is this workstation's IPv4 address and prefix length on eth0?",
     "show": {
       "lab": "lab-dmz-01",
@@ -82,8 +76,6 @@
       "3.1.interfaces"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which value is eth0's MAC address?",
     "show": {
       "lab": "lab-dmz-01",
@@ -122,8 +114,6 @@
       "3.1.interfaces"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Where does this machine send a packet for 8.8.8.8?",
     "show": {
       "lab": "lab-dmz-01",
@@ -162,8 +152,6 @@
       "3.1.interfaces"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the line '10.20.0.0/24 dev eth0 proto kernel scope link' tell you?",
     "show": {
       "lab": "lab-dmz-01",
@@ -202,8 +190,6 @@
       "3.1.listening-ports"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which of these services can other machines on the network reach?",
     "show": {
       "lab": "lab-dmz-01",
@@ -242,8 +228,6 @@
       "3.1.listening-ports"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the Local Address 127.0.0.1:5432 mean for the database?",
     "show": {
       "lab": "lab-dmz-01",
@@ -282,8 +266,6 @@
       "3.1.listening-ports"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What do the options in ss -tln stand for?",
     "options": [
       {
@@ -318,8 +300,6 @@
       "3.1.listening-ports"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "A database is used only by a program on the same machine. Where should it listen to limit exposure?",
     "options": [
       {
@@ -354,8 +334,6 @@
       "3.1.connections"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What is the state of the connection to 10.20.0.10 port 22, and what is it?",
     "show": {
       "lab": "lab-dmz-01",
@@ -394,8 +372,6 @@
       "3.1.connections"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the TIME-WAIT line to port 80 show?",
     "show": {
       "lab": "lab-dmz-01",
@@ -434,8 +410,6 @@
       "3.1.connections"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Who chose the port number 51514 in the first line?",
     "show": {
       "lab": "lab-dmz-01",
@@ -474,8 +448,6 @@
       "3.1.connections"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which command lists current TCP connections rather than listeners?",
     "options": [
       {

@@ -41,7 +41,7 @@ the spaced-repetition schedule and the skill tree's unlock percentages all key o
 ### Items
 
 Every item has: `id` (unique in the pack), `type`, `concept_ids` (one or more, all defined in `pack.json`),
-`difficulty` (1, 2 or 3), `source` (`hand` or `ai`), `reviewed` (true or false) and `stem` (the question).
+`difficulty` (1, 2 or 3) and `stem` (the question). An optional `reviewed_by` (`human` or `ai`) says who has reviewed the item.
 
 Two fields are **optional**:
 
@@ -65,9 +65,10 @@ The per-option `why` (the reason a wrong option is wrong) was always optional an
 types (`match`, `order`, `evidence`) the explanations *inside* the item, on each pair, step or flaw, are required: they
 are what the item teaches.
 
-`source` and `reviewed` are honest labels: items made with AI help and not yet checked by the maintainer should say
-`"source": "ai", "reviewed": false`. Unreviewed AI items are served with lower priority. `CONTENT-STANDARDS.md` (at the top
-of the repository) says what `reviewed` means, who may set it, and what makes a good item.
+`reviewed_by` is an honest label: leave it out unless someone has actually checked the item. `"human"` means the
+maintainer checked it against a source, `"ai"` that an AI tool did. When the game builds a round it serves human-reviewed items
+first, then AI-reviewed, then the rest. The older `source` and `reviewed` keys are gone: `validate-pack` rejects them.
+`CONTENT-STANDARDS.md` (at the top of the repository) says what review means, who may set it, and what makes a good item.
 
 The two simplest types, used by `templates/pack/`:
 

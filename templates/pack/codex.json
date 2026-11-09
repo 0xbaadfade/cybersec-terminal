@@ -1,12 +1,8 @@
 {
   "1.1.passwords": {
-    "definition": "A password is something you know. Sites should store only a salted hash of it, and you should use a long, unique password for each site.",
-    "source": "hand",
-    "reviewed": false
+    "definition": "A password is something you know. Sites should store only a salted hash of it, and you should use a long, unique password for each site."
   },
   "1.1.mfa": {
-    "definition": "Multi-factor authentication combines different kinds of proof: something you know (password), have (phone or card) and are (fingerprint).",
-    "source": "hand",
-    "reviewed": false
+    "definition": "Multi-factor authentication combines different kinds of proof: something you know (password), have (phone or card) and are (fingerprint)."
   }
 }

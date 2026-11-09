@@ -2,8 +2,6 @@
   {
     "type": "terminal",
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-office-01",
     "id": "win-m-01",
     "concept_ids": [
@@ -22,8 +20,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-office-01",
     "id": "win-m-02",
     "concept_ids": [
@@ -45,8 +41,6 @@
       "1.1.ipconfig"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which line shows the router this PC uses to reach other networks?",
     "show": {
       "lab": "lab-office-01",
@@ -85,8 +79,6 @@
       "1.1.ipconfig"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the subnet mask 255.255.255.0 tell you?",
     "show": {
       "lab": "lab-office-01",
@@ -125,8 +117,6 @@
       "1.1.ipconfig"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which lines show that this PC got its address automatically?",
     "show": {
       "lab": "lab-office-01",
@@ -165,8 +155,6 @@
       "1.1.ipconfig"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which line shows the server this PC asks to resolve names?",
     "show": {
       "lab": "lab-office-01",
@@ -205,8 +193,6 @@
       "1.1.physical-address"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What is this PC's physical (MAC) address?",
     "show": {
       "lab": "lab-office-01",
@@ -245,8 +231,6 @@
       "1.1.physical-address"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Why do switch port security and asset inventories use MAC addresses?",
     "options": [
       {
@@ -281,8 +265,6 @@
       "1.1.physical-address"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which command shows the physical address on a Windows PC?",
     "options": [
       {
@@ -317,8 +299,6 @@
       "1.1.physical-address"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "How far does the MAC address of this PC travel?",
     "show": {
       "lab": "lab-office-01",

@@ -605,7 +605,7 @@ func _pack_summary() -> Array:
 				d["id"], d["title"], int(d["weight"]), pack.count_items(d["id"])]))
 	var s := pack.stats()
 	out.append(_l(""))
-	out.append(_l("%d items (%d reviewed)" % [s["items"], s["reviewed"]], S_DIM))
+	out.append(_l("%d items (%d reviewed by a person, %d by AI)" % [s["items"], s["human"], s["ai"]], S_DIM))
 	return out
 
 

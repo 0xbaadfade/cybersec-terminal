@@ -312,7 +312,7 @@ static func _exam_draw(pack: Pack, profile: Profile, pool: Array, domain_id: Str
 	return out
 
 
-## Reviewed before unreviewed, then the item served longest ago (never served
+## Human-reviewed, then AI-reviewed, then unreviewed, then the item served longest ago (never served
 ## first), then fewest times served, then a seeded random tie-break. Never a
 ## performance-based item, except a terminal mission for a skill pack's round
 ## (`ordinary_only` keeps the exam to ordinary questions).
@@ -325,7 +325,7 @@ static func _choose_item(pack: Pack, profile: Profile, concept_id: String,
 		var rec := Mastery.item_record(profile, item["id"])
 		cands.append({
 			"id": item["id"],
-			"unreviewed": 0 if item["reviewed"] else 1,
+			"unreviewed": Pack.review_rank(item),
 			"last": int(rec.get("last_day", -1)) if int(rec.get("seen", 0)) > 0 else -1,
 			"seen": int(rec.get("seen", 0)),
 			"jitter": rng.randf(),

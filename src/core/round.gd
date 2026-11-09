@@ -202,8 +202,8 @@ func _requeue(entry: Dictionary) -> int:
 		if not queued.has(it["id"]) and pack.round_item(it):
 			choices.append(it)
 	choices.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
-		if a["reviewed"] != b["reviewed"]:
-			return a["reviewed"]
+		if Pack.review_rank(a) != Pack.review_rank(b):
+			return Pack.review_rank(a) < Pack.review_rank(b)
 		return a["id"] < b["id"])
 	var item_id: String = choices[0]["id"] if not choices.is_empty() else entry["item"]
 	var gap := rng.randi_range(rules.requeue_min, rules.requeue_max)

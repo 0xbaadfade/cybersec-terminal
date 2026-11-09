@@ -2,8 +2,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-office-01",
     "id": "win-m-03",
     "concept_ids": [
@@ -24,8 +22,6 @@
       "2.1.listening-ports"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "This is part of a Windows workstation's netstat output. What does the line for port 3389 tell you?",
     "show": {
       "lab": "lab-office-01",
@@ -64,8 +60,6 @@
       "2.1.listening-ports"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Port 445 is listening on all interfaces. What is it, and who owns it?",
     "show": {
       "lab": "lab-office-01",
@@ -104,8 +98,6 @@
       "2.1.listening-ports"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the -o option add to netstat -an?",
     "options": [
       {
@@ -140,8 +132,6 @@
       "2.1.listening-ports"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Why does 0.0.0.0:3389 LISTENING deserve a hardening note?",
     "show": {
       "lab": "lab-office-01",
@@ -180,8 +170,6 @@
       "2.1.connections"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which line shows this PC talking LDAP to the domain controller (dc-01, 192.168.10.5)?",
     "show": {
       "lab": "lab-office-01",
@@ -220,8 +208,6 @@
       "2.1.connections"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "The connection to 192.168.10.20:445 is ESTABLISHED. What is it?",
     "show": {
       "lab": "lab-office-01",
@@ -260,8 +246,6 @@
       "2.1.connections"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does TIME_WAIT mean for the connection to 192.168.10.60:80?",
     "show": {
       "lab": "lab-office-01",
@@ -300,8 +284,6 @@
       "2.1.connections"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the -n option do for netstat?",
     "options": [
       {

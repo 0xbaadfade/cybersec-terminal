@@ -7,12 +7,12 @@ This page is generated from the packs and `data/tracks.json` when the repository
 
 ## Built
 
-| Pack | Items | Types | Difficulty 1 / 2 / 3 | Reviewed | Made by |
+| Pack | Items | Types | Difficulty 1 / 2 / 3 | Reviewed by a person | Reviewed by AI |
 |---|---|---|---|---|---|
-| Linux Command Line | 52 | 42 mcq, 10 terminal | 20 / 30 / 2 | 0 of 52 | 52 ai, 0 hand |
-| Windows Command Line | 35 | 30 mcq, 5 terminal | 17 / 17 / 1 | 0 of 35 | 35 ai, 0 hand |
+| Linux Command Line | 52 | 42 mcq, 10 terminal | 20 / 30 / 2 | 0 of 52 | 0 of 52 |
+| Windows Command Line | 35 | 30 mcq, 5 terminal | 17 / 17 / 1 | 0 of 35 | 0 of 35 |
 
-"Reviewed" is the number that matters for the *curated* bank: see `CONTENT-STANDARDS.md`. The maintainer reviews items as
+"Reviewed by a person" is the number that matters for the *curated* bank: see `CONTENT-STANDARDS.md`. The maintainer reviews items as
 they study the topic. Where the difficulty 3 column is thin, harder questions are especially welcome.
 
 ## Wanted

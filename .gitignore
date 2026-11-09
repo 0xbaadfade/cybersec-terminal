@@ -3,3 +3,5 @@
 export/
 *.tmp
 dist/
+# your own question banks (Aiken exports etc.): never committed, never published
+banks/

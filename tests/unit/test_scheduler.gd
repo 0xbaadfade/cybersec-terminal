@@ -158,6 +158,16 @@ func test_least_recently_served_item_rotates_in() -> void:
 	Support.remove_dir(dir2)
 
 
+func test_ai_reviewed_comes_after_human_and_before_unreviewed() -> void:
+	var dir2 := Support.make_dir()
+	var ai_item := Support.make_item("u-2", "1.1.a", "mcq", false)
+	ai_item["reviewed_by"] = "ai"
+	Support.write_wide_pack(dir2, [Support.make_item("u-1", "1.1.a", "mcq", false), ai_item])
+	pack = Pack.load_dir(dir2)
+	assert_eq(_pick(["1.1"], ["1.1"])[0]["item"], "u-2")
+	Support.remove_dir(dir2)
+
+
 func test_unreviewed_only_concept_still_served() -> void:
 	var dir2 := Support.make_dir()
 	Support.write_wide_pack(dir2, [Support.make_item("u-1", "1.1.a", "mcq", false)])

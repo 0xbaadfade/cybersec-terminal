@@ -2,8 +2,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-office-01",
     "id": "win-m-05",
     "concept_ids": [
@@ -26,8 +24,6 @@
       "4.1.curl-headers"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which line names the web server software on the camera?",
     "show": {
       "lab": "lab-office-01",
@@ -66,8 +62,6 @@
       "4.1.curl-headers"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What should an assessor note about 'Boa/0.94.14rc21' on an IP camera?",
     "show": {
       "lab": "lab-office-01",
@@ -106,8 +100,6 @@
       "4.1.curl-headers"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does 'Failed to connect to 192.168.10.1:80' tell you?",
     "show": {
       "lab": "lab-office-01",
@@ -146,8 +138,6 @@
       "4.1.reading-files"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "According to the file, where does this PC get its gateway and DNS settings?",
     "show": {
       "lab": "lab-office-01",
@@ -186,8 +176,6 @@
       "4.1.reading-files"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which Windows command prints the contents of a text file, like cat on Linux?",
     "options": [
       {
@@ -222,8 +210,6 @@
       "4.1.reading-files"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which Windows command searches text for a string, like grep on Linux?",
     "options": [
       {

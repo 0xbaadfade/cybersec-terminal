@@ -15,11 +15,11 @@ expert work. It began as the maintainer's own study bank and grows as they resea
 add their own content for the community. The game is one way to study it. The questions are plain JSON, so they can be used
 anywhere.
 
-Every item says how it was made (`hand` or `ai`) and whether the maintainer has reviewed it against a source. AI-assisted
-questions are welcome if they are labelled, but only reviewed items count as the *curated* bank; the rest are marked
-unreviewed and are served with lower priority. `CONTENT-STANDARDS.md` says exactly what that means.
+Every item records whether it has been reviewed, and by whom: the maintainer (against a cited source) or an AI tool. How an
+item was drafted does not matter, and AI help is welcome. Only person-reviewed items count as the *curated* bank; the rest are
+labelled and are served after them. `CONTENT-STANDARDS.md` says exactly what that means.
 
-**Where it stands:** 87 questions in 2 packs; 0 of them reviewed. See `ROADMAP.md` for what is built and what
+**Where it stands:** 87 questions in 2 packs; 0 reviewed by a person, 0 by an AI tool. See `ROADMAP.md` for what is built and what
 is wanted, and `CONTRIBUTING.md` to help.
 
 ![The skill tree: Foundations complete, Linux and Windows open, other branches coming soon](docs/screenshots/skill-tree.png)

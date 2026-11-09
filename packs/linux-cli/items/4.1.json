@@ -2,8 +2,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-dmz-01",
     "id": "lin-m-10",
     "concept_ids": [
@@ -26,8 +24,6 @@
       "4.1.http-headers"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "A tester ran the command below against web-03. Which finding would a vulnerability assessment report first?",
     "show": {
       "lab": "lab-dmz-01",
@@ -66,8 +62,6 @@
       "4.1.http-headers"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the status line of this response mean?",
     "show": {
       "lab": "lab-dmz-01",
@@ -106,8 +100,6 @@
       "4.1.http-headers"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Where does the server send a browser that asks for /old?",
     "show": {
       "lab": "lab-dmz-01",
@@ -146,8 +138,6 @@
       "4.1.http-headers"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which status does the server give for a page that does not exist?",
     "show": {
       "lab": "lab-dmz-01",
@@ -186,8 +176,6 @@
       "4.1.http-headers"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Why do hardening guides tell administrators to hide the Server and X-Powered-By headers?",
     "show": {
       "lab": "lab-dmz-01",

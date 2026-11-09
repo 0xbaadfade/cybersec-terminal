@@ -6,8 +6,6 @@
       "1.1.ping"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Three hosts of the web tier were reported up: 10.20.0.10, 10.20.0.11 and 10.20.0.30. One of them never answers ping. Which one? (Read notes.txt if you want a hint about where to look.)",
     "lab": "lab-dmz-01",
     "answer": {
@@ -22,8 +20,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-dmz-01",
     "id": "lin-m-02",
     "concept_ids": [
@@ -41,8 +37,6 @@
   {
     "type": "terminal",
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-dmz-01",
     "id": "lin-m-03",
     "concept_ids": [
@@ -61,8 +55,6 @@
   {
     "type": "terminal",
     "difficulty": 3,
-    "source": "ai",
-    "reviewed": false,
     "lab": "lab-dmz-01",
     "id": "lin-m-04",
     "concept_ids": [
@@ -87,8 +79,6 @@
       "1.1.service-versions"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "This scan of web-03 shows three open ports. Which one is a remote login service that sends everything, passwords included, in clear text and should be replaced by an encrypted one?",
     "show": {
       "lab": "lab-dmz-01",
@@ -127,8 +117,6 @@
       "1.1.ping"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "The ping below got no replies. What can you conclude?",
     "show": {
       "lab": "lab-dmz-01",
@@ -167,8 +155,6 @@
       "1.1.ping"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which statement does this output support?",
     "show": {
       "lab": "lab-dmz-01",
@@ -207,8 +193,6 @@
       "1.1.ping"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "On Linux, which ping option limits how many echo requests are sent?",
     "options": [
       {
@@ -243,8 +227,6 @@
       "1.1.ping"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "The scan below reports printer-01 as up, yet a plain ping to it gets no reply. How can both be true?",
     "show": {
       "lab": "lab-dmz-01",
@@ -283,8 +265,6 @@
       "1.1.port-scan"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What does the line 'Not shown: 997 closed tcp ports (conn-refused)' mean?",
     "show": {
       "lab": "lab-dmz-01",
@@ -323,8 +303,6 @@
       "1.1.port-scan"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which statement about db-02 is correct?",
     "show": {
       "lab": "lab-dmz-01",
@@ -363,8 +341,6 @@
       "1.1.port-scan"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "In an nmap report, what does the state 'filtered' mean?",
     "options": [
       {
@@ -399,8 +375,6 @@
       "1.1.port-scan"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Which command only checks which hosts are up on 10.20.0.0/24, without scanning their ports?",
     "options": [
       {
@@ -435,8 +409,6 @@
       "1.1.service-versions"
     ],
     "difficulty": 1,
-    "source": "ai",
-    "reviewed": false,
     "stem": "What software is the name server on dns-01 running, according to this scan?",
     "show": {
       "lab": "lab-dmz-01",
@@ -475,8 +447,6 @@
       "1.1.service-versions"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Why does nmap -sV take longer than a plain port scan?",
     "options": [
       {
@@ -511,8 +481,6 @@
       "1.1.service-versions"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Port 23 shows no version information. What is the most reasonable reading?",
     "show": {
       "lab": "lab-dmz-01",
@@ -551,8 +519,6 @@
       "1.1.service-versions"
     ],
     "difficulty": 2,
-    "source": "ai",
-    "reviewed": false,
     "stem": "Why does a security team care that a scan shows 'Apache httpd 2.4.6'?",
     "show": {
       "lab": "lab-dmz-01",

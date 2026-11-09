@@ -58,7 +58,7 @@ static func write_pack(root: String, items: Array) -> void:
 static func good_item(item_id: String = "t-1") -> Dictionary:
 	return {
 		"id": item_id, "type": "mcq", "concept_ids": ["1.1.a"], "difficulty": 1,
-		"source": "hand", "reviewed": true, "stem": "Pick b.",
+		"reviewed_by": "human", "stem": "Pick b.",
 		"options": [{"id": "a", "text": "A"}, {"id": "b", "text": "B"}, {"id": "c", "text": "C"}],
 		"answer": ["b"], "explain": "Because b.",
 	}
@@ -67,18 +67,21 @@ static func good_item(item_id: String = "t-1") -> Dictionary:
 ## An item with options a-d. mcq answers ["b"]; multi answers ["a", "c"].
 static func make_item(item_id: String, concept: String, type: String = "mcq",
 		reviewed: bool = true, difficulty: int = 1) -> Dictionary:
-	return {
+	var item := {
 		"id": item_id, "type": type, "concept_ids": [concept], "difficulty": difficulty,
-		"source": "hand" if reviewed else "ai", "reviewed": reviewed, "stem": "Stem of %s." % item_id,
+		"stem": "Stem of %s." % item_id,
 		"options": [{"id": "a", "text": "Alpha", "why": "Alpha is wrong."}, {"id": "b", "text": "Bravo"},
 				{"id": "c", "text": "Charlie"}, {"id": "d", "text": "Delta"}],
 		"answer": ["b"] if type == "mcq" else ["a", "c"],
 		"explain": "Explanation of %s." % item_id,
 	}
+	if reviewed:
+		item["reviewed_by"] = "human"
+	return item
 
 
 ## Two domains; 1.1 has concepts a,b,c; 1.2 has d,e; 1.3 has none; 2.1 has f.
-## Two items per concept (one reviewed, one not) unless `items` is given.
+## Two items per concept (one reviewed by a person, one not reviewed) unless `items` is given.
 static func write_wide_pack(root: String, items: Array = []) -> void:
 	write_json(root.path_join("pack.json"), {
 		"id": "wide", "title": "Wide Pack", "short": "WIDE", "version": 1,
@@ -113,7 +116,7 @@ const REASONS: Array = [
 static func evidence_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
 		"id": item_id, "type": "evidence", "concept_ids": [concept], "difficulty": difficulty,
-		"source": "ai", "reviewed": false, "stem": "Flag what weakens %s." % item_id,
+		"stem": "Flag what weakens %s." % item_id,
 		"artifact": {"file": "artifacts/demo.txt", "kind": "config", "title": "demo: config"},
 		"flaws": [
 			{"line": 3, "match": "RootLogin yes", "reason": "excess-privilege", "explain": "Root login is excess privilege."},
@@ -188,7 +191,7 @@ static func write_lab_pack(root: String, items: Array, lab: Dictionary = {}) -> 
 static func terminal_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
 		"id": item_id, "type": "terminal", "concept_ids": [concept], "difficulty": difficulty,
-		"source": "ai", "reviewed": false, "stem": "Which host drops ping? (%s)" % item_id,
+		"stem": "Which host drops ping? (%s)" % item_id,
 		"lab": "lab-a", "answer": {"accept": ["10.20.0.30", "printer-01"]},
 		"explain": "printer-01 drops ICMP (%s)." % item_id,
 	}
@@ -198,7 +201,7 @@ static func terminal_item(item_id: String, concept: String, difficulty: int = 1)
 static func match_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
 		"id": item_id, "type": "match", "concept_ids": [concept], "difficulty": difficulty,
-		"source": "ai", "reviewed": false, "stem": "Match each case (%s)." % item_id,
+		"stem": "Match each case (%s)." % item_id,
 		"categories": [{"id": "x", "text": "Xray"}, {"id": "y", "text": "Yankee"}, {"id": "z", "text": "Zulu"}],
 		"pairs": [
 			{"text": "Case one", "category": "x", "explain": "One is an Xray."},
@@ -214,7 +217,7 @@ static func match_item(item_id: String, concept: String, difficulty: int = 1) ->
 static func order_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
 		"id": item_id, "type": "order", "concept_ids": [concept], "difficulty": difficulty,
-		"source": "ai", "reviewed": false, "stem": "Put these in order (%s)." % item_id,
+		"stem": "Put these in order (%s)." % item_id,
 		"steps": [
 			{"text": "Step first", "explain": "First comes first."},
 			{"text": "Step second", "explain": "Second follows."},
