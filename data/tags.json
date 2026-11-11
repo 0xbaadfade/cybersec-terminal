@@ -305,6 +305,7 @@
     {"id": "binary-exploitation", "title": "Binary Exploitation", "kind": "pack"},
     {"id": "linux-cli", "title": "Linux Command Line", "kind": "pack"},
     {"id": "sy0-701", "title": "CompTIA Security+ SY0-701", "kind": "pack"},
+    {"id": "unassigned", "title": "Not in any pack (held out of SY0-701)", "kind": "pack"},
     {"id": "windows-cli", "title": "Windows Command Line", "kind": "pack"},
     {"id": "wireless-security", "title": "Wireless Security", "kind": "pack"},
     {"id": "public", "title": "May ship in the public repo", "kind": "flag"}

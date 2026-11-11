@@ -148,6 +148,9 @@ Search `data/tags.json` before adding a topic: if one already says what your que
 keys, because saved progress is stored under them. To rename one, add `"renamed": {"old.id": "new.id"}` instead of editing
 the id, so nobody's progress is lost.
 
+`unassigned` is a pack tag that no pack lists: a question tagged with it stays in the bank but is shown by no pack (the
+maintainer uses it for questions found to be outside a certification's objectives). `validate-pack` does not warn about it.
+
 **Where items live.** A question only your pack shows goes in `packs/<pack-id>/items/*.json`. A question more than one pack
 may show goes in `bank/items/*.json`, in a file named `<pack tag>_<anything>.json` for the pack it was written for. The bank
 holds only `mcq` and `multi` items without a `show` block; items that need a lab, simulated tool output or evidence

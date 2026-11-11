@@ -19,7 +19,7 @@ Every item records whether it has been reviewed, and by whom: the maintainer (ag
 item was drafted does not matter, and AI help is welcome. Only person-reviewed items count as the *curated* bank; the rest are
 labelled and are served after them. `CONTENT-STANDARDS.md` says exactly what that means.
 
-**Where it stands:** 1029 questions in 3 packs; 76 reviewed by a person, 0 by an AI tool. See `ROADMAP.md` for what is built and what
+**Where it stands:** 961 questions in 3 packs; 76 reviewed by a person, 0 by an AI tool. See `ROADMAP.md` for what is built and what
 is wanted, and `CONTRIBUTING.md` to help.
 
 ![The skill tree: Foundations complete, Linux and Windows open, other branches coming soon](docs/screenshots/skill-tree.png)

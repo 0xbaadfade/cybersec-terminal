@@ -11,7 +11,7 @@ This page is generated from the packs and `data/tracks.json` when the repository
 |---|---|---|---|---|---|
 | Linux Command Line | 52 | 42 mcq, 10 terminal | 20 / 30 / 2 | 0 of 52 | 0 of 52 |
 | Windows Command Line | 35 | 30 mcq, 5 terminal | 17 / 17 / 1 | 0 of 35 | 0 of 35 |
-| CompTIA Security+ SY0-701 | 942 | 942 mcq | 0 / 942 / 0 | 76 of 942 | 0 of 942 |
+| CompTIA Security+ SY0-701 | 874 | 874 mcq | 0 / 874 / 0 | 76 of 874 | 0 of 874 |
 
 "Reviewed by a person" is the number that matters for the *curated* bank: see `CONTENT-STANDARDS.md`. The maintainer reviews items as
 they study the topic. Where the difficulty 3 column is thin, harder questions are especially welcome.

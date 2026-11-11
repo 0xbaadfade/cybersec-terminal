@@ -1,431 +1,1154 @@
 [
   {
-    "id": "aiken-domain-4-005", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-005",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A company is building a broad set of conditional steps to follow when investigating a data breach. Which of the following would BEST describe these steps?",
     "options": [
-      { "id": "a", "text": "Playbook" },
-      { "id": "b", "text": "Order of volatility" },
-      { "id": "c", "text": "DAC" },
-      { "id": "d", "text": "Managerial controls" }
+      {
+        "id": "a",
+        "text": "Playbook"
+      },
+      {
+        "id": "b",
+        "text": "Order of volatility"
+      },
+      {
+        "id": "c",
+        "text": "DAC"
+      },
+      {
+        "id": "d",
+        "text": "Managerial controls"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-006", "type": "mcq", "tags": ["identity.federation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-006",
+    "type": "mcq",
+    "tags": [
+      "identity.federation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A company is developing a web application that allows users to import their photos and contacts from a popular cloud-based photo storage service. To securely facilitate this feature without accessing the users' cloud service credentials, which protocol should the company use?",
     "options": [
-      { "id": "a", "text": "OAuth" },
-      { "id": "b", "text": "SAML" },
-      { "id": "c", "text": "LDAP" },
-      { "id": "d", "text": "Kerberos" }
+      {
+        "id": "a",
+        "text": "OAuth"
+      },
+      {
+        "id": "b",
+        "text": "SAML"
+      },
+      {
+        "id": "c",
+        "text": "LDAP"
+      },
+      {
+        "id": "d",
+        "text": "Kerberos"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-009", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-009",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A company is implementing a two-factor authentication system for enhanced security. They choose a token-based approach where the password for authentication changes periodically, in sync with the authentication server. Which algorithm is likely being used in these tokens to generate the time-sensitive passwords?",
     "options": [
-      { "id": "a", "text": "HMAC-based One-Time Password (HOTP)" },
-      { "id": "b", "text": "Time-based One-Time Password (TOTP)" },
-      { "id": "c", "text": "Advanced Encryption Standard (AES)" },
-      { "id": "d", "text": "Public Key Infrastructure (PKI)" }
+      {
+        "id": "a",
+        "text": "HMAC-based One-Time Password (HOTP)"
+      },
+      {
+        "id": "b",
+        "text": "Time-based One-Time Password (TOTP)"
+      },
+      {
+        "id": "c",
+        "text": "Advanced Encryption Standard (AES)"
+      },
+      {
+        "id": "d",
+        "text": "Public Key Infrastructure (PKI)"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-018", "type": "mcq", "tags": ["identity.federation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-018",
+    "type": "mcq",
+    "tags": [
+      "identity.federation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A mobile app developer needs to incorporate a feature that allows users to share content directly to their social media accounts from the app. To securely enable this functionality without accessing or storing users' social media credentials, which protocol should the developer implement?",
     "options": [
-      { "id": "a", "text": "OAuth" },
-      { "id": "b", "text": "SAML" },
-      { "id": "c", "text": "LDAP" },
-      { "id": "d", "text": "SSH" }
+      {
+        "id": "a",
+        "text": "OAuth"
+      },
+      {
+        "id": "b",
+        "text": "SAML"
+      },
+      {
+        "id": "c",
+        "text": "LDAP"
+      },
+      {
+        "id": "d",
+        "text": "SSH"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-026", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-026",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A security administrator is concerned that a user may have installed a rogue access point on the corporate network. Which of the following could be used to confirm this suspicion?",
     "options": [
-      { "id": "a", "text": "Switch log" },
-      { "id": "b", "text": "UTM log" },
-      { "id": "c", "text": "WAF log" },
-      { "id": "d", "text": "DLP log" }
+      {
+        "id": "a",
+        "text": "Switch log"
+      },
+      {
+        "id": "b",
+        "text": "UTM log"
+      },
+      {
+        "id": "c",
+        "text": "WAF log"
+      },
+      {
+        "id": "d",
+        "text": "DLP log"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-029", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
-    "stem": "A security administrator would like to test a server to see if a specific vulnerability exists. Which of the following would be the BEST choice for this task?",
-    "options": [
-      { "id": "a", "text": "Metasploit" },
-      { "id": "b", "text": "Netcat" },
-      { "id": "c", "text": "Autopsy" },
-      { "id": "d", "text": "FTK Imager" }
+    "id": "aiken-domain-4-037",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
     ],
-    "answer": ["a"]
-  },
-  {
-    "id": "aiken-domain-4-037", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "difficulty": 2,
     "stem": "A type of authentication based on a user's typing style that analyzes dwell time and flight time is know as which of the following?",
     "options": [
-      { "id": "a", "text": "Key logging" },
-      { "id": "b", "text": "Keystroke dynamics" },
-      { "id": "c", "text": "Key streching" },
-      { "id": "d", "text": "Key auditing" }
+      {
+        "id": "a",
+        "text": "Key logging"
+      },
+      {
+        "id": "b",
+        "text": "Keystroke dynamics"
+      },
+      {
+        "id": "c",
+        "text": "Key streching"
+      },
+      {
+        "id": "d",
+        "text": "Key auditing"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-046", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-046",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "An online service provider enhances its security by asking users questions based on their recent financial transactions or geographic history during the login process. This method of verifying user identity is an example of which type of knowledge-based authentication (KBA)?",
     "options": [
-      { "id": "a", "text": "Static KBA" },
-      { "id": "b", "text": "Dynamic KBA" },
-      { "id": "c", "text": "Biometric Authentication" },
-      { "id": "d", "text": "Multi-Factor Authentication" }
+      {
+        "id": "a",
+        "text": "Static KBA"
+      },
+      {
+        "id": "b",
+        "text": "Dynamic KBA"
+      },
+      {
+        "id": "c",
+        "text": "Biometric Authentication"
+      },
+      {
+        "id": "d",
+        "text": "Multi-Factor Authentication"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-048", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-048",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "At XYZ Corporation, each department manager has the authority to grant or restrict access to certain company files and resources within their own department. Managers can decide who among their team members can view, edit, or share specific documents based on the project requirements. This scenario exemplifies which type of access control model?",
     "options": [
-      { "id": "a", "text": "Discretionary Access Control (DAC)" },
-      { "id": "b", "text": "Mandatory Access Control (MAC)" },
-      { "id": "c", "text": "Role-Based Access Control (RBAC)" },
-      { "id": "d", "text": "Attribute-Based Access Control (ABAC)" }
+      {
+        "id": "a",
+        "text": "Discretionary Access Control (DAC)"
+      },
+      {
+        "id": "b",
+        "text": "Mandatory Access Control (MAC)"
+      },
+      {
+        "id": "c",
+        "text": "Role-Based Access Control (RBAC)"
+      },
+      {
+        "id": "d",
+        "text": "Attribute-Based Access Control (ABAC)"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-056", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-056",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In a corporate environment where employees have the authority to set access permissions for the files they own, determining who can read, write, or execute these files, which type of access control is being utilized?",
     "options": [
-      { "id": "a", "text": "Mandatory Access Control (MAC)" },
-      { "id": "b", "text": "Role-Based Access Control (RBAC)" },
-      { "id": "c", "text": "Discretionary Access Control (DAC)" },
-      { "id": "d", "text": "Rule-Based Access Control (RBAC)" }
+      {
+        "id": "a",
+        "text": "Mandatory Access Control (MAC)"
+      },
+      {
+        "id": "b",
+        "text": "Role-Based Access Control (RBAC)"
+      },
+      {
+        "id": "c",
+        "text": "Discretionary Access Control (DAC)"
+      },
+      {
+        "id": "d",
+        "text": "Rule-Based Access Control (RBAC)"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-058", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-058",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In a high-security government facility, the system restricts access to information based on both the classification of the data (e.g., confidential, secret, top secret) and the clearance level of the individual seeking access. Which access control model does this scenario exemplify?",
     "options": [
-      { "id": "a", "text": "Discretionary Access Control (DAC)" },
-      { "id": "b", "text": "Mandatory Access Control (MAC)" },
-      { "id": "c", "text": "Role-Based Access Control (RBAC)" },
-      { "id": "d", "text": "Attribute-Based Access Control (ABAC)" }
+      {
+        "id": "a",
+        "text": "Discretionary Access Control (DAC)"
+      },
+      {
+        "id": "b",
+        "text": "Mandatory Access Control (MAC)"
+      },
+      {
+        "id": "c",
+        "text": "Role-Based Access Control (RBAC)"
+      },
+      {
+        "id": "d",
+        "text": "Attribute-Based Access Control (ABAC)"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-059", "type": "mcq", "tags": ["identity.sso", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-059",
+    "type": "mcq",
+    "tags": [
+      "identity.sso",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In a large organization with multiple cloud-based services, which protocol is best suited for implementing a Single Sign-On (SSO) solution that allows users to authenticate once and gain access to all connected services?",
     "options": [
-      { "id": "a", "text": "OAuth" },
-      { "id": "b", "text": "OpenID" },
-      { "id": "c", "text": "SAML" },
-      { "id": "d", "text": "LDAP" }
+      {
+        "id": "a",
+        "text": "OAuth"
+      },
+      {
+        "id": "b",
+        "text": "OpenID"
+      },
+      {
+        "id": "c",
+        "text": "SAML"
+      },
+      {
+        "id": "d",
+        "text": "LDAP"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-060", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-060",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In a network environment utilizing LDAP, what role does the protocol play when a user attempts to log in to the network using their credentials?",
     "options": [
-      { "id": "a", "text": "LDAP encrypts the user's password for secure transmission over the network" },
-      { "id": "b", "text": "LDAP directly grants or denies access to network resources based on user credentials" },
-      { "id": "c", "text": "LDAP acts as a database that stores user credentials for authentication purposes" },
-      { "id": "d", "text": "LDAP queries the central directory to verify the user's credentials and retrieve their account information" }
+      {
+        "id": "a",
+        "text": "LDAP encrypts the user's password for secure transmission over the network"
+      },
+      {
+        "id": "b",
+        "text": "LDAP directly grants or denies access to network resources based on user credentials"
+      },
+      {
+        "id": "c",
+        "text": "LDAP acts as a database that stores user credentials for authentication purposes"
+      },
+      {
+        "id": "d",
+        "text": "LDAP queries the central directory to verify the user's credentials and retrieve their account information"
+      }
     ],
-    "answer": ["d"]
+    "answer": [
+      "d"
+    ]
   },
   {
-    "id": "aiken-domain-4-061", "type": "mcq", "tags": ["identity.pam", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-061",
+    "type": "mcq",
+    "tags": [
+      "identity.pam",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In a Privileged Access Management (PAM) system, what mechanism is used to ensure that administrators receive administrative privileges only when necessary, and these privileges are revoked after the task is completed?",
     "options": [
-      { "id": "a", "text": "Just-In-Time Permissions" },
-      { "id": "b", "text": "Permanent Administrative Rights" },
-      { "id": "c", "text": "Continuous Access Monitoring" },
-      { "id": "d", "text": "Static Group Membership" }
+      {
+        "id": "a",
+        "text": "Just-In-Time Permissions"
+      },
+      {
+        "id": "b",
+        "text": "Permanent Administrative Rights"
+      },
+      {
+        "id": "c",
+        "text": "Continuous Access Monitoring"
+      },
+      {
+        "id": "d",
+        "text": "Static Group Membership"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-062", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-062",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In a secure authentication system, a token generates new codes automatically at regular intervals, such as every 60 seconds. This behavior suggests that the token is most likely using which type of algorithm?",
     "options": [
-      { "id": "a", "text": "HMAC-based One-Time Password (HOTP)" },
-      { "id": "b", "text": "Time-based One-Time Password (TOTP)" },
-      { "id": "c", "text": "Symmetric Key Algorithm" },
-      { "id": "d", "text": "Elliptic Curve Cryptography" }
+      {
+        "id": "a",
+        "text": "HMAC-based One-Time Password (HOTP)"
+      },
+      {
+        "id": "b",
+        "text": "Time-based One-Time Password (TOTP)"
+      },
+      {
+        "id": "c",
+        "text": "Symmetric Key Algorithm"
+      },
+      {
+        "id": "d",
+        "text": "Elliptic Curve Cryptography"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-063", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-063",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In an academic environment, students are provided access to digital learning resources and course materials only for the classes in which they are registered. What type of access control model is this an example of?",
     "options": [
-      { "id": "a", "text": "Discretionary Access Control (DAC)" },
-      { "id": "b", "text": "Mandatory Access Control (MAC)" },
-      { "id": "c", "text": "Role-Based Access Control (RBAC)" },
-      { "id": "d", "text": "Attribute-Based Access Control (ABAC)" }
+      {
+        "id": "a",
+        "text": "Discretionary Access Control (DAC)"
+      },
+      {
+        "id": "b",
+        "text": "Mandatory Access Control (MAC)"
+      },
+      {
+        "id": "c",
+        "text": "Role-Based Access Control (RBAC)"
+      },
+      {
+        "id": "d",
+        "text": "Attribute-Based Access Control (ABAC)"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-065", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-065",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In an IT security context, how do Rule-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC) differ in terms of defining access rights to resources?",
     "options": [
-      { "id": "a", "text": "RBAC defines access based on a set of predefined rules, while ABAC assigns access rights based on a combination of user, resource, and environmental attributes." },
-      { "id": "b", "text": "RBAC and ABAC both use a dynamic set of attributes to grant access rights." },
-      { "id": "c", "text": "ABAC uses predefined rules for access, while RBAC bases access rights on user and resource attributes." },
-      { "id": "d", "text": "RBAC is focused on environmental attributes, whereas ABAC relies on a static set of rules." }
+      {
+        "id": "a",
+        "text": "RBAC defines access based on a set of predefined rules, while ABAC assigns access rights based on a combination of user, resource, and environmental attributes."
+      },
+      {
+        "id": "b",
+        "text": "RBAC and ABAC both use a dynamic set of attributes to grant access rights."
+      },
+      {
+        "id": "c",
+        "text": "ABAC uses predefined rules for access, while RBAC bases access rights on user and resource attributes."
+      },
+      {
+        "id": "d",
+        "text": "RBAC is focused on environmental attributes, whereas ABAC relies on a static set of rules."
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-069", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
-    "stem": "In the context of biometric security systems, what type of error could potentially permit an unauthorized user to gain access to a secured system?",
-    "options": [
-      { "id": "a", "text": "False Rejection Rate (FRR)" },
-      { "id": "b", "text": "False Acceptance Rate (FAR)" },
-      { "id": "c", "text": "Crossover Error Rate (CER)" },
-      { "id": "d", "text": "Biometric System Latency" }
+    "id": "aiken-domain-4-070",
+    "type": "mcq",
+    "tags": [
+      "identity.federation",
+      "sy0-701",
+      "public"
     ],
-    "answer": ["b"]
-  },
-  {
-    "id": "aiken-domain-4-070", "type": "mcq", "tags": ["identity.federation", "sy0-701", "public"], "difficulty": 2,
+    "difficulty": 2,
     "stem": "In the context of identity management and access control, what does 'federation' typically refer to?",
     "options": [
-      { "id": "a", "text": "The process of centralizing user credentials into a single repository." },
-      { "id": "b", "text": "The technique of segmenting a network into smaller, more manageable units." },
-      { "id": "c", "text": "The establishment of trust relationships between different organizations to share identity information." },
-      { "id": "d", "text": "The practice of regularly updating and changing user passwords for security." }
+      {
+        "id": "a",
+        "text": "The process of centralizing user credentials into a single repository."
+      },
+      {
+        "id": "b",
+        "text": "The technique of segmenting a network into smaller, more manageable units."
+      },
+      {
+        "id": "c",
+        "text": "The establishment of trust relationships between different organizations to share identity information."
+      },
+      {
+        "id": "d",
+        "text": "The practice of regularly updating and changing user passwords for security."
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-071", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-071",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In the context of MFA (Multifactor Authentication), which factor is considered the weakest because it can be easily shared or stolen?",
     "options": [
-      { "id": "a", "text": "Something You Know" },
-      { "id": "b", "text": "Something You Have" },
-      { "id": "c", "text": "Somewhere You Are" },
-      { "id": "d", "text": "Something You Are" }
+      {
+        "id": "a",
+        "text": "Something You Know"
+      },
+      {
+        "id": "b",
+        "text": "Something You Have"
+      },
+      {
+        "id": "c",
+        "text": "Somewhere You Are"
+      },
+      {
+        "id": "d",
+        "text": "Something You Are"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-072", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-072",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In the context of OAuth, how does this open standard enhance security when users grant third-party services access to their information in another service?",
     "options": [
-      { "id": "a", "text": "By encrypting user data shared between services" },
-      { "id": "b", "text": "By allowing users to share specific data without exposing their login credentials" },
-      { "id": "c", "text": "By creating a new set of credentials for each third-party service" },
-      { "id": "d", "text": "By permanently linking user accounts across different services" }
+      {
+        "id": "a",
+        "text": "By encrypting user data shared between services"
+      },
+      {
+        "id": "b",
+        "text": "By allowing users to share specific data without exposing their login credentials"
+      },
+      {
+        "id": "c",
+        "text": "By creating a new set of credentials for each third-party service"
+      },
+      {
+        "id": "d",
+        "text": "By permanently linking user accounts across different services"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-079", "type": "mcq", "tags": ["identity.federation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-079",
+    "type": "mcq",
+    "tags": [
+      "identity.federation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In the realm of network security, the AAA (Authentication, Authorization, and Accounting) framework is critical for controlling access to resources and monitoring user activities. Which of the following pairs of solutions are known to provide comprehensive AAA functionality?",
     "options": [
-      { "id": "a", "text": "CHAP and Kerberos" },
-      { "id": "b", "text": "TACACS+ and RADIUS" },
-      { "id": "c", "text": "MS-CHAP and CHAP" },
-      { "id": "d", "text": "Kerberos and MS-CHAP" }
+      {
+        "id": "a",
+        "text": "CHAP and Kerberos"
+      },
+      {
+        "id": "b",
+        "text": "TACACS+ and RADIUS"
+      },
+      {
+        "id": "c",
+        "text": "MS-CHAP and CHAP"
+      },
+      {
+        "id": "d",
+        "text": "Kerberos and MS-CHAP"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-082", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-082",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Lisa's organization is implementing a two-factor authentication system for building access that requires employees to use both a memorized code and a physical object. Which combination best meets these criteria?",
     "options": [
-      { "id": "a", "text": "Access badges and biometric scans" },
-      { "id": "b", "text": "PIN codes and RFID access cards" },
-      { "id": "c", "text": "Passwords and security guard verification" },
-      { "id": "d", "text": "Facial recognition and key fobs" }
+      {
+        "id": "a",
+        "text": "Access badges and biometric scans"
+      },
+      {
+        "id": "b",
+        "text": "PIN codes and RFID access cards"
+      },
+      {
+        "id": "c",
+        "text": "Passwords and security guard verification"
+      },
+      {
+        "id": "d",
+        "text": "Facial recognition and key fobs"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-083", "type": "mcq", "tags": ["identity.pam", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-083",
+    "type": "mcq",
+    "tags": [
+      "identity.pam",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Modern security architectures leverage the impermanence of certain access credentials to strengthen system security. What best describes these short-lived credentials designed to minimize the impact of credential theft by expiring after a set time or a single use?",
     "options": [
-      { "id": "a", "text": "Temporary Authentication Certificates (TACs)" },
-      { "id": "b", "text": "Multi-Factor Authentication (MFA) Codes" },
-      { "id": "c", "text": "Ephemeral Credentials" },
-      { "id": "d", "text": "Role-Based Access Control (RBAC) Permissions" }
+      {
+        "id": "a",
+        "text": "Temporary Authentication Certificates (TACs)"
+      },
+      {
+        "id": "b",
+        "text": "Multi-Factor Authentication (MFA) Codes"
+      },
+      {
+        "id": "c",
+        "text": "Ephemeral Credentials"
+      },
+      {
+        "id": "d",
+        "text": "Role-Based Access Control (RBAC) Permissions"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-091", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-091",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Security-enhanced Linux (SELinux) is a prominent example of an operating system implementing a specific access control scheme. Which type of access control scheme does SELinux primarily use?",
     "options": [
-      { "id": "a", "text": "Discretionary Access Control (DAC)" },
-      { "id": "b", "text": "Mandatory Access Control (MAC)" },
-      { "id": "c", "text": "Role-Based Access Control (RBAC)" },
-      { "id": "d", "text": "Attribute-Based Access Control (ABAC)" }
+      {
+        "id": "a",
+        "text": "Discretionary Access Control (DAC)"
+      },
+      {
+        "id": "b",
+        "text": "Mandatory Access Control (MAC)"
+      },
+      {
+        "id": "c",
+        "text": "Role-Based Access Control (RBAC)"
+      },
+      {
+        "id": "d",
+        "text": "Attribute-Based Access Control (ABAC)"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-093", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-093",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "The CIO of Company A wants to implement multifactor authentication to gain access to the building.  Which of the following meets this requirement?",
     "options": [
-      { "id": "a", "text": "Fingerprint and retina scan" },
-      { "id": "b", "text": "Badge and PIN" },
-      { "id": "c", "text": "Username and password" },
-      { "id": "d", "text": "None of the above" }
+      {
+        "id": "a",
+        "text": "Fingerprint and retina scan"
+      },
+      {
+        "id": "b",
+        "text": "Badge and PIN"
+      },
+      {
+        "id": "c",
+        "text": "Username and password"
+      },
+      {
+        "id": "d",
+        "text": "None of the above"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-095", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-095",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "The most common type of authentication method used in military computer networks is ___________.",
     "options": [
-      { "id": "a", "text": "CAC and PIN" },
-      { "id": "b", "text": "Username and password" },
-      { "id": "c", "text": "Username and biometric" },
-      { "id": "d", "text": "PIV" }
+      {
+        "id": "a",
+        "text": "CAC and PIN"
+      },
+      {
+        "id": "b",
+        "text": "Username and password"
+      },
+      {
+        "id": "c",
+        "text": "Username and biometric"
+      },
+      {
+        "id": "d",
+        "text": "PIV"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-098", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-098",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "The token's primary security advantage over metallic keys is _______________.",
     "options": [
-      { "id": "a", "text": "Tokens can be issued to all employees" },
-      { "id": "b", "text": "Tokens can be copied for faster distribution" },
-      { "id": "c", "text": "Tokens are revocable" },
-      { "id": "d", "text": "Tokens are bigger, and thus easier to find than a key" }
+      {
+        "id": "a",
+        "text": "Tokens can be issued to all employees"
+      },
+      {
+        "id": "b",
+        "text": "Tokens can be copied for faster distribution"
+      },
+      {
+        "id": "c",
+        "text": "Tokens are revocable"
+      },
+      {
+        "id": "d",
+        "text": "Tokens are bigger, and thus easier to find than a key"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-099", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-099",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "The Wi-Fi Protected Setup (WPS) feature on many wireless routers is intended to simplify the process of connecting devices to the network. However, it has a known vulnerability. What is this vulnerability, and how can it be exploited?",
     "options": [
-      { "id": "a", "text": "WPS is vulnerable to brute-force attacks that attempt different PINs until successful, allowing tools like Reaver to discover the PIN within hours." },
-      { "id": "b", "text": "WPS can be bypassed by intercepting Wi-Fi signals, enabling unauthorized users to connect without a PIN." },
-      { "id": "c", "text": "The encryption used by WPS is outdated, allowing attackers to decrypt the Wi-Fi password easily." },
-      { "id": "d", "text": "WPS does not encrypt its signals, making it easy for attackers to spoof legitimate devices." }
+      {
+        "id": "a",
+        "text": "WPS is vulnerable to brute-force attacks that attempt different PINs until successful, allowing tools like Reaver to discover the PIN within hours."
+      },
+      {
+        "id": "b",
+        "text": "WPS can be bypassed by intercepting Wi-Fi signals, enabling unauthorized users to connect without a PIN."
+      },
+      {
+        "id": "c",
+        "text": "The encryption used by WPS is outdated, allowing attackers to decrypt the Wi-Fi password easily."
+      },
+      {
+        "id": "d",
+        "text": "WPS does not encrypt its signals, making it easy for attackers to spoof legitimate devices."
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-100", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-100",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "To reduce the risk of insider threats and enhance security, a financial institution wants to implement a system where accounts with specific privileges are created for users when needed and automatically deleted after a set period. Which approach should the institution adopt?",
     "options": [
-      { "id": "a", "text": "Permanent Role-Based Access" },
-      { "id": "b", "text": "Just-in-Time Permissions" },
-      { "id": "c", "text": "Temporal Accounts" },
-      { "id": "d", "text": "Continuous Access Monitoring" }
+      {
+        "id": "a",
+        "text": "Permanent Role-Based Access"
+      },
+      {
+        "id": "b",
+        "text": "Just-in-Time Permissions"
+      },
+      {
+        "id": "c",
+        "text": "Temporal Accounts"
+      },
+      {
+        "id": "d",
+        "text": "Continuous Access Monitoring"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-117", "type": "mcq", "tags": ["identity.federation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-117",
+    "type": "mcq",
+    "tags": [
+      "identity.federation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "When implementing a federated identity management system using SAML for single sign-on (SSO), what is the primary purpose of SAML in this context?",
     "options": [
-      { "id": "a", "text": "To manage user authorization levels across different systems" },
-      { "id": "b", "text": "To enable user authentication and identity sharing between different organizations" },
-      { "id": "c", "text": "To serve as the main data storage solution for user credentials" },
-      { "id": "d", "text": "To provide encryption for data transmission between federated networks" }
+      {
+        "id": "a",
+        "text": "To manage user authorization levels across different systems"
+      },
+      {
+        "id": "b",
+        "text": "To enable user authentication and identity sharing between different organizations"
+      },
+      {
+        "id": "c",
+        "text": "To serve as the main data storage solution for user credentials"
+      },
+      {
+        "id": "d",
+        "text": "To provide encryption for data transmission between federated networks"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-119", "type": "mcq", "tags": ["identity.federation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-119",
+    "type": "mcq",
+    "tags": [
+      "identity.federation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which authentication protocol is commonly used for remote user access, such as in VPNs and wireless networks, providing centralized Authentication, Authorization, and Accounting (AAA) management?",
     "options": [
-      { "id": "a", "text": "LDAP" },
-      { "id": "b", "text": "Kerberos" },
-      { "id": "c", "text": "RADIUS" },
-      { "id": "d", "text": "SAML" }
+      {
+        "id": "a",
+        "text": "LDAP"
+      },
+      {
+        "id": "b",
+        "text": "Kerberos"
+      },
+      {
+        "id": "c",
+        "text": "RADIUS"
+      },
+      {
+        "id": "d",
+        "text": "SAML"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-120", "type": "mcq", "tags": ["identity.sso", "sy0-701", "public"], "difficulty": 2,
-    "stem": "Which authentication protocol is designed primarily for web-based single sign-on (SSO) and allows users to log in with a single ID to access connected applications across multiple domains?",
-    "options": [
-      { "id": "a", "text": "OpenlD" },
-      { "id": "b", "text": "Kerberos" },
-      { "id": "c", "text": "RADIUS" },
-      { "id": "d", "text": "TACACS+" }
+    "id": "aiken-domain-4-122",
+    "type": "mcq",
+    "tags": [
+      "identity.permission-assignment",
+      "sy0-701",
+      "public"
     ],
-    "answer": ["a"]
-  },
-  {
-    "id": "aiken-domain-4-122", "type": "mcq", "tags": ["identity.permission-assignment", "sy0-701", "public"], "difficulty": 2,
+    "difficulty": 2,
     "stem": "Which concept exposes employees to varying job roles to increase their overall knowledge of the business?",
     "options": [
-      { "id": "a", "text": "Job Rotation" },
-      { "id": "b", "text": "Mandatory Vacation" },
-      { "id": "c", "text": "Least Privilege" },
-      { "id": "d", "text": "Separation of Duties" }
+      {
+        "id": "a",
+        "text": "Job Rotation"
+      },
+      {
+        "id": "b",
+        "text": "Mandatory Vacation"
+      },
+      {
+        "id": "c",
+        "text": "Least Privilege"
+      },
+      {
+        "id": "d",
+        "text": "Separation of Duties"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-124", "type": "mcq", "tags": ["identity.password-concepts", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-124",
+    "type": "mcq",
+    "tags": [
+      "identity.password-concepts",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which of the following best describes a minimum password age setting?",
     "options": [
-      { "id": "a", "text": "Passwords cannot be reused until they have been expired a certain amount of time." },
-      { "id": "b", "text": "Users must not change passwords until a certain date." },
-      { "id": "c", "text": "Users must change passwords after a certain amount of time." },
-      { "id": "d", "text": "Users must wait a certain amount of time before they are allowed to change passwords." }
+      {
+        "id": "a",
+        "text": "Passwords cannot be reused until they have been expired a certain amount of time."
+      },
+      {
+        "id": "b",
+        "text": "Users must not change passwords until a certain date."
+      },
+      {
+        "id": "c",
+        "text": "Users must change passwords after a certain amount of time."
+      },
+      {
+        "id": "d",
+        "text": "Users must wait a certain amount of time before they are allowed to change passwords."
+      }
     ],
-    "answer": ["d"]
+    "answer": [
+      "d"
+    ]
   },
   {
-    "id": "aiken-domain-4-125", "type": "mcq", "tags": ["identity.federation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-125",
+    "type": "mcq",
+    "tags": [
+      "identity.federation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which of the following defines policies, protocols, and practices to manage identities across systems and organizations?",
     "options": [
-      { "id": "a", "text": "FIM" },
-      { "id": "b", "text": "SSO" },
-      { "id": "c", "text": "Account management" },
-      { "id": "d", "text": "Transitive trust" }
+      {
+        "id": "a",
+        "text": "FIM"
+      },
+      {
+        "id": "b",
+        "text": "SSO"
+      },
+      {
+        "id": "c",
+        "text": "Account management"
+      },
+      {
+        "id": "d",
+        "text": "Transitive trust"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-128", "type": "mcq", "tags": ["identity.pam", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-128",
+    "type": "mcq",
+    "tags": [
+      "identity.pam",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which of the following is BEST carried out immediately after a compromise of security within an organization?",
     "options": [
-      { "id": "a", "text": "Change management" },
-      { "id": "b", "text": "Incident management" },
-      { "id": "c", "text": "Risk transference" },
-      { "id": "d", "text": "Access control revalidation" }
+      {
+        "id": "a",
+        "text": "Change management"
+      },
+      {
+        "id": "b",
+        "text": "Incident management"
+      },
+      {
+        "id": "c",
+        "text": "Risk transference"
+      },
+      {
+        "id": "d",
+        "text": "Access control revalidation"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-130", "type": "mcq", "tags": ["identity.mfa", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-130",
+    "type": "mcq",
+    "tags": [
+      "identity.mfa",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which of the following scenarios best illustrates the \"Something You Have\" factor in Multifactor Authentication (MFA)?",
     "options": [
-      { "id": "a", "text": "Logging in to your bank account with a fingerprint scan" },
-      { "id": "b", "text": "Entering a temporary verification code sent to your phone" },
-      { "id": "c", "text": "Using your personal email address as a username" },
-      { "id": "d", "text": "Requiring physical presence at a specific ATM to withdraw cash" }
+      {
+        "id": "a",
+        "text": "Logging in to your bank account with a fingerprint scan"
+      },
+      {
+        "id": "b",
+        "text": "Entering a temporary verification code sent to your phone"
+      },
+      {
+        "id": "c",
+        "text": "Using your personal email address as a username"
+      },
+      {
+        "id": "d",
+        "text": "Requiring physical presence at a specific ATM to withdraw cash"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-138", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-138",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which type of access control is based on \"labels\" and \"levels\" and is considered the most restrictive method?",
     "options": [
-      { "id": "a", "text": "DAC" },
-      { "id": "b", "text": "MAC" },
-      { "id": "c", "text": "RBAC" },
-      { "id": "d", "text": "ABAC" }
+      {
+        "id": "a",
+        "text": "DAC"
+      },
+      {
+        "id": "b",
+        "text": "MAC"
+      },
+      {
+        "id": "c",
+        "text": "RBAC"
+      },
+      {
+        "id": "d",
+        "text": "ABAC"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   }
 ]

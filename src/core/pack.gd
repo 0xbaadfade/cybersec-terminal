@@ -15,6 +15,8 @@ const ITEM_TYPES: Array = ["mcq", "multi", "evidence", "terminal", "match", "ord
 const PBQ_TYPES: Array = ["evidence", "terminal", "match", "order"]
 ## The PBQs the full exam may hold: none of them uses a command line.
 const EXAM_PBQ_TYPES: Array = ["evidence", "match", "order"]
+## A pack tag that no pack lists: the item stays in the bank on purpose (outside every pack for now), so no warning.
+const HELD_TAG := "unassigned"
 const MAX_CATEGORIES := 5
 const MAX_PAIRS := 8
 const MIN_STEPS := 3
@@ -119,7 +121,7 @@ static func check_bank(root: String = "res://") -> Dictionary:
 			scratch.errors.append("%s %s: the id is also used in %s" % [entry["label"], item.get("id"), own_ids[str(item.get("id"))]])
 		if scratch._validate_item(item, entry["label"], true):
 			scratch.items[item["id"]] = item
-			if not _carries_any(item["tags"], pack_tags.keys()):
+			if not _carries_any(item["tags"], pack_tags.keys()) and not (item["tags"] as Array).has(HELD_TAG):
 				scratch.warnings.append("%s %s: carries no tag of any pack, so no pack serves it" % [entry["label"], item["id"]])
 	return {"errors": scratch.errors, "warnings": scratch.warnings, "count": count}
 

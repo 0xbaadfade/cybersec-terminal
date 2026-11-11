@@ -1,266 +1,738 @@
 [
   {
-    "id": "aiken-domain-2-019", "type": "mcq", "tags": ["arch.segmentation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-019",
+    "type": "mcq",
+    "tags": [
+      "arch.segmentation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A company runs two separate applications in their data center. The security administrator has been tasked with preventing all communication between these applications. Which of the following would be the BEST way to implement this security requirement?",
     "options": [
-      { "id": "a", "text": "Air gap" },
-      { "id": "b", "text": "Protected distribution" },
-      { "id": "c", "text": "Firewall" },
-      { "id": "d", "text": "VLANs" }
+      {
+        "id": "a",
+        "text": "Air gap"
+      },
+      {
+        "id": "b",
+        "text": "Protected distribution"
+      },
+      {
+        "id": "c",
+        "text": "Firewall"
+      },
+      {
+        "id": "d",
+        "text": "VLANs"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-021", "type": "mcq", "tags": ["vulns.patching", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-021",
+    "type": "mcq",
+    "tags": [
+      "vulns.patching",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A company's IT department regularly updates their software systems with the latest fixes and improvements provided by the software vendors. What is this routine process of applying updates to software known as?",
     "options": [
-      { "id": "a", "text": "Configuration Management" },
-      { "id": "b", "text": "Patching" },
-      { "id": "c", "text": "Redundancy Planning" },
-      { "id": "d", "text": "Threat Hunting" }
+      {
+        "id": "a",
+        "text": "Configuration Management"
+      },
+      {
+        "id": "b",
+        "text": "Patching"
+      },
+      {
+        "id": "c",
+        "text": "Redundancy Planning"
+      },
+      {
+        "id": "d",
+        "text": "Threat Hunting"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-2-030", "type": "mcq", "tags": ["ops.hardening-techniques", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-030",
+    "type": "mcq",
+    "tags": [
+      "ops.hardening-techniques",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A data center manager has built a Faraday cage in the data center, and a set of application servers have been placed into racks inside the Faraday cage. Which of the following would be the MOST likely reason for the data center manager to install this configuration of equipment?",
     "options": [
-      { "id": "a", "text": "Protect the servers against any unwanted electromagnetic fields" },
-      { "id": "b", "text": "Prevent physical access to the servers without the proper credentials" },
-      { "id": "c", "text": "Provide additional cooling to all devices in the cage" },
-      { "id": "d", "text": "Adds additional fire protection for the application servers" }
+      {
+        "id": "a",
+        "text": "Protect the servers against any unwanted electromagnetic fields"
+      },
+      {
+        "id": "b",
+        "text": "Prevent physical access to the servers without the proper credentials"
+      },
+      {
+        "id": "c",
+        "text": "Provide additional cooling to all devices in the cage"
+      },
+      {
+        "id": "d",
+        "text": "Adds additional fire protection for the application servers"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-035", "type": "mcq", "tags": ["ops.monitoring", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-035",
+    "type": "mcq",
+    "tags": [
+      "ops.monitoring",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A group of business partners is using blockchain technology to monitor and track raw materials and parts as they are transferred between companies. Where would a partner find these tracking details?",
     "options": [
-      { "id": "a", "text": "Ledger" },
-      { "id": "b", "text": "HSM" },
-      { "id": "c", "text": "SIEM" },
-      { "id": "d", "text": "SED" }
+      {
+        "id": "a",
+        "text": "Ledger"
+      },
+      {
+        "id": "b",
+        "text": "HSM"
+      },
+      {
+        "id": "c",
+        "text": "SIEM"
+      },
+      {
+        "id": "d",
+        "text": "SED"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-043", "type": "mcq", "tags": ["ops.hardening-techniques", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-043",
+    "type": "mcq",
+    "tags": [
+      "ops.hardening-techniques",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A network administrator is installing a series of access points in a public library. Which of the following would be the BEST way to prevent theft of his laptop while performing this work?",
     "options": [
-      { "id": "a", "text": "Cable lock" },
-      { "id": "b", "text": "Biometrics" },
-      { "id": "c", "text": "Protected distribution" },
-      { "id": "d", "text": "Faraday cage" }
+      {
+        "id": "a",
+        "text": "Cable lock"
+      },
+      {
+        "id": "b",
+        "text": "Biometrics"
+      },
+      {
+        "id": "c",
+        "text": "Protected distribution"
+      },
+      {
+        "id": "d",
+        "text": "Faraday cage"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-047", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-047",
+    "type": "mcq",
+    "tags": [
+      "crypto.encryption",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A network security analyst needs to select a cryptographic solution for securing communications between a web server and a backup server within the same data center. The primary requirement is to ensure the encryption process is both secure and efficient, with a specific emphasis on the secure management of encryption keys. Which encryption method would best fulfill these criteria?",
     "options": [
-      { "id": "a", "text": "Symmetric encryption utilizing Advanced Encryption Standard (AES)" },
-      { "id": "b", "text": "Asymmetric encryption utilizing Elliptic Curve Cryptography (ECC)" },
-      { "id": "c", "text": "Hybrid encryption combining RSA encryption keys with AES" },
-      { "id": "d", "text": "Asymmetric encryption solely relying on RSA encryption keys" }
+      {
+        "id": "a",
+        "text": "Symmetric encryption utilizing Advanced Encryption Standard (AES)"
+      },
+      {
+        "id": "b",
+        "text": "Asymmetric encryption utilizing Elliptic Curve Cryptography (ECC)"
+      },
+      {
+        "id": "c",
+        "text": "Hybrid encryption combining RSA encryption keys with AES"
+      },
+      {
+        "id": "d",
+        "text": "Asymmetric encryption solely relying on RSA encryption keys"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-2-048", "type": "mcq", "tags": ["arch.isolation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-048",
+    "type": "mcq",
+    "tags": [
+      "arch.isolation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A penetration tester has compromised a system but only has low-level user privileges. What is the next logical step to gain higher control and expand their exploration within the target network?",
     "options": [
-      { "id": "a", "text": "Conduct a network-wide vulnerability scan." },
-      { "id": "b", "text": "Research and exploit a known vulnerability to gain higher privileges." },
-      { "id": "c", "text": "Attempt to move laterally to other systems on the network." },
-      { "id": "d", "text": "Enumerate the current system's users and groups for potential targets." }
+      {
+        "id": "a",
+        "text": "Conduct a network-wide vulnerability scan."
+      },
+      {
+        "id": "b",
+        "text": "Research and exploit a known vulnerability to gain higher privileges."
+      },
+      {
+        "id": "c",
+        "text": "Attempt to move laterally to other systems on the network."
+      },
+      {
+        "id": "d",
+        "text": "Enumerate the current system's users and groups for potential targets."
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-2-051", "type": "mcq", "tags": ["vulns.patching", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-051",
+    "type": "mcq",
+    "tags": [
+      "vulns.patching",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A recent report shows the return of a vulnerability that was previously patched four months ago. After researching this issue, the security team has found that a recent patch has reintroduced this vulnerability on the servers. Which of the following should the security administrator implement to prevent this issue from occurring in the future?",
     "options": [
-      { "id": "a", "text": "Continuous monitoring" },
-      { "id": "b", "text": "Master image" },
-      { "id": "c", "text": "Elasticity" },
-      { "id": "d", "text": "Templates" }
+      {
+        "id": "a",
+        "text": "Continuous monitoring"
+      },
+      {
+        "id": "b",
+        "text": "Master image"
+      },
+      {
+        "id": "c",
+        "text": "Elasticity"
+      },
+      {
+        "id": "d",
+        "text": "Templates"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-055", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-055",
+    "type": "mcq",
+    "tags": [
+      "crypto.encryption",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A security administrator has installed a network-based DLP solution to determine if file transfers contain PII. Which of the following describes the data during the file transfer?",
     "options": [
-      { "id": "a", "text": "In-transit" },
-      { "id": "b", "text": "In-use" },
-      { "id": "c", "text": "At-rest" },
-      { "id": "d", "text": "Highly available" }
+      {
+        "id": "a",
+        "text": "In-transit"
+      },
+      {
+        "id": "b",
+        "text": "In-use"
+      },
+      {
+        "id": "c",
+        "text": "At-rest"
+      },
+      {
+        "id": "d",
+        "text": "Highly available"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-086", "type": "mcq", "tags": ["ops.hardening-techniques", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-086",
+    "type": "mcq",
+    "tags": [
+      "ops.hardening-techniques",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "All of the following are security measures used to harden a host except which one?",
     "options": [
-      { "id": "a", "text": "Uninstalling unnecessary applications" },
-      { "id": "b", "text": "Installing security patches" },
-      { "id": "c", "text": "Opening unused ports" },
-      { "id": "d", "text": "Updating antivirus signatures" }
+      {
+        "id": "a",
+        "text": "Uninstalling unnecessary applications"
+      },
+      {
+        "id": "b",
+        "text": "Installing security patches"
+      },
+      {
+        "id": "c",
+        "text": "Opening unused ports"
+      },
+      {
+        "id": "d",
+        "text": "Updating antivirus signatures"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-2-106", "type": "mcq", "tags": ["vulns.patching", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-106",
+    "type": "mcq",
+    "tags": [
+      "vulns.patching",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Chris, a network technician, used a way to gain remote administrative access to a Linux host without knowing administrative credentials. What has Chris found and what did he do with it?",
     "options": [
-      { "id": "a", "text": "Vulnerability and Exploit" },
-      { "id": "b", "text": "CVE and Exploit" },
-      { "id": "c", "text": "Vulnerability and Worm" },
-      { "id": "d", "text": "Pentest and Port scan" }
+      {
+        "id": "a",
+        "text": "Vulnerability and Exploit"
+      },
+      {
+        "id": "b",
+        "text": "CVE and Exploit"
+      },
+      {
+        "id": "c",
+        "text": "Vulnerability and Worm"
+      },
+      {
+        "id": "d",
+        "text": "Pentest and Port scan"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-115", "type": "mcq", "tags": ["ops.application-allow-list", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-115",
+    "type": "mcq",
+    "tags": [
+      "ops.application-allow-list",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "If a person is entering a data center facility, they must check-in before they are allowed to move further into the building. People who are leaving must be formally checked-out before they are able to exit the building. Which of the following would BEST facilitate this process?",
     "options": [
-      { "id": "a", "text": "Access control vestibule" },
-      { "id": "b", "text": "Air gap" },
-      { "id": "c", "text": "Faraday cage" },
-      { "id": "d", "text": "Protected distribution" }
+      {
+        "id": "a",
+        "text": "Access control vestibule"
+      },
+      {
+        "id": "b",
+        "text": "Air gap"
+      },
+      {
+        "id": "c",
+        "text": "Faraday cage"
+      },
+      {
+        "id": "d",
+        "text": "Protected distribution"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-119", "type": "mcq", "tags": ["identity.least-privilege", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-119",
+    "type": "mcq",
+    "tags": [
+      "identity.least-privilege",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In an organization, a security issue occurs when employees accumulate unnecessary access rights over time, often as a result of changing roles or responsibilities without revoking previous permissions. What is this phenomenon known as?",
     "options": [
-      { "id": "a", "text": "Privilege Escalation" },
-      { "id": "b", "text": "Privilege Creep" },
-      { "id": "c", "text": "Access Aggregation" },
-      { "id": "d", "text": "Permission Inflation" }
+      {
+        "id": "a",
+        "text": "Privilege Escalation"
+      },
+      {
+        "id": "b",
+        "text": "Privilege Creep"
+      },
+      {
+        "id": "c",
+        "text": "Access Aggregation"
+      },
+      {
+        "id": "d",
+        "text": "Permission Inflation"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-2-121", "type": "mcq", "tags": ["identity.least-privilege", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-121",
+    "type": "mcq",
+    "tags": [
+      "identity.least-privilege",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In cybersecurity, what distinguishes Advanced Persistent Threats (APTs) from other types of cyber threats?",
     "options": [
-      { "id": "a", "text": "They are primarily focused on quick financial gain through ransomware and phishing scams." },
-      { "id": "b", "text": "They consist of widespread, non-targeted attacks using common malware." },
-      { "id": "c", "text": "They involve long-term, strategic cyber campaigns targeted at specific organizations or nations." },
-      { "id": "d", "text": "They are generally low-skill attacks carried out by individual hackers." }
+      {
+        "id": "a",
+        "text": "They are primarily focused on quick financial gain through ransomware and phishing scams."
+      },
+      {
+        "id": "b",
+        "text": "They consist of widespread, non-targeted attacks using common malware."
+      },
+      {
+        "id": "c",
+        "text": "They involve long-term, strategic cyber campaigns targeted at specific organizations or nations."
+      },
+      {
+        "id": "d",
+        "text": "They are generally low-skill attacks carried out by individual hackers."
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-2-123", "type": "mcq", "tags": ["ops.hardening-techniques", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-123",
+    "type": "mcq",
+    "tags": [
+      "ops.hardening-techniques",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In his organization, Michael needs to manage network traffic for each employee's computer, customizing the security settings per machine. What kind of security solution should he use?",
     "options": [
-      { "id": "a", "text": "Network-based firewall" },
-      { "id": "b", "text": "Host-based firewall" },
-      { "id": "c", "text": "Intrusion Detection System (IDS)" },
-      { "id": "d", "text": "Proxy server" }
+      {
+        "id": "a",
+        "text": "Network-based firewall"
+      },
+      {
+        "id": "b",
+        "text": "Host-based firewall"
+      },
+      {
+        "id": "c",
+        "text": "Intrusion Detection System (IDS)"
+      },
+      {
+        "id": "d",
+        "text": "Proxy server"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-2-128", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-128",
+    "type": "mcq",
+    "tags": [
+      "identity.access-controls",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In the context of wireless network security, what characterizes a disassociation attack?",
     "options": [
-      { "id": "a", "text": "Flooding the access point with an overwhelming number of connection requests, leading to network unavailability." },
-      { "id": "b", "text": "Sending a frame that impersonates a client's request to end its session with the access point." },
-      { "id": "c", "text": "Capturing and altering the data transmitted between a client and the access point, compromising data integrity" },
-      { "id": "d", "text": "Unauthorized encryption of the signal between the client and the access point, denying access to authorized users." }
+      {
+        "id": "a",
+        "text": "Flooding the access point with an overwhelming number of connection requests, leading to network unavailability."
+      },
+      {
+        "id": "b",
+        "text": "Sending a frame that impersonates a client's request to end its session with the access point."
+      },
+      {
+        "id": "c",
+        "text": "Capturing and altering the data transmitted between a client and the access point, compromising data integrity"
+      },
+      {
+        "id": "d",
+        "text": "Unauthorized encryption of the signal between the client and the access point, denying access to authorized users."
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-2-179", "type": "mcq", "tags": ["ops.hardening-techniques", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-179",
+    "type": "mcq",
+    "tags": [
+      "ops.hardening-techniques",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "To reduce potential vulnerabilities in its networked systems, a company is focusing on limiting open network ports and active protocols. What does this hardening technique specifically aim to achieve?",
     "options": [
-      { "id": "a", "text": "Strengthening password security" },
-      { "id": "b", "text": "Reducing the attack surface" },
-      { "id": "c", "text": "Encrypting data transmission" },
-      { "id": "d", "text": "Segregating network traffic" }
+      {
+        "id": "a",
+        "text": "Strengthening password security"
+      },
+      {
+        "id": "b",
+        "text": "Reducing the attack surface"
+      },
+      {
+        "id": "c",
+        "text": "Encrypting data transmission"
+      },
+      {
+        "id": "d",
+        "text": "Segregating network traffic"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-2-184", "type": "mcq", "tags": ["arch.segmentation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-184",
+    "type": "mcq",
+    "tags": [
+      "arch.segmentation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "What are the main tenets of cybersecurity?",
     "options": [
-      { "id": "a", "text": "CIA" },
-      { "id": "b", "text": "AAA" },
-      { "id": "c", "text": "FBI" },
-      { "id": "d", "text": "UTM" }
+      {
+        "id": "a",
+        "text": "CIA"
+      },
+      {
+        "id": "b",
+        "text": "AAA"
+      },
+      {
+        "id": "c",
+        "text": "FBI"
+      },
+      {
+        "id": "d",
+        "text": "UTM"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-185", "type": "mcq", "tags": ["identity.access-controls", "sy0-701", "public"], "difficulty": 2,
-    "stem": "What are the network address, broadcast address, and the subnet mask of the network includes a host with the IPv4 Address 171.168.215.20 /29",
-    "options": [
-      { "id": "a", "text": "network address 171.168.215.16, broadcast address 171.168.215.23, and Subnet mask 255.255.255.248" },
-      { "id": "b", "text": "network address 171.168.215.14, broadcast address 171.168.215.33, and Subnet mask 255.255.255.240" },
-      { "id": "c", "text": "network address 171.168.215.16, broadcast address 171.168.215.20, and Subnet mask 255.255.255.224" },
-      { "id": "d", "text": "network address 171.168.215.16, broadcast address 171.168.215.23, and Subnet mask 255.255.255.128" }
+    "id": "aiken-domain-2-193",
+    "type": "mcq",
+    "tags": [
+      "arch.segmentation",
+      "sy0-701",
+      "public"
     ],
-    "answer": ["a"]
-  },
-  {
-    "id": "aiken-domain-2-193", "type": "mcq", "tags": ["arch.segmentation", "sy0-701", "public"], "difficulty": 2,
+    "difficulty": 2,
     "stem": "What is skimming?",
     "options": [
-      { "id": "a", "text": "The theft of sensitive data from a payment card" },
-      { "id": "b", "text": "Making an unauthorized copy of a payment card" },
-      { "id": "c", "text": "Using a device to read the RFID chip from a significant distance" },
-      { "id": "d", "text": "Using a wifi scanner to scan all available channels for unsecured data" }
+      {
+        "id": "a",
+        "text": "The theft of sensitive data from a payment card"
+      },
+      {
+        "id": "b",
+        "text": "Making an unauthorized copy of a payment card"
+      },
+      {
+        "id": "c",
+        "text": "Using a device to read the RFID chip from a significant distance"
+      },
+      {
+        "id": "d",
+        "text": "Using a wifi scanner to scan all available channels for unsecured data"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-221", "type": "mcq", "tags": ["identity.least-privilege", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-221",
+    "type": "mcq",
+    "tags": [
+      "identity.least-privilege",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which of the following describes the exploitation of an interactive process to gain access to areas of a system that are normally restricted to higher privilege levels?",
     "options": [
-      { "id": "a", "text": "Social Engineering" },
-      { "id": "b", "text": "Lateral Movement" },
-      { "id": "c", "text": "Privilege Escalation" },
-      { "id": "d", "text": "Phishing" }
+      {
+        "id": "a",
+        "text": "Social Engineering"
+      },
+      {
+        "id": "b",
+        "text": "Lateral Movement"
+      },
+      {
+        "id": "c",
+        "text": "Privilege Escalation"
+      },
+      {
+        "id": "d",
+        "text": "Phishing"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-2-236", "type": "mcq", "tags": ["arch.segmentation", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-236",
+    "type": "mcq",
+    "tags": [
+      "arch.segmentation",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which of the following would be the BEST option for application testing in an environment that is completely separated from the production network?",
     "options": [
-      { "id": "a", "text": "Air gap" },
-      { "id": "b", "text": "Cloud computing" },
-      { "id": "c", "text": "VLANs" },
-      { "id": "d", "text": "Virtualization" }
+      {
+        "id": "a",
+        "text": "Air gap"
+      },
+      {
+        "id": "b",
+        "text": "Cloud computing"
+      },
+      {
+        "id": "c",
+        "text": "VLANs"
+      },
+      {
+        "id": "d",
+        "text": "Virtualization"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-2-266", "type": "mcq", "tags": ["ops.application-allow-list", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-266",
+    "type": "mcq",
+    "tags": [
+      "ops.application-allow-list",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "You have investigated a security incident involving users installing a free game downloaded from the Internet onto their desktop computers, only to find that the game is a virus. What could you do to prevent the users from installing and running the game?",
     "options": [
-      { "id": "a", "text": "MDM" },
-      { "id": "b", "text": "DLP" },
-      { "id": "c", "text": "Application deny list" },
-      { "id": "d", "text": "Playbook" }
+      {
+        "id": "a",
+        "text": "MDM"
+      },
+      {
+        "id": "b",
+        "text": "DLP"
+      },
+      {
+        "id": "c",
+        "text": "Application deny list"
+      },
+      {
+        "id": "d",
+        "text": "Playbook"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-2-268", "type": "mcq", "tags": ["ops.asset-disposal", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-2-268",
+    "type": "mcq",
+    "tags": [
+      "ops.asset-disposal",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "You were recently hired at a company and one of your responsibilities is to inventory network assets.  As you conduct your inventory, you notice a mixture of old equipment and new equipment in the infrastructure and there is no inventory management system.  This is know as:",
     "options": [
-      { "id": "a", "text": "Diversity" },
-      { "id": "b", "text": "System sprawl" },
-      { "id": "c", "text": "Layering" },
-      { "id": "d", "text": "Vulnerability assessment" }
+      {
+        "id": "a",
+        "text": "Diversity"
+      },
+      {
+        "id": "b",
+        "text": "System sprawl"
+      },
+      {
+        "id": "c",
+        "text": "Layering"
+      },
+      {
+        "id": "d",
+        "text": "Vulnerability assessment"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   }
 ]

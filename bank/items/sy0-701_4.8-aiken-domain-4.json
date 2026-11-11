@@ -1,245 +1,582 @@
 [
   {
-    "id": "aiken-domain-4-001", "type": "mcq", "tags": ["ir.testing", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-001",
+    "type": "mcq",
+    "tags": [
+      "ir.testing",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A business manager is documenting a set of steps for processing orders if the primary Internet connection fails. Which of these would BEST describe these steps?",
     "options": [
-      { "id": "a", "text": "Continuity of operations" },
-      { "id": "b", "text": "Communication plan" },
-      { "id": "c", "text": "Stakeholder management" },
-      { "id": "d", "text": "Tabletop exercise" }
+      {
+        "id": "a",
+        "text": "Continuity of operations"
+      },
+      {
+        "id": "b",
+        "text": "Communication plan"
+      },
+      {
+        "id": "c",
+        "text": "Stakeholder management"
+      },
+      {
+        "id": "d",
+        "text": "Tabletop exercise"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-003", "type": "mcq", "tags": ["ir.testing", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-003",
+    "type": "mcq",
+    "tags": [
+      "ir.testing",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A company has decided to perform a disaster recovery exercise during an annual meeting with the IT directors and senior directors. A simulated disaster will be presented, and the participants will discuss the logistics and processes required to resolve the disaster. Which of the following would BEST describe this exercise?",
     "options": [
-      { "id": "a", "text": "Tabletop Exercise" },
-      { "id": "b", "text": "Alternate business practice" },
-      { "id": "c", "text": "Business impact analysis" },
-      { "id": "d", "text": "After-action report" }
+      {
+        "id": "a",
+        "text": "Tabletop Exercise"
+      },
+      {
+        "id": "b",
+        "text": "Alternate business practice"
+      },
+      {
+        "id": "c",
+        "text": "Business impact analysis"
+      },
+      {
+        "id": "d",
+        "text": "After-action report"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-012", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-012",
+    "type": "mcq",
+    "tags": [
+      "ir.digital-forensics",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A company's web server has been infected with malware, and the security administrator has contained the system and would like to create a bit-bybit image of the server storage drive. Which of the following would be the BEST choice for this task?",
     "options": [
-      { "id": "a", "text": "dd" },
-      { "id": "b", "text": "Memdump" },
-      { "id": "c", "text": "chmod" },
-      { "id": "d", "text": "tcpdump" }
+      {
+        "id": "a",
+        "text": "dd"
+      },
+      {
+        "id": "b",
+        "text": "Memdump"
+      },
+      {
+        "id": "c",
+        "text": "chmod"
+      },
+      {
+        "id": "d",
+        "text": "tcpdump"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-016", "type": "mcq", "tags": ["ir.process", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-016",
+    "type": "mcq",
+    "tags": [
+      "ir.process",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A data breach has occurred in a large insurance company. A security administrator is building new servers and security systems to get all of the financial systems back online. Which part of the incident response process would BEST describe these actions?",
     "options": [
-      { "id": "a", "text": "Lessons learned" },
-      { "id": "b", "text": "Isolation and containment" },
-      { "id": "c", "text": "Reconstitution" },
-      { "id": "d", "text": "Precursors" }
+      {
+        "id": "a",
+        "text": "Lessons learned"
+      },
+      {
+        "id": "b",
+        "text": "Isolation and containment"
+      },
+      {
+        "id": "c",
+        "text": "Reconstitution"
+      },
+      {
+        "id": "d",
+        "text": "Precursors"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-017", "type": "mcq", "tags": ["ir.process", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-017",
+    "type": "mcq",
+    "tags": [
+      "ir.process",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A financial services company is headquartered in an area with a high occurrence of tropical storms and hurricanes. Which of the following would be MOST important when restoring services disabled by a storm?",
     "options": [
-      { "id": "a", "text": "Disaster recovery plan" },
-      { "id": "b", "text": "Stakeholder management" },
-      { "id": "c", "text": "Communication plan" },
-      { "id": "d", "text": "Retention policies" }
+      {
+        "id": "a",
+        "text": "Disaster recovery plan"
+      },
+      {
+        "id": "b",
+        "text": "Stakeholder management"
+      },
+      {
+        "id": "c",
+        "text": "Communication plan"
+      },
+      {
+        "id": "d",
+        "text": "Retention policies"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-024", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-024",
+    "type": "mcq",
+    "tags": [
+      "ir.digital-forensics",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A security administrator has identified the installation of a RAT on a database server and has quarantined the system. Which of the following should be followed to ensure that the integrity of the evidence is maintained?",
     "options": [
-      { "id": "a", "text": "Chain of custody" },
-      { "id": "b", "text": "Legal hold" },
-      { "id": "c", "text": "Non-repudiation" },
-      { "id": "d", "text": "Perfect forward secrecy" }
+      {
+        "id": "a",
+        "text": "Chain of custody"
+      },
+      {
+        "id": "b",
+        "text": "Legal hold"
+      },
+      {
+        "id": "c",
+        "text": "Non-repudiation"
+      },
+      {
+        "id": "d",
+        "text": "Perfect forward secrecy"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-027", "type": "mcq", "tags": ["ir.threat-hunting", "sy0-701", "public"], "difficulty": 2,
-    "stem": "A security administrator is deploying a web server and needs to understand the methods an attacker could use to gain access to the system. Which of the following would be the BEST source of this information?",
-    "options": [
-      { "id": "a", "text": "MITRE ATT&CK" },
-      { "id": "b", "text": "Diamond model" },
-      { "id": "c", "text": "Tabletop exercise" },
-      { "id": "d", "text": "ISO 27701" }
+    "id": "aiken-domain-4-035",
+    "type": "mcq",
+    "tags": [
+      "ir.process",
+      "sy0-701",
+      "public"
     ],
-    "answer": ["a"]
-  },
-  {
-    "id": "aiken-domain-4-035", "type": "mcq", "tags": ["ir.process", "sy0-701", "public"], "difficulty": 2,
+    "difficulty": 2,
     "stem": "A system administrator has been called to a system that is suspected to have a malware infection. The administrator has removed the device from the network and has disconnected all USB flash drives. Which of these incident response steps is the administrator following?",
     "options": [
-      { "id": "a", "text": "Containment" },
-      { "id": "b", "text": "Lessons learned" },
-      { "id": "c", "text": "Detection" },
-      { "id": "d", "text": "Reconstitution" }
+      {
+        "id": "a",
+        "text": "Containment"
+      },
+      {
+        "id": "b",
+        "text": "Lessons learned"
+      },
+      {
+        "id": "c",
+        "text": "Detection"
+      },
+      {
+        "id": "d",
+        "text": "Reconstitution"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-036", "type": "mcq", "tags": ["ir.process", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-036",
+    "type": "mcq",
+    "tags": [
+      "ir.process",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "A system administrator has identified an unexpected username on a database server, and the user has been transferring database files to an external server over the company’s Internet connection. The administrator then performed these tasks:• Physically disconnected the Ethernet cable on the database server• Disabled the unknown account• Configured a firewall rule to prevent file transfers from the serverWhich of the following would BEST describe this part of the incident response process?",
     "options": [
-      { "id": "a", "text": "Containment" },
-      { "id": "b", "text": "Eradication" },
-      { "id": "c", "text": "Lessons learned" },
-      { "id": "d", "text": "Preparation" }
+      {
+        "id": "a",
+        "text": "Containment"
+      },
+      {
+        "id": "b",
+        "text": "Eradication"
+      },
+      {
+        "id": "c",
+        "text": "Lessons learned"
+      },
+      {
+        "id": "d",
+        "text": "Preparation"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-040", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-040",
+    "type": "mcq",
+    "tags": [
+      "ir.digital-forensics",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "After the identification of a potential data breach involving sensitive customer data, you, as the IT security analyst, are charged with the collection and safeguarding of digital evidence for possible legal proceedings and to meet regulatory obligations.What is the MOST ESSENTIAL action to undertake PROMPTLY to maintain the integrity of the digital evidence?",
     "options": [
-      { "id": "a", "text": "Compile an exhaustive report detailing the suspected breach incidents." },
-      { "id": "b", "text": "Initiate the capture of possibly affected systems using digital forensic methodologies." },
-      { "id": "c", "text": "Enforce a legal hold to ensure no relevant data is modified or eradicated." },
-      { "id": "d", "text": "Apply encryption mechanisms to secure the data suspected to be compromised." }
+      {
+        "id": "a",
+        "text": "Compile an exhaustive report detailing the suspected breach incidents."
+      },
+      {
+        "id": "b",
+        "text": "Initiate the capture of possibly affected systems using digital forensic methodologies."
+      },
+      {
+        "id": "c",
+        "text": "Enforce a legal hold to ensure no relevant data is modified or eradicated."
+      },
+      {
+        "id": "d",
+        "text": "Apply encryption mechanisms to secure the data suspected to be compromised."
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-041", "type": "mcq", "tags": ["ir.testing", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-041",
+    "type": "mcq",
+    "tags": [
+      "ir.testing",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Alice applied for a job at a software development company.  After submitting her resume, the HR department conducted a short background check on her, reviewed her qualifications, interviewed her, and reported this information to management.  Alice was hired and was excited to see that the company provided her with a nice desk and a new computer.  One of her coworkers provided her a tour and introduced her to several people working in various sections of the company.  What process is taking place in this scenario?",
     "options": [
-      { "id": "a", "text": "Onboarding" },
-      { "id": "b", "text": "Offboarding" },
-      { "id": "c", "text": "Initiation" },
-      { "id": "d", "text": "Socializing" }
+      {
+        "id": "a",
+        "text": "Onboarding"
+      },
+      {
+        "id": "b",
+        "text": "Offboarding"
+      },
+      {
+        "id": "c",
+        "text": "Initiation"
+      },
+      {
+        "id": "d",
+        "text": "Socializing"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-044", "type": "mcq", "tags": ["ir.testing", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-044",
+    "type": "mcq",
+    "tags": [
+      "ir.testing",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "An incident response team would like to validate their disaster recovery plans without making any changes to the infrastructure. Which of the following would be the best course of action?",
     "options": [
-      { "id": "a", "text": "Tabletop exercise" },
-      { "id": "b", "text": "Hot site fail-over" },
-      { "id": "c", "text": "Simulation" },
-      { "id": "d", "text": "Penetration test" }
+      {
+        "id": "a",
+        "text": "Tabletop exercise"
+      },
+      {
+        "id": "b",
+        "text": "Hot site fail-over"
+      },
+      {
+        "id": "c",
+        "text": "Simulation"
+      },
+      {
+        "id": "d",
+        "text": "Penetration test"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-047", "type": "mcq", "tags": ["ir.process", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-047",
+    "type": "mcq",
+    "tags": [
+      "ir.process",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "An organization has identified a security breach and has removed the affected servers from the network. Which of the following is the NEXT step in the IR process?",
     "options": [
-      { "id": "a", "text": "Eradication" },
-      { "id": "b", "text": "Preparation" },
-      { "id": "c", "text": "Recovery" },
-      { "id": "d", "text": "Identification" },
-      { "id": "e", "text": "Containment" }
+      {
+        "id": "a",
+        "text": "Eradication"
+      },
+      {
+        "id": "b",
+        "text": "Preparation"
+      },
+      {
+        "id": "c",
+        "text": "Recovery"
+      },
+      {
+        "id": "d",
+        "text": "Identification"
+      },
+      {
+        "id": "e",
+        "text": "Containment"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-050", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
-    "stem": "Daniel, a cybersecurity analyst, has been asked to respond to a denial of service attack against a web server. Daniel first collects information in the ARP cache, then a copy of the server’s temporary file system, and finally system logs from the web server. What part of the forensics gathering process did Daniel follow?",
-    "options": [
-      { "id": "a", "text": "Order of volatility" },
-      { "id": "b", "text": "Legal hold" },
-      { "id": "c", "text": "Data hashing" },
-      { "id": "d", "text": "Chain of custody" }
+    "id": "aiken-domain-4-051",
+    "type": "mcq",
+    "tags": [
+      "ir.process",
+      "sy0-701",
+      "public"
     ],
-    "answer": ["a"]
-  },
-  {
-    "id": "aiken-domain-4-051", "type": "mcq", "tags": ["ir.process", "sy0-701", "public"], "difficulty": 2,
+    "difficulty": 2,
     "stem": "During a ransomware outbreak, an organization was forced to rebuild database servers from known good backup systems. In which of the following incident response phases were these database servers brought back online?",
     "options": [
-      { "id": "a", "text": "Recovery" },
-      { "id": "b", "text": "Lessons learned" },
-      { "id": "c", "text": "Containment" },
-      { "id": "d", "text": "Identification" }
+      {
+        "id": "a",
+        "text": "Recovery"
+      },
+      {
+        "id": "b",
+        "text": "Lessons learned"
+      },
+      {
+        "id": "c",
+        "text": "Containment"
+      },
+      {
+        "id": "d",
+        "text": "Identification"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-052", "type": "mcq", "tags": ["ir.process", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-052",
+    "type": "mcq",
+    "tags": [
+      "ir.process",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "During an incident response, after your team has identified and isolated a malware infection in the network, what is the next step in the incident response process to ensure the threat is completely removed from the system?",
     "options": [
-      { "id": "a", "text": "Lessons Learned" },
-      { "id": "b", "text": "Eradication" },
-      { "id": "c", "text": "Recovery" },
-      { "id": "d", "text": "Preparation" }
+      {
+        "id": "a",
+        "text": "Lessons Learned"
+      },
+      {
+        "id": "b",
+        "text": "Eradication"
+      },
+      {
+        "id": "c",
+        "text": "Recovery"
+      },
+      {
+        "id": "d",
+        "text": "Preparation"
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-067", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-067",
+    "type": "mcq",
+    "tags": [
+      "ir.digital-forensics",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "In digital forensics, what is the significance of maintaining a 'chain of custody' for digital evidence?",
     "options": [
-      { "id": "a", "text": "It ensures that the evidence is stored in a secure, digital format." },
-      { "id": "b", "text": "It provides a record of all individuals who have handled the evidence, maintaining its integrity for legal purposes." },
-      { "id": "c", "text": "It involves encrypting the evidence to prevent unauthorized access." },
-      { "id": "d", "text": "It is a process of duplicating the digital evidence to have backups in case of data loss." }
+      {
+        "id": "a",
+        "text": "It ensures that the evidence is stored in a secure, digital format."
+      },
+      {
+        "id": "b",
+        "text": "It provides a record of all individuals who have handled the evidence, maintaining its integrity for legal purposes."
+      },
+      {
+        "id": "c",
+        "text": "It involves encrypting the evidence to prevent unauthorized access."
+      },
+      {
+        "id": "d",
+        "text": "It is a process of duplicating the digital evidence to have backups in case of data loss."
+      }
     ],
-    "answer": ["b"]
+    "answer": [
+      "b"
+    ]
   },
   {
-    "id": "aiken-domain-4-102", "type": "mcq", "tags": ["ir.training", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-102",
+    "type": "mcq",
+    "tags": [
+      "ir.training",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Users in the HR department were recently informed that they need to implement user training awareness program which is tailored to their department.  Which of the following types of training would be MOST appropriate for this department?",
     "options": [
-      { "id": "a", "text": "Implementing encryption and hashing" },
-      { "id": "b", "text": "Input validation" },
-      { "id": "c", "text": "Handling PII" },
-      { "id": "d", "text": "Protecting PHI" }
+      {
+        "id": "a",
+        "text": "Implementing encryption and hashing"
+      },
+      {
+        "id": "b",
+        "text": "Input validation"
+      },
+      {
+        "id": "c",
+        "text": "Handling PII"
+      },
+      {
+        "id": "d",
+        "text": "Protecting PHI"
+      }
     ],
-    "answer": ["c"]
+    "answer": [
+      "c"
+    ]
   },
   {
-    "id": "aiken-domain-4-123", "type": "mcq", "tags": ["ir.threat-hunting", "sy0-701", "public"], "difficulty": 2,
-    "stem": "Which of the following applies scientific principles to provide a post-event analysis of an intrusion?",
-    "options": [
-      { "id": "a", "text": "Diamond model" },
-      { "id": "b", "text": "NIST RMF" },
-      { "id": "c", "text": "ISO 27701" },
-      { "id": "d", "text": "MITRE ATT&CK framework" }
+    "id": "aiken-domain-4-133",
+    "type": "mcq",
+    "tags": [
+      "ir.digital-forensics",
+      "sy0-701",
+      "public"
     ],
-    "answer": ["a"]
-  },
-  {
-    "id": "aiken-domain-4-133", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
+    "difficulty": 2,
     "stem": "Which of the following would be the BEST way to determine if files have been modified after the forensics data acquisition process has occurred?",
     "options": [
-      { "id": "a", "text": "Create a hash of the data" },
-      { "id": "b", "text": "Use a tamper seal on all storage devices" },
-      { "id": "c", "text": "Create an image of each storage device for future comparison" },
-      { "id": "d", "text": "Take screenshots of file directories with file sizes" }
+      {
+        "id": "a",
+        "text": "Create a hash of the data"
+      },
+      {
+        "id": "b",
+        "text": "Use a tamper seal on all storage devices"
+      },
+      {
+        "id": "c",
+        "text": "Create an image of each storage device for future comparison"
+      },
+      {
+        "id": "d",
+        "text": "Take screenshots of file directories with file sizes"
+      }
     ],
-    "answer": ["a"]
+    "answer": [
+      "a"
+    ]
   },
   {
-    "id": "aiken-domain-4-135", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
+    "id": "aiken-domain-4-135",
+    "type": "mcq",
+    "tags": [
+      "ir.digital-forensics",
+      "sy0-701",
+      "public"
+    ],
+    "difficulty": 2,
     "stem": "Which of these are used to force the preservation of data for later use in court?",
     "options": [
-      { "id": "a", "text": "Legal hold" },
-      { "id": "b", "text": "Chain of custody" },
-      { "id": "c", "text": "Data loss prevention" },
-      { "id": "d", "text": "Order of volatility" }
+      {
+        "id": "a",
+        "text": "Legal hold"
+      },
+      {
+        "id": "b",
+        "text": "Chain of custody"
+      },
+      {
+        "id": "c",
+        "text": "Data loss prevention"
+      },
+      {
+        "id": "d",
+        "text": "Order of volatility"
+      }
     ],
-    "answer": ["a"]
-  },
-  {
-    "id": "aiken-domain-4-142", "type": "mcq", "tags": ["ir.digital-forensics", "sy0-701", "public"], "difficulty": 2,
-    "stem": "Your manager has asked that you create a forensics image of an employee's hard drive. What tool would you use?",
-    "options": [
-      { "id": "a", "text": "WinHex" },
-      { "id": "b", "text": "Nessus" },
-      { "id": "c", "text": "Autopsy" },
-      { "id": "d", "text": "FTK Imager" }
-    ],
-    "answer": ["d"]
+    "answer": [
+      "a"
+    ]
   }
 ]
