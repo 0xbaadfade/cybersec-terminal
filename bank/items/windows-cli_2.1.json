@@ -1,0 +1,66 @@
+[
+  {
+    "id": "win-q-lis-2",
+    "type": "mcq",
+    "tags": ["network.listening-ports", "windows-cli", "public"],
+    "difficulty": 1,
+    "stem": "What does the -o option add to netstat -an?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The name of the user account that opened each connection",
+        "why": "-o adds the process ID, not a user name."
+      },
+      {
+        "id": "b",
+        "text": "The ID of the process that owns each connection (PID)"
+      },
+      {
+        "id": "c",
+        "text": "Only the connections that are open, hiding listeners",
+        "why": "-o does not filter; it adds a column."
+      },
+      {
+        "id": "d",
+        "text": "The amount of traffic sent over each connection",
+        "why": "netstat does not show traffic volume here."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "netstat -ano shows addresses and ports as numbers, all states, plus the PID. Look the PID up in Task Manager or tasklist to find the program."
+  },
+  {
+    "id": "win-q-con-4",
+    "type": "mcq",
+    "tags": ["network.connections", "windows-cli", "public"],
+    "difficulty": 1,
+    "stem": "What does the -n option do for netstat?",
+    "options": [
+      {
+        "id": "a",
+        "text": "It shows only new connections and hides the ones that are already old",
+        "why": "-n does not filter by age."
+      },
+      {
+        "id": "b",
+        "text": "It hides the process IDs and the owning program names",
+        "why": "PIDs come from -o."
+      },
+      {
+        "id": "c",
+        "text": "It shows addresses and ports as numbers, with no name lookups"
+      },
+      {
+        "id": "d",
+        "text": "It shows only network statistics, not connections",
+        "why": "Statistics are -s."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "-n keeps output fast and unambiguous: you see real addresses and port numbers, not names."
+  }
+]

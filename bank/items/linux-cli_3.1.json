@@ -1,0 +1,98 @@
+[
+  {
+    "id": "lin-q-lis-3",
+    "type": "mcq",
+    "tags": ["network.listening-ports", "linux-cli", "public"],
+    "difficulty": 1,
+    "stem": "What do the options in ss -tln stand for?",
+    "options": [
+      {
+        "id": "a",
+        "text": "TCP sockets, in all states, with the timers shown on each",
+        "why": "-l limits the list to listening sockets; timers are -o."
+      },
+      {
+        "id": "b",
+        "text": "TCP sockets, listening only, shown as numbers not names"
+      },
+      {
+        "id": "c",
+        "text": "Traffic counters, taken over the last number of minutes",
+        "why": "ss shows sockets, not traffic counters."
+      },
+      {
+        "id": "d",
+        "text": "Terminal output, long format, with no header line at the top",
+        "why": "The letters are t for TCP, l for listening and n for numeric."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "ss -tln: t = TCP, l = listening, n = numeric ports and addresses. Add -p (with privileges) to see which process owns each socket."
+  },
+  {
+    "id": "lin-q-lis-4",
+    "type": "mcq",
+    "tags": ["network.listening-ports", "linux-cli", "public"],
+    "difficulty": 2,
+    "stem": "A database is used only by a program on the same machine. Where should it listen to limit exposure?",
+    "options": [
+      {
+        "id": "a",
+        "text": "0.0.0.0",
+        "why": "That accepts connections on every interface, including from the network."
+      },
+      {
+        "id": "b",
+        "text": "The default gateway's address",
+        "why": "A service binds to its own addresses, not to the router's."
+      },
+      {
+        "id": "c",
+        "text": "127.0.0.1"
+      },
+      {
+        "id": "d",
+        "text": "10.20.0.255",
+        "why": "That is the broadcast address; a service does not listen there."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Binding to the loopback address is part of hardening: a service nobody remote needs should not be reachable remotely."
+  },
+  {
+    "id": "lin-q-con-4",
+    "type": "mcq",
+    "tags": ["network.connections", "linux-cli", "public"],
+    "difficulty": 1,
+    "stem": "Which command lists current TCP connections rather than listeners?",
+    "options": [
+      {
+        "id": "a",
+        "text": "ss -tln",
+        "why": "-l limits the list to listening sockets."
+      },
+      {
+        "id": "b",
+        "text": "ip addr",
+        "why": "That shows addresses on the interfaces."
+      },
+      {
+        "id": "c",
+        "text": "ss -tn"
+      },
+      {
+        "id": "d",
+        "text": "ping -c 4 web-03",
+        "why": "ping tests reachability; it does not list connections."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Without -l, ss shows sockets that are connected. Together with -l it can show both views of the same machine."
+  }
+]

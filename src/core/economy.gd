@@ -10,7 +10,7 @@ extends RefCounted
 ## once-a-day payout record is per track (`progress["paid"]`). Numbers read back
 ## from disk are floats, so reads go through int().
 ##
-## Nothing here touches concepts, items or rounds: Cycles never cost mastery.
+## Nothing here changes mastery, items or rounds: Cycles never cost mastery.
 
 
 ## The wallet dictionary, created on first use.
@@ -48,51 +48,43 @@ static func spend(profile: Profile, amount: int) -> bool:
 	return true
 
 
-## Cycles per minute one concept's node produces now, read from `profile`'s
-## active track: 0 until the concept has been met, the box rate while it is not
-## due, and `stale_percent` of that rate while it is due for review.
-static func node_rate(profile: Profile, concept_id: String, today: int, rules: Rules) -> float:
-	if Mastery.seen(profile, concept_id) == 0:
+## Cycles per minute one node produces now. A node is a topic, or a pack concept read through its `topics` (its weakest
+## topic sets the rate): 0 until it has been met, the box rate while it is not due, and `stale_percent` of that rate
+## while any of it is due for review.
+static func node_rate(profile: Profile, topics: Array, today: int, rules: Rules) -> float:
+	if Mastery.seen_of(profile, topics) == 0:
 		return 0.0
-	var rate: float = rules.eco_rate_by_box[clampi(Mastery.box(profile, concept_id), 0, Rules.MAX_BOX)]
-	if Mastery.is_due(profile, concept_id, today):
+	var rate: float = rules.eco_rate_by_box[clampi(Mastery.box_of(profile, topics), 0, Rules.MAX_BOX)]
+	if Mastery.is_due_of(profile, topics, today):
 		rate *= Perks.stale_percent(profile, rules) / 100.0
 	return rate * Perks.node_multiplier(profile, rules)
 
 
-## Output of the active track's pack.
+## Output of the active track's pack: each of its topics once, however many concepts list it.
 static func track_rate(profile: Profile, pack: Pack, today: int, rules: Rules) -> float:
 	var total := 0.0
-	for cid in pack.concepts:
-		total += node_rate(profile, cid, today, rules)
+	for t in pack.all_topics():
+		total += node_rate(profile, [t], today, rules)
 	return total
 
 
-## Output of every track the learner has played. It reads the saved concept
-## records, so no pack has to be loaded.
+## Output of everything the learner has met: one node per topic, so a topic two tracks share pays once. It reads the
+## saved topic records, so no pack has to be loaded.
 static func rate(profile: Profile, today: int, rules: Rules) -> float:
 	var total := 0.0
-	var tracks: Variant = profile.data.get("tracks")
-	if typeof(tracks) != TYPE_DICTIONARY:
-		return 0.0
-	for id in tracks:
-		var concepts: Variant = tracks[id].get("concepts") if typeof(tracks[id]) == TYPE_DICTIONARY else null
-		if typeof(concepts) != TYPE_DICTIONARY:
-			continue
-		var view := profile.view(id)
-		for cid in concepts:
-			total += node_rate(view, cid, today, rules)
+	for t in profile.peek_topics():
+		total += node_rate(profile, [t], today, rules)
 	return total
 
 
-## {"online", "stale", "unbuilt"} over `concept_ids` (a pack, or one domain) of
-## the active track.
-static func counts(profile: Profile, concept_ids: Array, today: int) -> Dictionary:
+## {"online", "stale", "unbuilt"} over `concept_ids` (a pack, or one domain) of `pack`.
+static func counts(profile: Profile, pack: Pack, concept_ids: Array, today: int) -> Dictionary:
 	var out := {"online": 0, "stale": 0, "unbuilt": 0}
 	for cid in concept_ids:
-		if Mastery.seen(profile, cid) == 0:
+		var topics := pack.topics_of(cid)
+		if Mastery.seen_of(profile, topics) == 0:
 			out["unbuilt"] += 1
-		elif Mastery.is_due(profile, cid, today):
+		elif Mastery.is_due_of(profile, topics, today):
 			out["stale"] += 1
 		else:
 			out["online"] += 1
@@ -149,7 +141,8 @@ static func award(profile: Profile, concept_id: String, xp: int, credit: float, 
 
 static func _played_nothing(profile: Profile) -> bool:
 	var tracks: Variant = profile.data.get("tracks")
-	return typeof(tracks) != TYPE_DICTIONARY or (tracks as Dictionary).is_empty()
+	var no_tracks: bool = typeof(tracks) != TYPE_DICTIONARY or (tracks as Dictionary).is_empty()
+	return no_tracks and profile.peek_topics().is_empty()
 
 
 # --- text ----------------------------------------------------------------

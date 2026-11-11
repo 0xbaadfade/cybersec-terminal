@@ -1,0 +1,618 @@
+[
+  {
+    "id": "aiken-domain-5-002", "type": "mcq", "tags": ["grc.roles-and-responsibilities", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A cloud service provider (CSP) offers database hosting services to a hospital. The CSP stores the patient records but does not decide how the data is used or collected. In this scenario, what is the role of the CSP?",
+    "options": [
+      { "id": "a", "text": "Data subject" },
+      { "id": "b", "text": "Data owner" },
+      { "id": "c", "text": "Data processor" },
+      { "id": "d", "text": "Data controller" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-007", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company implements specific privacy controls to align with a new city ordinance regarding the collection of biometric data. Which governance consideration is this?",
+    "options": [
+      { "id": "a", "text": "Local/regional" },
+      { "id": "b", "text": "National" },
+      { "id": "c", "text": "Global" },
+      { "id": "d", "text": "Industry" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-018", "type": "mcq", "tags": ["grc.governance-structures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A defense contractor must structure its internal security governance to align strictly with oversight from the Department of Defense. This demonstrates the influence of which governance structure?",
+    "options": [
+      { "id": "a", "text": "Government entities" },
+      { "id": "b", "text": "Internal steering committees" },
+      { "id": "c", "text": "Centralized privacy offices" },
+      { "id": "d", "text": "Decentralized boards" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-019", "type": "mcq", "tags": ["grc.standards", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A developer is granted temporary administrative access for a period of 48 hours to troubleshoot a critical production issue, bypassing standard access control policies. What does this situation represent?",
+    "options": [
+      { "id": "a", "text": "Transfer" },
+      { "id": "b", "text": "Exemption" },
+      { "id": "c", "text": "Avoidance" },
+      { "id": "d", "text": "Exception" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-020", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A document outlines the mandatory specifications for locking mechanisms on server racks and the minimum resolution for security cameras. What is this document?",
+    "options": [
+      { "id": "a", "text": "Physical security standard" },
+      { "id": "b", "text": "Physical security guideline" },
+      { "id": "c", "text": "Information security policy" },
+      { "id": "d", "text": "Business continuity policy" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-021", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A financial institution focuses on maintaining critical customer transaction processing during a natural disaster. Which policy primarily drives this objective?",
+    "options": [
+      { "id": "a", "text": "AUP" },
+      { "id": "b", "text": "Business continuity policy" },
+      { "id": "c", "text": "Software development policy" },
+      { "id": "d", "text": "Change management policy" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-031", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A healthcare provider operates across multiple provinces in Canada and must ensure patient data is protected in accordance with federal healthcare regulations. This is an example of navigating which type of privacy implication?",
+    "options": [
+      { "id": "a", "text": "International" },
+      { "id": "b", "text": "Global" },
+      { "id": "c", "text": "National" },
+      { "id": "d", "text": "Local/regional" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-043", "type": "mcq", "tags": ["grc.procedures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A new security policy requires all employees to classify their documents before saving them. What is the BEST way to ensure employees understand and correctly apply this new requirement?",
+    "options": [
+      { "id": "a", "text": "Provide interactive user guidance and training modules on data classification" },
+      { "id": "b", "text": "Implement an intrusion prevention system to block unclassified files" },
+      { "id": "c", "text": "Terminate employees who fail to classify documents correctly" },
+      { "id": "d", "text": "Send a single company-wide email with the policy attached" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-051", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A retail company must implement the Payment Card Industry Data Security Standard to process credit cards. Which external governance consideration does this represent?",
+    "options": [
+      { "id": "a", "text": "National" },
+      { "id": "b", "text": "Government entities" },
+      { "id": "c", "text": "Local/regional" },
+      { "id": "d", "text": "Industry" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-057", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security manager is reviewing the organization's requirements for preserving forensic evidence after a server compromise. Which policy dictates these requirements?",
+    "options": [
+      { "id": "a", "text": "Acceptable use policy" },
+      { "id": "b", "text": "Onboarding/offboarding policy" },
+      { "id": "c", "text": "Business continuity policy" },
+      { "id": "d", "text": "Incident response policy" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-060", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security operations center analyst receives an alert for a potential phishing attack. Which document provides the specific, standardized workflow the analyst should follow to investigate and remediate the threat?",
+    "options": [
+      { "id": "a", "text": "Playbook" },
+      { "id": "b", "text": "Information security policy" },
+      { "id": "c", "text": "Acceptable use policy" },
+      { "id": "d", "text": "Business continuity policy" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-063", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A small business operates entirely within a single U.S. state and must comply with a specific state-level privacy act regarding consumer data. Which legal implication of privacy is the business addressing?",
+    "options": [
+      { "id": "a", "text": "Global" },
+      { "id": "b", "text": "National" },
+      { "id": "c", "text": "Local/regional" },
+      { "id": "d", "text": "Transnational" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-067", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A system administrator wants to update the firmware on a core router. Which policy dictates that this action requires peer review and management approval before execution?",
+    "options": [
+      { "id": "a", "text": "Software development policy" },
+      { "id": "b", "text": "Acceptable use policy" },
+      { "id": "c", "text": "Change management policy" },
+      { "id": "d", "text": "Incident response policy" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-077", "type": "mcq", "tags": ["grc.procedures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An administrator needs to roll back a failed database patch. Which document details the exact, step-by-step technical commands required to accomplish this?",
+    "options": [
+      { "id": "a", "text": "Disaster recovery policy" },
+      { "id": "b", "text": "Change management policy" },
+      { "id": "c", "text": "Change management procedure" },
+      { "id": "d", "text": "Information security guideline" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-078", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An e-commerce company based in Japan sells products to customers in Europe, South America, and North America, requiring adherence to GDPR, CCPA, and LGPD. Which privacy consideration is the company primarily managing?",
+    "options": [
+      { "id": "a", "text": "Industry-specific contractual impacts" },
+      { "id": "b", "text": "Global legal implications" },
+      { "id": "c", "text": "Local/regional legal implications" },
+      { "id": "d", "text": "National legal implications" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-081", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An employee uses their corporate laptop to run an unauthorized cryptocurrency miner. Which document was MOST likely violated?",
+    "options": [
+      { "id": "a", "text": "AUP" },
+      { "id": "b", "text": "Software development policy" },
+      { "id": "c", "text": "Disaster recovery policy" },
+      { "id": "d", "text": "Information security policy" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-089", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization has updated its rules regarding acceptable use of corporate laptops. Where is the MOST appropriate place to document these changes for employee reference and acknowledgment?",
+    "options": [
+      { "id": "a", "text": "The risk register" },
+      { "id": "b", "text": "Policy/handbooks" },
+      { "id": "c", "text": "The business continuity plan" },
+      { "id": "d", "text": "The incident response playbook" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-094", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization updates its data retention policies to ensure it can comply with electronic discovery requests during civil lawsuits. Which external consideration does this address?",
+    "options": [
+      { "id": "a", "text": "Legal" },
+      { "id": "b", "text": "Industry" },
+      { "id": "c", "text": "Global" },
+      { "id": "d", "text": "National" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-096", "type": "mcq", "tags": ["grc.standards", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization's documentation dictates that all service accounts must have their authentication credentials rotated every 90 days. What type of governance document is this?",
+    "options": [
+      { "id": "a", "text": "Access control standard" },
+      { "id": "b", "text": "Acceptable use policy" },
+      { "id": "c", "text": "Password standard" },
+      { "id": "d", "text": "Password guideline" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-097", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization's primary data center is destroyed, prompting IT to failover to a hot site. Which policy specifically governs the technical restoration of these IT services?",
+    "options": [
+      { "id": "a", "text": "Change management policy" },
+      { "id": "b", "text": "Onboarding procedure" },
+      { "id": "c", "text": "AUP" },
+      { "id": "d", "text": "Disaster recovery policy" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-100", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Complying with the federal cybersecurity mandates established by a country's national government is an example of which external consideration?",
+    "options": [
+      { "id": "a", "text": "Industry" },
+      { "id": "b", "text": "Global" },
+      { "id": "c", "text": "Local/regional" },
+      { "id": "d", "text": "National" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-101", "type": "mcq", "tags": ["grc.procedures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "During a malware outbreak, analysts consult a document that provides a specific, step-by-step checklist for containing the threat. What is this document?",
+    "options": [
+      { "id": "a", "text": "Business continuity policy" },
+      { "id": "b", "text": "Playbook" },
+      { "id": "c", "text": "Acceptable use policy" },
+      { "id": "d", "text": "Security guideline" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-128", "type": "mcq", "tags": ["grc.roles-and-responsibilities", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Under modern privacy frameworks, which entity determines the overarching purpose and means of processing personal data?",
+    "options": [
+      { "id": "a", "text": "Data steward" },
+      { "id": "b", "text": "Data processor" },
+      { "id": "c", "text": "Data custodian" },
+      { "id": "d", "text": "Data controller" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-135", "type": "mcq", "tags": ["grc.governance-structures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the MOST important function of an audit committee within an organization's governance structure?",
+    "options": [
+      { "id": "a", "text": "To perform active penetration tests against the organization's perimeter" },
+      { "id": "b", "text": "To provide independent oversight of the financial reporting and security audit processes" },
+      { "id": "c", "text": "To configure and deploy firewalls and intrusion prevention systems" },
+      { "id": "d", "text": "To conduct daily log reviews and respond to real-time security alerts" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-137", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the MOST important reason for an organization to implement a business continuity policy?",
+    "options": [
+      { "id": "a", "text": "To define the specific penalties for employee misuse of computing resources" },
+      { "id": "b", "text": "To outline the technical steps for configuring a high-availability cluster" },
+      { "id": "c", "text": "To restore IT infrastructure after a catastrophic hardware failure" },
+      { "id": "d", "text": "To ensure critical operations can be maintained during a disruption" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-142", "type": "mcq", "tags": ["grc.policy-monitoring-and-revision", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the primary objective of an offensive security assessment?",
+    "options": [
+      { "id": "a", "text": "To simulate an attacker's tactics to proactively identify exploitable weaknesses" },
+      { "id": "b", "text": "To ensure that security policies comply with local data privacy laws" },
+      { "id": "c", "text": "To validate the configuration of an endpoint detection and response system" },
+      { "id": "d", "text": "To review firewalls logs for signs of ongoing, active intrusions" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-144", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the primary purpose of a change management policy?",
+    "options": [
+      { "id": "a", "text": "To dictate how users should create complex passwords" },
+      { "id": "b", "text": "To mitigate the risk of unauthorized or uncoordinated modifications causing system outages" },
+      { "id": "c", "text": "To define the specific steps an analyst must take to quarantine a virus" },
+      { "id": "d", "text": "To provide a high-level summary of the organization's overall risk appetite" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-151", "type": "mcq", "tags": ["grc.policy-monitoring-and-revision", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the primary reason an organization establishes a schedule for policy monitoring and revision?",
+    "options": [
+      { "id": "a", "text": "To guarantee that all employees read the policies on a weekly basis" },
+      { "id": "b", "text": "To ensure governance documents remain aligned with evolving business objectives and threat landscapes" },
+      { "id": "c", "text": "To provide the IT department with routine administrative tasks during downtime" },
+      { "id": "d", "text": "To automatically generate new encryption keys for the organization" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-153", "type": "mcq", "tags": ["grc.procedures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What procedure must be immediately executed to mitigate insider threat risks when a disgruntled employee is terminated?",
+    "options": [
+      { "id": "a", "text": "Incident response playbook" },
+      { "id": "b", "text": "Business continuity procedure" },
+      { "id": "c", "text": "Change management procedure" },
+      { "id": "d", "text": "Onboarding/offboarding procedure" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-160", "type": "mcq", "tags": ["grc.governance-structures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which BEST describes a decentralized security governance structure?",
+    "options": [
+      { "id": "a", "text": "Security policies are dictated exclusively by external government regulatory bodies" },
+      { "id": "b", "text": "Individual business units or regional offices have the authority to manage their own security policies" },
+      { "id": "c", "text": "A single board of directors holds all decision-making power for the global enterprise" },
+      { "id": "d", "text": "All security decisions and policies are mandated by a single corporate headquarters" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-162", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which BEST describes the primary objective of a compliance audit?",
+    "options": [
+      { "id": "a", "text": "To evaluate the technical feasibility of exploiting network vulnerabilities" },
+      { "id": "b", "text": "To test the physical security controls of a newly acquired data center" },
+      { "id": "c", "text": "To determine if an organization adheres to specific industry standards or laws" },
+      { "id": "d", "text": "To review the financial statements and budgetary allocations for IT security" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-167", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which BEST explains the purpose of conducting a penetration test rather than a vulnerability scan?",
+    "options": [
+      { "id": "a", "text": "To review the organization's written information security policy" },
+      { "id": "b", "text": "To evaluate the effectiveness of the disaster recovery failover site" },
+      { "id": "c", "text": "To demonstrate how vulnerabilities can be chained to achieve system compromise" },
+      { "id": "d", "text": "To identify missing patches across a large number of systems quickly" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-168", "type": "mcq", "tags": ["grc.guidelines", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which characteristic clearly distinguishes a security guideline from a security standard?",
+    "options": [
+      { "id": "a", "text": "Guidelines provide suggested best practices, while standards are mandatory" },
+      { "id": "b", "text": "Guidelines are strictly enforced, while standards are optional" },
+      { "id": "c", "text": "Guidelines are created by external regulators, while standards are internal" },
+      { "id": "d", "text": "Guidelines contain step-by-step instructions, while standards contain broad statements" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-170", "type": "mcq", "tags": ["grc.standards", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which document mandates that all wireless networks must utilize WPA3 Enterprise for authentication and data confidentiality?",
+    "options": [
+      { "id": "a", "text": "Encryption standard" },
+      { "id": "b", "text": "AUP" },
+      { "id": "c", "text": "Incident response procedure" },
+      { "id": "d", "text": "Encryption guideline" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-171", "type": "mcq", "tags": ["grc.procedures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which document provides the step-by-step instructions an engineer must follow to submit, test, and document a requested firewall rule modification?",
+    "options": [
+      { "id": "a", "text": "Change management procedure" },
+      { "id": "b", "text": "Access control standard" },
+      { "id": "c", "text": "Incident response playbook" },
+      { "id": "d", "text": "Change management policy" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-172", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which document serves as the overarching directive from executive management regarding the organization's approach to protecting data?",
+    "options": [
+      { "id": "a", "text": "Incident response playbook" },
+      { "id": "b", "text": "Information security policy" },
+      { "id": "c", "text": "Access control standard" },
+      { "id": "d", "text": "Change management procedure" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-173", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which document specifies the exact height requirements for badge readers and the specific type of turnstiles to be installed at facility entrances?",
+    "options": [
+      { "id": "a", "text": "Incident response playbook" },
+      { "id": "b", "text": "Business continuity policy" },
+      { "id": "c", "text": "Acceptable use policy" },
+      { "id": "d", "text": "Physical security standard" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-175", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which external consideration is an organization addressing when it implements specific data controls to avoid fines from a government regulatory agency?",
+    "options": [
+      { "id": "a", "text": "Local/regional" },
+      { "id": "b", "text": "Industry" },
+      { "id": "c", "text": "Regulatory" },
+      { "id": "d", "text": "Global" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-176", "type": "mcq", "tags": ["grc.external-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which external factor must a multinational corporation primarily consider when transferring consumer data between servers located in different continents?",
+    "options": [
+      { "id": "a", "text": "Industry" },
+      { "id": "b", "text": "National" },
+      { "id": "c", "text": "Local/regional" },
+      { "id": "d", "text": "Global" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-177", "type": "mcq", "tags": ["grc.governance-structures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which governance body typically consists of cross-functional department leaders who meet periodically to steer security initiatives and review policies?",
+    "options": [
+      { "id": "a", "text": "Government entity" },
+      { "id": "b", "text": "Security steering committee" },
+      { "id": "c", "text": "Board of directors" },
+      { "id": "d", "text": "Security operations center" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-178", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which governance document provides recommendations and best practices but is not strictly mandatory?",
+    "options": [
+      { "id": "a", "text": "Standard" },
+      { "id": "b", "text": "Guideline" },
+      { "id": "c", "text": "Policy" },
+      { "id": "d", "text": "Procedure" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-179", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which governance element acts as the foundational root document from which all other security standards and procedures are derived?",
+    "options": [
+      { "id": "a", "text": "Information security policy" },
+      { "id": "b", "text": "AUP" },
+      { "id": "c", "text": "Incident response playbook" },
+      { "id": "d", "text": "Access control standard" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-180", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which governance element dictates the framework for restoring IT systems and data facilities following a major outage?",
+    "options": [
+      { "id": "a", "text": "Change management policy" },
+      { "id": "b", "text": "Acceptable use policy" },
+      { "id": "c", "text": "Disaster recovery policy" },
+      { "id": "d", "text": "Business continuity policy" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-181", "type": "mcq", "tags": ["grc.standards", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which governance element dictates the mandatory use of role-based access control across all human resources applications?",
+    "options": [
+      { "id": "a", "text": "Acceptable use policy" },
+      { "id": "b", "text": "Offboarding procedure" },
+      { "id": "c", "text": "Incident response playbook" },
+      { "id": "d", "text": "Access control standard" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-182", "type": "mcq", "tags": ["grc.standards", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which governance element explicitly requires the use of multifactor authentication for all administrative logins across the enterprise?",
+    "options": [
+      { "id": "a", "text": "Offboarding procedure" },
+      { "id": "b", "text": "Acceptable use policy" },
+      { "id": "c", "text": "Access control standard" },
+      { "id": "d", "text": "Information security guideline" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-183", "type": "mcq", "tags": ["grc.governance-structures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which governance structure typically holds the ultimate fiduciary responsibility and oversight for an organization's risk management program?",
+    "options": [
+      { "id": "a", "text": "Change advisory board" },
+      { "id": "b", "text": "Security operations center" },
+      { "id": "c", "text": "Incident response team" },
+      { "id": "d", "text": "Board of directors" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-190", "type": "mcq", "tags": ["grc.standards", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following BEST represents an encryption standard?",
+    "options": [
+      { "id": "a", "text": "A procedure outlining how to generate a new SSH key pair" },
+      { "id": "b", "text": "A guideline suggesting the use of VPNs on public Wi-Fi" },
+      { "id": "c", "text": "A requirement that all databases utilize AES-256 for data at rest" },
+      { "id": "d", "text": "A policy stating that sensitive data must be protected" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-191", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following documents is primarily used to inform employees of permitted and prohibited activities on corporate networks?",
+    "options": [
+      { "id": "a", "text": "Incident response policy" },
+      { "id": "b", "text": "Business continuity policy" },
+      { "id": "c", "text": "Disaster recovery policy" },
+      { "id": "d", "text": "Acceptable use policy" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-193", "type": "mcq", "tags": ["grc.standards", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is an example of a password standard?",
+    "options": [
+      { "id": "a", "text": "A mandate that all domain user accounts must use a minimum of 14 characters" },
+      { "id": "b", "text": "A step-by-step guide for resetting a forgotten Active Directory password" },
+      { "id": "c", "text": "A high-level statement that all systems must be secure" },
+      { "id": "d", "text": "A recommendation to use a password manager for personal accounts" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-196", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is NOT typically a reason an organization would review a vendor's evidence of internal audits?",
+    "options": [
+      { "id": "a", "text": "To confirm the vendor periodically tests its own incident response plan" },
+      { "id": "b", "text": "To verify that the vendor consistently enforces access control policies" },
+      { "id": "c", "text": "To establish the legal framework for a new business partnership" },
+      { "id": "d", "text": "To ensure the vendor identifies and remediates its own internal control failures" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-197", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which policy ensures that custom-built applications are subjected to vulnerability scanning and penetration testing prior to production release?",
+    "options": [
+      { "id": "a", "text": "Incident response policy" },
+      { "id": "b", "text": "AUP" },
+      { "id": "c", "text": "Disaster recovery policy" },
+      { "id": "d", "text": "Software development policy" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-198", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which policy establishes the organizational mandate and phases for handling a detected cybersecurity breach?",
+    "options": [
+      { "id": "a", "text": "Incident response policy" },
+      { "id": "b", "text": "Disaster recovery policy" },
+      { "id": "c", "text": "Acceptable use policy" },
+      { "id": "d", "text": "Software development policy" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-199", "type": "mcq", "tags": ["grc.policies", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which policy governs the integration of security testing and code review requirements throughout the lifecycle of an application?",
+    "options": [
+      { "id": "a", "text": "Acceptable use policy" },
+      { "id": "b", "text": "Software development policy" },
+      { "id": "c", "text": "Change management policy" },
+      { "id": "d", "text": "Business continuity policy" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-200", "type": "mcq", "tags": ["grc.procedures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which procedure ensures that an employee's access rights, badges, and hardware are properly collected and revoked upon termination?",
+    "options": [
+      { "id": "a", "text": "Change management procedure" },
+      { "id": "b", "text": "Incident response procedure" },
+      { "id": "c", "text": "Onboarding/offboarding procedure" },
+      { "id": "d", "text": "Software development procedure" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-202", "type": "mcq", "tags": ["grc.roles-and-responsibilities", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Who holds the ultimate responsibility for a specific dataset's classification, protection level, and business value?",
+    "options": [
+      { "id": "a", "text": "Data processor" },
+      { "id": "b", "text": "Data custodian" },
+      { "id": "c", "text": "Data steward" },
+      { "id": "d", "text": "Data owner" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-204", "type": "mcq", "tags": ["grc.roles-and-responsibilities", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Who is typically responsible for implementing the technical controls, such as daily backups and access management, mandated by the data owner?",
+    "options": [
+      { "id": "a", "text": "Data owner" },
+      { "id": "b", "text": "Board of directors" },
+      { "id": "c", "text": "Data custodian" },
+      { "id": "d", "text": "Data controller" }
+    ],
+    "answer": ["c"]
+  }
+]

@@ -3,6 +3,9 @@ extends RefCounted
 ## Chooses the items for a round (README "Round selection"). Headless and
 ## deterministic for a given RandomNumberGenerator seed and clock.
 ##
+## A concept's state is read from its topics, shared by every pack (Mastery): it is due when any topic is, unseen when any
+## topic is unseen, and ranks by its lowest box.
+##
 ## Returns entries {"item", "concept", "kind"}; kind is "review" (was due),
 ## "new" (never seen) or "practice" (a top-up, not yet due).
 ##
@@ -52,9 +55,9 @@ static func scope_concepts(pack: Pack, scope: Array) -> Array:
 static func due_concepts(pack: Pack, profile: Profile, scope: Array, today: int) -> Array:
 	var due: Array = []
 	for cid in scope_concepts(pack, scope):
-		if Mastery.is_due(profile, cid, today):
+		if Mastery.is_due_of(profile, pack.topics_of(cid), today):
 			due.append(cid)
-	due.sort_custom(func(a: String, b: String) -> bool: return _by_box_then_due(profile, a, b))
+	due.sort_custom(func(a: String, b: String) -> bool: return _by_box_then_due(pack, profile, a, b))
 	return due
 
 
@@ -77,7 +80,7 @@ static func pick(pack: Pack, profile: Profile, due_scope: Array, new_scope: Arra
 		for cid in scope_concepts(pack, [objective_id]):
 			if chosen.size() >= round_size or new_count >= max_new:
 				break
-			if Mastery.seen(profile, cid) == 0 and not taken.has(cid):
+			if Mastery.seen_of(profile, pack.topics_of(cid)) == 0 and not taken.has(cid):
 				chosen.append([cid, "new"])
 				taken[cid] = true
 				new_count += 1
@@ -85,9 +88,9 @@ static func pick(pack: Pack, profile: Profile, due_scope: Array, new_scope: Arra
 	if chosen.size() < round_size:
 		var rest: Array = []
 		for cid in scope_concepts(pack, due_scope):
-			if not taken.has(cid) and Mastery.seen(profile, cid) > 0:
+			if not taken.has(cid) and Mastery.seen_of(profile, pack.topics_of(cid)) > 0:
 				rest.append(cid)
-		rest.sort_custom(func(a: String, b: String) -> bool: return _by_box_then_due(profile, a, b))
+		rest.sort_custom(func(a: String, b: String) -> bool: return _by_box_then_due(pack, profile, a, b))
 		for cid in rest:
 			if chosen.size() >= round_size:
 				break
@@ -128,7 +131,7 @@ static func pick(pack: Pack, profile: Profile, due_scope: Array, new_scope: Arra
 static func _fill(pack: Pack, profile: Profile, scope: Array, count: int, used: Dictionary,
 		rng: RandomNumberGenerator) -> Array:
 	var pool: Array = scope_concepts(pack, scope)
-	pool.sort_custom(func(a: String, b: String) -> bool: return _by_box_then_due(profile, a, b))
+	pool.sort_custom(func(a: String, b: String) -> bool: return _by_box_then_due(pack, profile, a, b))
 	var out: Array = []
 	var progressed := true
 	while out.size() < count and progressed:
@@ -146,13 +149,13 @@ static func _fill(pack: Pack, profile: Profile, scope: Array, count: int, used: 
 	return out
 
 
-static func _by_box_then_due(profile: Profile, a: String, b: String) -> bool:
-	var ba := Mastery.box(profile, a)
-	var bb := Mastery.box(profile, b)
+static func _by_box_then_due(pack: Pack, profile: Profile, a: String, b: String) -> bool:
+	var ba := Mastery.box_of(profile, pack.topics_of(a))
+	var bb := Mastery.box_of(profile, pack.topics_of(b))
 	if ba != bb:
 		return ba < bb
-	var da := Mastery.due_day(profile, a)
-	var db := Mastery.due_day(profile, b)
+	var da := Mastery.due_day_of(profile, pack.topics_of(a))
+	var db := Mastery.due_day_of(profile, pack.topics_of(b))
 	if da != db:
 		return da < db
 	return a < b

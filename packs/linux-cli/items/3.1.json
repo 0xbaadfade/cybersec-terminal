@@ -4,9 +4,7 @@
     "difficulty": 2,
     "lab": "lab-dmz-01",
     "id": "lin-m-08",
-    "concept_ids": [
-      "3.1.interfaces"
-    ],
+    "tags": ["network.interfaces", "linux-cli", "public"],
     "stem": "A secure-baseline checklist for workstations asks for the MAC address of the network card. What is analyst-ws's MAC address?",
     "answer": {
       "accept": [
@@ -20,9 +18,7 @@
     "difficulty": 2,
     "lab": "lab-dmz-01",
     "id": "lin-m-09",
-    "concept_ids": [
-      "3.1.listening-ports"
-    ],
+    "tags": ["network.listening-ports", "linux-cli", "public"],
     "stem": "One service on analyst-ws accepts connections only from the machine itself, not from the network. Which TCP port is it?",
     "answer": {
       "accept": [
@@ -34,9 +30,7 @@
   {
     "id": "lin-q-if-1",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.interfaces"
-    ],
+    "tags": ["network.interfaces", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What is this workstation's IPv4 address and prefix length on eth0?",
     "show": {
@@ -72,9 +66,7 @@
   {
     "id": "lin-q-if-2",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.interfaces"
-    ],
+    "tags": ["network.interfaces", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "Which value is eth0's MAC address?",
     "show": {
@@ -110,9 +102,7 @@
   {
     "id": "lin-q-if-3",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.interfaces"
-    ],
+    "tags": ["network.interfaces", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Where does this machine send a packet for 8.8.8.8?",
     "show": {
@@ -148,9 +138,7 @@
   {
     "id": "lin-q-if-4",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.interfaces"
-    ],
+    "tags": ["network.interfaces", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "What does the line '10.20.0.0/24 dev eth0 proto kernel scope link' tell you?",
     "show": {
@@ -186,9 +174,7 @@
   {
     "id": "lin-q-lis-1",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.listening-ports"
-    ],
+    "tags": ["network.listening-ports", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Which of these services can other machines on the network reach?",
     "show": {
@@ -224,9 +210,7 @@
   {
     "id": "lin-q-lis-2",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.listening-ports"
-    ],
+    "tags": ["network.listening-ports", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "What does the Local Address 127.0.0.1:5432 mean for the database?",
     "show": {
@@ -260,79 +244,9 @@
     "explain": "A service bound to the loopback address cannot be reached from the network. It is a simple way to reduce exposure for something only local programs need."
   },
   {
-    "id": "lin-q-lis-3",
-    "type": "mcq",
-    "concept_ids": [
-      "3.1.listening-ports"
-    ],
-    "difficulty": 1,
-    "stem": "What do the options in ss -tln stand for?",
-    "options": [
-      {
-        "id": "a",
-        "text": "TCP sockets, in all states, with the timers shown on each",
-        "why": "-l limits the list to listening sockets; timers are -o."
-      },
-      {
-        "id": "b",
-        "text": "TCP sockets, listening only, shown as numbers not names"
-      },
-      {
-        "id": "c",
-        "text": "Traffic counters, taken over the last number of minutes",
-        "why": "ss shows sockets, not traffic counters."
-      },
-      {
-        "id": "d",
-        "text": "Terminal output, long format, with no header line at the top",
-        "why": "The letters are t for TCP, l for listening and n for numeric."
-      }
-    ],
-    "answer": [
-      "b"
-    ],
-    "explain": "ss -tln: t = TCP, l = listening, n = numeric ports and addresses. Add -p (with privileges) to see which process owns each socket."
-  },
-  {
-    "id": "lin-q-lis-4",
-    "type": "mcq",
-    "concept_ids": [
-      "3.1.listening-ports"
-    ],
-    "difficulty": 2,
-    "stem": "A database is used only by a program on the same machine. Where should it listen to limit exposure?",
-    "options": [
-      {
-        "id": "a",
-        "text": "0.0.0.0",
-        "why": "That accepts connections on every interface, including from the network."
-      },
-      {
-        "id": "b",
-        "text": "The default gateway's address",
-        "why": "A service binds to its own addresses, not to the router's."
-      },
-      {
-        "id": "c",
-        "text": "127.0.0.1"
-      },
-      {
-        "id": "d",
-        "text": "10.20.0.255",
-        "why": "That is the broadcast address; a service does not listen there."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "Binding to the loopback address is part of hardening: a service nobody remote needs should not be reachable remotely."
-  },
-  {
     "id": "lin-q-con-1",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.connections"
-    ],
+    "tags": ["network.connections", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What is the state of the connection to 10.20.0.10 port 22, and what is it?",
     "show": {
@@ -368,9 +282,7 @@
   {
     "id": "lin-q-con-2",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.connections"
-    ],
+    "tags": ["network.connections", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "What does the TIME-WAIT line to port 80 show?",
     "show": {
@@ -406,9 +318,7 @@
   {
     "id": "lin-q-con-3",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.connections"
-    ],
+    "tags": ["network.connections", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Who chose the port number 51514 in the first line?",
     "show": {
@@ -440,39 +350,5 @@
       "b"
     ],
     "explain": "A client opens a connection from a high, temporary port to the server's well-known port. The pair (address and port on each side) identifies the connection."
-  },
-  {
-    "id": "lin-q-con-4",
-    "type": "mcq",
-    "concept_ids": [
-      "3.1.connections"
-    ],
-    "difficulty": 1,
-    "stem": "Which command lists current TCP connections rather than listeners?",
-    "options": [
-      {
-        "id": "a",
-        "text": "ss -tln",
-        "why": "-l limits the list to listening sockets."
-      },
-      {
-        "id": "b",
-        "text": "ip addr",
-        "why": "That shows addresses on the interfaces."
-      },
-      {
-        "id": "c",
-        "text": "ss -tn"
-      },
-      {
-        "id": "d",
-        "text": "ping -c 4 web-03",
-        "why": "ping tests reachability; it does not list connections."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "Without -l, ss shows sockets that are connected. Together with -l it can show both views of the same machine."
   }
 ]

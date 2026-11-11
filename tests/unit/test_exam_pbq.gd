@@ -607,8 +607,8 @@ func test_a_botched_pbq_comes_back_for_review_tomorrow() -> void:
 	_submit()
 	var again := _store.load_profile("dana")
 	again.track = _router.profile.track
-	assert_eq(Mastery.box(again, cid), 1)
-	assert_true(Mastery.is_due(again, cid, Mastery.day_of(_now) + 1))
+	assert_eq(Mastery.box(again, Support.topic_of(cid)), 1)
+	assert_true(Mastery.is_due(again, Support.topic_of(cid), Mastery.day_of(_now) + 1))
 
 
 func test_leaving_the_exam_changes_nothing_even_after_pbq_work() -> void:

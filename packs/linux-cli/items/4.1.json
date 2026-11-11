@@ -4,9 +4,7 @@
     "difficulty": 2,
     "lab": "lab-dmz-01",
     "id": "lin-m-10",
-    "concept_ids": [
-      "4.1.http-headers"
-    ],
+    "tags": ["network.http-headers", "linux-cli", "public"],
     "stem": "web-03's web server announces more about itself than it needs to. Apart from the server software, which scripting language and version does it disclose in its HTTP response headers?",
     "answer": {
       "accept": [
@@ -20,9 +18,7 @@
   {
     "id": "lin-r-01",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.http-headers"
-    ],
+    "tags": ["network.http-headers", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "A tester ran the command below against web-03. Which finding would a vulnerability assessment report first?",
     "show": {
@@ -58,9 +54,7 @@
   {
     "id": "lin-q-http-1",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.http-headers"
-    ],
+    "tags": ["network.http-headers", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What does the status line of this response mean?",
     "show": {
@@ -96,9 +90,7 @@
   {
     "id": "lin-q-http-2",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.http-headers"
-    ],
+    "tags": ["network.http-headers", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Where does the server send a browser that asks for /old?",
     "show": {
@@ -134,9 +126,7 @@
   {
     "id": "lin-q-http-3",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.http-headers"
-    ],
+    "tags": ["network.http-headers", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "Which status does the server give for a page that does not exist?",
     "show": {
@@ -172,9 +162,7 @@
   {
     "id": "lin-q-http-4",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.http-headers"
-    ],
+    "tags": ["network.http-headers", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Why do hardening guides tell administrators to hide the Server and X-Powered-By headers?",
     "show": {

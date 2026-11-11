@@ -312,7 +312,7 @@ func test_progress_is_saved_under_the_track_and_never_under_an_empty_id() -> voi
 	_router.handle("menu")
 	_router.handle("logout")
 	var saved: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(_profiles.path_join("dana.json")))
-	assert_eq(int(saved["version"]), 2)
+	assert_eq(int(saved["version"]), 3)
 	assert_eq(saved["tracks"].keys(), ["alpha"], "only a played track has a section; beta and '' have none")
 	assert_gt(int(saved["tracks"]["alpha"]["xp"]["total"]), 0)
 

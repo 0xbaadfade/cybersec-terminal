@@ -21,6 +21,10 @@ static func remove_dir(path: String) -> void:
 ## content (domain 4 only); they test the engine, not how much content the pack has.
 static func copy_real_pack_without_book_items(dest: String) -> void:
 	_copy_dir("res://packs/secplus-sy0-701", dest)
+	# The questions live in bank/items/ now; the copy is a standalone pack, so they go into its own items/.
+	for f in DirAccess.get_files_at("res://bank/items"):
+		if f.begins_with("sy0-701_") and f.ends_with(".json") and not f.ends_with("-book.json"):
+			write_text(dest.path_join("items").path_join(f), FileAccess.get_file_as_string("res://bank/items".path_join(f)))
 
 
 static func _copy_dir(src: String, dest: String) -> void:
@@ -40,7 +44,18 @@ static func write_text(path: String, text: String) -> void:
 	f.close()
 
 
+## Fixture items carry a derived `concept_ids` and `topics` (what a loaded Pack adds, and what Mastery reads) so they can
+## be used without loading a pack; on disk an item has only `tags`, so both are left out of what is written.
 static func write_json(path: String, data: Variant) -> void:
+	if typeof(data) == TYPE_ARRAY:
+		var clean: Array = []
+		for entry in data:
+			if typeof(entry) == TYPE_DICTIONARY and entry.has("tags") and entry.has("concept_ids"):
+				entry = entry.duplicate()
+				entry.erase("concept_ids")
+				entry.erase("topics")
+			clean.append(entry)
+		data = clean
 	write_text(path, JSON.stringify(data, "\t"))
 
 
@@ -50,14 +65,19 @@ static func write_pack(root: String, items: Array) -> void:
 		"id": "test", "title": "Test Pack", "short": "TEST", "version": 1,
 		"domains": [{"id": "1", "title": "One", "weight": 100}],
 		"objectives": [{"id": "1.1", "domain": "1", "title": "First",
-				"concepts": [{"id": "1.1.a", "title": "Alpha"}, {"id": "1.1.b", "title": "Beta"}]}],
+				"concepts": [{"id": "1.1.a", "title": "Alpha", "topics": ["t.1-1-a"]}, {"id": "1.1.b", "title": "Beta", "topics": ["t.1-1-b"]}]}],
 	})
 	write_json(root.path_join("items/test.json"), items)
 
 
+## The topic tag the fixture packs give a concept ("1.1.a" -> "t.1-1-a"); items are tagged with it.
+static func topic_of(concept: String) -> String:
+	return "t." + concept.replace(".", "-")
+
+
 static func good_item(item_id: String = "t-1") -> Dictionary:
 	return {
-		"id": item_id, "type": "mcq", "concept_ids": ["1.1.a"], "difficulty": 1,
+		"id": item_id, "type": "mcq", "tags": [topic_of("1.1.a")], "concept_ids": ["1.1.a"], "topics": [topic_of("1.1.a")], "difficulty": 1,
 		"reviewed_by": "human", "stem": "Pick b.",
 		"options": [{"id": "a", "text": "A"}, {"id": "b", "text": "B"}, {"id": "c", "text": "C"}],
 		"answer": ["b"], "explain": "Because b.",
@@ -68,7 +88,7 @@ static func good_item(item_id: String = "t-1") -> Dictionary:
 static func make_item(item_id: String, concept: String, type: String = "mcq",
 		reviewed: bool = true, difficulty: int = 1) -> Dictionary:
 	var item := {
-		"id": item_id, "type": type, "concept_ids": [concept], "difficulty": difficulty,
+		"id": item_id, "type": type, "tags": [topic_of(concept)], "concept_ids": [concept], "topics": [topic_of(concept)], "difficulty": difficulty,
 		"stem": "Stem of %s." % item_id,
 		"options": [{"id": "a", "text": "Alpha", "why": "Alpha is wrong."}, {"id": "b", "text": "Bravo"},
 				{"id": "c", "text": "Charlie"}, {"id": "d", "text": "Delta"}],
@@ -88,11 +108,11 @@ static func write_wide_pack(root: String, items: Array = []) -> void:
 		"domains": [{"id": "1", "title": "One", "weight": 60}, {"id": "2", "title": "Two", "weight": 40}],
 		"objectives": [
 			{"id": "1.1", "domain": "1", "title": "First", "concepts": [
-				{"id": "1.1.a", "title": "Alpha"}, {"id": "1.1.b", "title": "Beta"}, {"id": "1.1.c", "title": "Gamma"}]},
+				{"id": "1.1.a", "title": "Alpha", "topics": ["t.1-1-a"]}, {"id": "1.1.b", "title": "Beta", "topics": ["t.1-1-b"]}, {"id": "1.1.c", "title": "Gamma", "topics": ["t.1-1-c"]}]},
 			{"id": "1.2", "domain": "1", "title": "Second", "concepts": [
-				{"id": "1.2.d", "title": "Delta"}, {"id": "1.2.e", "title": "Epsilon"}]},
+				{"id": "1.2.d", "title": "Delta", "topics": ["t.1-2-d"]}, {"id": "1.2.e", "title": "Epsilon", "topics": ["t.1-2-e"]}]},
 			{"id": "1.3", "domain": "1", "title": "Third, empty"},
-			{"id": "2.1", "domain": "2", "title": "Other domain", "concepts": [{"id": "2.1.f", "title": "Zeta"}]},
+			{"id": "2.1", "domain": "2", "title": "Other domain", "concepts": [{"id": "2.1.f", "title": "Zeta", "topics": ["t.2-1-f"]}]},
 		],
 	})
 	if items.is_empty():
@@ -115,7 +135,7 @@ const REASONS: Array = [
 ## weak-auth, line 5 weak-crypto (exposure also accepted); line 2 is a decoy.
 static func evidence_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
-		"id": item_id, "type": "evidence", "concept_ids": [concept], "difficulty": difficulty,
+		"id": item_id, "type": "evidence", "tags": [topic_of(concept)], "concept_ids": [concept], "topics": [topic_of(concept)], "difficulty": difficulty,
 		"stem": "Flag what weakens %s." % item_id,
 		"artifact": {"file": "artifacts/demo.txt", "kind": "config", "title": "demo: config"},
 		"flaws": [
@@ -137,7 +157,7 @@ static func write_evidence_pack(root: String, items: Array, artifact_text: Strin
 		"id": "ev", "title": "Evidence Pack", "short": "EV", "version": 1,
 		"domains": [{"id": "1", "title": "One", "weight": 100}],
 		"objectives": [{"id": "1.1", "domain": "1", "title": "First", "concepts": [
-			{"id": "1.1.a", "title": "Alpha"}, {"id": "1.1.b", "title": "Beta"}, {"id": "1.1.c", "title": "Gamma"}]}],
+			{"id": "1.1.a", "title": "Alpha", "topics": ["t.1-1-a"]}, {"id": "1.1.b", "title": "Beta", "topics": ["t.1-1-b"]}, {"id": "1.1.c", "title": "Gamma", "topics": ["t.1-1-c"]}]}],
 		"evidence_reasons": REASONS,
 	}
 	for k in meta:
@@ -190,7 +210,7 @@ static func write_lab_pack(root: String, items: Array, lab: Dictionary = {}) -> 
 ## A terminal item on the demo lab; the answer is the printer.
 static func terminal_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
-		"id": item_id, "type": "terminal", "concept_ids": [concept], "difficulty": difficulty,
+		"id": item_id, "type": "terminal", "tags": [topic_of(concept)], "concept_ids": [concept], "topics": [topic_of(concept)], "difficulty": difficulty,
 		"stem": "Which host drops ping? (%s)" % item_id,
 		"lab": "lab-a", "answer": {"accept": ["10.20.0.30", "printer-01"]},
 		"explain": "printer-01 drops ICMP (%s)." % item_id,
@@ -200,7 +220,7 @@ static func terminal_item(item_id: String, concept: String, difficulty: int = 1)
 ## A match item: categories x, y, z; four pairs (one x, two y, three z, four x).
 static func match_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
-		"id": item_id, "type": "match", "concept_ids": [concept], "difficulty": difficulty,
+		"id": item_id, "type": "match", "tags": [topic_of(concept)], "concept_ids": [concept], "topics": [topic_of(concept)], "difficulty": difficulty,
 		"stem": "Match each case (%s)." % item_id,
 		"categories": [{"id": "x", "text": "Xray"}, {"id": "y", "text": "Yankee"}, {"id": "z", "text": "Zulu"}],
 		"pairs": [
@@ -216,7 +236,7 @@ static func match_item(item_id: String, concept: String, difficulty: int = 1) ->
 ## An order item: four steps, written in the right order.
 static func order_item(item_id: String, concept: String, difficulty: int = 1) -> Dictionary:
 	return {
-		"id": item_id, "type": "order", "concept_ids": [concept], "difficulty": difficulty,
+		"id": item_id, "type": "order", "tags": [topic_of(concept)], "concept_ids": [concept], "topics": [topic_of(concept)], "difficulty": difficulty,
 		"stem": "Put these in order (%s)." % item_id,
 		"steps": [
 			{"text": "Step first", "explain": "First comes first."},

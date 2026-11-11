@@ -12,7 +12,7 @@ static func lines(pack: Pack, profile: Profile, rules: Rules, today: int, key: S
 
 
 static func _overview_lines(pack: Pack, profile: Profile, rules: Rules, today: int) -> Array:
-	var total := Economy.counts(profile, pack.concepts.keys(), today)
+	var total := Economy.counts(profile, pack, pack.concepts.keys(), today)
 	var out: Array = [_l("GRID  //  %s" % pack.short, Lines.S_ACCENT)]
 	out.append(_l("Cycles   %s   (earned in all: %s)" % [Economy.format_int(floori(Economy.cycles(profile))),
 			Economy.format_int(floori(Economy.earned(profile)))]))
@@ -24,10 +24,14 @@ static func _overview_lines(pack: Pack, profile: Profile, rules: Rules, today: i
 		var ids := _domain_concepts(pack, d["id"])
 		if ids.is_empty():
 			continue
-		var c := Economy.counts(profile, ids, today)
+		var c := Economy.counts(profile, pack, ids, today)
 		var rate := 0.0
+		var seen_topics: Dictionary = {}   # a topic two concepts share pays once
 		for cid in ids:
-			rate += Economy.node_rate(profile, cid, today, rules)
+			for t in pack.topics_of(cid):
+				if not seen_topics.has(t):
+					seen_topics[t] = true
+					rate += Economy.node_rate(profile, [t], today, rules)
 		out.append(_l("  %s  %s %3d online %3d stale %3d unbuilt   %s" % [(d["id"] as String).rpad(3),
 				_fit(d["title"], 34).rpad(34), c["online"], c["stale"], c["unbuilt"], Economy.format_rate(rate)],
 				Lines.S_ERROR if c["stale"] > 0 else Lines.S_NORMAL))
@@ -47,12 +51,13 @@ static func _domain_lines(pack: Pack, profile: Profile, rules: Rules, today: int
 	var out: Array = [_l("GRID  //  %s  %s" % [domain["id"], domain["title"]], Lines.S_ACCENT)]
 	var unbuilt := 0
 	for cid in _domain_concepts(pack, domain["id"]):
-		if Mastery.seen(profile, cid) == 0:
+		var topics := pack.topics_of(cid)
+		if Mastery.seen_of(profile, topics) == 0:
 			unbuilt += 1
 			continue
-		var stale := Mastery.is_due(profile, cid, today)
+		var stale := Mastery.is_due_of(profile, topics, today)
 		out.append(_l("  %s %s box %d  %s  %s" % [_fit(cid, 22).rpad(22), _fit(pack.concepts[cid]["title"], 44).rpad(44),
-				Mastery.box(profile, cid), Economy.format_rate(Economy.node_rate(profile, cid, today, rules)).rpad(9),
+				Mastery.box_of(profile, topics), Economy.format_rate(Economy.node_rate(profile, topics, today, rules)).rpad(9),
 				"STALE" if stale else "online"], Lines.S_ERROR if stale else Lines.S_OK))
 	if out.size() == 1:
 		out.append(_l("No nodes here yet. Answer a question from this domain to build one.", Lines.S_DIM))

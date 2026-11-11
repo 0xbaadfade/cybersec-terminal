@@ -4,9 +4,7 @@
     "difficulty": 1,
     "lab": "lab-office-01",
     "id": "win-m-01",
-    "concept_ids": [
-      "1.1.ipconfig"
-    ],
+    "tags": ["network.interfaces", "windows-cli", "public"],
     "stem": "This is a Windows workstation. What is its default gateway?",
     "answer": {
       "accept": [
@@ -22,9 +20,7 @@
     "difficulty": 2,
     "lab": "lab-office-01",
     "id": "win-m-02",
-    "concept_ids": [
-      "1.1.physical-address"
-    ],
+    "tags": ["network.mac-address", "windows-cli", "public"],
     "stem": "Asset inventories and switch port security identify a network card by its physical (MAC) address. What is this workstation's physical address? (Windows writes it with dashes; either form is accepted.)",
     "answer": {
       "accept": [
@@ -37,9 +33,7 @@
   {
     "id": "win-q-ip-1",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.ipconfig"
-    ],
+    "tags": ["network.interfaces", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "Which line shows the router this PC uses to reach other networks?",
     "show": {
@@ -75,9 +69,7 @@
   {
     "id": "win-q-ip-2",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.ipconfig"
-    ],
+    "tags": ["network.interfaces", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "What does the subnet mask 255.255.255.0 tell you?",
     "show": {
@@ -113,9 +105,7 @@
   {
     "id": "win-q-ip-3",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.ipconfig"
-    ],
+    "tags": ["network.interfaces", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "Which lines show that this PC got its address automatically?",
     "show": {
@@ -151,9 +141,7 @@
   {
     "id": "win-q-ip-4",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.ipconfig"
-    ],
+    "tags": ["network.interfaces", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "Which line shows the server this PC asks to resolve names?",
     "show": {
@@ -189,9 +177,7 @@
   {
     "id": "win-q-mac-1",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.physical-address"
-    ],
+    "tags": ["network.mac-address", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "What is this PC's physical (MAC) address?",
     "show": {
@@ -225,79 +211,9 @@
     "explain": "Windows writes MAC addresses with dashes on the Physical Address line. The DUID looks similar but is a different identifier."
   },
   {
-    "id": "win-q-mac-2",
-    "type": "mcq",
-    "concept_ids": [
-      "1.1.physical-address"
-    ],
-    "difficulty": 2,
-    "stem": "Why do switch port security and asset inventories use MAC addresses?",
-    "options": [
-      {
-        "id": "a",
-        "text": "A MAC address never changes and cannot be faked, so it proves which device it is",
-        "why": "MAC addresses can be spoofed, so they are a weak control on their own."
-      },
-      {
-        "id": "b",
-        "text": "A MAC address names the network card, so a switch can allow only known devices"
-      },
-      {
-        "id": "c",
-        "text": "A MAC address shows who the user is, so the switch can allow only that person",
-        "why": "It identifies a card, not a person."
-      },
-      {
-        "id": "d",
-        "text": "A MAC address is routed across the internet, so it can be checked from anywhere",
-        "why": "MACs only matter on the local network segment."
-      }
-    ],
-    "answer": [
-      "b"
-    ],
-    "explain": "MAC addresses make a convenient device identifier, but spoofing is easy, so they support a defence rather than replace authentication."
-  },
-  {
-    "id": "win-q-mac-3",
-    "type": "mcq",
-    "concept_ids": [
-      "1.1.physical-address"
-    ],
-    "difficulty": 1,
-    "stem": "Which command shows the physical address on a Windows PC?",
-    "options": [
-      {
-        "id": "a",
-        "text": "ipconfig",
-        "why": "Plain ipconfig leaves out the physical address."
-      },
-      {
-        "id": "b",
-        "text": "ipconfig /release",
-        "why": "That gives up the DHCP lease."
-      },
-      {
-        "id": "c",
-        "text": "ipconfig /all"
-      },
-      {
-        "id": "d",
-        "text": "ipconfig /flushdns",
-        "why": "That clears the local DNS cache."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "ipconfig on its own prints a short summary; /all adds the host name, physical address, DHCP and DNS details."
-  },
-  {
     "id": "win-q-mac-4",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.physical-address"
-    ],
+    "tags": ["network.mac-address", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "How far does the MAC address of this PC travel?",
     "show": {

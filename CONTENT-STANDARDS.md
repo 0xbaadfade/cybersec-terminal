@@ -63,10 +63,11 @@ checks it again.
 - **An `explain`** that says why the right answer is right and why the tempting wrong one is wrong.
 - **`references`** (a book, a standard, a web page) wherever a fact could be disputed or will change.
 - **Up to date.** If an answer depends on a version or a date, say which in the stem.
-- **Tied to a concept.** `concept_ids` link the item to the pack's objectives, so the spaced-repetition scheduler and
-  the skill tree can use it.
+- **Tagged for what it teaches.** `tags` give the item one to three topics (`wireless.sae`) and the pack or packs it is for,
+  so the spaced-repetition scheduler and the skill tree can use it and a question on a shared subject is written once, not
+  once per pack. Pick the topic that names the one idea the question tests; do not add a topic to widen its reach.
 
-`docs/making-packs.md` has the file format and `validate-pack` checks it.
+`docs/making-packs.md` has the file format and the rules for tags, and `validate-pack` checks them.
 
 ## Sources and licensing
 

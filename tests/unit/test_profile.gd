@@ -49,11 +49,11 @@ func test_create_rejects_duplicates_and_bad_names() -> void:
 func test_save_round_trips_progress() -> void:
 	var p := _store.create("sam")
 	p.progress()["xp"]["4"] = 120
-	p.progress()["concepts"]["4.1.baselines"] = {"box": 2, "misses": 1}
+	p.topic_bucket()["ops.baselines"] = {"box": 2, "misses": 1}
 	assert_true(_store.save(p))
 	var back := _store.load_profile("sam")
 	assert_eq(int(back.progress()["xp"]["4"]), 120)
-	assert_eq(int(back.progress()["concepts"]["4.1.baselines"]["box"]), 2)
+	assert_eq(int(back.peek_topics()["ops.baselines"]["box"]), 2)
 
 
 func test_save_replaces_and_leaves_no_temp_file() -> void:

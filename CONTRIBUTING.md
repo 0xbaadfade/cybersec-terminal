@@ -6,9 +6,13 @@ or skill you know well. You do not need to write code.
 
 ## Adding or improving questions
 
-1. Read `docs/making-packs.md` and start from `templates/pack/`.
-2. Run `validate-pack` on your pack and fix every error (the command is in the guide).
-3. Open a pull request. The checks run `validate-pack` on every pack automatically.
+1. Read `docs/making-packs.md` (the section "Tags" is the part to read first) and start from `templates/pack/`.
+2. Tag every question: one to three topics for what it teaches, and the pack it is for. Search `data/tags.json` for an
+   existing topic before adding one; a new tag is one line in that file, in the same pull request.
+3. Run `validate-pack` and fix every error (the command is in the guide). It checks the tags too.
+4. Open a pull request. The checks run `validate-pack` on every pack and on the whole bank automatically.
+
+A question that is already in the bank for another pack does not need to be written again: add your pack's tag to it.
 
 Please:
 

@@ -23,6 +23,14 @@ func _init() -> void:
 		if not pack.ok():
 			failed += 1
 	if args.is_empty() or args[0] == "":
+		var bank := Pack.check_bank()
+		print("bank: %d items in bank/items/" % bank["count"])
+		for w in bank["warnings"]:
+			print("  warning: %s" % w)
+		for e in bank["errors"]:
+			print("  ERROR %s" % e)
+		if not (bank["errors"] as Array).is_empty():
+			failed += 1
 		var catalog := TrackCatalog.load_file()
 		var ready := catalog.playable_ids().size()
 		print("tracks: %d listed, %d playable" % [catalog.all_tracks().size(), ready])

@@ -53,22 +53,22 @@ func test_a_bad_economy_block_is_reported_and_keeps_defaults() -> void:
 # --- nodes -------------------------------------------------------------------------
 
 func test_an_unmet_concept_has_no_node() -> void:
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today, _rules), 0.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today, _rules), 0.0)
 
 
 func test_node_rate_follows_the_box() -> void:
 	_learn("1.1.a", 1)
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today, _rules), 1.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today, _rules), 1.0)
 	_learn("1.1.a", 2)  # box 3
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today, _rules), 4.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today, _rules), 4.0)
 	_learn("1.1.a", 5)  # capped at box 5
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today, _rules), 15.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today, _rules), 15.0)
 
 
 func test_a_due_concept_is_stale_and_earns_a_quarter() -> void:
 	_learn("1.1.a", 3)  # box 3, next review in 4 days
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today, _rules), 4.0)
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today + 4, _rules), 1.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today, _rules), 4.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today + 4, _rules), 1.0)
 
 
 func test_total_rate_and_counts() -> void:
@@ -77,9 +77,9 @@ func test_total_rate_and_counts() -> void:
 	_learn("2.1.f", 1)  # 1/min, will be stale tomorrow
 	assert_eq(Economy.track_rate(_profile, _pack, _today, _rules), 7.0)
 	assert_eq(Economy.rate(_profile, _today, _rules), 7.0)
-	var c := Economy.counts(_profile, _pack.concepts.keys(), _today)
+	var c := Economy.counts(_profile, _pack, _pack.concepts.keys(), _today)
 	assert_eq(c, {"online": 3, "stale": 0, "unbuilt": 3})
-	var later := Economy.counts(_profile, _pack.concepts.keys(), _today + 1)
+	var later := Economy.counts(_profile, _pack, _pack.concepts.keys(), _today + 1)
 	assert_eq(later, {"online": 2, "stale": 1, "unbuilt": 3})
 
 
@@ -128,10 +128,18 @@ func test_a_profile_that_has_played_nothing_gets_no_wallet() -> void:
 func test_output_adds_up_every_track_played() -> void:
 	_learn("1.1.b", 3)  # 4/min in track "wide"
 	_profile.track = "other"
-	_learn("2.1.f", 2)  # 2/min in track "other"
+	_learn("9.9.z", 2)  # 2/min, a topic that is not in this pack
 	_profile.track = _pack.id
 	assert_eq(Economy.track_rate(_profile, _pack, _today, _rules), 4.0)
 	assert_eq(Economy.rate(_profile, _today, _rules), 6.0)
+
+
+func test_a_topic_two_tracks_share_pays_once() -> void:
+	_learn("1.1.b", 3)  # 4/min
+	_profile.track = "other"
+	_learn("1.1.b", 0)
+	Mastery.apply(_profile, Support.make_item("y", "1.1.b"), 1.0, Support.T0, _rules)  # the other track answers it too: box 4, 8/min
+	assert_eq(Economy.rate(_profile, _today, _rules), 8.0, "one node for the topic, not one per track")
 
 
 func test_settle_pays_into_one_wallet_whichever_track_is_active() -> void:

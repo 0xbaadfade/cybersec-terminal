@@ -1,0 +1,944 @@
+[
+  {
+    "id": "aiken-domain-1-004", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company installs warning signs indicating that the premises are monitored by video surveillance. What is the PRIMARY goal of this specific security implementation?",
+    "options": [
+      { "id": "a", "text": "To compensate for the risk of unauthorized entry attempts." },
+      { "id": "b", "text": "To discourage potential intruders from attempting to bypass security measures." },
+      { "id": "c", "text": "To actively prevent unauthorized individuals from entering the building." },
+      { "id": "d", "text": "To capture photographic evidence of malicious activity after it has occurred." }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-009", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company wants to prevent unauthorized vehicles from ramming into the front entrance of its headquarters. Which physical control should be installed?",
+    "options": [
+      { "id": "a", "text": "Motion sensors" },
+      { "id": "b", "text": "Fencing" },
+      { "id": "c", "text": "Bollards" },
+      { "id": "d", "text": "Access control vestibule" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-012", "type": "mcq", "tags": ["identity.aaa", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A database administrator assigns specific read and write permissions to a user's role rather than the individual user account. Which concept is being implemented?",
+    "options": [
+      { "id": "a", "text": "Authorization models" },
+      { "id": "b", "text": "Implicit trust zones" },
+      { "id": "c", "text": "Authenticating people" },
+      { "id": "d", "text": "Deception technology" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-014", "type": "mcq", "tags": ["general.cia", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A Distributed Denial of Service (DDoS) attack floods a company's web server, making the customer portal inaccessible. Which aspect of the CIA triad is violated?",
+    "options": [
+      { "id": "a", "text": "Confidentiality" },
+      { "id": "b", "text": "Integrity" },
+      { "id": "c", "text": "Availability" },
+      { "id": "d", "text": "Accounting" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-015", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A facility manager wants to detect unauthorized entry through a restricted perimeter area without requiring visual monitoring. Which control should be deployed?",
+    "options": [
+      { "id": "a", "text": "Sensors" },
+      { "id": "b", "text": "Fencing" },
+      { "id": "c", "text": "Access badge" },
+      { "id": "d", "text": "Lighting" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-028", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A remote employee logs into a VPN using a hardware token that generates a one-time password (OTP) along with their PIN. What is this authentication process primarily validating?",
+    "options": [
+      { "id": "a", "text": "System integrity" },
+      { "id": "b", "text": "The identity of a system" },
+      { "id": "c", "text": "The identity of a person" },
+      { "id": "d", "text": "Non-repudiation of data" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-030", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator generates a fake set of API keys and places them in a public GitHub repository to detect credential stuffing attempts. What is this fake credential called?",
+    "options": [
+      { "id": "a", "text": "Honeyfile" },
+      { "id": "b", "text": "Honeypot" },
+      { "id": "c", "text": "Honeytoken" },
+      { "id": "d", "text": "Honeynet" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-031", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator implements digital signatures for all outbound corporate emails. What is the PRIMARY security concept being enforced?",
+    "options": [
+      { "id": "a", "text": "Threat scope reduction" },
+      { "id": "b", "text": "Non-repudiation" },
+      { "id": "c", "text": "Integrity" },
+      { "id": "d", "text": "Gap analysis" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-033", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security analyst configures a non-production server designed to look like a high-value database to attract and analyze attacker behavior. What is this called?",
+    "options": [
+      { "id": "a", "text": "Honeynet" },
+      { "id": "b", "text": "Honeypot" },
+      { "id": "c", "text": "Honeyfile" },
+      { "id": "d", "text": "Honeytoken" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-034", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security analyst deploys a single vulnerable server on a secluded network segment to study attacker behavior. What is this called?",
+    "options": [
+      { "id": "a", "text": "Honeyfile" },
+      { "id": "b", "text": "Honeytoken" },
+      { "id": "c", "text": "Honeypot" },
+      { "id": "d", "text": "Honeynet" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-038", "type": "mcq", "tags": ["grc.gap-analysis", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security architect is determining the appropriate scope of encryption for a new deployment. Which factor MOST heavily influences the decision of which level of encryption to apply?",
+    "options": [
+      { "id": "a", "text": "The specific vendor providing the underlying hardware infrastructure" },
+      { "id": "b", "text": "The cost of the encryption algorithm license" },
+      { "id": "c", "text": "The granularity of access control needed versus the performance impact" },
+      { "id": "d", "text": "The physical location of the data center hosting the information" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-039", "type": "mcq", "tags": ["grc.gap-analysis", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security consultant is hired to compare an organization's current cybersecurity posture against the NIST Cybersecurity Framework to identify missing controls. What is this process called?",
+    "options": [
+      { "id": "a", "text": "Threat modeling" },
+      { "id": "b", "text": "Gap analysis" },
+      { "id": "c", "text": "Risk assessment" },
+      { "id": "d", "text": "Impact analysis" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-040", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security engineer is designing a Zero Trust network and needs to place the component that intercepts and forwards traffic, acting as a gatekeeper to resources. Which component should be placed?",
+    "options": [
+      { "id": "a", "text": "Policy Administrator" },
+      { "id": "b", "text": "Policy Engine" },
+      { "id": "c", "text": "Policy Enforcement Point (PEP)" },
+      { "id": "d", "text": "Control Plane" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-041", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security engineer places a decoy PDF document named \"salaries_2026.pdf\" on a file share and configures an alert to trigger if it is opened. What is this decoy file?",
+    "options": [
+      { "id": "a", "text": "Honeytoken" },
+      { "id": "b", "text": "Honeyfile" },
+      { "id": "c", "text": "Honeypot" },
+      { "id": "d", "text": "Steganography" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-045", "type": "mcq", "tags": ["grc.gap-analysis", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security team compares their current security posture against the requirements outlined in the ISO 27001 standard to identify missing controls. What is this process called?",
+    "options": [
+      { "id": "a", "text": "Threat scope reduction" },
+      { "id": "b", "text": "Active defense" },
+      { "id": "c", "text": "Policy enforcement" },
+      { "id": "d", "text": "Gap analysis" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-047", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security team places a fake document named \"Q4_Financial_Projections.xlsx\" on a shared drive and sets up an alert if it is accessed. What is this called?",
+    "options": [
+      { "id": "a", "text": "Honeynet" },
+      { "id": "b", "text": "Honeypot" },
+      { "id": "c", "text": "Honeytoken" },
+      { "id": "d", "text": "Honeyfile" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-048", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security team wants to detect intruders in a darkened warehouse using technology that measures changes in heat signatures. Which sensor type is BEST suited for this?",
+    "options": [
+      { "id": "a", "text": "Pressure sensor" },
+      { "id": "b", "text": "Microwave sensor" },
+      { "id": "c", "text": "Infrared sensor" },
+      { "id": "d", "text": "Ultrasonic sensor" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-053", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A system administrator assigns folder permissions based on the department the employee belongs to, such as \"Finance\" or \"Engineering\". What authorization model is being used?",
+    "options": [
+      { "id": "a", "text": "Mandatory Access Control (MAC)" },
+      { "id": "b", "text": "Rule-Based Access Control (RBAC)" },
+      { "id": "c", "text": "Role-Based Access Control (RBAC)" },
+      { "id": "d", "text": "Discretionary Access Control (DAC)" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-057", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A system grants access based on the user's security clearance level and the classification label of the document. Which concept does this describe?",
+    "options": [
+      { "id": "a", "text": "Threat scope reduction" },
+      { "id": "b", "text": "Honeytoken" },
+      { "id": "c", "text": "Authorization models" },
+      { "id": "d", "text": "Gap analysis" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-059", "type": "mcq", "tags": ["identity.aaa", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A system prompts a user for a username and password, then verifies the password against a secure database. Which phase of the AAA framework does the verification step represent?",
+    "options": [
+      { "id": "a", "text": "Identification" },
+      { "id": "b", "text": "Authentication" },
+      { "id": "c", "text": "Authorization" },
+      { "id": "d", "text": "Accounting" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-062", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A user receives a digitally signed email from a manager. The digital signature ensures the manager cannot claim they did not send the message. Which concept does this illustrate?",
+    "options": [
+      { "id": "a", "text": "Availability" },
+      { "id": "b", "text": "Confidentiality" },
+      { "id": "c", "text": "Non-repudiation" },
+      { "id": "d", "text": "Authentication" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-063", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A user typically logs in from New York, but suddenly attempts to log in from Tokyo. The system prompts for additional verification. What concept does this BEST illustrate?",
+    "options": [
+      { "id": "a", "text": "Adaptive identity" },
+      { "id": "b", "text": "Policy Administrator" },
+      { "id": "c", "text": "Gap analysis" },
+      { "id": "d", "text": "Non-repudiation" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-071", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An access control system evaluates factors such as the user's location, time of day, device health, and resource type before granting access. Which model is being described?",
+    "options": [
+      { "id": "a", "text": "Discretionary Access Control (DAC)" },
+      { "id": "b", "text": "Mandatory Access Control (MAC)" },
+      { "id": "c", "text": "Attribute-Based Access Control (ABAC)" },
+      { "id": "d", "text": "Role-Based Access Control (RBAC)" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-073", "type": "mcq", "tags": ["identity.aaa", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An administrator configures user privileges so that only human resources staff can access personnel files. Which phase of the AAA framework is being enforced?",
+    "options": [
+      { "id": "a", "text": "Authentication" },
+      { "id": "b", "text": "Identification" },
+      { "id": "c", "text": "Authorization" },
+      { "id": "d", "text": "Accounting" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-074", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An administrator generates a fake API credential and inserts it into a database to detect unauthorized data exfiltration if the credential is ever used. What is this?",
+    "options": [
+      { "id": "a", "text": "Honeytoken" },
+      { "id": "b", "text": "Honeyfile" },
+      { "id": "c", "text": "Honeypot" },
+      { "id": "d", "text": "Blockchain" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-075", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An administrator implements a network intrusion prevention system (IPS) to block known malicious traffic. In what way does this control differ from a detective control?",
+    "options": [
+      { "id": "a", "text": "It provides alternative mitigation when the primary control fails rather than identifying the issue." },
+      { "id": "b", "text": "It relies on administrative policies to dictate behavior rather than using technical mechanisms." },
+      { "id": "c", "text": "It restores the system to a normal state after an incident occurs rather than investigating it." },
+      { "id": "d", "text": "It actively stops the threat before it compromises the system rather than merely recording the event." }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-078", "type": "mcq", "tags": ["general.cia", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An administrator uses a cryptographic hash function to verify that a downloaded software patch has not been modified. What security concept does this process support?",
+    "options": [
+      { "id": "a", "text": "Confidentiality" },
+      { "id": "b", "text": "Non-repudiation" },
+      { "id": "c", "text": "Availability" },
+      { "id": "d", "text": "Integrity" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-081", "type": "mcq", "tags": ["general.cia", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An attacker intercepts network traffic and alters the contents of a financial transaction spreadsheet before it reaches the recipient. Which of the following security objectives has been directly compromised?",
+    "options": [
+      { "id": "a", "text": "Confidentiality" },
+      { "id": "b", "text": "Integrity" },
+      { "id": "c", "text": "Availability" },
+      { "id": "d", "text": "Non-repudiation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-082", "type": "mcq", "tags": ["identity.aaa", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An auditor examines syslog records to determine who modified a critical configuration file on a router. Which phase of the AAA framework enables this review?",
+    "options": [
+      { "id": "a", "text": "Authentication" },
+      { "id": "b", "text": "Authorization" },
+      { "id": "c", "text": "Accounting" },
+      { "id": "d", "text": "Non-repudiation" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-088", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An enterprise deploys an entire network of decoy systems, simulated services, and false data to mimic its actual production network. What is this infrastructure?",
+    "options": [
+      { "id": "a", "text": "Secure enclave" },
+      { "id": "b", "text": "Implicit trust zone" },
+      { "id": "c", "text": "Honeynet" },
+      { "id": "d", "text": "Policy Engine" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-089", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An enterprise implements 802.1X port-based network control to ensure that only approved company-issued laptops can connect to the physical network. What is this process called?",
+    "options": [
+      { "id": "a", "text": "Authenticating people" },
+      { "id": "b", "text": "Authenticating systems" },
+      { "id": "c", "text": "Non-repudiation" },
+      { "id": "d", "text": "Tokenization" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-091", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An IAM system requires multifactor authentication only when a user attempts to access resources from an unrecognized device. What is this an example of?",
+    "options": [
+      { "id": "a", "text": "Adaptive identity" },
+      { "id": "b", "text": "Policy Administrator" },
+      { "id": "c", "text": "Gap analysis" },
+      { "id": "d", "text": "Implicit trust zones" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-095", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization creates an entire simulated corporate network, complete with dummy servers, workstations, and routers, to observe advanced persistent threats. What is this environment?",
+    "options": [
+      { "id": "a", "text": "Gap analysis" },
+      { "id": "b", "text": "Honeyfile" },
+      { "id": "c", "text": "Honeypot" },
+      { "id": "d", "text": "Honeynet" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-098", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization installs a double-door system where the first door must close and lock before the second door can be opened. What is this physical security control called?",
+    "options": [
+      { "id": "a", "text": "Bollard" },
+      { "id": "b", "text": "Access control vestibule" },
+      { "id": "c", "text": "Fencing" },
+      { "id": "d", "text": "Secure enclave" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-102", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization needs to secure a sensitive vault and wants an alarm to trigger if someone steps on a specific area of the floor. Which sensor is BEST?",
+    "options": [
+      { "id": "a", "text": "Microwave" },
+      { "id": "b", "text": "Ultrasonic" },
+      { "id": "c", "text": "Pressure" },
+      { "id": "d", "text": "Infrared" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-104", "type": "mcq", "tags": ["grc.gap-analysis", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization requires employees to use a smart card and a PIN to access the corporate network. Which fundamental concept does this BEST represent?",
+    "options": [
+      { "id": "a", "text": "Authenticating people" },
+      { "id": "b", "text": "Authenticating systems" },
+      { "id": "c", "text": "Gap analysis" },
+      { "id": "d", "text": "Policy-driven access control" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-105", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization uses Attribute-Based Access Control (ABAC) to allow document access only if the user is in the \"Finance\" group and accessing during business hours. What is this?",
+    "options": [
+      { "id": "a", "text": "Non-Repudiation" },
+      { "id": "b", "text": "Gap analysis" },
+      { "id": "c", "text": "Policy-driven access control" },
+      { "id": "d", "text": "Implicit trust zones" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-106", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization utilizes an access control model where files are assigned classification labels (e.g., Secret), and users are assigned clearance levels. What is this model?",
+    "options": [
+      { "id": "a", "text": "Discretionary Access Control (DAC)" },
+      { "id": "b", "text": "Role-Based Access Control (RBAC)" },
+      { "id": "c", "text": "Mandatory Access Control (MAC)" },
+      { "id": "d", "text": "Attribute-Based Access Control (ABAC)" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-108", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization wants to implement adaptive identity. Which of the following scenarios BEST illustrates this concept?",
+    "options": [
+      { "id": "a", "text": "A user is prompted for a password change every 90 days" },
+      { "id": "b", "text": "A user is granted access based solely on their active directory group membership" },
+      { "id": "c", "text": "A user is asked for secondary authentication because they logged in from a new country" },
+      { "id": "d", "text": "A user's account is locked out after three failed attempts from their desk phone" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-109", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization wants to restrict facility access and track the physical movement of employees. Which control is MOST appropriate?",
+    "options": [
+      { "id": "a", "text": "Access badge" },
+      { "id": "b", "text": "Pressure sensors" },
+      { "id": "c", "text": "Lighting" },
+      { "id": "d", "text": "Bollards" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-111", "type": "mcq", "tags": ["grc.gap-analysis", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Before migrating to a cloud environment, a company evaluates its current security controls against the cloud provider's shared responsibility model. What is this evaluation called?",
+    "options": [
+      { "id": "a", "text": "Threat scope reduction" },
+      { "id": "b", "text": "Gap analysis" },
+      { "id": "c", "text": "Adaptive identity" },
+      { "id": "d", "text": "Zero Trust evaluation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-112", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "By enforcing strict least privilege and network segmentation, an organization limits how far an attacker can move laterally. What is this an example of?",
+    "options": [
+      { "id": "a", "text": "Threat scope reduction" },
+      { "id": "b", "text": "Non-repudiation" },
+      { "id": "c", "text": "Authenticating systems" },
+      { "id": "d", "text": "Data Plane architecture" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-113", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "By segmenting a network and strictly controlling communications between the segments, a security architect aims to limit the potential blast radius of a breach. Which concept does this achieve?",
+    "options": [
+      { "id": "a", "text": "Accounting" },
+      { "id": "b", "text": "Authenticating systems" },
+      { "id": "c", "text": "Data Plane implementation" },
+      { "id": "d", "text": "Threat scope reduction" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-123", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "How does threat scope reduction benefit an organization implementing a Zero Trust model?",
+    "options": [
+      { "id": "a", "text": "It eliminates the need for any internal firewalls or logical access controls" },
+      { "id": "b", "text": "It minimizes the lateral movement potential of an attacker by segmenting assets" },
+      { "id": "c", "text": "It allows external partners to bypass the Policy Enforcement Point" },
+      { "id": "d", "text": "It completely removes the need for data encryption in transit" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-129", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a shared folder environment, the owner of a file has the authority to grant read and write permissions to other users at their discretion. Which access control model is this?",
+    "options": [
+      { "id": "a", "text": "Rule-Based Access Control" },
+      { "id": "b", "text": "Mandatory Access Control" },
+      { "id": "c", "text": "Discretionary Access Control" },
+      { "id": "d", "text": "Role-Based Access Control" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-130", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a software-defined perimeter, where are the centralized access policies defined and maintained?",
+    "options": [
+      { "id": "a", "text": "Data Plane" },
+      { "id": "b", "text": "Policy Enforcement Point" },
+      { "id": "c", "text": "Subject/System" },
+      { "id": "d", "text": "Control Plane" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-131", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a Zero Trust architecture, which component represents the overarching framework that governs access policies and decisions?",
+    "options": [
+      { "id": "a", "text": "Control Plane" },
+      { "id": "b", "text": "Data Plane" },
+      { "id": "c", "text": "Implicit trust zone" },
+      { "id": "d", "text": "Policy Enforcement Point" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-132", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a Zero Trust framework, which component is responsible for establishing and managing the rules that dictate access to resources?",
+    "options": [
+      { "id": "a", "text": "Policy Enforcement Point" },
+      { "id": "b", "text": "Policy Engine" },
+      { "id": "c", "text": "Policy Administrator" },
+      { "id": "d", "text": "Subject/System" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-137", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "To prevent eavesdropping on administrative sessions to web servers, an organization enforces HTTPS over port 443. This is an example of applying cryptographic solutions to which of the following states of data?",
+    "options": [
+      { "id": "a", "text": "Data at rest" },
+      { "id": "b", "text": "Transport/communication" },
+      { "id": "c", "text": "Data in execution" },
+      { "id": "d", "text": "Data in use" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-138", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "To prevent vehicles from crashing into a facility's main entrance, which of the following physical security controls should be installed FIRST?",
+    "options": [
+      { "id": "a", "text": "Access control vestibule" },
+      { "id": "b", "text": "Video surveillance" },
+      { "id": "c", "text": "Fencing" },
+      { "id": "d", "text": "Bollards" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-139", "type": "mcq", "tags": ["grc.gap-analysis", "sy0-701", "public"], "difficulty": 2,
+    "stem": "To secure API communications between two backend microservices without human intervention, which method is MOST appropriate?",
+    "options": [
+      { "id": "a", "text": "Authorization systems" },
+      { "id": "b", "text": "Gap analysis" },
+      { "id": "c", "text": "Physical access badges" },
+      { "id": "d", "text": "Authenticating systems" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-145", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What does a Zero Trust architecture seek to eliminate within a corporate network?",
+    "options": [
+      { "id": "a", "text": "Cryptographic issues" },
+      { "id": "b", "text": "Gap analysis" },
+      { "id": "c", "text": "Implicit trust zones" },
+      { "id": "d", "text": "The Policy Engine" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-147", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the MOST important reason for deploying video surveillance in conjunction with physical access controls?",
+    "options": [
+      { "id": "a", "text": "To implement a Zero Trust control plane" },
+      { "id": "b", "text": "To provide non-repudiation of physical events" },
+      { "id": "c", "text": "To reduce the need for gap analysis" },
+      { "id": "d", "text": "To authenticate systems" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-152", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When a user attempts to access a secure database, what role does the user play in the Zero Trust access model?",
+    "options": [
+      { "id": "a", "text": "Policy Enforcement Point" },
+      { "id": "b", "text": "Policy Administrator" },
+      { "id": "c", "text": "Subject/System" },
+      { "id": "d", "text": "Policy Engine" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-154", "type": "mcq", "tags": ["identity.aaa", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When configuring a RADIUS server, which aspect of AAA ensures that a user's session duration and data usage are recorded?",
+    "options": [
+      { "id": "a", "text": "Authorization" },
+      { "id": "b", "text": "Accounting" },
+      { "id": "c", "text": "Auditing" },
+      { "id": "d", "text": "Authentication" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-160", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which component in a Zero Trust environment evaluates real-time context and calculates whether to grant access based on established rules?",
+    "options": [
+      { "id": "a", "text": "Policy Engine" },
+      { "id": "b", "text": "Policy Enforcement Point" },
+      { "id": "c", "text": "Policy Administrator" },
+      { "id": "d", "text": "Data Plane" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-161", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which component is responsible for creating, maintaining, and updating the access policies used in a Zero Trust architecture?",
+    "options": [
+      { "id": "a", "text": "Policy Administrator" },
+      { "id": "b", "text": "Data Plane" },
+      { "id": "c", "text": "Subject/System" },
+      { "id": "d", "text": "Policy Enforcement Point" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-162", "type": "mcq", "tags": ["identity.aaa", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which component of the AAA framework is primarily responsible for tracking user activity and resource consumption on a network?",
+    "options": [
+      { "id": "a", "text": "Auditing" },
+      { "id": "b", "text": "Authentication" },
+      { "id": "c", "text": "Authorization" },
+      { "id": "d", "text": "Accounting" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-163", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which component physically or logically intercepts the access request and enforces the decision made by the control plane?",
+    "options": [
+      { "id": "a", "text": "Policy Engine" },
+      { "id": "b", "text": "Policy Enforcement Point" },
+      { "id": "c", "text": "Policy Administrator" },
+      { "id": "d", "text": "Implicit trust zone" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-164", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which concept assumes that threats exist both inside and outside the network perimeter?",
+    "options": [
+      { "id": "a", "text": "Control Plane" },
+      { "id": "b", "text": "Implicit trust zones" },
+      { "id": "c", "text": "Non-repudiation" },
+      { "id": "d", "text": "Zero Trust" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-165", "type": "mcq", "tags": ["general.cia", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which core security principle is violated if an attacker successfully launches a Denial of Service (DoS) attack against a web server?",
+    "options": [
+      { "id": "a", "text": "Availability" },
+      { "id": "b", "text": "Integrity" },
+      { "id": "c", "text": "Confidentiality" },
+      { "id": "d", "text": "Non-repudiation" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-166", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which cryptographic process is PRIMARY used to ensure non-repudiation for an electronic contract?",
+    "options": [
+      { "id": "a", "text": "Symmetric encryption" },
+      { "id": "b", "text": "Gap analysis" },
+      { "id": "c", "text": "Hashing" },
+      { "id": "d", "text": "Digital signatures" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-169", "type": "mcq", "tags": ["general.cia", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following BEST describes the component of the CIA triad that ensures data is not altered in an unauthorized manner?",
+    "options": [
+      { "id": "a", "text": "Integrity" },
+      { "id": "b", "text": "Confidentiality" },
+      { "id": "c", "text": "Availability" },
+      { "id": "d", "text": "Non-repudiation" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-174", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following BEST summarizes the core principle of a Zero Trust architecture?",
+    "options": [
+      { "id": "a", "text": "Trust but verify" },
+      { "id": "b", "text": "Trust based on network location" },
+      { "id": "c", "text": "Never trust, always verify" },
+      { "id": "d", "text": "Implicit trust within the perimeter" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-177", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following describes the fundamental guiding principle of a Zero Trust architecture?",
+    "options": [
+      { "id": "a", "text": "Always trust but verify internal network traffic" },
+      { "id": "b", "text": "Never trust, always verify, regardless of network location" },
+      { "id": "c", "text": "Establish a strong perimeter defense to protect internal assets" },
+      { "id": "d", "text": "Grant administrative access to all users within the secure enclave" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-178", "type": "mcq", "tags": ["general.non-repudiation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is NOT a characteristic of asymmetric cryptography?",
+    "options": [
+      { "id": "a", "text": "It requires both parties to share the exact same key prior to communication" },
+      { "id": "b", "text": "It provides non-repudiation when used for digital signatures" },
+      { "id": "c", "text": "It is generally slower and more computationally intensive than symmetric cryptography" },
+      { "id": "d", "text": "It utilizes a mathematically related key pair" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-182", "type": "mcq", "tags": ["identity.aaa", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is the BEST example of authenticating systems in a network environment?",
+    "options": [
+      { "id": "a", "text": "Using biometric fingerprint scanning" },
+      { "id": "b", "text": "A user entering a password" },
+      { "id": "c", "text": "802.1X using machine certificates" },
+      { "id": "d", "text": "Entering an MFA token code" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-185", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following physical security controls is MOST effective at preventing tailgating into a highly secure server room?",
+    "options": [
+      { "id": "a", "text": "Video surveillance" },
+      { "id": "b", "text": "Security guard" },
+      { "id": "c", "text": "Access control vestibule" },
+      { "id": "d", "text": "Bollards" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-187", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following relies on predefined rules evaluating user attributes, environmental conditions, and resource sensitivity to grant access?",
+    "options": [
+      { "id": "a", "text": "Deception technology" },
+      { "id": "b", "text": "Policy-driven access control" },
+      { "id": "c", "text": "Gap analysis" },
+      { "id": "d", "text": "Implicit trust zones" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-188", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which physical control is typically the first line of perimeter defense designed to clearly define the property line and deter casual intrusion?",
+    "options": [
+      { "id": "a", "text": "Fencing" },
+      { "id": "b", "text": "Access badge" },
+      { "id": "c", "text": "Sensors" },
+      { "id": "d", "text": "Bollards" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-189", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which physical security control is considered a strong deterrent that also enhances the effectiveness of video surveillance at night?",
+    "options": [
+      { "id": "a", "text": "Bollards" },
+      { "id": "b", "text": "Lighting" },
+      { "id": "c", "text": "Microwave sensors" },
+      { "id": "d", "text": "Infrared sensors" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-190", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which physical security control provides the BEST capability to visually verify a person's identity and intervene dynamically during an incident?",
+    "options": [
+      { "id": "a", "text": "Access control vestibule" },
+      { "id": "b", "text": "Lighting" },
+      { "id": "c", "text": "Security guard" },
+      { "id": "d", "text": "Video surveillance" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-191", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which physical security sensor type emits high-frequency sound waves and measures the reflections to detect movement within an enclosed room?",
+    "options": [
+      { "id": "a", "text": "Infrared sensor" },
+      { "id": "b", "text": "Ultrasonic sensor" },
+      { "id": "c", "text": "Pressure sensor" },
+      { "id": "d", "text": "Microwave sensor" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-192", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which plane in a Zero Trust architecture is responsible for the actual routing and transfer of authorized user traffic to the requested resource?",
+    "options": [
+      { "id": "a", "text": "Data Plane" },
+      { "id": "b", "text": "Management Plane" },
+      { "id": "c", "text": "Control Plane" },
+      { "id": "d", "text": "Policy Plane" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-193", "type": "mcq", "tags": ["ops.deception-technology", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which security strategy is specifically designed to mislead attackers, waste their time, and alert defenders to malicious activity?",
+    "options": [
+      { "id": "a", "text": "Implicit trust zones" },
+      { "id": "b", "text": "Deception and disruption technology" },
+      { "id": "c", "text": "Gap analysis" },
+      { "id": "d", "text": "Adaptive identity" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-194", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which type of motion sensor emits high-frequency electromagnetic waves and measures the shift in the reflected waves to detect movement?",
+    "options": [
+      { "id": "a", "text": "Pressure" },
+      { "id": "b", "text": "Microwave" },
+      { "id": "c", "text": "Access badge" },
+      { "id": "d", "text": "Infrared" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-195", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which type of sensor detects changes in thermal radiation to identify the presence of a person in a dark room?",
+    "options": [
+      { "id": "a", "text": "Microwave" },
+      { "id": "b", "text": "Pressure" },
+      { "id": "c", "text": "Infrared" },
+      { "id": "d", "text": "Ultrasonic" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "reviewed_by": "human",
+    "id": "aiken-domain-1-196", "type": "mcq", "tags": ["general.physical-security", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which type of sensor detects motion by emitting high-frequency sound waves and measuring the reflection?",
+    "options": [
+      { "id": "a", "text": "Infrared" },
+      { "id": "b", "text": "Ultrasonic" },
+      { "id": "c", "text": "Microwave" },
+      { "id": "d", "text": "Pressure" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-197", "type": "mcq", "tags": ["arch.zero-trust", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which Zero Trust plane is responsible for transmitting the actual application data and communication once access has been authorized?",
+    "options": [
+      { "id": "a", "text": "Control Plane" },
+      { "id": "b", "text": "Management Plane" },
+      { "id": "c", "text": "Policy Plane" },
+      { "id": "d", "text": "Data Plane" }
+    ],
+    "answer": ["d"]
+  }
+]

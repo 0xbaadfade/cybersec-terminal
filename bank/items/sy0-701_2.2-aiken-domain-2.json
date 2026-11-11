@@ -1,0 +1,684 @@
+[
+  {
+    "id": "aiken-domain-2-001", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "_________ redirects victims from a legitimate site to a bogus website. To accomplish this, the attacker employs another attack, such as DNS cache poisoning.",
+    "options": [
+      { "id": "a", "text": "Pharming" },
+      { "id": "b", "text": "Phishing" },
+      { "id": "c", "text": "Typo squatting" },
+      { "id": "d", "text": "Redirection attack" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-002", "type": "mcq", "tags": ["threats.voice-call-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "__________  is the use of fake caller ID to appear as a trusted organization and attempts to get an individual to enter account details via the phone.",
+    "options": [
+      { "id": "a", "text": "Pretexting" },
+      { "id": "b", "text": "SPAM" },
+      { "id": "c", "text": "Vishing" },
+      { "id": "d", "text": "Telemarketing" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-003", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "__________ employs spear phishing tactics but goes after high-profile targets, such as an executive within a company.",
+    "options": [
+      { "id": "a", "text": "Whaling" },
+      { "id": "b", "text": "Pharming" },
+      { "id": "c", "text": "Targeting" },
+      { "id": "d", "text": "Impersonation" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-004", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "__________ involves coordinated actions that seek to affect the development, actions, and behavior of the targeted population.",
+    "options": [
+      { "id": "a", "text": "Influence Campaign" },
+      { "id": "b", "text": "Social Engineering" },
+      { "id": "c", "text": "Consensus" },
+      { "id": "d", "text": "Metadata" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-006", "type": "mcq", "tags": ["threats.message-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "__________ is an attempt to acquire sensitive information by masquerading as a trustworthy entity via electronic communication (usually email).",
+    "options": [
+      { "id": "a", "text": "SPAM" },
+      { "id": "b", "text": "Phishing" },
+      { "id": "c", "text": "SPIM" },
+      { "id": "d", "text": "Smishing" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-007", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "__________ is someone that assumes the character or appearance of someone else. Choose the BEST answer.",
+    "options": [
+      { "id": "a", "text": "Social Engineering" },
+      { "id": "b", "text": "Impersonation" },
+      { "id": "c", "text": "Identity Thief" },
+      { "id": "d", "text": "A Penetration Tester" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-008", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "__________ is the process by which an attacker seeks to extract useful information from users, often by just tricking them into helping the attacker.",
+    "options": [
+      { "id": "a", "text": "Social engineering" },
+      { "id": "b", "text": "Identify fraud" },
+      { "id": "c", "text": "Prepending" },
+      { "id": "d", "text": "Hoax" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-010", "type": "mcq", "tags": ["threats.message-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "(A) __________ can come in person or through other means of communication, whereas phishing is generally relegated to e-communication & phone.  Although phishing can occur at any time, and with the specific goal of obtaining private information, a __________ can often be perpetuated on holidays or other special days and could be carried out simply for fun.",
+    "options": [
+      { "id": "a", "text": "Hoax" },
+      { "id": "b", "text": "Deception" },
+      { "id": "c", "text": "Publicized Falsehood" },
+      { "id": "d", "text": "Fake News" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-018", "type": "mcq", "tags": ["threats.file-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company mandates that all employees must shred sensitive documents before disposal. This practice is primarily intended to safeguard against which type of security threat?",
+    "options": [
+      { "id": "a", "text": "Shoulder Surfing" },
+      { "id": "b", "text": "Tailgating" },
+      { "id": "c", "text": "Dumpster Diving" },
+      { "id": "d", "text": "Phishing" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-020", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company's employees receive text messages claiming to be from the IT department, urging them to click a link to update their passwords immediately. The message warns of account suspension if they fail to comply. What type of attack does this scenario most likely represent?",
+    "options": [
+      { "id": "a", "text": "Shoulder Surfing" },
+      { "id": "b", "text": "Tailgating" },
+      { "id": "c", "text": "Smishing" },
+      { "id": "d", "text": "Dumpster Diving" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-033", "type": "mcq", "tags": ["threats.file-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A file server has a full backup performed each Monday at 1 AM. Incremental backups are performed at 1 AM on Tuesday, Wednesday, Thursday, and Friday. The system administrator needs to perform a full recovery of the file server on Thursday afternoon. How many backup sets would be required to complete the recovery?",
+    "options": [
+      { "id": "a", "text": "4" },
+      { "id": "b", "text": "3" },
+      { "id": "c", "text": "2" },
+      { "id": "d", "text": "1" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-039", "type": "mcq", "tags": ["threats.file-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A Linux administrator is downloading an updated version of her Linux distribution. The download site shows a link to the ISO and a SHA256 hash value. Which of these would describe the use of this hash value?",
+    "options": [
+      { "id": "a", "text": "Verifies that the file was not corrupted during the file transfer" },
+      { "id": "b", "text": "Provides a key for decrypting the ISO after download" },
+      { "id": "c", "text": "Authenticates the site as an official ISO distribution site" },
+      { "id": "d", "text": "Confirms that the file does not contain any malware" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-040", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A malicious user uses an Internet chat room to issue commands to 700 compromised computers around the world. The zombies are instructed to execute a smurf attack against a web site. What is the BEST description of this type of attack is this?",
+    "options": [
+      { "id": "a", "text": "Distributed denial of service" },
+      { "id": "b", "text": "Exploitation framework" },
+      { "id": "c", "text": "Distributed cracker" },
+      { "id": "d", "text": "Denial of Service" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-041", "type": "mcq", "tags": ["threats.image-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A manufacturing company would like to track the progress of parts as they are used on an assembly line. Which of the following technologies would be the BEST choice for this task?",
+    "options": [
+      { "id": "a", "text": "Blockchain" },
+      { "id": "b", "text": "Quantum computing" },
+      { "id": "c", "text": "Hashing" },
+      { "id": "d", "text": "Asymmetric encryption" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-046", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A network administrator wants to review all active connections and listening ports on a server to check for any unauthorized or suspicious connections. Which command would be most appropriate for this purpose?",
+    "options": [
+      { "id": "a", "text": "ping 10.10.10.1" },
+      { "id": "b", "text": "nmap -sV 10.10.10.1" },
+      { "id": "c", "text": "tracert 10.10.10.1" },
+      { "id": "d", "text": "netstat -an" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-049", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A phisher is trying to acquire money from a business.  So, they perform some steps that include; * Phishers attempt to find contracts and names of suppliers providing goods to a particular company. * They impersonate a legitimate supplier and send bills to subordinate personnel. * They try to solidify their efforts by sending fake letters that claim to come from the actual supplier’s designated bank.These scams take advantage of the fact that the average email user or someone handling administrative tasks for a business (or personal affairs) may not know whether any product or service has actually been purchased.  What type of attack is this?",
+    "options": [
+      { "id": "a", "text": "Invoice Scams" },
+      { "id": "b", "text": "Phishing emails" },
+      { "id": "c", "text": "Credential Harvesting" },
+      { "id": "d", "text": "Arabian Prince attack" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-050", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A phishing attack that sends out bogus emails from businesses like your bank.  The purpose of this email is for you to log into your bank account.  In this email, the attacker would provide you with a link that would take you to their fake website that would collect your username and password before sending you to the legitimate site.  What attack is this?",
+    "options": [
+      { "id": "a", "text": "Credential Harvesting" },
+      { "id": "b", "text": "Pharming" },
+      { "id": "c", "text": "Watering Hole attack" },
+      { "id": "d", "text": "Password Harvesting" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-053", "type": "mcq", "tags": ["threats.image-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator has discovered that an employee has been exfiltrating confidential company information by embedding the data within image files and emailing the images to a third-party. Which of the following would best describe this activity?",
+    "options": [
+      { "id": "a", "text": "Steganography" },
+      { "id": "b", "text": "Digital signatures" },
+      { "id": "c", "text": "Block cipher" },
+      { "id": "d", "text": "Perfect forward secrecy" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-056", "type": "mcq", "tags": ["threats.removable-device-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator is concerned about data exfiltration resulting from the use of malicious phone charging stations. Which of the following would be the BEST way to protect against this threat?",
+    "options": [
+      { "id": "a", "text": "USB data blocker" },
+      { "id": "b", "text": "Personal firewall" },
+      { "id": "c", "text": "MFA" },
+      { "id": "d", "text": "FDE" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-070", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A technology company is manufacturing a military-grade radar tracking system that can instantly identify any nearby unmanned aerial vehicles (UAVs). The UAV detector must be able to instantly identify and react to a vehicle without delay. Which of the following would BEST describe this tracking system?",
+    "options": [
+      { "id": "a", "text": "RTOS" },
+      { "id": "b", "text": "IoT" },
+      { "id": "c", "text": "ICS" },
+      { "id": "d", "text": "MFD" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-088", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An AI feature that enables it to accomplish tasks based on training data without explicit human instructions is called:",
+    "options": [
+      { "id": "a", "text": "API" },
+      { "id": "b", "text": "ML" },
+      { "id": "c", "text": "SDK" },
+      { "id": "d", "text": "VR" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-094", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An attacker has targeted a website that your company employees visit often. What attack type is this?",
+    "options": [
+      { "id": "a", "text": "Influencer campaign" },
+      { "id": "b", "text": "Propaganda" },
+      { "id": "c", "text": "Hybrid warfare" },
+      { "id": "d", "text": "Watering hole attack" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-096", "type": "mcq", "tags": ["threats.voice-call-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An employee receives a phone call from an individual claiming to be from the company's IT department, urgently requesting their login credentials to resolve a server issue. Which type of social engineering attack is this?",
+    "options": [
+      { "id": "a", "text": "Phishing" },
+      { "id": "b", "text": "Vishing" },
+      { "id": "c", "text": "Smishing" },
+      { "id": "d", "text": "Pretexting" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-103", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Brendon, one of the sales managers within your company, tries to visit www.facebook.com but is blocked from doing so. Brendon receives a message indicating that access to the site is not allowed. What type of security feature is being used to block Brendon from accessing the site?",
+    "options": [
+      { "id": "a", "text": "Access point" },
+      { "id": "b", "text": "Content filter" },
+      { "id": "c", "text": "Network address translation" },
+      { "id": "d", "text": "Firewall" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-105", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Chris wishes to see the connections that are listening on his personal computer.  What tool can he use to verify those active connections?",
+    "options": [
+      { "id": "a", "text": "Netstat" },
+      { "id": "b", "text": "Netcat" },
+      { "id": "c", "text": "Protocol Analyzer" },
+      { "id": "d", "text": "Nmap" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-107", "type": "mcq", "tags": ["threats.removable-device-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Demo cables have even been made with embedded Wi-Fi devices, enabling attacks against a Wi-Fi network from the cable itself.  What is this categorized as?",
+    "options": [
+      { "id": "a", "text": "Malicious USB cable" },
+      { "id": "b", "text": "O.MG cable" },
+      { "id": "c", "text": "Ninja cable" },
+      { "id": "d", "text": "Juice jacking cable" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-109", "type": "mcq", "tags": ["threats.default-credentials", "sy0-701", "public"], "difficulty": 2,
+    "stem": "During a security audit, Michael finds his company uses an off-the-shelf Wi-Fi router. What is the most critical initial action he should take to enhance its security?",
+    "options": [
+      { "id": "a", "text": "Create a dedicated network for visitors" },
+      { "id": "b", "text": "Implement encryption on the wireless network" },
+      { "id": "c", "text": "Activate monitoring for all Wi-Fi traffic" },
+      { "id": "d", "text": "Update the router's default login information" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-117", "type": "mcq", "tags": ["threats.removable-device-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a secure workstation environment, the goal is to completely prevent a user from accessing unauthorized removable media. Which of the following tools, when correctly configured and implemented, would guarantee this level of security?",
+    "options": [
+      { "id": "a", "text": "USB Data Blocker" },
+      { "id": "b", "text": "Biometric Reader with Authorization List" },
+      { "id": "c", "text": "Disk Encryption Software" },
+      { "id": "d", "text": "File Permission Settings" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-127", "type": "mcq", "tags": ["threats.supply-chain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In the context of virtualized environments, what does the term \"VM Sprawl\" refer to, and what is a primary concern associated with it?",
+    "options": [
+      { "id": "a", "text": "The rapid expansion of virtual machines, leading to unmanaged and often underutilized VMs." },
+      { "id": "b", "text": "The integration of VMs with physical servers, causing potential security vulnerabilities." },
+      { "id": "c", "text": "The automatic scaling of VMs in response to network traffic, potentially leading to bandwidth issues." },
+      { "id": "d", "text": "The use of multiple VM platforms, creating complexities in management and compatibility." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-133", "type": "mcq", "tags": ["threats.message-based-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Jane's smartphone starts receiving several text messages from an unknown sender.  This is known as ____________.",
+    "options": [
+      { "id": "a", "text": "Spam" },
+      { "id": "b", "text": "Email bombing" },
+      { "id": "c", "text": "Smishing" },
+      { "id": "d", "text": "SMS flooding" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-135", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Jim searches through LinkedIn profiles and finds Bill's profile. Jim copies Bill's profile and uses that information to get a job.  What did Jim commit?",
+    "options": [
+      { "id": "a", "text": "Identity Fraud" },
+      { "id": "b", "text": "Identity theft" },
+      { "id": "c", "text": "Social Engineering" },
+      { "id": "d", "text": "Catfishing" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-137", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Johnny, a malicious hacker, obtained a copy of his target company's phone directory.  He decided to contact various people in the Human Resources department in order to try to obtain some personal information about the company's employees.  What type of social engineering attempt did he perform?  Choose the best answer.",
+    "options": [
+      { "id": "a", "text": "Pharming" },
+      { "id": "b", "text": "Spear Phishing" },
+      { "id": "c", "text": "Whaling" },
+      { "id": "d", "text": "Collusion" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-140", "type": "mcq", "tags": ["threats.default-credentials", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Laura, while reviewing her office's network setup, notices they are using a standard wireless router. To begin enhancing its security, what should be her first step?",
+    "options": [
+      { "id": "a", "text": "Changing the default admin credentials" },
+      { "id": "b", "text": "Configuring network encryption settings" },
+      { "id": "c", "text": "Establishing a separate network for guest access" },
+      { "id": "d", "text": "Enabling network traffic monitoring" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-143", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Many employees fell for a phishing email that appeared to be from a department head and demanded that employees click on a link and complete an online survey by the end of the day. Which one of the following principles of influence did these employees succumb to?",
+    "options": [
+      { "id": "a", "text": "Authority" },
+      { "id": "b", "text": "Scarcity" },
+      { "id": "c", "text": "Whaling" },
+      { "id": "d", "text": "Social proof" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-145", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Megan, a cybersecurity specialist, is reviewing the port configuration of a critical server in her organization's network. An nmap scan reveals that TCP ports 21 (FTP), 443 (HTTPS), and 3389 (RDP) are open. Given the organization's strict security policy that mandates the use of secure, encrypted protocols for all remote connections and data transfer, Megan needs to determine which port(s) should be disabled to comply with this policy.Which port(s) should Megan disable to align with the organization's secure protocol requirements?",
+    "options": [
+      { "id": "a", "text": "21" },
+      { "id": "b", "text": "443" },
+      { "id": "c", "text": "21 and 3389" },
+      { "id": "d", "text": "3389" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-147", "type": "mcq", "tags": ["threats.unsecure-networks", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Mobile devices equipped for Bluetooth short-range wireless connectivity, such as laptops, tablets, and cell phones, are subject to receiving photos, messages, or other broadcast spam sent from nearby Bluetooth-enabled transmitting devices in an attack referred to as __________.",
+    "options": [
+      { "id": "a", "text": "Bluejacking" },
+      { "id": "b", "text": "Smurf attack" },
+      { "id": "c", "text": "Bluesnarfing" },
+      { "id": "d", "text": "SPIT" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-151", "type": "mcq", "tags": ["threats.supply-chain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Sam, a user in the purchasing department, would like to send an email to Jack. Which of these would allow Jack to verify the sender of the email?",
+    "options": [
+      { "id": "a", "text": "Digitally sign it with Sam’s private key" },
+      { "id": "b", "text": "Digitally sign it with Sam’s public key" },
+      { "id": "c", "text": "Digitally sign it with Jack’s private key" },
+      { "id": "d", "text": "Digitally sign it with Jack’s public key" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-152", "type": "mcq", "tags": ["threats.unsecure-networks", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Sara, the IT manager within your organization, wants to place a VPN concentrator on the network to accept VPN traffic from clients on the Internet. Where should she place the VPN concentrator?",
+    "options": [
+      { "id": "a", "text": "Public network" },
+      { "id": "b", "text": "Internet" },
+      { "id": "c", "text": "DMZ" },
+      { "id": "d", "text": "Private network" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-154", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Sarah, the HR manager of a corporation, gets an urgent email from the CEO who is reportedly at an overseas conference. The email requests an immediate transfer of funds for an unexpected business expense. Which social engineering attack does this scenario best represent?",
+    "options": [
+      { "id": "a", "text": "Phishing" },
+      { "id": "b", "text": "Vishing" },
+      { "id": "c", "text": "Smishing" },
+      { "id": "d", "text": "Whaling" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-158", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Subj: [EXTERNAL] How to capitalize on the current market downward spiralIn the subject line above, [EXTERNAL] is used to help identify if an email came from outside a companies network.  This helps with identifying potentially spoofed email addresses.  What is adding [EXTERNAL] to the subject line called?",
+    "options": [
+      { "id": "a", "text": "Pretending" },
+      { "id": "b", "text": "Prescreening" },
+      { "id": "c", "text": "Prepending" },
+      { "id": "d", "text": "Pretexting" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-162", "type": "mcq", "tags": ["threats.voice-call-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "The practice of modifying an application's code without changing its external behavior is referred to as:",
+    "options": [
+      { "id": "a", "text": "API call" },
+      { "id": "b", "text": "Sideloading" },
+      { "id": "c", "text": "Refactoring" },
+      { "id": "d", "text": "Shimming" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-164", "type": "mcq", "tags": ["threats.voice-call-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "The practice of using a telephone system to manipulate a user into disclosing confidential information is known as:",
+    "options": [
+      { "id": "a", "text": "Pharming" },
+      { "id": "b", "text": "Whaling" },
+      { "id": "c", "text": "Spear phishing" },
+      { "id": "d", "text": "Vishing" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-167", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "There is a new vulnerability discovered for systems running Remote Desktop. What tool could you use to discover which systems on the network are running Remote Desktop?",
+    "options": [
+      { "id": "a", "text": "ping" },
+      { "id": "b", "text": "traceroute" },
+      { "id": "c", "text": "nmap" },
+      { "id": "d", "text": "dd" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-168", "type": "mcq", "tags": ["threats.unsecure-networks", "sy0-701", "public"], "difficulty": 2,
+    "stem": "These utilities trace the route a packet takes and record the hops along the way. They are good tools to use to find out where a packet is getting hung up.",
+    "options": [
+      { "id": "a", "text": "tracert/traceroute" },
+      { "id": "b", "text": "nslookup/dig" },
+      { "id": "c", "text": "netstat/nbtstat" },
+      { "id": "d", "text": "netcat/hping" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-176", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Thomas, a finance director, gets an urgent email for a wire transfer from an email claiming to be the company's president at a technology summit. What type of social engineering attack is this?",
+    "options": [
+      { "id": "a", "text": "Whaling" },
+      { "id": "b", "text": "Spear Phishing" },
+      { "id": "c", "text": "Impersonation" },
+      { "id": "d", "text": "Credential Harvesting" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-178", "type": "mcq", "tags": ["threats.supply-chain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "To process the company payroll, a manager logs into a third-party browser-based application and enters the hours worked for each employee. The financial transfers and physical check mailings are all provided by the third-party company. The manager does not maintain any servers or virtual machines within his company. Which of the following would BEST describe this application model?",
+    "options": [
+      { "id": "a", "text": "SaaS" },
+      { "id": "b", "text": "Private" },
+      { "id": "c", "text": "IaaS" },
+      { "id": "d", "text": "PaaS" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-180", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Tom, a financial controller, received an email asking to update the bank account details for payments. The email seemed to come from a regular supplier, but the email address was slightly different: supplier@exampl3. co instead of supplier@example.co .Identify the type of social engineering attack in this scenario.",
+    "options": [
+      { "id": "a", "text": "Whaling" },
+      { "id": "b", "text": "Business Email Compromise" },
+      { "id": "c", "text": "Smishing" },
+      { "id": "d", "text": "Pretexting" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-181", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Upon noticing the registration of a domain that closely resembles your legitimate e-commerce site using 'buyelectronicsnow.com' in place of  'buyelectronixnow.com. What cybersecurity threat does this scenario most likely represent?",
+    "options": [
+      { "id": "a", "text": "Spear Phishing" },
+      { "id": "b", "text": "Phishing" },
+      { "id": "c", "text": "Organized Crime" },
+      { "id": "d", "text": "Typosquatting" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-182", "type": "mcq", "tags": ["threats.removable-device-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "USB dropping is a well-known means of attack, where the attacker leaves tainted USB devices for people to pick up and use. What are these devices classified as?",
+    "options": [
+      { "id": "a", "text": "Malicious Flash Drives" },
+      { "id": "b", "text": "Bait" },
+      { "id": "c", "text": "Bad USB" },
+      { "id": "d", "text": "Mobile code repository" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-183", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Various attacks—such as phishing, whaling, and vishing—that can also be classified as social engineering but that rely on technical methods to accomplish the goals. Such attacks are attacks on humans and take advantage of human psychology. People tend to trust others. People tend to want to be helpful to those in need. Because of these tendencies, adequate and ongoing training is required to counteract potential attacks. These techniques by themselves are first and foremost about ____________ that can directly or indirectly lead to sensitive data loss or other compromise.",
+    "options": [
+      { "id": "a", "text": "Eliciting Information" },
+      { "id": "b", "text": "Social engineering" },
+      { "id": "c", "text": "Making money" },
+      { "id": "d", "text": "Compromising a Network" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-204", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What type of cyber-attack involves overlaying a clickable layer over what appears to be a legitimate webpage button or link, tricking users into unintended actions that could compromise their security?",
+    "options": [
+      { "id": "a", "text": "Clickjacking" },
+      { "id": "b", "text": "Phishing" },
+      { "id": "c", "text": "Spoofing" },
+      { "id": "d", "text": "Ransomware" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-211", "type": "mcq", "tags": ["threats.supply-chain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which acronym represents a company that specializes in managing and monitoring its client's IT security systems?",
+    "options": [
+      { "id": "a", "text": "MSA" },
+      { "id": "b", "text": "SaaS" },
+      { "id": "c", "text": "MSP" },
+      { "id": "d", "text": "MSSP" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-226", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is an effective way to get information in crowded places such as airports, conventions, or supermarkets?",
+    "options": [
+      { "id": "a", "text": "Vishing" },
+      { "id": "b", "text": "Shoulder surfing" },
+      { "id": "c", "text": "Typo squatting" },
+      { "id": "d", "text": "Phishing" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-228", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is the best defense against social engineering?",
+    "options": [
+      { "id": "a", "text": "Cross-site Scripting" },
+      { "id": "b", "text": "Intimidation" },
+      { "id": "c", "text": "Awareness and education" },
+      { "id": "d", "text": "Influence campaign" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-229", "type": "mcq", "tags": ["threats.supply-chain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following processes merges developed code, tests for issues, and automatically moves the newly developed application to production without any human intervention?",
+    "options": [
+      { "id": "a", "text": "Continuous deployment" },
+      { "id": "b", "text": "Continuity of operations" },
+      { "id": "c", "text": "Continuous delivery" },
+      { "id": "d", "text": "Continuous integration" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-230", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following simple command-line tools would be used from the host to determine what open ports a host is listening on?",
+    "options": [
+      { "id": "a", "text": "netstat" },
+      { "id": "b", "text": "ping" },
+      { "id": "c", "text": "ifconfig" },
+      { "id": "d", "text": "nbtstat" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-232", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following terms refers to a form of phishing in which the goal is to send an e-mail to trick someone very important in the organization into giving out their account name and password?",
+    "options": [
+      { "id": "a", "text": "Whaling" },
+      { "id": "b", "text": "Impersonation" },
+      { "id": "c", "text": "Vishing" },
+      { "id": "d", "text": "Gold phishing" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-233", "type": "mcq", "tags": ["threats.voice-call-vectors", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following terms refers to the practice of stealing or obtaining a user's personal or account information, typically using voice over IP (VoIP) systems?",
+    "options": [
+      { "id": "a", "text": "Phishing" },
+      { "id": "b", "text": "Whaling" },
+      { "id": "c", "text": "Vishing" },
+      { "id": "d", "text": "VolP hijacking" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-244", "type": "mcq", "tags": ["threats.open-service-ports", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of these would be used to provide HA for a web-based database application?",
+    "options": [
+      { "id": "a", "text": "UPS" },
+      { "id": "b", "text": "SIEM" },
+      { "id": "c", "text": "DLP" },
+      { "id": "d", "text": "VPN concentrator" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-247", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which social engineering attack relies on identity theft?",
+    "options": [
+      { "id": "a", "text": "Dumpster diving" },
+      { "id": "b", "text": "Impersonation" },
+      { "id": "c", "text": "Watering hole attack" },
+      { "id": "d", "text": "Shoulder surfing" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-254", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "While influence campaigns, propaganda, and disinformation have been around for many centuries, their use has expanded largely due to the Internet and, specifically, social media. The Internet has provided an opportunity to widely disseminate information, and social media has provided an opportunity for it to spread. __________ can and often does include a combination of these methods, but the psychological, economic, and political influence aspects go beyond just distraction to achieving greater goals, such as dividing public opinion by exploiting societal vulnerabilities.",
+    "options": [
+      { "id": "a", "text": "Influence Campaign" },
+      { "id": "b", "text": "Hybrid Warfare" },
+      { "id": "c", "text": "A Political Campaign" },
+      { "id": "d", "text": "Social Engineering" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-257", "type": "mcq", "tags": ["threats.social-engineering", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Workers also might put discarded equipment into the garbage if city laws do not require special disposal. Intruders know this and scavenge for discarded equipment and documents in an act called __________.",
+    "options": [
+      { "id": "a", "text": "Dumpster Diving" },
+      { "id": "b", "text": "Scavenging" },
+      { "id": "c", "text": "Dumpster surfing" },
+      { "id": "d", "text": "Hobo Marking" }
+    ],
+    "answer": ["a"]
+  }
+]

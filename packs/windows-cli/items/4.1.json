@@ -4,9 +4,7 @@
     "difficulty": 2,
     "lab": "lab-office-01",
     "id": "win-m-05",
-    "concept_ids": [
-      "4.1.curl-headers"
-    ],
+    "tags": ["network.http-headers", "windows-cli", "public"],
     "stem": "The IP camera cam-01 has a web page. Which web server software does its Server header name?",
     "answer": {
       "accept": [
@@ -20,9 +18,7 @@
   {
     "id": "win-q-curl-1",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.curl-headers"
-    ],
+    "tags": ["network.http-headers", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "Which line names the web server software on the camera?",
     "show": {
@@ -58,9 +54,7 @@
   {
     "id": "win-q-curl-2",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.curl-headers"
-    ],
+    "tags": ["network.http-headers", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "What should an assessor note about 'Boa/0.94.14rc21' on an IP camera?",
     "show": {
@@ -96,9 +90,7 @@
   {
     "id": "win-q-curl-3",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.curl-headers"
-    ],
+    "tags": ["network.http-headers", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "What does 'Failed to connect to 192.168.10.1:80' tell you?",
     "show": {
@@ -134,9 +126,7 @@
   {
     "id": "win-q-file-1",
     "type": "mcq",
-    "concept_ids": [
-      "4.1.reading-files"
-    ],
+    "tags": ["windows.reading-files", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "According to the file, where does this PC get its gateway and DNS settings?",
     "show": {
@@ -168,73 +158,5 @@
       "c"
     ],
     "explain": "type prints a text file. Reading local notes is often the quickest way to learn how a machine is set up."
-  },
-  {
-    "id": "win-q-file-2",
-    "type": "mcq",
-    "concept_ids": [
-      "4.1.reading-files"
-    ],
-    "difficulty": 1,
-    "stem": "Which Windows command prints the contents of a text file, like cat on Linux?",
-    "options": [
-      {
-        "id": "a",
-        "text": "hostname",
-        "why": "That prints the computer's name."
-      },
-      {
-        "id": "b",
-        "text": "ipconfig",
-        "why": "That shows network settings."
-      },
-      {
-        "id": "c",
-        "text": "netstat",
-        "why": "That shows connections."
-      },
-      {
-        "id": "d",
-        "text": "type"
-      }
-    ],
-    "answer": [
-      "d"
-    ],
-    "explain": "type readme.txt prints the file. The Linux counterpart is cat."
-  },
-  {
-    "id": "win-q-file-3",
-    "type": "mcq",
-    "concept_ids": [
-      "4.1.reading-files"
-    ],
-    "difficulty": 1,
-    "stem": "Which Windows command searches text for a string, like grep on Linux?",
-    "options": [
-      {
-        "id": "a",
-        "text": "findstr"
-      },
-      {
-        "id": "b",
-        "text": "hostname",
-        "why": "That prints the computer's name."
-      },
-      {
-        "id": "c",
-        "text": "ipconfig",
-        "why": "That shows network settings."
-      },
-      {
-        "id": "d",
-        "text": "netstat",
-        "why": "That shows connections."
-      }
-    ],
-    "answer": [
-      "a"
-    ],
-    "explain": "findstr prints the lines that contain a string, for example: findstr DHCP readme.txt."
   }
 ]

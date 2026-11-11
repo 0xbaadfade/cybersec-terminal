@@ -2,6 +2,7 @@
   "id": "linux-cli",
   "title": "Linux Command Line",
   "short": "LINUX CLI",
+  "tags": ["linux-cli"],
   "version": 1,
   "rounds_include_labs": true,
   "exam": { "questions": 30, "minutes": 30, "pass_percent": 70 },
@@ -35,15 +36,18 @@
       "concepts": [
         {
           "id": "1.1.ping",
-          "title": "Ping and reachability"
+          "title": "Ping and reachability",
+          "topics": ["network.ping"]
         },
         {
           "id": "1.1.port-scan",
-          "title": "Port scans"
+          "title": "Port scans",
+          "topics": ["network.port-scan"]
         },
         {
           "id": "1.1.service-versions",
-          "title": "Service versions"
+          "title": "Service versions",
+          "topics": ["network.service-versions"]
         }
       ]
     },
@@ -54,15 +58,18 @@
       "concepts": [
         {
           "id": "2.1.forward-lookup",
-          "title": "Looking up a name"
+          "title": "Looking up a name",
+          "topics": ["network.dns-lookup"]
         },
         {
           "id": "2.1.record-types",
-          "title": "Record types"
+          "title": "Record types",
+          "topics": ["network.dns-record-types"]
         },
         {
           "id": "2.1.reverse-lookup",
-          "title": "Reverse lookups"
+          "title": "Reverse lookups",
+          "topics": ["network.dns-reverse-lookup"]
         }
       ]
     },
@@ -73,15 +80,18 @@
       "concepts": [
         {
           "id": "3.1.interfaces",
-          "title": "Addresses, MAC and routes"
+          "title": "Addresses, MAC and routes",
+          "topics": ["network.interfaces"]
         },
         {
           "id": "3.1.listening-ports",
-          "title": "Listening services"
+          "title": "Listening services",
+          "topics": ["network.listening-ports"]
         },
         {
           "id": "3.1.connections",
-          "title": "Connections"
+          "title": "Connections",
+          "topics": ["network.connections"]
         }
       ]
     },
@@ -92,7 +102,8 @@
       "concepts": [
         {
           "id": "4.1.http-headers",
-          "title": "Status codes and headers"
+          "title": "Status codes and headers",
+          "topics": ["network.http-headers"]
         }
       ]
     }

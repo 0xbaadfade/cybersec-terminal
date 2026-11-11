@@ -148,17 +148,17 @@ func test_answer_yield_scales_what_an_answer_pays() -> void:
 func test_node_output_scales_every_node() -> void:
 	for i in range(2):
 		Mastery.apply(_profile, Support.make_item("x", "1.1.a"), 1.0, Support.T0, _rules)  # box 2 = 2/min
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today, _rules), 2.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today, _rules), 2.0)
 	_give("node_output", 5)
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today, _rules), 3.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today, _rules), 3.0)
 
 
 func test_stale_floor_raises_a_stale_nodes_share() -> void:
 	for i in range(3):
 		Mastery.apply(_profile, Support.make_item("x", "1.1.a"), 1.0, Support.T0, _rules)  # box 3 = 4/min, due in 4 days
-	assert_eq(Economy.node_rate(_profile, "1.1.a", _today + 4, _rules), 1.0)
+	assert_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today + 4, _rules), 1.0)
 	_give("stale_floor", 3)  # 25% + 30 points = 55%
-	assert_almost_eq(Economy.node_rate(_profile, "1.1.a", _today + 4, _rules), 2.2, 0.0001)
+	assert_almost_eq(Economy.node_rate(_profile, [Support.topic_of("1.1.a")], _today + 4, _rules), 2.2, 0.0001)
 
 
 func test_repeat_payout_raises_the_same_day_share() -> void:

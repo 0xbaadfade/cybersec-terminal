@@ -1,0 +1,805 @@
+[
+  {
+    "id": "aiken-domain-2-009", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "__________ or input validation is the root cause behind most overflows, injection attacks, and canonical structure errors.",
+    "options": [
+      { "id": "a", "text": "Improper Input Handling" },
+      { "id": "b", "text": "Improper Error Handling" },
+      { "id": "c", "text": "Code Reuse" },
+      { "id": "d", "text": "Software Debugging" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-013", "type": "mcq", "tags": ["vulns.virtualization", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company has been informed of a hypervisor vulnerability that could allow users on one virtual machine to access resources on another virtual machine. Which of the following would BEST describe this vulnerability?",
+    "options": [
+      { "id": "a", "text": "VM escape" },
+      { "id": "b", "text": "Containerization" },
+      { "id": "c", "text": "Service integration" },
+      { "id": "d", "text": "SDN" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-014", "type": "mcq", "tags": ["vulns.hardware", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company has rolled out a new application that requires the use of a hardware-based token generator. Which of the following would be the BEST description of this access feature?",
+    "options": [
+      { "id": "a", "text": "Something you have" },
+      { "id": "b", "text": "Something you are" },
+      { "id": "c", "text": "Something you do" },
+      { "id": "d", "text": "Something you know" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-015", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company is designing an application that will have a high demand and will require significant computing resources during the summer. During the winter, there will be little to no application use and resource use should be minimal. Which of these characteristics BEST describe this application requirement?",
+    "options": [
+      { "id": "a", "text": "Elasticity" },
+      { "id": "b", "text": "Imaging" },
+      { "id": "c", "text": "Orchestration" },
+      { "id": "d", "text": "Availability" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-025", "type": "mcq", "tags": ["vulns.cryptographic", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A cybercriminal manipulates a connection to revert to a previous, more vulnerable version of its communication protocol, exposing it to well-documented security flaws. Which attack method does this scenario illustrate?",
+    "options": [
+      { "id": "a", "text": "Protocol Manipulation" },
+      { "id": "b", "text": "Downgrade Attack" },
+      { "id": "c", "text": "Replay Attack" },
+      { "id": "d", "text": "Injection Attack" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-036", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A hacker designs malicious code to cause an application to search an area of memory that does not hold any data for the application causing the application to experience errors.  What type of attack is this?",
+    "options": [
+      { "id": "a", "text": "Pointer dereference" },
+      { "id": "b", "text": "Misdirect" },
+      { "id": "c", "text": "Buffer overflow" },
+      { "id": "d", "text": "DoS" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-052", "type": "mcq", "tags": ["vulns.cloud-specific", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator has configured a virtual machine in a screened subnet with a guest login account and no password. Which of the following would be the MOST likely reason for this configuration?",
+    "options": [
+      { "id": "a", "text": "The server is a honeypot for attracting potential attackers" },
+      { "id": "b", "text": "The server is a cloud storage service for remote users" },
+      { "id": "c", "text": "The server will be used as a VPN concentrator" },
+      { "id": "d", "text": "The server is a development sandbox for third-party programming projects" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-054", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator has identified an internally developed application that allows users to modify SQL queries through a web-based front-end. To prevent this modification, the administrator has recommended that all queries be completely removed from the application front-end and placed onto the back-end of the application server. Which of the following would describe this implementation?",
+    "options": [
+      { "id": "a", "text": "Stored procedures" },
+      { "id": "b", "text": "Obfuscation" },
+      { "id": "c", "text": "Code signing" },
+      { "id": "d", "text": "Input validation" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-057", "type": "mcq", "tags": ["vulns.virtualization", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator is designing a storage array that would maintain an exact replica of all data without striping. The array needs to operate normally if a single drive was to fail. Which of the following would be the BEST choice for this storage system?",
+    "options": [
+      { "id": "a", "text": "RAID 1" },
+      { "id": "b", "text": "RAID 5" },
+      { "id": "c", "text": "RAID 0" },
+      { "id": "d", "text": "RAID 10" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-058", "type": "mcq", "tags": ["vulns.cryptographic", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security administrator is researching the methods used by attackers to gain access to web servers. Which of the following would provide additional information about these techniques?",
+    "options": [
+      { "id": "a", "text": "Honeypot" },
+      { "id": "b", "text": "Obfuscation" },
+      { "id": "c", "text": "Hashing" },
+      { "id": "d", "text": "IPS" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-064", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security professional evaluates the risks of modifying company-issued iPhones to install unofficial apps by granting root access. What is this practice called?",
+    "options": [
+      { "id": "a", "text": "Rooting" },
+      { "id": "b", "text": "Carrier Unblocking" },
+      { "id": "c", "text": "Firmware Customization" },
+      { "id": "d", "text": "Jailbreaking" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-065", "type": "mcq", "tags": ["vulns.zero-day", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A situation in which a web form field accepts data other than expected (e.g. server commands) is an example of:",
+    "options": [
+      { "id": "a", "text": "Zero-day vulnerability" },
+      { "id": "b", "text": "Improper input validation" },
+      { "id": "c", "text": "Default configuration" },
+      { "id": "d", "text": "Improper error handling" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-066", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A situation in which an application fails to properly release memory allocated to it is known as:",
+    "options": [
+      { "id": "a", "text": "Memory leak" },
+      { "id": "b", "text": "Buffer overflow" },
+      { "id": "c", "text": "Race condition" },
+      { "id": "d", "text": "Integer overflow" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-067", "type": "mcq", "tags": ["vulns.os-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A system administrator discovers that a malicious program has embedded itself deep within the operating system of a company's server, granting unauthorized access and control to an external attacker. This program is difficult to detect and remove. What is this type of mal ware known as?",
+    "options": [
+      { "id": "a", "text": "Spyware" },
+      { "id": "b", "text": "Rootkit" },
+      { "id": "c", "text": "Adware" },
+      { "id": "d", "text": "Trojan" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-071", "type": "mcq", "tags": ["vulns.cloud-specific", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A transportation company maintains a scheduling application and a database in a virtualized cloud-based environment. Which of the following would be the BEST way to backup these services?",
+    "options": [
+      { "id": "a", "text": "Snapshot" },
+      { "id": "b", "text": "Full" },
+      { "id": "c", "text": "Differential" },
+      { "id": "d", "text": "Incremental" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-076", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A user submits a comment on a blog that contains a script. When other users view the comment, the script runs in their browsers, stealing cookies and session data. What type of attack does this represent?",
+    "options": [
+      { "id": "a", "text": "Denial of Service" },
+      { "id": "b", "text": "SQL Injection" },
+      { "id": "c", "text": "Cross-Site Scripting (XSS)" },
+      { "id": "d", "text": "Clickjacking" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-079", "type": "mcq", "tags": ["vulns.cryptographic", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A wireless disassociation attack is a type of:",
+    "options": [
+      { "id": "a", "text": "Deauthentication attack" },
+      { "id": "b", "text": "Downgrade attack" },
+      { "id": "c", "text": "Brute-force attack" },
+      { "id": "d", "text": "Cryptographic attack" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-080", "type": "mcq", "tags": ["vulns.cloud-specific", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A wireless disassociation attack is a type of:",
+    "options": [
+      { "id": "a", "text": "Cryptographic attack" },
+      { "id": "b", "text": "Downgrade attack" },
+      { "id": "c", "text": "Brute-force attack" },
+      { "id": "d", "text": "Denial-of-Service (DoS) attack" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-085", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "All of the following are potential application security issues requiring attention except which one?",
+    "options": [
+      { "id": "a", "text": "Sql injection" },
+      { "id": "b", "text": "Malware" },
+      { "id": "c", "text": "Cross-site scripting" },
+      { "id": "d", "text": "Buffer overflows" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-090", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An application developer is creating a mobile device app that will include extensive encryption and decryption. Which of the following technologies would be the BEST choice for this app?",
+    "options": [
+      { "id": "a", "text": "Elliptic curve" },
+      { "id": "b", "text": "AES" },
+      { "id": "c", "text": "Diffie-Hellman" },
+      { "id": "d", "text": "PGP" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-091", "type": "mcq", "tags": ["vulns.zero-day", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An attacker discovers an unknown vulnerability in a popular software application and immediately begins exploiting it before the software developer can release a patch. What type of attack is this?",
+    "options": [
+      { "id": "a", "text": "Social Engineering" },
+      { "id": "b", "text": "Zero-Day Attack" },
+      { "id": "c", "text": "Rootkit Installation" },
+      { "id": "d", "text": "Phishing" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-093", "type": "mcq", "tags": ["vulns.cryptographic", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An attacker forces a network connection to use an older, less secure version of a communication protocol, making it susceptible to known vulnerabilities. What type of attack is this?",
+    "options": [
+      { "id": "a", "text": "Downgrade Attack" },
+      { "id": "b", "text": "On-Path Attack" },
+      { "id": "c", "text": "Phishing" },
+      { "id": "d", "text": "SQL Injection" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-098", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An IPS at your company has found a sharp increase in traffic from all-in-one printers. After researching, your security team has found a vulnerability associated with these devices that allows the device to be remotely controlled by a third-party. Which category would BEST describe these devices?",
+    "options": [
+      { "id": "a", "text": "IoT" },
+      { "id": "b", "text": "RTOS" },
+      { "id": "c", "text": "MFD" },
+      { "id": "d", "text": "SoC" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-099", "type": "mcq", "tags": ["threats.supply-chain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization's network is compromised after an update to third-party accounting software introduces unauthorized access points. This breach was not due to a direct attack on the organization's own systems. What type of attack does this scenario best illustrate?",
+    "options": [
+      { "id": "a", "text": "Insider threat" },
+      { "id": "b", "text": "Supply chain attack" },
+      { "id": "c", "text": "Spear-phishing" },
+      { "id": "d", "text": "Service denial" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-102", "type": "mcq", "tags": ["vulns.zero-day", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Bob, a cybersecurity analyst at XYZ Corp, finds that the company's server software is outdated by several months, exposing it to a known exploit. In cybersecurity terms, what has Bob identified in this scenario?",
+    "options": [
+      { "id": "a", "text": "Risk" },
+      { "id": "b", "text": "Threat" },
+      { "id": "c", "text": "Vulnerability" },
+      { "id": "d", "text": "Incident" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-104", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Chandra is a software developer. She has just completed a web application for a hardened e-commerce web site. What should be done before the application goes live?",
+    "options": [
+      { "id": "a", "text": "Use security fuzzing." },
+      { "id": "b", "text": "Patch the web server." },
+      { "id": "c", "text": "Ping the web site to ensure it is functional." },
+      { "id": "d", "text": "Test the PKI code in the web application." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-118", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a software application, developers identified a vulnerability where a resource's state changes between its security check (Time of Check, TOC) and the time it's used (Time of Use, TaU), leading to unexpected behavior. What type of issue does this scenario describe?",
+    "options": [
+      { "id": "a", "text": "Race Condition" },
+      { "id": "b", "text": "Concurrency Error" },
+      { "id": "c", "text": "Permission Elevation Flaw" },
+      { "id": "d", "text": "Buffer Overflow" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-125", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In the context of Android devices, what is 'sideloading,' and what security implications does it have?",
+    "options": [
+      { "id": "a", "text": "Sideloading is the recommended method for installing official updates on Android devices." },
+      { "id": "b", "text": "Sideloading refers to transferring files between two Android devices securely." },
+      { "id": "c", "text": "Sideloading is the process of installing apps via APK files from sources other than the Google Play Store, potentially weakening security." },
+      { "id": "d", "text": "Sideloading is a technique used to increase the battery life of Android devices." }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-126", "type": "mcq", "tags": ["vulns.virtualization", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In the context of virtualization and cloud computing, which of the following definitions is incorrect?",
+    "options": [
+      { "id": "a", "text": "Hypervisor: A physical component in virtualization technology that enhances the processing power of virtual machines on a server." },
+      { "id": "b", "text": "Cloud Elasticity: The capability of a cloud computing service to dynamically adjust and allocate computational resources based on the current demand, typically in an automated manner." },
+      { "id": "c", "text": "Virtual Machine (VM): A software-based emulation of a physical computer, functioning within a larger system and possessing its own operating system and allocated resources." },
+      { "id": "d", "text": "Cloud Scalability: The ability of a cloud environment to efficiently scale resources up or down to suit varying workload requirements." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-129", "type": "mcq", "tags": ["vulns.cryptographic", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In this attack, the attacker takes advantage of a commonly employed principle to support backward compatibility, to downgrade the security to a lower or nonexistent state.",
+    "options": [
+      { "id": "a", "text": "Downgrade attack" },
+      { "id": "b", "text": "XSS" },
+      { "id": "c", "text": "TLS to SSL" },
+      { "id": "d", "text": "Backwards compatibility" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-134", "type": "mcq", "tags": ["vulns.zero-day", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Jim believes that his database system has been attacked. He calls the database software vendor, which acknowledges that many of its customers are experiencing a similar situation. However, the vendor is unaware of any weaknesses or vulnerabilities. What has most likely occurred?",
+    "options": [
+      { "id": "a", "text": "Zero day attack" },
+      { "id": "b", "text": "Zero hour attack" },
+      { "id": "c", "text": "Glitch" },
+      { "id": "d", "text": "Misconfiguration" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-136", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Johnny was able to login to a public web server through an unsecured logical port.  He was able to access several HTML pages and embed malicious code on them so as to be undetectable by users who loaded the web pages into their web browsers.  This will allow him to steal information directly from their computers.  What type of attack is he planning on executing?",
+    "options": [
+      { "id": "a", "text": "CSS" },
+      { "id": "b", "text": "XSRF" },
+      { "id": "c", "text": "DDOS" },
+      { "id": "d", "text": "XSS" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-148", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "On an online education platform, a malicious actor injects a script into a discussion post. This script steals session data (like cookies and tokens) when unsuspecting users' browsers execute it. What kind of cybersecurity attack does this scenario describe?",
+    "options": [
+      { "id": "a", "text": "Cross-Site Scripting (XSS)" },
+      { "id": "b", "text": "Phishing" },
+      { "id": "c", "text": "Man-in-the-Middle Attack" },
+      { "id": "d", "text": "Credential Stuffing" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-149", "type": "mcq", "tags": ["vulns.misconfiguration", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Race conditions are also associated with allowing attackers to exploit system processes to gain elevated access to areas that otherwise should be restricted. This is known as __________.",
+    "options": [
+      { "id": "a", "text": "Privilege escalation" },
+      { "id": "b", "text": "Directory traversal" },
+      { "id": "c", "text": "Out-of-order action" },
+      { "id": "d", "text": "Improper input handling" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-150", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Rachel, a web developer, is reviewing website logs and notices a recurring entry: <script>alert ( 'Alert' )</sc ript> being submitted in a user feedback form. She recognizes this pattern as potentially harmful.Task: Determine the type of web security vulnerability this pattern suggests and recommend an appropriate countermeasure.",
+    "options": [
+      { "id": "a", "text": "SQL Injection; use parameterized queries." },
+      { "id": "b", "text": "Cross-Site Scripting (XSS); implement input validation and encoding." },
+      { "id": "c", "text": "Buffer Overflow; increase storage allocation for inputs." },
+      { "id": "d", "text": "CSRF Attack; introduce anti-CSRF tokens." }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-156", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Some computer languages use a construct referred to as a _pointer,_ a construct that refers to the memory location that holds the variable, as opposed to a variable, where the value is stored directly in the memory location. To get the value at the memory location denoted by a pointer variable, one must __________ the pointer. The act of __________ a pointer now changes the meaning of the object to the contents of the memory location, not the memory location as identified by the pointer.",
+    "options": [
+      { "id": "a", "text": "dereference, dereferencing" },
+      { "id": "b", "text": "parse, parsing" },
+      { "id": "c", "text": "null, nulling" },
+      { "id": "d", "text": "instantiate, instantiating" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-160", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "The act of installing applications on a smartphone from an unapproved source is known as ____________.",
+    "options": [
+      { "id": "a", "text": "Backdooring" },
+      { "id": "b", "text": "Sideloading" },
+      { "id": "c", "text": "Sidemounting" },
+      { "id": "d", "text": "Rooting" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-161", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "The network design of an online women's apparel company includes a primary data center in the United States and secondary data centers in London and Tokyo. Customers place orders online via HTTPS to servers at the closest data center, and these orders and customer profiles are then centrally stored in the United States data center. The connections between all data centers use Internet links with IPsec tunnels. Fulfillment requests are sent from the United States data center to shipping locations in the customer’s country. Which of the following should be the CIO’s MOST significant security concern with this existing network design?",
+    "options": [
+      { "id": "a", "text": "Customer information is transferred between countries" },
+      { "id": "b", "text": "The data centers are located geographically distant from each other" },
+      { "id": "c", "text": "Fulfillment requests are shipped within the customer’s country" },
+      { "id": "d", "text": "IPsec connects data centers over public Internet links" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-165", "type": "mcq", "tags": ["vulns.os-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "The technique used to discover the type of operating system at a particular I.P. address is known as ______________.  (Choose the best answer)",
+    "options": [
+      { "id": "a", "text": "Banner grabbing" },
+      { "id": "b", "text": "Port scanning" },
+      { "id": "c", "text": "Reconnaissance" },
+      { "id": "d", "text": "Network discovery" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-173", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "This is another type of overflow that is specific to whole numbers. For example, 12 but not 12.1. When programs do not carefully account for this, undesirable behaviors and consequences can result.",
+    "options": [
+      { "id": "a", "text": "Buffer Overflow" },
+      { "id": "b", "text": "String Overflow" },
+      { "id": "c", "text": "Invalid Boolean" },
+      { "id": "d", "text": "Integer Overflow" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-175", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "This occurs when the data presented to an application or service exceeds the storage space that has been reserved in memory for that application or service.",
+    "options": [
+      { "id": "a", "text": "Buffer overflow" },
+      { "id": "b", "text": "Memory Leak" },
+      { "id": "c", "text": "Invalid Input" },
+      { "id": "d", "text": "BSOD" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-177", "type": "mcq", "tags": ["vulns.cloud-specific", "sy0-701", "public"], "difficulty": 2,
+    "stem": "To address the use of unauthorized cloud applications by employees, what technology should the IT department implement to monitor and control access to these cloud services effectively?",
+    "options": [
+      { "id": "a", "text": "Endpoint Detection and Response (EDR) Software" },
+      { "id": "b", "text": "Data Loss Prevention (DLP) Software" },
+      { "id": "c", "text": "Intrusion Prevention System (IPS)" },
+      { "id": "d", "text": "Cloud Access Security Broker (CASB)" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-186", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What attack is this a representation of?[XSS pictorial]",
+    "options": [
+      { "id": "a", "text": "CSS" },
+      { "id": "b", "text": "XSS" },
+      { "id": "c", "text": "DLL injection" },
+      { "id": "d", "text": "LDAP injection" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-187", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is a botnet in the context of cybersecurity threats?",
+    "options": [
+      { "id": "a", "text": "A network of interconnected devices infected with malware that allows an attacker to control them remotely" },
+      { "id": "b", "text": "A sophisticated software that autonomously performs tasks on the internet without human intervention" },
+      { "id": "c", "text": "A defensive mechanism that uses a network of virtual machines to detect and counteract cyber threats" },
+      { "id": "d", "text": "A type of antivirus software designed to detect and eliminate malicious bots and automated scripts" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-191", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is another name for a malicious race condition?",
+    "options": [
+      { "id": "a", "text": "Buffer overflow" },
+      { "id": "b", "text": "XSS" },
+      { "id": "c", "text": "TOC/TOU attack" },
+      { "id": "d", "text": "DDoS" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-197", "type": "mcq", "tags": ["vulns.hardware", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What security practice is crucial for maintaining the integrity and safety of Internet of Things (loT) devices within an organization?",
+    "options": [
+      { "id": "a", "text": "Regularly updating the firmware and software of loT devices to patch vulnerabilities." },
+      { "id": "b", "text": "Using loT devices exclusively for internal communication to prevent external threats." },
+      { "id": "c", "text": "Connecting all loT devices to a single network for centralized control." },
+      { "id": "d", "text": "Limiting loT usage to non-critical functions only, to avoid any security risks." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-198", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What type of attack executes code by overwriting areas of memory that should not be overwritten?",
+    "options": [
+      { "id": "a", "text": "Buffer overflow" },
+      { "id": "b", "text": "DLL injection" },
+      { "id": "c", "text": "Integer overflow" },
+      { "id": "d", "text": "Pointer dereference" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-199", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What type of attack involves sending unsolicited messages to Bluetooth-enabled devices, often for pranking or advertising, without the intent of malicious access?",
+    "options": [
+      { "id": "a", "text": "Phishing" },
+      { "id": "b", "text": "Clickjacking" },
+      { "id": "c", "text": "Bluejacking" },
+      { "id": "d", "text": "Cross-site Scripting" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-2-209", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When software is not designed to properly handle errors, the result might be release of message and diagnostic information that is sensitive to the inner workings of the systems. This data can disclose details to an end user and allow an attacker to gain sufficient information to advance an attack.",
+    "options": [
+      { "id": "a", "text": "Improper error handling" },
+      { "id": "b", "text": "TOC/TOU" },
+      { "id": "c", "text": "Memory Overflow" },
+      { "id": "d", "text": "SECDEVOPS" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-213", "type": "mcq", "tags": ["vulns.zero-day", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which CMD prompt command will give you the most information about a Windows computer NIC interface?",
+    "options": [
+      { "id": "a", "text": "ipconfig" },
+      { "id": "b", "text": "ping" },
+      { "id": "c", "text": "pathping" },
+      { "id": "d", "text": "ipconfig /all" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-216", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following alters the external behavior of an application and at the same time does not introduce any changes to the application's code?",
+    "options": [
+      { "id": "a", "text": "Shimming" },
+      { "id": "b", "text": "Refactoring" },
+      { "id": "c", "text": "API call" },
+      { "id": "d", "text": "Sideloading" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-217", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following application attacks allows attackers to inject client side script into web pages viewed by other users?",
+    "options": [
+      { "id": "a", "text": "SQL injection" },
+      { "id": "b", "text": "XML injection" },
+      { "id": "c", "text": "Buffer overflow" },
+      { "id": "d", "text": "Cross-site scripting" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-219", "type": "mcq", "tags": ["vulns.cloud-specific", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following cloud deployments would include CPU, storage, and networking, but not include any operating system or application?",
+    "options": [
+      { "id": "a", "text": "IaaS" },
+      { "id": "b", "text": "PaaS" },
+      { "id": "c", "text": "DaaS" },
+      { "id": "d", "text": "SaaS" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-222", "type": "mcq", "tags": ["vulns.zero-day", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following enables the exchange of information between computer programs?",
+    "options": [
+      { "id": "a", "text": "API" },
+      { "id": "b", "text": "UI" },
+      { "id": "c", "text": "Device Drivers" },
+      { "id": "d", "text": "SDK" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-224", "type": "mcq", "tags": ["vulns.misconfiguration", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is a characteristic of a RAT?",
+    "options": [
+      { "id": "a", "text": "It gives the attacker the ability to modify and change settings" },
+      { "id": "b", "text": "The can be deployed through malware such as worms" },
+      { "id": "c", "text": "The allow attackers to connect to the system remotely" },
+      { "id": "d", "text": "All of the above" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-231", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following terms describes an attempt to read a variable value from an invalid memory address?",
+    "options": [
+      { "id": "a", "text": "Buffer overflow" },
+      { "id": "b", "text": "Null-pointer dereference" },
+      { "id": "c", "text": "Integer overflow" },
+      { "id": "d", "text": "Memory leak" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-237", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following would be the BEST way to confirm the secure baseline of a deployed application instance?",
+    "options": [
+      { "id": "a", "text": "Perform an integrity measurement" },
+      { "id": "b", "text": "Compare the production application to the sandbox" },
+      { "id": "c", "text": "Compare the production application to the previous version" },
+      { "id": "d", "text": "Perform QA testing on the application instance" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-238", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following would be the BEST way to protect credit card account information when performing real-time purchase authorizations?",
+    "options": [
+      { "id": "a", "text": "Tokenization" },
+      { "id": "b", "text": "NGFW" },
+      { "id": "c", "text": "DLP" },
+      { "id": "d", "text": "Masking" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-239", "type": "mcq", "tags": ["threats.supply-chain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following would be the BEST way to provide a website login using existing credentials from a third-party site?",
+    "options": [
+      { "id": "a", "text": "Federation" },
+      { "id": "b", "text": "802.1X" },
+      { "id": "c", "text": "PEAP" },
+      { "id": "d", "text": "EAP-FAST" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-240", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following would be the MOST effective use of asymmetric encryption?",
+    "options": [
+      { "id": "a", "text": "Securely derive a session key" },
+      { "id": "b", "text": "Protect data on mobile devices" },
+      { "id": "c", "text": "Store passwords" },
+      { "id": "d", "text": "Real-time video encryption" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-242", "type": "mcq", "tags": ["vulns.cloud-specific", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of these cloud deployment models would BEST describe a company that would build a cloud for their own use and use systems and storage platforms in their data center?",
+    "options": [
+      { "id": "a", "text": "Private" },
+      { "id": "b", "text": "Community" },
+      { "id": "c", "text": "Hybrid" },
+      { "id": "d", "text": "Public" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-243", "type": "mcq", "tags": ["vulns.cloud-specific", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of these cloud deployment models would share resources between a private virtualized data center and externally available cloud services?",
+    "options": [
+      { "id": "a", "text": "Hybrid" },
+      { "id": "b", "text": "Community" },
+      { "id": "c", "text": "SaaS" },
+      { "id": "d", "text": "Containerization" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-245", "type": "mcq", "tags": ["vulns.virtualization", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of these would be used to provide multi-factor authentication?",
+    "options": [
+      { "id": "a", "text": "Smart card with picture ID" },
+      { "id": "b", "text": "Null-modem serial cable" },
+      { "id": "c", "text": "Employee policy manual" },
+      { "id": "d", "text": "USB-connected storage drive with FDE" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-248", "type": "mcq", "tags": ["vulns.cryptographic", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which type of cyber attack is designed to force a server to revert to a less secure form of encryption for a network connection?",
+    "options": [
+      { "id": "a", "text": "Downgrade attack" },
+      { "id": "b", "text": "Upgrade attack" },
+      { "id": "c", "text": "Known-cipher attack" },
+      { "id": "d", "text": "XSS attack" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-251", "type": "mcq", "tags": ["vulns.virtualization", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which type of virtualization is preferred for a business environment with a large amount of network traffic?",
+    "options": [
+      { "id": "a", "text": "Type I hypervisor" },
+      { "id": "b", "text": "Type II hypervisor" },
+      { "id": "c", "text": "Type III hypervisor" },
+      { "id": "d", "text": "Hybrid hypervisor" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-253", "type": "mcq", "tags": ["vulns.hardware", "sy0-701", "public"], "difficulty": 2,
+    "stem": "While deploying a new web server, you remember something from a Security+ class that was important regarding web servers and how to protect them from hackers.  Which of the following is the MOST important software coding requirements for server OSs to help reduce buffer overflows, XSS, and XSRF attacks?",
+    "options": [
+      { "id": "a", "text": "Infiltration protection" },
+      { "id": "b", "text": "Exfiltration protection" },
+      { "id": "c", "text": "DEP" },
+      { "id": "d", "text": "Input validation" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-2-255", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Sam works at the ACME help desk. Sam has received several trouble calls this past month about a new web server that was added to the network. The server works perfectly at the beginning of the week but freezes up at the end of the week. Each time, the repair is to restart the server. What could be causing this?",
+    "options": [
+      { "id": "a", "text": "Memory Leak" },
+      { "id": "b", "text": "Server failure" },
+      { "id": "c", "text": "DoS" },
+      { "id": "d", "text": "CPU overheat" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-258", "type": "mcq", "tags": ["vulns.misconfiguration", "sy0-701", "public"], "difficulty": 2,
+    "stem": "You are a Linux server administrator. You need to modify file system permissions through a shell script. Which Linux command should you use to accomplish this within the shell script?",
+    "options": [
+      { "id": "a", "text": "chmod" },
+      { "id": "b", "text": "tail" },
+      { "id": "c", "text": "head" },
+      { "id": "d", "text": "ls" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-260", "type": "mcq", "tags": ["vulns.application", "sy0-701", "public"], "difficulty": 2,
+    "stem": "You are configuring a web server for your organization to disseminate information and process customer orders. What is the most suitable network location for this server, considering both security and external accessibility?",
+    "options": [
+      { "id": "a", "text": "Screened Subnet" },
+      { "id": "b", "text": "Intranet" },
+      { "id": "c", "text": "Extranet" },
+      { "id": "d", "text": "Internet" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-263", "type": "mcq", "tags": ["vulns.web-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "You are monitoring requests into the web server and notice one that contains this URL: http://site/processpayment.asp?txtName=<script>alert('hello'); </script> What type of attack is occurring?",
+    "options": [
+      { "id": "a", "text": "XSS" },
+      { "id": "b", "text": "SQL Injection" },
+      { "id": "c", "text": "CSRF" },
+      { "id": "d", "text": "SSL" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-2-265", "type": "mcq", "tags": ["vulns.mobile-device", "sy0-701", "public"], "difficulty": 2,
+    "stem": "You are responsible for the Wi-Fi network at your company. How can you prevent the discovery of your WLAN from war drivers?",
+    "options": [
+      { "id": "a", "text": "Enable WEP." },
+      { "id": "b", "text": "Disable SSID broadcasting." },
+      { "id": "c", "text": "Enable WPA2." },
+      { "id": "d", "text": "Enable MAC address filtering." }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-267", "type": "mcq", "tags": ["vulns.virtualization", "sy0-701", "public"], "difficulty": 2,
+    "stem": "You notice that a virtual machine (VM) in your network is interacting unexpectedly with its host system and other VMs on the same server.Task: Identify the type of security threat this activity most likely represents.",
+    "options": [
+      { "id": "a", "text": "VMSprawl" },
+      { "id": "b", "text": "VM Escape" },
+      { "id": "c", "text": "Resource Contention" },
+      { "id": "d", "text": "Hypervisor Vulnerability" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-2-269", "type": "mcq", "tags": ["vulns.os-based", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Your company owns a purpose-built appliance that doesn’t provide any access to the operating system and doesn't provide a method to upgrade the firmware. Which of the following describes this appliance?",
+    "options": [
+      { "id": "a", "text": "Embedded system" },
+      { "id": "b", "text": "End-of-life" },
+      { "id": "c", "text": "Weak configuration" },
+      { "id": "d", "text": "Improper input handling" }
+    ],
+    "answer": ["a"]
+  }
+]

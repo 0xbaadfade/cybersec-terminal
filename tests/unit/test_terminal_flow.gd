@@ -253,8 +253,8 @@ func test_a_right_answer_shows_the_lesson_and_counts() -> void:
 	assert_false(text.contains("practice"))
 	assert_false(text.contains("comes back in"))
 	assert_eq(Mastery.total_xp(_router.profile), 20)
-	assert_eq(Mastery.box(_router.profile, "1.1.a"), 1)
-	assert_eq(Mastery.seen(_router.profile, "1.1.a"), 1)
+	assert_eq(Mastery.box(_router.profile, Support.topic_of("1.1.a")), 1)
+	assert_eq(Mastery.seen(_router.profile, Support.topic_of("1.1.a")), 1)
 
 
 func test_a_wrong_first_answer_keeps_the_lab_open_and_a_second_is_partial() -> void:
@@ -280,7 +280,7 @@ func test_two_wrong_answers_end_it_and_reveal_the_answer() -> void:
 	assert_string_contains(text, "Your answer: one, two   (not accepted)")
 	assert_string_contains(text, "The answer: 10.20.0.30")
 	assert_string_contains(text, "You ran no commands.")
-	assert_eq(Mastery.box(_router.profile, "1.1.a"), 1, "a miss puts the concept back in box 1")
+	assert_eq(Mastery.box(_router.profile, Support.topic_of("1.1.a")), 1, "a miss puts the concept back in box 1")
 	assert_eq(_router.current_round.queue.size(), 2, "a retry is queued")
 	assert_string_contains(text, "comes back in")
 	_router.handle("")
@@ -330,7 +330,7 @@ func test_a_mission_result_is_saved_and_logged() -> void:
 	_router.handle("")
 	var saved := ProfileStore.new(_profiles).load_profile("dana")
 	saved.track = "ev"
-	assert_true(saved.progress()["items"].has("a-t"))
+	assert_true(saved.peek_items().has("a-t"))
 	assert_eq(Mastery.total_xp(saved), 20)
 	assert_eq(saved.rounds().size(), 1, "a round-log entry")
 	assert_eq(int(saved.rounds()[0]["answered"]), 1)

@@ -582,7 +582,7 @@ func _status() -> Array:
 		out.append(_l("  domain %s   %4d xp   %s" % [d["id"], Mastery.domain_xp(profile, d["id"]), d["title"]], S_DIM))
 	var met := 0
 	for cid in pack.concepts:
-		if Mastery.seen(profile, cid) > 0:
+		if Mastery.seen_of(profile, pack.topics_of(cid)) > 0:
 			met += 1
 	out.append(_l("concepts met %d of %d" % [met, pack.concepts.size()]))
 	out.append(_l("due today    %d" % _due_count()))
@@ -785,8 +785,8 @@ func _commit(res: Dictionary) -> Array:
 	var out: Array = []
 	var cid: String = entry["concept"]
 	var today := Mastery.day_of(now())
-	var was_stale := Mastery.is_due(profile, cid, today)
-	if Mastery.seen(profile, cid) == 0:
+	var was_stale := Mastery.is_due_of(profile, pack.topics_of(cid), today)
+	if Mastery.seen_of(profile, pack.topics_of(cid)) == 0:
 		_round_built[cid] = true
 	if was_stale:
 		_round_stale[cid] = true

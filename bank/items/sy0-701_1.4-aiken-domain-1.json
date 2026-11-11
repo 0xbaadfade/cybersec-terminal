@@ -1,0 +1,607 @@
+[
+  {
+    "id": "aiken-domain-1-001", "type": "mcq", "tags": ["crypto.obfuscation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A call center application displays customer information to support agents. To protect customer privacy, the application replaces the first five digits of the customer's Social Security Number with asterisks on the screen. Which data protection method is this?",
+    "options": [
+      { "id": "a", "text": "Data masking" },
+      { "id": "b", "text": "Salting" },
+      { "id": "c", "text": "Encryption" },
+      { "id": "d", "text": "Hashing" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-005", "type": "mcq", "tags": ["crypto.key-management-tools", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company is rolling out new laptops that require full-disk encryption. The security policy mandates that the encryption keys must be bound to the specific hardware of the laptop and protected against offline dictionary attacks. Which component is BEST suited to fulfill this requirement?",
+    "options": [
+      { "id": "a", "text": "HSM" },
+      { "id": "b", "text": "TPM" },
+      { "id": "c", "text": "Secure enclave" },
+      { "id": "d", "text": "Key escrow" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-010", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A corporate IT department manages multiple subdomains, including mail.company.com, portal.company.com, and vpn.company.com. They want to secure all of these with a single digital certificate to simplify administration. Which type of certificate BEST meets this requirement?",
+    "options": [
+      { "id": "a", "text": "Root certificate" },
+      { "id": "b", "text": "Escrow certificate" },
+      { "id": "c", "text": "Wildcard certificate" },
+      { "id": "d", "text": "Self-signed certificate" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-011", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A cryptanalyst is evaluating two different implementations of the RSA algorithm, one using a 1024-bit key and the other using a 4096-bit key. What is the MOST significant operational tradeoff when selecting the longer key?",
+    "options": [
+      { "id": "a", "text": "Increased administrative overhead for certificate authorities" },
+      { "id": "b", "text": "Decreased availability of symmetric key exchange mechanisms" },
+      { "id": "c", "text": "Increased processing time for encryption and decryption operations" },
+      { "id": "d", "text": "Decreased compatibility with modern web browsers" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-017", "type": "mcq", "tags": ["crypto.pki", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A government agency dictates that it must be able to decrypt communications of certain entities if a lawful order is issued. To facilitate this without possessing the entities' daily operating keys, a trusted third party holds a copy of the keys. What is this arrangement called?",
+    "options": [
+      { "id": "a", "text": "Key tokenization" },
+      { "id": "b", "text": "Key stretching" },
+      { "id": "c", "text": "Key escrow" },
+      { "id": "d", "text": "Key exchange" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-018", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A healthcare organization manages a massive patient registry. Instead of encrypting the entire server drive, the security team decides to encrypt the underlying SQL data structures to protect the data at rest while allowing the OS to run normally. Which encryption level is being applied?",
+    "options": [
+      { "id": "a", "text": "File encryption" },
+      { "id": "b", "text": "Database encryption" },
+      { "id": "c", "text": "Full-disk encryption" },
+      { "id": "d", "text": "Volume encryption" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-019", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A high-traffic web server requires real-time validation of client certificates without having to download and parse large, static lists of revoked serial numbers. Which protocol should the organization implement to achieve this?",
+    "options": [
+      { "id": "a", "text": "CRL" },
+      { "id": "b", "text": "TPM" },
+      { "id": "c", "text": "CSR" },
+      { "id": "d", "text": "OCSP" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-020", "type": "mcq", "tags": ["crypto.pki", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A large enterprise is migrating from a decentralized authentication model to a framework that heavily relies on digital certificates for user login, device authentication, and secure email. What framework is the organization expanding?",
+    "options": [
+      { "id": "a", "text": "Public key infrastructure" },
+      { "id": "b", "text": "Secure enclave architecture" },
+      { "id": "c", "text": "Data masking framework" },
+      { "id": "d", "text": "Open public ledger" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-023", "type": "mcq", "tags": ["crypto.key-management-tools", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A major financial institution needs to generate and manage high-value root certificates for its enterprise PKI. The keys must be stored in a dedicated, tamper-resistant network appliance with strong physical security controls. Which of the following should be deployed?",
+    "options": [
+      { "id": "a", "text": "HSM" },
+      { "id": "b", "text": "Secure enclave" },
+      { "id": "c", "text": "UTM" },
+      { "id": "d", "text": "TPM" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-024", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A manager places a sensitive document into a shared departmental folder. The manager wants to ensure that even if other employees have network access to the folder, only authorized individuals can open and read this specific document. Which encryption strategy is BEST?",
+    "options": [
+      { "id": "a", "text": "Full-disk encryption" },
+      { "id": "b", "text": "Volume encryption" },
+      { "id": "c", "text": "Transport encryption" },
+      { "id": "d", "text": "File-level encryption" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-029", "type": "mcq", "tags": ["crypto.obfuscation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A retail merchant wants to store customer credit card data for recurring billing but wishes to reduce the scope of PCI DSS compliance. Instead of storing the actual PAN (Primary Account Number), the merchant's system stores a randomly generated string of characters provided by the payment gateway. What technique is being utilized?",
+    "options": [
+      { "id": "a", "text": "Obfuscation" },
+      { "id": "b", "text": "Hashing" },
+      { "id": "c", "text": "Steganography" },
+      { "id": "d", "text": "Tokenization" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-036", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security analyst is selecting an encryption algorithm to protect archives of video surveillance footage. The primary constraints are high speed and low processing overhead. Which cryptographic approach should be selected?",
+    "options": [
+      { "id": "a", "text": "Symmetric cryptography" },
+      { "id": "b", "text": "Asymmetric cryptography" },
+      { "id": "c", "text": "Steganography" },
+      { "id": "d", "text": "Key stretching" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-049", "type": "mcq", "tags": ["crypto.key-management-tools", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A smartphone application processes highly sensitive biometric data for user authentication. To protect this data from being accessed by the main operating system or other malicious apps, where should the cryptographic operations and biometric data be isolated?",
+    "options": [
+      { "id": "a", "text": "Secure enclave" },
+      { "id": "b", "text": "HSM" },
+      { "id": "c", "text": "PKI" },
+      { "id": "d", "text": "Key escrow" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-050", "type": "mcq", "tags": ["crypto.obfuscation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A software development team writes a proprietary algorithm in JavaScript that runs in the client's browser. To make it difficult for competitors to reverse-engineer the logic, they intentionally scramble the variable names and code structure. Which technique is this an example of?",
+    "options": [
+      { "id": "a", "text": "Steganography" },
+      { "id": "b", "text": "Encryption" },
+      { "id": "c", "text": "Tokenization" },
+      { "id": "d", "text": "Obfuscation" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-051", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A storage administrator creates a unified logical storage area spanning multiple physical disks and applies encryption to the entire logical area. What type of encryption is this?",
+    "options": [
+      { "id": "a", "text": "Record encryption" },
+      { "id": "b", "text": "Database encryption" },
+      { "id": "c", "text": "File encryption" },
+      { "id": "d", "text": "Volume encryption" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-052", "type": "mcq", "tags": ["crypto.blockchain", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A supply chain organization wants to track the provenance of goods. They implement a decentralized, distributed system where every transaction is cryptographically linked to the previous one in a continuously growing list of records. Which technology is MOST likely being deployed?",
+    "options": [
+      { "id": "a", "text": "Key management system" },
+      { "id": "b", "text": "Secure enclave" },
+      { "id": "c", "text": "Blockchain" },
+      { "id": "d", "text": "Public Key Infrastructure" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-056", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A system administrator mounts a virtual encrypted disk file that acts as a logical drive within the operating system. All files written into this logical drive are automatically encrypted. This is an implementation of which encryption level?",
+    "options": [
+      { "id": "a", "text": "Volume encryption" },
+      { "id": "b", "text": "Transport encryption" },
+      { "id": "c", "text": "Record encryption" },
+      { "id": "d", "text": "Database encryption" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-058", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A system needs to encrypt large volumes of backup data quickly before transmitting it to offsite storage. Why would the organization choose a symmetric algorithm over an asymmetric one for this specific task?",
+    "options": [
+      { "id": "a", "text": "Symmetric algorithms provide inherent non-repudiation for the backup files" },
+      { "id": "b", "text": "Symmetric algorithms do not require key management or secure key storage" },
+      { "id": "c", "text": "Symmetric algorithms are less computationally intensive and much faster for bulk data" },
+      { "id": "d", "text": "Symmetric algorithms use two separate keys, making them natively more secure" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-060", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A systems administrator is configuring a small internal test server and does not want to pay for or deploy an enterprise PKI. The administrator generates a digital certificate directly on the server for HTTPS access. What type of certificate has been created?",
+    "options": [
+      { "id": "a", "text": "Self-signed certificate" },
+      { "id": "b", "text": "Third-party certificate" },
+      { "id": "c", "text": "Wildcard certificate" },
+      { "id": "d", "text": "Root of trust certificate" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-061", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A user needs to securely store a specific tax document on a shared network drive where other users have read access to the directory. Which encryption level is MOST appropriate for this single document?",
+    "options": [
+      { "id": "a", "text": "Volume encryption" },
+      { "id": "b", "text": "File encryption" },
+      { "id": "c", "text": "Partition encryption" },
+      { "id": "d", "text": "Full-disk encryption" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-064", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A user's laptop was stolen, and the client certificate installed on it could be compromised. The PKI administrator revokes the certificate. How do other systems typically learn that this certificate is no longer valid?",
+    "options": [
+      { "id": "a", "text": "By forcing a key exchange protocol" },
+      { "id": "b", "text": "By examining the Root of trust" },
+      { "id": "c", "text": "By checking a Certificate Revocation List (CRL)" },
+      { "id": "d", "text": "By querying the hardware security module" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-066", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A web administrator needs to renew an expiring digital certificate for a company web server. What MUST the administrator generate on the web server and send to the Certificate Authority to obtain the new certificate?",
+    "options": [
+      { "id": "a", "text": "A certificate revocation list" },
+      { "id": "b", "text": "A self-signed root" },
+      { "id": "c", "text": "A public key infrastructure" },
+      { "id": "d", "text": "A certificate signing request" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-067", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A web application backend utilizes Transparent Data Encryption (TDE) to protect the entire SQL instance. Which level of encryption does TDE operate at?",
+    "options": [
+      { "id": "a", "text": "Record-level encryption" },
+      { "id": "b", "text": "Database-level encryption" },
+      { "id": "c", "text": "Full-disk encryption" },
+      { "id": "d", "text": "File-level encryption" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-068", "type": "mcq", "tags": ["crypto.salting", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A website administrator wants to ensure that a downloadable software patch has not been modified by an attacker in transit. The administrator posts a string of characters next to the download link. Users are instructed to run a specific algorithm against the downloaded file and compare the resulting string. What cryptographic mechanism is being used?",
+    "options": [
+      { "id": "a", "text": "Tokenization" },
+      { "id": "b", "text": "Digital signature" },
+      { "id": "c", "text": "Hashing" },
+      { "id": "d", "text": "Symmetric encryption" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-072", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An administrator configures a server with one hard drive split into two distinct logical sections: one for the OS and one for storing sensitive log files. If the administrator only encrypts the section containing the log files, which level of encryption is being utilized?",
+    "options": [
+      { "id": "a", "text": "File encryption" },
+      { "id": "b", "text": "Partition encryption" },
+      { "id": "c", "text": "Record encryption" },
+      { "id": "d", "text": "Full-disk encryption" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-079", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An application requires that only the Social Security Number fields within a customer table be encrypted, while the rest of the customer table remains plaintext for rapid searching. Which level of encryption MUST be implemented to achieve this?",
+    "options": [
+      { "id": "a", "text": "Record encryption" },
+      { "id": "b", "text": "Full-disk encryption" },
+      { "id": "c", "text": "Partition encryption" },
+      { "id": "d", "text": "Volume encryption" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-080", "type": "mcq", "tags": ["crypto.key-stretching", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An attacker has stolen a database containing user password hashes. To mitigate the threat of offline brute-force and rainbow table attacks, the application's developers previously configured the hashing algorithm to iterate thousands of times before outputting the final hash. What defense mechanism is this?",
+    "options": [
+      { "id": "a", "text": "Tokenization" },
+      { "id": "b", "text": "Obfuscation" },
+      { "id": "c", "text": "Key stretching" },
+      { "id": "d", "text": "Data masking" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-084", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An auditor mandates that all administrative traffic between an administrator's workstation and a core switch must be encrypted. Implementing SSH to replace Telnet addresses security at which level?",
+    "options": [
+      { "id": "a", "text": "Transport/communication" },
+      { "id": "b", "text": "Data in use" },
+      { "id": "c", "text": "Data at rest" },
+      { "id": "d", "text": "Secure enclave" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-085", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An e-commerce company is launching a public-facing website. To ensure that visitors' web browsers implicitly trust the site without security warnings, from where should the company obtain their digital certificate?",
+    "options": [
+      { "id": "a", "text": "A local hardware security module" },
+      { "id": "b", "text": "A trusted third-party CA" },
+      { "id": "c", "text": "An internal enterprise CA" },
+      { "id": "d", "text": "A self-signed generator" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-086", "type": "mcq", "tags": ["crypto.digital-signatures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An employee wants to receive an encrypted email from a vendor. Which cryptographic component MUST the employee share with the vendor to facilitate this secure communication?",
+    "options": [
+      { "id": "a", "text": "Private key" },
+      { "id": "b", "text": "Symmetric session key" },
+      { "id": "c", "text": "Digital signature" },
+      { "id": "d", "text": "Public key" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-090", "type": "mcq", "tags": ["crypto.key-management-tools", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An enterprise utilizes various cloud providers, internal servers, and containerized applications. They need a centralized service to create, rotate, disable, and define access controls for all cryptographic keys across these environments. What is the MOST appropriate solution to implement?",
+    "options": [
+      { "id": "a", "text": "Trusted Platform Module" },
+      { "id": "b", "text": "Key management system" },
+      { "id": "c", "text": "Certificate revocation list" },
+      { "id": "d", "text": "Hardware security module" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-094", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An operating system is installed on the primary drive, while all proprietary company data is stored on a secondary drive. To optimize boot performance while securing the data at rest, only the secondary drive is encrypted. What type of encryption is this?",
+    "options": [
+      { "id": "a", "text": "Record-level encryption" },
+      { "id": "b", "text": "Database-level encryption" },
+      { "id": "c", "text": "File-level encryption" },
+      { "id": "d", "text": "Partition-level encryption" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-107", "type": "mcq", "tags": ["crypto.pki", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization wants to ensure that encrypted company data can still be recovered if an employee unexpectedly leaves the company and their encryption keys are lost. Which of the following BEST describes the solution to this problem?",
+    "options": [
+      { "id": "a", "text": "Key exchange" },
+      { "id": "b", "text": "Key escrow" },
+      { "id": "c", "text": "Key stretching" },
+      { "id": "d", "text": "Key rotation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-116", "type": "mcq", "tags": ["crypto.obfuscation", "sy0-701", "public"], "difficulty": 2,
+    "stem": "During a forensic investigation, an analyst discovers that a malicious insider has been exfiltrating corporate secrets by hiding text data within the pixels of marketing images posted to a public website. What concept does this activity illustrate?",
+    "options": [
+      { "id": "a", "text": "Salting" },
+      { "id": "b", "text": "Data masking" },
+      { "id": "c", "text": "Key stretching" },
+      { "id": "d", "text": "Steganography" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-120", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "During a security review, a consultant recommends replacing DES with AES-256 for all internal database encryption. What is the PRIMARY reason for upgrading the cryptographic algorithm?",
+    "options": [
+      { "id": "a", "text": "To enable digital signatures on the database tables" },
+      { "id": "b", "text": "To utilize an algorithm that is computationally resistant to modern brute-force attacks" },
+      { "id": "c", "text": "To transition from a symmetric to an asymmetric methodology" },
+      { "id": "d", "text": "To comply with requirements for utilizing hardware security modules" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-125", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "If a corporate laptop is stolen from a coffee shop, which cryptographic solution provides the BEST protection against an attacker removing the hard drive to read the operating system and user files?",
+    "options": [
+      { "id": "a", "text": "Full-disk encryption" },
+      { "id": "b", "text": "Database-level encryption" },
+      { "id": "c", "text": "Record-level encryption" },
+      { "id": "d", "text": "File-level encryption" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-127", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a multi-tenant cloud environment, a database administrator ensures that each tenant's specific data rows are encrypted with a unique key, preventing one tenant from accessing another's data even within the same table. Which encryption strategy provides this granularity?",
+    "options": [
+      { "id": "a", "text": "Partition-level encryption" },
+      { "id": "b", "text": "Volume-level encryption" },
+      { "id": "c", "text": "Record-level encryption" },
+      { "id": "d", "text": "Full-disk encryption" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-128", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In a PKI, what is the PRIMARY role of a Certificate Authority (CA)?",
+    "options": [
+      { "id": "a", "text": "To issue, manage, and validate digital certificates" },
+      { "id": "b", "text": "To continuously monitor network traffic for malicious activity" },
+      { "id": "c", "text": "To symmetrically encrypt the data payload of network packets" },
+      { "id": "d", "text": "To provide a secure physical vault for key escrow" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-133", "type": "mcq", "tags": ["crypto.digital-signatures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In an asymmetric encryption scenario, if Alice wants to send a confidential message to Bob, which key does Alice use to encrypt the message so that only Bob can read it?",
+    "options": [
+      { "id": "a", "text": "Bob's public key" },
+      { "id": "b", "text": "Alice's public key" },
+      { "id": "c", "text": "Bob's private key" },
+      { "id": "d", "text": "Alice's private key" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-134", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In hardware-backed security, which component provides the foundational security layer from which all other secure operations, such as secure boot and cryptographic key generation, derive their assurance?",
+    "options": [
+      { "id": "a", "text": "Online Certificate Status Protocol" },
+      { "id": "b", "text": "Public Key Infrastructure" },
+      { "id": "c", "text": "Root of trust" },
+      { "id": "d", "text": "Certificate signing request" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-140", "type": "mcq", "tags": ["crypto.digital-signatures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Two remote servers must establish a secure session over an untrusted network without transmitting the actual session key across the link. Which cryptographic mechanism BEST facilitates this requirement?",
+    "options": [
+      { "id": "a", "text": "Key exchange protocol" },
+      { "id": "b", "text": "Digital signature" },
+      { "id": "c", "text": "Steganography" },
+      { "id": "d", "text": "Key stretching" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-144", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What distinguishes asymmetric encryption from symmetric encryption regarding key management?",
+    "options": [
+      { "id": "a", "text": "Asymmetric encryption uses the same key for both encryption and decryption" },
+      { "id": "b", "text": "Asymmetric encryption requires hardware security modules for all key generation" },
+      { "id": "c", "text": "Asymmetric encryption completely eliminates the need to manage any keys" },
+      { "id": "d", "text": "Asymmetric encryption uses a mathematically related key pair, eliminating the need to securely distribute a shared secret" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-148", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the PRIMARY disadvantage of relying solely on full-disk encryption to protect data on a running, unlocked workstation?",
+    "options": [
+      { "id": "a", "text": "It severely degrades network performance" },
+      { "id": "b", "text": "It does not protect data from unauthorized users who access the active session" },
+      { "id": "c", "text": "It requires the use of self-signed certificates" },
+      { "id": "d", "text": "It cannot be managed by an enterprise key management system" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-149", "type": "mcq", "tags": ["crypto.digital-signatures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What is the PRIMARY purpose of establishing a PKI within an enterprise network?",
+    "options": [
+      { "id": "a", "text": "To manage the creation, storage, and distribution of digital certificates" },
+      { "id": "b", "text": "To ensure that all network traffic is encrypted using IPsec" },
+      { "id": "c", "text": "To centralize the authentication of users via LDAP" },
+      { "id": "d", "text": "To provide a symmetric key distribution system for legacy applications" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-151", "type": "mcq", "tags": ["crypto.digital-signatures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When a software developer digitally signs an executable file to prove it has not been tampered with, which cryptographic element is used to create the mathematical signature?",
+    "options": [
+      { "id": "a", "text": "The certificate authority's public key" },
+      { "id": "b", "text": "A symmetric session key" },
+      { "id": "c", "text": "The developer's private key" },
+      { "id": "d", "text": "The developer's public key" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-153", "type": "mcq", "tags": ["crypto.certificates", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When a web browser connects to a secure website, what does the server present to the client to prove its identity and provide its public key?",
+    "options": [
+      { "id": "a", "text": "A symmetric session key" },
+      { "id": "b", "text": "A certificate revocation list" },
+      { "id": "c", "text": "A hardware security module" },
+      { "id": "d", "text": "A digital certificate" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-155", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When designing a database architecture, the security team must decide whether to encrypt the entire storage array or just the specific columns containing credit card numbers. This decision represents a choice regarding which cryptographic concept?",
+    "options": [
+      { "id": "a", "text": "Encryption level" },
+      { "id": "b", "text": "Asymmetric vs. symmetric" },
+      { "id": "c", "text": "Key stretching duration" },
+      { "id": "d", "text": "Obfuscation methodology" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-156", "type": "mcq", "tags": ["crypto.key-management-tools", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When implementing a robust cryptographic strategy, an organization decides to deploy a combination of software-based utilities and hardware appliances. What is the MOST important consideration when selecting these cryptographic tools?",
+    "options": [
+      { "id": "a", "text": "Ensuring they only support self-signed certificates" },
+      { "id": "b", "text": "Ensuring they rely entirely on proprietary, closed-source algorithms" },
+      { "id": "c", "text": "Ensuring they bypass the operating system's native entropy sources" },
+      { "id": "d", "text": "Ensuring they securely generate, store, and manage cryptographic keys" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-157", "type": "mcq", "tags": ["crypto.salting", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When performing an audit of user credentials, a security engineer notices that two users have the exact same plaintext password, but their password hashes stored in the database are completely different. What technique was applied to the passwords prior to hashing to cause this?",
+    "options": [
+      { "id": "a", "text": "Salting" },
+      { "id": "b", "text": "Key stretching" },
+      { "id": "c", "text": "Obfuscation" },
+      { "id": "d", "text": "Data masking" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-1-158", "type": "mcq", "tags": ["crypto.encryption", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which BEST describes the fundamental difference between encryption and hashing?",
+    "options": [
+      { "id": "a", "text": "Encryption provides integrity, while hashing provides confidentiality" },
+      { "id": "b", "text": "Encryption is a two-way reversible process, while hashing is a one-way mathematical function" },
+      { "id": "c", "text": "Encryption is used exclusively for data at rest, while hashing is used for data in transit" },
+      { "id": "d", "text": "Encryption always relies on symmetric algorithms, while hashing uses asymmetric algorithms" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-159", "type": "mcq", "tags": ["crypto.open-public-ledger", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which characteristic distinguishes an open public ledger from a traditional centralized database in the context of cryptographic transaction records?",
+    "options": [
+      { "id": "a", "text": "Transactions in an open public ledger are entirely encrypted and hidden from all participants" },
+      { "id": "b", "text": "The ledger allows anyone to view the transaction history and participate in the consensus mechanism" },
+      { "id": "c", "text": "The ledger relies on a single trusted third party to validate and record all transactions" },
+      { "id": "d", "text": "Transactions can be easily modified or deleted by network administrators after being recorded" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-176", "type": "mcq", "tags": ["crypto.digital-signatures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following cryptographic concepts provides authentication, integrity, and non-repudiation for an electronic document?",
+    "options": [
+      { "id": "a", "text": "Key escrow" },
+      { "id": "b", "text": "Digital signatures" },
+      { "id": "c", "text": "Symmetric key exchange" },
+      { "id": "d", "text": "Secure enclaves" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-1-183", "type": "mcq", "tags": ["crypto.key-stretching", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following mechanisms is BEST suited for authenticating people rather than systems?",
+    "options": [
+      { "id": "a", "text": "Account passwords" },
+      { "id": "b", "text": "API keys" },
+      { "id": "c", "text": "X.509 certificates" },
+      { "id": "d", "text": "Retina scans" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-1-184", "type": "mcq", "tags": ["crypto.digital-signatures", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following MUST be kept absolutely secret and heavily protected to maintain the integrity of a digital signature system?",
+    "options": [
+      { "id": "a", "text": "The signer's public key" },
+      { "id": "b", "text": "The hash of the signed document" },
+      { "id": "c", "text": "The signer's private key" },
+      { "id": "d", "text": "The certificate authority's public key" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-1-186", "type": "mcq", "tags": ["crypto.salting", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following processes translates plaintext into ciphertext using a mathematical algorithm and a cryptographic key, primarily to ensure data confidentiality?",
+    "options": [
+      { "id": "a", "text": "Encryption" },
+      { "id": "b", "text": "Hashing" },
+      { "id": "c", "text": "Salting" },
+      { "id": "d", "text": "Obfuscation" }
+    ],
+    "answer": ["a"]
+  }
+]

@@ -2,9 +2,7 @@
   {
     "id": "lin-m-01",
     "type": "terminal",
-    "concept_ids": [
-      "1.1.ping"
-    ],
+    "tags": ["network.ping", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "Three hosts of the web tier were reported up: 10.20.0.10, 10.20.0.11 and 10.20.0.30. One of them never answers ping. Which one? (Read notes.txt if you want a hint about where to look.)",
     "lab": "lab-dmz-01",
@@ -22,9 +20,7 @@
     "difficulty": 2,
     "lab": "lab-dmz-01",
     "id": "lin-m-02",
-    "concept_ids": [
-      "1.1.ping"
-    ],
+    "tags": ["network.ping", "linux-cli", "public"],
     "stem": "How many hosts on 10.20.0.0/24 are up? Count your own workstation. (Give a number.)",
     "answer": {
       "accept": [
@@ -39,9 +35,7 @@
     "difficulty": 2,
     "lab": "lab-dmz-01",
     "id": "lin-m-03",
-    "concept_ids": [
-      "1.1.port-scan"
-    ],
+    "tags": ["network.port-scan", "linux-cli", "public"],
     "stem": "Exactly one host on 10.20.0.0/24 accepts connections on telnet (23/tcp). Find it and give its IP address.",
     "answer": {
       "accept": [
@@ -57,9 +51,7 @@
     "difficulty": 3,
     "lab": "lab-dmz-01",
     "id": "lin-m-04",
-    "concept_ids": [
-      "1.1.service-versions"
-    ],
+    "tags": ["network.service-versions", "linux-cli", "public"],
     "stem": "What software and version is listening on port 80 of web-03? (A plain port scan only says the port is open; ask the service itself.)",
     "answer": {
       "accept": [
@@ -75,9 +67,7 @@
   {
     "id": "lin-r-03",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.service-versions"
-    ],
+    "tags": ["network.service-versions", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "This scan of web-03 shows three open ports. Which one is a remote login service that sends everything, passwords included, in clear text and should be replaced by an encrypted one?",
     "show": {
@@ -113,9 +103,7 @@
   {
     "id": "lin-q-ping-1",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.ping"
-    ],
+    "tags": ["network.ping", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "The ping below got no replies. What can you conclude?",
     "show": {
@@ -151,9 +139,7 @@
   {
     "id": "lin-q-ping-2",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.ping"
-    ],
+    "tags": ["network.ping", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "Which statement does this output support?",
     "show": {
@@ -187,45 +173,9 @@
     "explain": "2 packets transmitted, 2 received, 0% packet loss: the host answered. Ping shows reachability and round-trip time, nothing about open ports or services."
   },
   {
-    "id": "lin-q-ping-3",
-    "type": "mcq",
-    "concept_ids": [
-      "1.1.ping"
-    ],
-    "difficulty": 1,
-    "stem": "On Linux, which ping option limits how many echo requests are sent?",
-    "options": [
-      {
-        "id": "a",
-        "text": "-n count",
-        "why": "On Linux -n means numeric output (no name lookups). Windows uses -n for the count."
-      },
-      {
-        "id": "b",
-        "text": "-s count",
-        "why": "-s sets the payload size in bytes."
-      },
-      {
-        "id": "c",
-        "text": "-c count"
-      },
-      {
-        "id": "d",
-        "text": "-W count",
-        "why": "-W is how long to wait for each reply, in seconds."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "Linux ping runs until stopped unless -c is given: ping -c 4 web-03 sends four requests. On Windows the count option is -n."
-  },
-  {
     "id": "lin-q-ping-4",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.ping"
-    ],
+    "tags": ["network.ping", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "The scan below reports printer-01 as up, yet a plain ping to it gets no reply. How can both be true?",
     "show": {
@@ -261,9 +211,7 @@
   {
     "id": "lin-q-scan-1",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.port-scan"
-    ],
+    "tags": ["network.port-scan", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What does the line 'Not shown: 997 closed tcp ports (conn-refused)' mean?",
     "show": {
@@ -299,9 +247,7 @@
   {
     "id": "lin-q-scan-2",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.port-scan"
-    ],
+    "tags": ["network.port-scan", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Which statement about db-02 is correct?",
     "show": {
@@ -335,79 +281,9 @@
     "explain": "open means a service accepted the connection, closed means the host refused it. Either way the host replied, so it is up."
   },
   {
-    "id": "lin-q-scan-3",
-    "type": "mcq",
-    "concept_ids": [
-      "1.1.port-scan"
-    ],
-    "difficulty": 2,
-    "stem": "In an nmap report, what does the state 'filtered' mean?",
-    "options": [
-      {
-        "id": "a",
-        "text": "The port is open, but the service is busy and cannot answer in time",
-        "why": "That would still be reported as open."
-      },
-      {
-        "id": "b",
-        "text": "The port is closed and the host sent back a refusal to the probe",
-        "why": "That is the closed state; filtered ports give no answer at all."
-      },
-      {
-        "id": "c",
-        "text": "nmap cannot tell whether it is open, because a firewall drops the probe"
-      },
-      {
-        "id": "d",
-        "text": "The port is open, and the traffic through it is encrypted by the service",
-        "why": "nmap's state says nothing about encryption."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "Filtered means no answer came back, typically because a firewall drops the packets. It is different from closed, where the host sends an explicit refusal."
-  },
-  {
-    "id": "lin-q-scan-4",
-    "type": "mcq",
-    "concept_ids": [
-      "1.1.port-scan"
-    ],
-    "difficulty": 2,
-    "stem": "Which command only checks which hosts are up on 10.20.0.0/24, without scanning their ports?",
-    "options": [
-      {
-        "id": "a",
-        "text": "nmap -sV 10.20.0.0/24",
-        "why": "-sV probes the services on open ports, which is a port scan with extra work."
-      },
-      {
-        "id": "b",
-        "text": "nmap -p 80 10.20.0.0/24",
-        "why": "-p 80 scans port 80 on every host."
-      },
-      {
-        "id": "c",
-        "text": "ping 10.20.0.0/24",
-        "why": "ping takes one host, not a network range."
-      },
-      {
-        "id": "d",
-        "text": "nmap -sn 10.20.0.0/24"
-      }
-    ],
-    "answer": [
-      "d"
-    ],
-    "explain": "-sn is a ping scan (host discovery only). It answers 'who is there?' before you decide what to scan."
-  },
-  {
     "id": "lin-q-ver-1",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.service-versions"
-    ],
+    "tags": ["network.service-versions", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What software is the name server on dns-01 running, according to this scan?",
     "show": {
@@ -441,45 +317,9 @@
     "explain": "The VERSION column comes from asking the service itself. Knowing a name server runs BIND 9.18 lets you look for known issues in that release."
   },
   {
-    "id": "lin-q-ver-2",
-    "type": "mcq",
-    "concept_ids": [
-      "1.1.service-versions"
-    ],
-    "difficulty": 2,
-    "stem": "Why does nmap -sV take longer than a plain port scan?",
-    "options": [
-      {
-        "id": "a",
-        "text": "It scans all 65,535 ports instead of only the default 1,000 ports",
-        "why": "-sV does not change which ports are scanned."
-      },
-      {
-        "id": "b",
-        "text": "It talks to each open service to identify the software version"
-      },
-      {
-        "id": "c",
-        "text": "It waits for the DNS server to answer a lookup for every host",
-        "why": "Name resolution is not what takes the time."
-      },
-      {
-        "id": "d",
-        "text": "It sends ICMP echo requests to every address, then waits for replies",
-        "why": "Host discovery is a different step."
-      }
-    ],
-    "answer": [
-      "b"
-    ],
-    "explain": "Version detection sends extra probes to each open service and reads its reply (banner). More conversation per port means a slower scan."
-  },
-  {
     "id": "lin-q-ver-3",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.service-versions"
-    ],
+    "tags": ["network.service-versions", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Port 23 shows no version information. What is the most reasonable reading?",
     "show": {
@@ -515,9 +355,7 @@
   {
     "id": "lin-q-ver-4",
     "type": "mcq",
-    "concept_ids": [
-      "1.1.service-versions"
-    ],
+    "tags": ["network.service-versions", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Why does a security team care that a scan shows 'Apache httpd 2.4.6'?",
     "show": {

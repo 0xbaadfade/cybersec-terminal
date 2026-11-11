@@ -1,0 +1,13 @@
+[
+  {
+    "id": "aiken-domain-4-064", "type": "mcq", "tags": ["ops.automation-benefits", "sy0-701", "public"], "difficulty": 2,
+    "stem": "In an IT environment, when a company needs to increase the capacity of its existing server by adding more resources like memory or processing power, rather than adding more servers, what is this process known as?",
+    "options": [
+      { "id": "a", "text": "Horizontal Scaling" },
+      { "id": "b", "text": "Vertical Scaling" },
+      { "id": "c", "text": "Load Balancing" },
+      { "id": "d", "text": "Redundancy Implementation" }
+    ],
+    "answer": ["b"]
+  }
+]

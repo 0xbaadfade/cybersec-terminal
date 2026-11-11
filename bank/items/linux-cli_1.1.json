@@ -1,0 +1,130 @@
+[
+  {
+    "id": "lin-q-ping-3",
+    "type": "mcq",
+    "tags": ["network.ping", "linux-cli", "public"],
+    "difficulty": 1,
+    "stem": "On Linux, which ping option limits how many echo requests are sent?",
+    "options": [
+      {
+        "id": "a",
+        "text": "-n count",
+        "why": "On Linux -n means numeric output (no name lookups). Windows uses -n for the count."
+      },
+      {
+        "id": "b",
+        "text": "-s count",
+        "why": "-s sets the payload size in bytes."
+      },
+      {
+        "id": "c",
+        "text": "-c count"
+      },
+      {
+        "id": "d",
+        "text": "-W count",
+        "why": "-W is how long to wait for each reply, in seconds."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Linux ping runs until stopped unless -c is given: ping -c 4 web-03 sends four requests. On Windows the count option is -n."
+  },
+  {
+    "id": "lin-q-scan-3",
+    "type": "mcq",
+    "tags": ["network.port-scan", "linux-cli", "public"],
+    "difficulty": 2,
+    "stem": "In an nmap report, what does the state 'filtered' mean?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The port is open, but the service is busy and cannot answer in time",
+        "why": "That would still be reported as open."
+      },
+      {
+        "id": "b",
+        "text": "The port is closed and the host sent back a refusal to the probe",
+        "why": "That is the closed state; filtered ports give no answer at all."
+      },
+      {
+        "id": "c",
+        "text": "nmap cannot tell whether it is open, because a firewall drops the probe"
+      },
+      {
+        "id": "d",
+        "text": "The port is open, and the traffic through it is encrypted by the service",
+        "why": "nmap's state says nothing about encryption."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "Filtered means no answer came back, typically because a firewall drops the packets. It is different from closed, where the host sends an explicit refusal."
+  },
+  {
+    "id": "lin-q-scan-4",
+    "type": "mcq",
+    "tags": ["network.port-scan", "linux-cli", "public"],
+    "difficulty": 2,
+    "stem": "Which command only checks which hosts are up on 10.20.0.0/24, without scanning their ports?",
+    "options": [
+      {
+        "id": "a",
+        "text": "nmap -sV 10.20.0.0/24",
+        "why": "-sV probes the services on open ports, which is a port scan with extra work."
+      },
+      {
+        "id": "b",
+        "text": "nmap -p 80 10.20.0.0/24",
+        "why": "-p 80 scans port 80 on every host."
+      },
+      {
+        "id": "c",
+        "text": "ping 10.20.0.0/24",
+        "why": "ping takes one host, not a network range."
+      },
+      {
+        "id": "d",
+        "text": "nmap -sn 10.20.0.0/24"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "-sn is a ping scan (host discovery only). It answers 'who is there?' before you decide what to scan."
+  },
+  {
+    "id": "lin-q-ver-2",
+    "type": "mcq",
+    "tags": ["network.service-versions", "linux-cli", "public"],
+    "difficulty": 2,
+    "stem": "Why does nmap -sV take longer than a plain port scan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "It scans all 65,535 ports instead of only the default 1,000 ports",
+        "why": "-sV does not change which ports are scanned."
+      },
+      {
+        "id": "b",
+        "text": "It talks to each open service to identify the software version"
+      },
+      {
+        "id": "c",
+        "text": "It waits for the DNS server to answer a lookup for every host",
+        "why": "Name resolution is not what takes the time."
+      },
+      {
+        "id": "d",
+        "text": "It sends ICMP echo requests to every address, then waits for replies",
+        "why": "Host discovery is a different step."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "Version detection sends extra probes to each open service and reads its reply (banner). More conversation per port means a slower scan."
+  }
+]

@@ -36,7 +36,7 @@ var version := 0
 var exam: Dictionary = {}
 var domains: Array = []
 var objectives: Array = []
-var concepts: Dictionary = {}  # concept id -> {id, title, objective}
+var concepts: Dictionary = {}  # concept id -> {id, title, objective, topics}
 var items: Dictionary = {}  # item id -> item Dictionary (valid items only)
 var ranks: Array = []  # optional [[name, xp], ...] replacing the engine's ladder
 var rounds_include_labs := false  # a skill pack: terminal missions are served in rounds
@@ -45,6 +45,8 @@ var evidence_reasons: Array = []  # [{key, label}] menu for evidence hunts
 var artifacts: Dictionary = {}  # item id -> Array of the artifact's lines
 var labs: Dictionary = {}  # lab id -> SimLab (valid labs only)
 var tool_docs: Dictionary = {}  # tool name -> {summary, usage, flags, concepts, note}
+var tags: Array = []  # pack tags: a bank item carrying any of them is in this pack
+var bank_items := 0  # how many of `items` came from bank/items/ (the rest are in this pack's own items/)
 var errors: Array = []
 var warnings: Array = []
 ## Valid items with no `explain` (explanations are optional; the report notes how many).
@@ -53,6 +55,9 @@ var items_without_explain := 0
 var _domain_ids: Dictionary = {}
 var _objective_by_id: Dictionary = {}
 var _by_concept: Dictionary = {}  # concept id -> Array of item ids
+var _concepts_by_topic: Dictionary = {}  # topic tag -> concept ids that list it, in pack.json order
+var _registry: TagRegistry = null  # data/tags.json when the pack sits in a game folder (<root>/packs/<id>)
+var _root := ""
 
 
 static func is_pbq(item: Dictionary) -> bool:
@@ -70,10 +75,53 @@ func round_item(item: Dictionary) -> bool:
 	return not is_pbq(item) or (rounds_include_labs and item["type"] == "terminal")
 
 
-static func load_dir(path: String) -> Pack:
+## `root` is the game folder holding data/tags.json and bank/items/. Left out, it is the folder two levels above a pack
+## that sits in a folder named `packs`; a pack anywhere else has no registry and no bank (tags are then only checked for
+## shape), which is how the test fixtures and a pack being written stand alone.
+static func load_dir(path: String, root: String = "") -> Pack:
 	var pack := Pack.new()
-	pack._load(path)
+	pack._load(path, root)
 	return pack
+
+
+static func root_of(path: String) -> String:
+	var dir := path.trim_suffix("/")
+	var packs_dir := dir.get_base_dir()
+	if packs_dir.get_file() == "packs":
+		return packs_dir.get_base_dir()
+	return ""
+
+
+## Checks bank/items/ as a whole, which no single pack load can: every item valid against the registry, ids unique across
+## the bank and every pack's own items, every item in at least one pack. -> {errors, warnings, count}
+static func check_bank(root: String = "res://") -> Dictionary:
+	var scratch := Pack.new()
+	scratch._root = root
+	var reg_path := root.path_join("data/tags.json")
+	if FileAccess.file_exists(reg_path):
+		scratch._registry = TagRegistry.load_file(reg_path)
+		scratch.errors.append_array(scratch._registry.errors)
+	var pack_tags: Dictionary = {}  # pack tag -> pack dir name
+	var own_ids: Dictionary = {}  # item id -> label of the pack file holding it
+	var packs_dir := root.path_join("packs")
+	for pack_name in DirAccess.get_directories_at(packs_dir):
+		var meta: Variant = scratch._read_json(packs_dir.path_join(pack_name).path_join("pack.json"), "packs/%s/pack.json" % pack_name)
+		if typeof(meta) == TYPE_DICTIONARY and typeof(meta.get("tags")) == TYPE_ARRAY:
+			for t in meta["tags"]:
+				pack_tags[t] = pack_name
+		for entry in scratch._read_item_files(packs_dir.path_join(pack_name).path_join("items"), "packs/%s/items" % pack_name, false):
+			own_ids[str(entry["item"].get("id", ""))] = entry["label"]
+	var count := 0
+	for entry in scratch._read_item_files(root.path_join("bank/items"), "bank/items", false):
+		var item: Dictionary = entry["item"]
+		count += 1
+		if own_ids.has(str(item.get("id", ""))):
+			scratch.errors.append("%s %s: the id is also used in %s" % [entry["label"], item.get("id"), own_ids[str(item.get("id"))]])
+		if scratch._validate_item(item, entry["label"], true):
+			scratch.items[item["id"]] = item
+			if not _carries_any(item["tags"], pack_tags.keys()):
+				scratch.warnings.append("%s %s: carries no tag of any pack, so no pack serves it" % [entry["label"], item["id"]])
+	return {"errors": scratch.errors, "warnings": scratch.warnings, "count": count}
 
 
 func ok() -> bool:
@@ -82,6 +130,26 @@ func ok() -> bool:
 
 func objective(objective_id: String) -> Dictionary:
 	return _objective_by_id.get(objective_id, {})
+
+
+## The topics a concept lists (its mastery is read from them), [] for an unknown concept.
+func topics_of(concept_id: String) -> Array:
+	return concepts.get(concept_id, {}).get("topics", [])
+
+
+## The topic tags in `tags`: a topic id is `<area>.<topic>`, the only kind of tag with a dot (TagRegistry).
+static func topics_in(tags: Array) -> Array:
+	return tags.filter(func(t: Variant) -> bool: return typeof(t) == TYPE_STRING and (t as String).contains("."))
+
+
+## Every distinct topic of the pack's concepts, in pack order.
+func all_topics() -> Array:
+	var out: Array = []
+	for cid in concepts:
+		for t in concepts[cid]["topics"]:
+			if not out.has(t):
+				out.append(t)
+	return out
 
 
 func domain_of_concept(concept_id: String) -> String:
@@ -182,6 +250,8 @@ func report() -> String:
 	lines.append("pack %s  \"%s\"  v%d" % [id, title, version])
 	lines.append("  %d domains, %d objectives, %d concepts, %d items (reviewed by a person %d, by AI %d)" % [
 			s["domains"], s["objectives"], s["concepts"], s["items"], s["human"], s["ai"]])
+	if bank_items > 0:
+		lines.append("  bank: %d of the items come from bank/items/ (tags %s)" % [bank_items, ", ".join(tags)])
 	lines.append("  codex: %d of %d concepts have a definition" % [codex.size(), concepts.size()])
 	var pbq := pbq_counts()
 	if int(pbq["evidence"]) + int(pbq["match"]) + int(pbq["order"]) > 0:
@@ -213,8 +283,13 @@ func report() -> String:
 
 # --- loading -----------------------------------------------------------
 
-func _load(path: String) -> void:
+func _load(path: String, root: String) -> void:
 	dir = path.trim_suffix("/")
+	_root = root if root != "" else Pack.root_of(dir)
+	if _root != "" and FileAccess.file_exists(_root.path_join("data/tags.json")):
+		_registry = TagRegistry.load_file(_root.path_join("data/tags.json"))
+		for e in _registry.errors:
+			errors.append(e)
 	var meta: Variant = _read_json(dir.path_join("pack.json"), "pack.json")
 	if typeof(meta) != TYPE_DICTIONARY:
 		if errors.is_empty():
@@ -378,6 +453,7 @@ func _load_meta(meta: Dictionary) -> void:
 			rounds_include_labs = meta["rounds_include_labs"]
 		else:
 			errors.append("pack.json: 'rounds_include_labs' must be true or false")
+	_load_pack_tags(meta.get("tags"))
 	if meta.has("ranks"):
 		var rank_problem := Rules.ranks_problem(meta["ranks"])
 		if rank_problem != "":
@@ -412,6 +488,24 @@ func _load_meta(meta: Dictionary) -> void:
 		objective_list = []
 	for o in objective_list:
 		_load_objective(o)
+
+
+## `tags`: the pack tags a bank item may carry to be in this pack. Required when the pack sits in a game folder.
+func _load_pack_tags(list: Variant) -> void:
+	if list == null:
+		if _registry != null:
+			errors.append("pack.json: 'tags' must list the pack's tag (a pack tag from data/tags.json)")
+		return
+	if typeof(list) != TYPE_ARRAY or (list as Array).is_empty():
+		errors.append("pack.json: 'tags' must be a non-empty array of pack tags")
+		return
+	for t in list:
+		if typeof(t) != TYPE_STRING or not TagRegistry.well_formed(t) or tags.has(t):
+			errors.append("pack.json: bad or repeated tag %s in 'tags'" % JSON.stringify(t))
+		elif _registry != null and _registry.kind_of(t) != "pack":
+			errors.append("pack.json: '%s' is not a pack tag in data/tags.json" % t)
+		else:
+			tags.append(t)
 
 
 func _load_evidence_reasons(list: Variant) -> void:
@@ -460,35 +554,107 @@ func _load_objective(o: Variant) -> void:
 		if concepts.has(cid):
 			errors.append("pack.json: duplicate concept id '%s'" % cid)
 			continue
-		concepts[cid] = {"id": cid, "title": c["title"], "objective": oid}
+		var topic_list: Variant = c.get("topics")
+		if typeof(topic_list) != TYPE_ARRAY or (topic_list as Array).is_empty():
+			errors.append("pack.json: concept '%s' needs 'topics', a non-empty array of topic tags" % cid)
+			continue
+		var topics: Array = []
+		for t in topic_list:
+			if typeof(t) != TYPE_STRING or topics.has(t):
+				errors.append("pack.json: concept '%s' has a bad or repeated topic %s" % [cid, JSON.stringify(t)])
+			elif _registry != null and _registry.kind_of(t) != "topic":
+				errors.append("pack.json: concept '%s': '%s' is not a topic in data/tags.json" % [cid, t])
+			else:
+				topics.append(t)
+		concepts[cid] = {"id": cid, "title": c["title"], "objective": oid, "topics": topics}
+		for t in topics:
+			if not _concepts_by_topic.has(t):
+				_concepts_by_topic[t] = []
+			_concepts_by_topic[t].append(cid)
 
 
+## First the bank items that carry one of the pack's tags (bank/items/*.json), then the pack's own items/*.json. An item is
+## in the concepts that list one of its topics; `concept_ids` is derived here and is what the rest of the game reads.
 func _load_items() -> void:
-	var items_dir := dir.path_join("items")
-	if DirAccess.open(items_dir) == null:
-		warnings.append("no items/ directory")
-		return
-	var names: Array = Array(DirAccess.get_files_at(items_dir))
+	if _root != "" and not tags.is_empty():
+		for entry in _read_item_files(_root.path_join("bank/items"), "bank/items", false):
+			var raw: Dictionary = entry["item"]
+			var item_tags: Variant = raw.get("tags")
+			if typeof(item_tags) != TYPE_ARRAY or not _carries_any(item_tags, tags):
+				continue
+			if _add_item(raw, entry["label"], true):
+				bank_items += 1
+	for entry in _read_item_files(dir.path_join("items"), "items", true):
+		var raw2: Dictionary = entry["item"]
+		var own_tags: Variant = raw2.get("tags")
+		if not tags.is_empty() and typeof(own_tags) == TYPE_ARRAY and not _carries_any(own_tags, tags):
+			errors.append("%s %s: carries none of the pack's tags (%s)" % [entry["label"], raw2.get("id", "(no id)"), ", ".join(tags)])
+			continue
+		_add_item(raw2, entry["label"], false)
+
+
+static func _carries_any(have: Array, want: Array) -> bool:
+	for t in want:
+		if have.has(t):
+			return true
+	return false
+
+
+## [{item, label}] over every *.json in `dir_path` (sorted), each file an array of items. Problems go to `errors`; a
+## missing folder is a warning when `warn_missing`.
+func _read_item_files(dir_path: String, label_dir: String, warn_missing: bool) -> Array:
+	var out: Array = []
+	if DirAccess.open(dir_path) == null:
+		if warn_missing:
+			warnings.append("no items/ directory")
+		return out
+	var names: Array = Array(DirAccess.get_files_at(dir_path))
 	names.sort()
 	for file_name in names:
 		if not (file_name as String).ends_with(".json"):
 			continue
-		var label := "items/%s" % file_name
-		var data: Variant = _read_json(items_dir.path_join(file_name), label)
+		var label := "%s/%s" % [label_dir, file_name]
+		var data: Variant = _read_json(dir_path.path_join(file_name), label)
 		if data == null:
 			continue
 		if typeof(data) != TYPE_ARRAY:
 			errors.append("%s: expected an array of items" % label)
 			continue
 		for item in data:
-			if _validate_item(item, label):
-				items[item["id"]] = item
-				if explain_of(item) == "":
-					items_without_explain += 1
-				for cid in item["concept_ids"]:
-					if not _by_concept.has(cid):
-						_by_concept[cid] = []
-					_by_concept[cid].append(item["id"])
+			if typeof(item) != TYPE_DICTIONARY:
+				errors.append("%s: every entry must be an object" % label)
+				continue
+			out.append({"item": item, "label": label})
+	return out
+
+
+## Validates `raw`, works out its concepts and stores a copy that has `concept_ids`. False when it is not usable.
+func _add_item(raw: Dictionary, label: String, from_bank: bool) -> bool:
+	if not _validate_item(raw, label, from_bank):
+		return false
+	var item: Dictionary = raw.duplicate()
+	var cids: Array = []
+	for t in item["tags"]:
+		for cid in _concepts_by_topic.get(t, []):
+			if not cids.has(cid):
+				cids.append(cid)
+	if cids.is_empty():
+		var msg := "%s %s: no concept in this pack lists any of its topics, so no round can ask it" % [label, item["id"]]
+		if from_bank:
+			warnings.append(msg)
+		else:
+			errors.append(msg)
+		return false
+	item["concept_ids"] = cids
+	item["topics"] = topics_in(item["tags"])   # derived like concept_ids: what answering this item updates
+	items[item["id"]] = item
+	if explain_of(item) == "":
+		items_without_explain += 1
+	for cid in cids:
+		if not _by_concept.has(cid):
+			_by_concept[cid] = []
+		_by_concept[cid].append(item["id"])
+	return true
 
 
 ## labs/*.json, one lab per file. A lab with problems is reported and not used.
@@ -577,7 +743,7 @@ func _load_codex() -> void:
 
 
 ## Appends to `errors` and returns false when the item is not usable.
-func _validate_item(item: Variant, label: String) -> bool:
+func _validate_item(item: Variant, label: String, from_bank: bool = false) -> bool:
 	if typeof(item) != TYPE_DICTIONARY:
 		errors.append("%s: every entry must be an object" % label)
 		return false
@@ -591,13 +757,9 @@ func _validate_item(item: Variant, label: String) -> bool:
 	var item_type: String = str(item.get("type", ""))
 	if not ITEM_TYPES.has(item_type):
 		problems.append("unsupported type '%s' (known: %s)" % [item_type, ", ".join(ITEM_TYPES)])
-	var cids: Variant = item.get("concept_ids")
-	if typeof(cids) != TYPE_ARRAY or (cids as Array).is_empty():
-		problems.append("'concept_ids' must be a non-empty array")
-	else:
-		for cid in cids:
-			if not concepts.has(cid):
-				problems.append("unknown concept id '%s'" % cid)
+	_validate_tags(item, problems)
+	if from_bank and (not (item_type == "mcq" or item_type == "multi") or item.has("show")):
+		problems.append("a bank item must be an mcq or multi without 'show' (labs and the richer types stay in their pack)")
 	if not _whole(item.get("difficulty")) or int(item.get("difficulty", 0)) < 1 or int(item.get("difficulty", 0)) > 3:
 		problems.append("'difficulty' must be 1, 2 or 3")
 	if item.has("source") or item.has("reviewed"):
@@ -623,6 +785,52 @@ func _validate_item(item: Variant, label: String) -> bool:
 	for p in problems:
 		errors.append("%s: %s" % [where, p])
 	return problems.is_empty()
+
+
+## `tags`: topics (what the item teaches), a pack tag, flags. Checked against data/tags.json when the pack has one.
+func _validate_tags(item: Dictionary, problems: Array) -> void:
+	if item.has("concept_ids"):
+		problems.append("'concept_ids' is gone: give the item 'tags' instead (topics, a pack tag, flags; see the README \"Shared bank plan\")")
+	var list: Variant = item.get("tags")
+	if typeof(list) != TYPE_ARRAY or (list as Array).is_empty():
+		problems.append("'tags' must be a non-empty array")
+		return
+	if (list as Array).size() > TagRegistry.MAX_TAGS:
+		problems.append("at most %d tags, found %d" % [TagRegistry.MAX_TAGS, (list as Array).size()])
+	var seen: Dictionary = {}
+	var topics := 0
+	var packs := 0
+	var clean := true
+	for t in list:
+		if typeof(t) != TYPE_STRING or not TagRegistry.well_formed(t):
+			problems.append("bad tag %s (lowercase letters, digits and . : _ -)" % JSON.stringify(t))
+			clean = false
+			continue
+		if seen.has(t):
+			problems.append("repeated tag '%s'" % t)
+			clean = false
+			continue
+		seen[t] = true
+		if _registry == null:
+			continue
+		if not _registry.has(t):
+			var now := _registry.current(t)
+			if now != t:
+				problems.append("tag '%s' was renamed to '%s'" % [t, now])
+			else:
+				problems.append("unknown tag '%s' (add it to data/tags.json in the same change)" % t)
+			clean = false
+			continue
+		match _registry.kind_of(t):
+			"topic":
+				topics += 1
+			"pack":
+				packs += 1
+	if _registry != null and clean:
+		if topics < 1 or topics > TagRegistry.MAX_TOPICS:
+			problems.append("an item needs 1 to %d topic tags, found %d" % [TagRegistry.MAX_TOPICS, topics])
+		if packs < 1:
+			problems.append("an item needs at least one pack tag")
 
 
 ## An optional `show: {lab, command}` prints a lab command's output under the

@@ -1,0 +1,299 @@
+[
+  {
+    "id": "aiken-domain-3-005", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company installs an inline Intrusion Prevention System (IPS) to monitor web traffic. To prioritize network availability, the network architect configures the IPS to allow all traffic to bypass inspection if the appliance experiences a hardware failure. Which of the following failure modes has the architect selected?",
+    "options": [
+      { "id": "a", "text": "Fail-closed" },
+      { "id": "b", "text": "Fail-open" },
+      { "id": "c", "text": "Fail-secure" },
+      { "id": "d", "text": "Fail-over" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-008", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company is experiencing frequent Layer 7 attacks against its primary e-commerce web application, including SQL injection and cross-site scripting (XSS) attempts. Which of the following network security appliances is BEST suited to protect the web application from these specific attacks?",
+    "options": [
+      { "id": "a", "text": "Intrusion Detection System" },
+      { "id": "b", "text": "Virtual Private Network" },
+      { "id": "c", "text": "Web Application Firewall" },
+      { "id": "d", "text": "Secure Access Service Edge" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-010", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company policy dictates that if the inline network intrusion prevention system (IPS) encounters a fatal hardware error, network traffic must continue to flow to maintain business operations, even if it is uninspected. Which failure mode MUST the IPS use?",
+    "options": [
+      { "id": "a", "text": "Fail-closed" },
+      { "id": "b", "text": "Fail-open" },
+      { "id": "c", "text": "Active-passive" },
+      { "id": "d", "text": "High availability" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-018", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A firewall is configured to block all inbound and outbound traffic that is not explicitly permitted by a rule. Which security principle does this BEST demonstrate?",
+    "options": [
+      { "id": "a", "text": "Fail-open" },
+      { "id": "b", "text": "Fail-closed" },
+      { "id": "c", "text": "Device placement" },
+      { "id": "d", "text": "Jump server utilization" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-028", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A network administrator needs to restrict physical access to network jacks in a corporate lobby. Only authorized corporate devices should be allowed to connect. Which of the following controls is the BEST solution?",
+    "options": [
+      { "id": "a", "text": "Deploying a Web Application Firewall (WAF)" },
+      { "id": "b", "text": "Implementing port security using 802.1X" },
+      { "id": "c", "text": "Configuring a reverse proxy server" },
+      { "id": "d", "text": "Setting up an IPSec VPN tunnel" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-029", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A network architect is designing security controls for a manufacturing plant. The PLCs and robotic arms must be logically separated from the corporate email and HR systems. Which of the following concepts BEST addresses this requirement?",
+    "options": [
+      { "id": "a", "text": "Security zones" },
+      { "id": "b", "text": "Tunneling" },
+      { "id": "c", "text": "Fail-open modes" },
+      { "id": "d", "text": "Load balancing" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-030", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A physical security access control system secures the main doors to a secure facility. For life safety reasons, the electronic locks must automatically release and unlock if power is lost. Which failure mode does this represent?",
+    "options": [
+      { "id": "a", "text": "Fail-closed" },
+      { "id": "b", "text": "Fail-secure" },
+      { "id": "c", "text": "Fail-open" },
+      { "id": "d", "text": "Fail-safe" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-033", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security analyst recommends implementing TLS for all internal application communication. Which of the following security objectives is the analyst PRIMARILY addressing?",
+    "options": [
+      { "id": "a", "text": "Creating secure security zones" },
+      { "id": "b", "text": "Reducing the attack surface" },
+      { "id": "c", "text": "Ensuring secure communications" },
+      { "id": "d", "text": "Managing device placement" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-035", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security architect wants to prevent direct administrative access to critical database servers from standard user workstations. Administrators must first connect to a secure intermediary machine. Which of the following BEST fulfills this requirement?",
+    "options": [
+      { "id": "a", "text": "Load balancer" },
+      { "id": "b", "text": "Jump server" },
+      { "id": "c", "text": "Next-Generation Firewall (NGFW)" },
+      { "id": "d", "text": "Intrusion Detection System (IDS)" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-036", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security engineer is configuring a new physical access control system for a highly secure facility. During a power outage, the electronic locks must automatically secure the doors to prevent unauthorized entry, even if it traps personnel inside temporarily. Which of the following failure modes is the engineer implementing?",
+    "options": [
+      { "id": "a", "text": "Fail-safe" },
+      { "id": "b", "text": "Fail-open" },
+      { "id": "c", "text": "Fail-closed" },
+      { "id": "d", "text": "Fail-over" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-039", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security engineer is reviewing the placement of an IDS sensor. To capture all traffic entering and leaving the organization's network before it hits the firewall, where is the BEST location for the sensor?",
+    "options": [
+      { "id": "a", "text": "In the internal secure zone" },
+      { "id": "b", "text": "On the external interface of the border router" },
+      { "id": "c", "text": "Inside the DMZ near the web servers" },
+      { "id": "d", "text": "Between the jump server and the internal database" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-041", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security team is designing a remote access solution for a highly distributed workforce. They want to integrate cloud-native security controls, including zero-trust network access, SWG, and CASB, delivered as a unified cloud service. Which architecture BEST describes this approach?",
+    "options": [
+      { "id": "a", "text": "Virtual Private Network (VPN)" },
+      { "id": "b", "text": "Unified Threat Management (UTM)" },
+      { "id": "c", "text": "Secure Access Service Edge (SASE)" },
+      { "id": "d", "text": "Infrastructure as Code (IaC)" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-048", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An administrator configures an Extensible Authentication Protocol (EAP) to require mutual authentication between the client and the authentication server using digital certificates. Which network security standard is MOST likely being supported?",
+    "options": [
+      { "id": "a", "text": "IPSec" },
+      { "id": "b", "text": "802.1X" },
+      { "id": "c", "text": "SASE" },
+      { "id": "d", "text": "WAF" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-056", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An enterprise requires employees to connect securely to the corporate network from public coffee shops using their laptops. Which of the following technologies is the BEST standard solution for this requirement?",
+    "options": [
+      { "id": "a", "text": "Jump server" },
+      { "id": "b", "text": "Virtual Private Network (VPN)" },
+      { "id": "c", "text": "Web Application Firewall (WAF)" },
+      { "id": "d", "text": "SD-WAN" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-057", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An enterprise wants to consolidate content filtering, anti-malware, firewall capabilities, and intrusion prevention into a single network appliance to simplify management. Which of the following should be deployed?",
+    "options": [
+      { "id": "a", "text": "WAF" },
+      { "id": "b", "text": "UTM" },
+      { "id": "c", "text": "Load balancer" },
+      { "id": "d", "text": "Jump server" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-061", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization implements a physical access control system for its primary datacenter. In the event of a total power failure, the electronic locks are designed to automatically unlock to ensure personnel can safely exit the building. Which of the following security concepts does this scenario BEST illustrate?",
+    "options": [
+      { "id": "a", "text": "Fail-closed system" },
+      { "id": "b", "text": "Fail-open system" },
+      { "id": "c", "text": "High availability" },
+      { "id": "d", "text": "Risk transference" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-067", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization must ensure its network architecture can rapidly identify and block active exploitation attempts against known vulnerabilities on internal servers. Which of the following controls is MOST appropriate?",
+    "options": [
+      { "id": "a", "text": "IPS" },
+      { "id": "b", "text": "IDS" },
+      { "id": "c", "text": "Load balancer" },
+      { "id": "d", "text": "802.1X" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-071", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization uses network sensors deployed across various subnets to copy and analyze traffic for anomalous behavior. Which of the following components are these sensors MOST likely supporting?",
+    "options": [
+      { "id": "a", "text": "Load balancer" },
+      { "id": "b", "text": "IPS/IDS" },
+      { "id": "c", "text": "SD-WAN" },
+      { "id": "d", "text": "VPN concentrator" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-074", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization wants to securely connect its remote branch offices to the corporate datacenter over broadband internet while dynamically optimizing traffic paths based on link quality. Which technology BEST meets these requirements?",
+    "options": [
+      { "id": "a", "text": "SD-WAN" },
+      { "id": "b", "text": "IPSec tunneling" },
+      { "id": "c", "text": "Remote desktop protocol (RDP)" },
+      { "id": "d", "text": "Extensible Authentication Protocol (EAP)" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-083", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "To minimize the attack surface, a security engineer decides to place web servers in a segregated network segment that is isolated from the internal corporate network but accessible from the internet. Which of the following concepts is being implemented?",
+    "options": [
+      { "id": "a", "text": "Security zones" },
+      { "id": "b", "text": "Jump servers" },
+      { "id": "c", "text": "Fail-closed design" },
+      { "id": "d", "text": "Secure Access Service Edge (SASE)" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-3-090", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When establishing a secure site-to-site communication link over the public internet, which of the following protocols is BEST suited for creating a robust, encrypted tunnel at the network layer?",
+    "options": [
+      { "id": "a", "text": "TLS" },
+      { "id": "b", "text": "IPSec" },
+      { "id": "c", "text": "EAP" },
+      { "id": "d", "text": "802.1X" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-094", "type": "mcq", "tags": ["arch.control-selection", "sy0-701", "public"], "difficulty": 2,
+    "stem": "When securing an embedded system within a medical device, which of the following constraints MOST significantly impacts the selection of security controls?",
+    "options": [
+      { "id": "a", "text": "The lack of available third-party threat intelligence feeds" },
+      { "id": "b", "text": "The inability to deploy traditional, resource-intensive anti-malware agents" },
+      { "id": "c", "text": "The reliance on cloud-based identity and access management" },
+      { "id": "d", "text": "The requirement for dynamic IP address allocation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-112", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following firewall types provides deep packet inspection, application-level awareness, and active intrusion prevention within a single platform, going beyond traditional stateful inspection?",
+    "options": [
+      { "id": "a", "text": "WAF" },
+      { "id": "b", "text": "NGFW" },
+      { "id": "c", "text": "Network tap" },
+      { "id": "d", "text": "Forward proxy" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-118", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is the PRIMARY consideration when evaluating the attack surface of a newly deployed cloud application?",
+    "options": [
+      { "id": "a", "text": "The physical location of the cloud provider's datacenters" },
+      { "id": "b", "text": "The total number of exposed API endpoints and open ports" },
+      { "id": "c", "text": "The encryption algorithm used for data at rest backups" },
+      { "id": "d", "text": "The redundancy of the internet service provider links" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-121", "type": "mcq", "tags": ["arch.infrastructure-considerations", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following network security appliances is specifically designed to inspect HTTPS traffic, prevent SQL injection, and block cross-site scripting (XSS) attacks aimed at a web server?",
+    "options": [
+      { "id": "a", "text": "Unified Threat Management (UTM)" },
+      { "id": "b", "text": "Intrusion Detection System (IDS)" },
+      { "id": "c", "text": "Web Application Firewall (WAF)" },
+      { "id": "d", "text": "Forward proxy server" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-3-124", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following represents the MOST significant security benefit of deploying a proxy server for outbound employee web traffic?",
+    "options": [
+      { "id": "a", "text": "It provides end-to-end encryption between the client and the destination web server" },
+      { "id": "b", "text": "It acts as an intermediary, inspecting and filtering requests to malicious domains" },
+      { "id": "c", "text": "It dynamically distributes network load across multiple internet service providers" },
+      { "id": "d", "text": "It authenticates users securely utilizing 802.1X before they access local network ports" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-3-128", "type": "mcq", "tags": ["network.secure-communication", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following technologies is BEST utilized to abstract network hardware and apply intelligent routing policies based on application requirements across diverse geographic locations?",
+    "options": [
+      { "id": "a", "text": "SASE" },
+      { "id": "b", "text": "SD-WAN" },
+      { "id": "c", "text": "NGFW" },
+      { "id": "d", "text": "UTM" }
+    ],
+    "answer": ["b"]
+  }
+]

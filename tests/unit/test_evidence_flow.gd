@@ -211,8 +211,8 @@ func test_a_hunts_result_is_saved_and_the_concept_comes_back_when_missed() -> vo
 	_router.handle("yes")
 	var saved := ProfileStore.new(_dir.path_join("saves")).load_profile("dana")
 	saved.track = _router.profile.track
-	assert_true(saved.progress()["items"].has("ev-0"))
-	assert_eq(Mastery.box(saved, "1.1.a"), 1)
+	assert_true(saved.peek_items().has("ev-0"))
+	assert_eq(Mastery.box(saved, Support.topic_of("1.1.a")), 1)
 	assert_eq(Mastery.total_xp(saved), 0, "an exam gives no XP")
 	assert_eq(saved.rounds().size(), 1)
 	assert_eq(int(saved.rounds()[0]["pbqs"]), 1)

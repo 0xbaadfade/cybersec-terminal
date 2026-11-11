@@ -1,0 +1,66 @@
+[
+  {
+    "id": "win-q-dns-4",
+    "type": "mcq",
+    "tags": ["network.dns-lookup", "windows-cli", "public"],
+    "difficulty": 1,
+    "stem": "Which server does nslookup ask by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The default gateway, since routers forward every request",
+        "why": "The gateway forwards packets; it is not necessarily a DNS server."
+      },
+      {
+        "id": "b",
+        "text": "The first host that answers a ping on the local network",
+        "why": "nslookup does not search for servers by pinging."
+      },
+      {
+        "id": "c",
+        "text": "The DNS server configured on the PC, shown by ipconfig /all"
+      },
+      {
+        "id": "d",
+        "text": "The DHCP server, always, whatever the PC is configured to use",
+        "why": "Only if that is what the PC was configured to use."
+      }
+    ],
+    "answer": [
+      "c"
+    ],
+    "explain": "nslookup uses the configured resolver unless you name another, as in nslookup fs-01 192.168.10.5."
+  },
+  {
+    "id": "win-q-ping-3",
+    "type": "mcq",
+    "tags": ["network.ping", "windows-cli", "public"],
+    "difficulty": 1,
+    "stem": "On Windows, which ping option sets the number of echo requests?",
+    "options": [
+      {
+        "id": "a",
+        "text": "-c count",
+        "why": "-c is the Linux option."
+      },
+      {
+        "id": "b",
+        "text": "-n count"
+      },
+      {
+        "id": "c",
+        "text": "-l count",
+        "why": "-l sets the payload size in bytes."
+      },
+      {
+        "id": "d",
+        "text": "-w count",
+        "why": "-w is the timeout per reply in milliseconds."
+      }
+    ],
+    "answer": [
+      "b"
+    ],
+    "explain": "ping -n 4 dc-01 sends four requests. Windows sends four by default; Linux ping runs until stopped."
+  }
+]

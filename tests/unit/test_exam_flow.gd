@@ -410,8 +410,8 @@ func test_submit_applies_mastery_for_answered_questions_only_and_gives_no_xp() -
 		assert_eq(int(Mastery.item_record(p, ids[i]).get("seen", 0)), 0, "blank question %d left alone" % (i + 1))
 	assert_eq(Mastery.total_xp(p), 0)
 	var concept: String = _router.pack.items[ids[3]]["concept_ids"][0]
-	assert_gt(int(Mastery.record(p, concept)["misses"]), 0, "a miss is recorded")
-	assert_true(Mastery.is_due(p, concept, Mastery.day_of(_now) + 1), "and the concept comes due tomorrow")
+	assert_gt(int(Mastery.record(p, Support.topic_of(concept))["misses"]), 0, "a miss is recorded")
+	assert_true(Mastery.is_due(p, Support.topic_of(concept), Mastery.day_of(_now) + 1), "and the concept comes due tomorrow")
 
 
 func test_the_attempt_is_logged_and_survives_a_save_and_load() -> void:

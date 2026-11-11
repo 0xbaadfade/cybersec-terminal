@@ -1,0 +1,310 @@
+[
+  {
+    "id": "aiken-domain-5-006", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company determines that a specific data breach would result in severe regulatory fines and catastrophic reputational damage. Which element of the risk analysis is being evaluated?",
+    "options": [
+      { "id": "a", "text": "Probability" },
+      { "id": "b", "text": "Frequency" },
+      { "id": "c", "text": "Impact" },
+      { "id": "d", "text": "Likelihood" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-013", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A company's executive is barred from serving as a corporate officer for five years due to intentional circumvention of security compliance regulations. What type of consequence does this represent?",
+    "options": [
+      { "id": "a", "text": "Due care failure" },
+      { "id": "b", "text": "Contractual impact" },
+      { "id": "c", "text": "Fine" },
+      { "id": "d", "text": "Sanction" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-015", "type": "mcq", "tags": ["grc.compliance-monitoring", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A compliance officer is reviewing log files and analyzing user access patterns every week to ensure no unauthorized access to patient data occurs. What process is the officer performing?",
+    "options": [
+      { "id": "a", "text": "Compliance monitoring" },
+      { "id": "b", "text": "Data inventory" },
+      { "id": "c", "text": "External attestation" },
+      { "id": "d", "text": "Automated reporting" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-017", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A defense contractor is prohibited from bidding on new government contracts for a period of two years due to repeated security framework violations. Which of the following BEST describes this consequence?",
+    "options": [
+      { "id": "a", "text": "Financial fine" },
+      { "id": "b", "text": "Reputational damage" },
+      { "id": "c", "text": "Sanction" },
+      { "id": "d", "text": "Contractual impact" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-023", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A financial institution implements a policy stating that all customer transaction records must be securely stored for exactly seven years, after which they must be destroyed. Which compliance element is being enforced?",
+    "options": [
+      { "id": "a", "text": "Data inventory" },
+      { "id": "b", "text": "Right to be forgotten" },
+      { "id": "c", "text": "Data ownership" },
+      { "id": "d", "text": "Data retention" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-025", "type": "mcq", "tags": ["grc.compliance-reporting", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A financial institution submits its quarterly cybersecurity posture report to a federal regulatory agency. What type of activity is the institution performing?",
+    "options": [
+      { "id": "a", "text": "Internal auditing" },
+      { "id": "b", "text": "Attestation and acknowledgement" },
+      { "id": "c", "text": "Automated continuous monitoring" },
+      { "id": "d", "text": "External compliance reporting" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-029", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A healthcare organization experienced a massive data breach due to gross negligence and failed to protect patient health information. As a direct regulatory consequence, a government agency mandates the organization pay $5 million. Which consequence of non-compliance is this?",
+    "options": [
+      { "id": "a", "text": "Reputational damage" },
+      { "id": "b", "text": "Loss of license" },
+      { "id": "c", "text": "Sanction" },
+      { "id": "d", "text": "Fine" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-037", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A managed service provider (MSP) fails to meet the data encryption standards mandated in a master service agreement with an enterprise client. The client terminates the agreement prematurely. Which of the following consequences of non-compliance has occurred?",
+    "options": [
+      { "id": "a", "text": "Regulatory fine" },
+      { "id": "b", "text": "Legal sanction" },
+      { "id": "c", "text": "Loss of license" },
+      { "id": "d", "text": "Contractual impact" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-041", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A marketing firm decides to launch a new campaign, determining exactly what customer information needs to be collected and how it will be used for targeted advertising. Which privacy role does the marketing firm fulfill?",
+    "options": [
+      { "id": "a", "text": "Data subject" },
+      { "id": "b", "text": "Data custodian" },
+      { "id": "c", "text": "Data controller" },
+      { "id": "d", "text": "Data processor" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-042", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A medical practitioner's clinic repeatedly violates HIPAA regulations by leaving patient files unsecured. The state medical board revokes the clinic's authorization to operate. What is the BEST description of this outcome?",
+    "options": [
+      { "id": "a", "text": "External reporting" },
+      { "id": "b", "text": "Contractual breach" },
+      { "id": "c", "text": "Reputational damage" },
+      { "id": "d", "text": "Loss of license" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-045", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A payment processing company fails multiple consecutive Payment Card Industry Data Security Standard (PCI DSS) audits. The acquiring bank revokes the company's ability to process credit card transactions. Which consequence of non-compliance does this scenario represent?",
+    "options": [
+      { "id": "a", "text": "Loss of license" },
+      { "id": "b", "text": "Criminal sanction" },
+      { "id": "c", "text": "Statutory fine" },
+      { "id": "d", "text": "Reputational damage" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-047", "type": "mcq", "tags": ["grc.compliance-monitoring", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A public corporation prepares its annual financial and cybersecurity risk disclosures to be submitted to the Securities and Exchange Commission (SEC). This action primarily fulfills which compliance requirement?",
+    "options": [
+      { "id": "a", "text": "Automated vulnerability monitoring" },
+      { "id": "b", "text": "External compliance reporting" },
+      { "id": "c", "text": "Right to be forgotten" },
+      { "id": "d", "text": "Internal attestation" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-059", "type": "mcq", "tags": ["grc.compliance-reporting", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A security officer prepares a monthly dashboard showing patching compliance to the Chief Information Security Officer (CISO). Which type of compliance reporting does this BEST represent?",
+    "options": [
+      { "id": "a", "text": "Internal reporting" },
+      { "id": "b", "text": "Regulatory reporting" },
+      { "id": "c", "text": "External reporting" },
+      { "id": "d", "text": "Statutory reporting" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-073", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "A user sends a formal request to a social media platform demanding that all their personal data and account history be permanently deleted from the platform's servers. Which privacy concept is the user invoking?",
+    "options": [
+      { "id": "a", "text": "Data attestation" },
+      { "id": "b", "text": "Right to be forgotten" },
+      { "id": "c", "text": "Data processing" },
+      { "id": "d", "text": "Due diligence" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-074", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "After a significant data breach, an organization notices a sharp decline in brand trust and widespread negative media coverage, leading to decreased sales. Which non-compliance consequence is the organization suffering?",
+    "options": [
+      { "id": "a", "text": "Internal sanction" },
+      { "id": "b", "text": "Reputational damage" },
+      { "id": "c", "text": "Contractual fine" },
+      { "id": "d", "text": "Loss of license" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-086", "type": "mcq", "tags": ["grc.compliance-monitoring", "sy0-701", "public"], "difficulty": 2,
+    "stem": "An organization deploys a security posture management tool that automatically generates tickets and corrects cloud storage buckets if they are accidentally made public. What is the MOST important benefit of this approach to compliance?",
+    "options": [
+      { "id": "a", "text": "It reduces human error and enables continuous compliance enforcement through automation." },
+      { "id": "b", "text": "It eliminates the need for any internal security policies." },
+      { "id": "c", "text": "It ensures manual audits are no longer required by law." },
+      { "id": "d", "text": "It shifts the legal liability of a data breach entirely to the cloud service provider." }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-098", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Before a company can accurately apply retention policies and ensure privacy compliance, what must it FIRST create to understand what information it currently holds and where it is located?",
+    "options": [
+      { "id": "a", "text": "A vendor assessment questionnaire" },
+      { "id": "b", "text": "An external compliance report" },
+      { "id": "c", "text": "A data inventory" },
+      { "id": "d", "text": "A data subject request" }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-108", "type": "mcq", "tags": ["grc.compliance-monitoring", "sy0-701", "public"], "difficulty": 2,
+    "stem": "During an annual security review, all employees are required to sign a document stating they have read, understood, and will follow the acceptable use policy. Which compliance element does this represent?",
+    "options": [
+      { "id": "a", "text": "Due diligence" },
+      { "id": "b", "text": "Continuous monitoring" },
+      { "id": "c", "text": "Regulatory reporting" },
+      { "id": "d", "text": "Attestation and acknowledgement" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-113", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Following a highly publicized customer data leak, a retail company experiences a 30% drop in stock value and loses thousands of subscribers, despite not yet receiving any regulatory fines. What consequence of non-compliance has MOST impacted the company?",
+    "options": [
+      { "id": "a", "text": "Contractual impacts" },
+      { "id": "b", "text": "Reputational damage" },
+      { "id": "c", "text": "Sanctions" },
+      { "id": "d", "text": "Loss of license" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-123", "type": "mcq", "tags": ["grc.compliance-monitoring", "sy0-701", "public"], "difficulty": 2,
+    "stem": "To ensure ongoing adherence to security policies, a systems administrator uses a centralized tool to continuously check server configurations against CIS benchmarks. Which of the following is the administrator implementing?",
+    "options": [
+      { "id": "a", "text": "Right to be forgotten" },
+      { "id": "b", "text": "Compliance reporting" },
+      { "id": "c", "text": "Attestation" },
+      { "id": "d", "text": "Compliance monitoring" }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-127", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Under general privacy frameworks, which term BEST describes the individual who is identified by the collected personal data?",
+    "options": [
+      { "id": "a", "text": "Data subject" },
+      { "id": "b", "text": "Data steward" },
+      { "id": "c", "text": "Data processor" },
+      { "id": "d", "text": "Data controller" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-129", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What distinguishes a data controller from a data processor under standard global privacy regulations?",
+    "options": [
+      { "id": "a", "text": "A controller is legally exempt from compliance fines, while a processor bears the full financial liability for a breach." },
+      { "id": "b", "text": "A controller dictates how and why data is collected, while a processor only handles the data on behalf of the controller." },
+      { "id": "c", "text": "A controller is responsible for securing the data, while a processor is responsible for generating the data policies." },
+      { "id": "d", "text": "A controller manages the technical infrastructure, while a processor interacts directly with the data subjects." }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-132", "type": "mcq", "tags": ["grc.compliance-monitoring", "sy0-701", "public"], "difficulty": 2,
+    "stem": "What distinguishes due care from due diligence in the context of security compliance?",
+    "options": [
+      { "id": "a", "text": "Due care pertains to financial assets, while due diligence pertains to physical security controls." },
+      { "id": "b", "text": "Due care relies on external audits, while due diligence relies strictly on internal monitoring." },
+      { "id": "c", "text": "Due care is a legal requirement, while due diligence is only an optional industry standard." },
+      { "id": "d", "text": "Due care is the implementation of security controls, while due diligence is the continuous verification that those controls are effective." }
+    ],
+    "answer": ["d"]
+  },
+  {
+    "id": "aiken-domain-5-169", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which consequence of non-compliance typically involves a specific monetary penalty levied by a regulatory body for violating data protection laws?",
+    "options": [
+      { "id": "a", "text": "Fine" },
+      { "id": "b", "text": "Loss of license" },
+      { "id": "c", "text": "Reputational damage" },
+      { "id": "d", "text": "Right to be forgotten" }
+    ],
+    "answer": ["a"]
+  },
+  {
+    "id": "aiken-domain-5-174", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which entity acts on behalf of another organization to store, manipulate, or analyze collected personal data without determining the purpose of the data collection?",
+    "options": [
+      { "id": "a", "text": "Data owner" },
+      { "id": "b", "text": "Data processor" },
+      { "id": "c", "text": "Data controller" },
+      { "id": "d", "text": "Data steward" }
+    ],
+    "answer": ["b"]
+  },
+  {
+    "id": "aiken-domain-5-186", "type": "mcq", "tags": ["grc.privacy", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following BEST defines the concept of data ownership within an organization's governance structure?",
+    "options": [
+      { "id": "a", "text": "The individual whose personal information is collected by the organization." },
+      { "id": "b", "text": "The third-party vendor hired to perform analytics on the organization's database." },
+      { "id": "c", "text": "The executive who has ultimate accountability for the protection and use of a specific data set." },
+      { "id": "d", "text": "The IT administrator who physically maintains the servers where data is stored." }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-195", "type": "mcq", "tags": ["grc.compliance-reporting", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Which of the following is NOT a typical characteristic of internal compliance reporting?",
+    "options": [
+      { "id": "a", "text": "It is presented to executives and the board of directors." },
+      { "id": "b", "text": "It helps track adherence to internal security policies." },
+      { "id": "c", "text": "It is legally mandated to be published to the general public." },
+      { "id": "d", "text": "It enables management to make informed risk decisions." }
+    ],
+    "answer": ["c"]
+  },
+  {
+    "id": "aiken-domain-5-210", "type": "mcq", "tags": ["grc.non-compliance-consequences", "sy0-701", "public"], "difficulty": 2,
+    "stem": "Your organization failed to meet the Service Level Agreement (SLA) uptime requirements due to a security incident. As a result, you must issue service credits to all affected customers. What does this situation illustrate?",
+    "options": [
+      { "id": "a", "text": "Contractual impacts" },
+      { "id": "b", "text": "Loss of license" },
+      { "id": "c", "text": "Legal sanctions" },
+      { "id": "d", "text": "Regulatory fines" }
+    ],
+    "answer": ["a"]
+  }
+]

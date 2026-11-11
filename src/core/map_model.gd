@@ -139,9 +139,9 @@ func _build() -> void:
 		var known := 0
 		var started := false
 		for cid in cids:
-			if Mastery.box(profile, cid) >= 2:
+			if Mastery.box_of(profile, pack.topics_of(cid)) >= 2:
 				known += 1
-			if Mastery.seen(profile, cid) > 0:
+			if Mastery.seen_of(profile, pack.topics_of(cid)) > 0:
 				started = true
 		var n := {"id": o["id"], "title": o["title"], "domain": o["domain"], "concepts": cids,
 				"total": cids.size(), "known": known, "started": started, "state": "empty", "gate": ""}

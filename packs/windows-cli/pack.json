@@ -2,6 +2,7 @@
   "id": "windows-cli",
   "title": "Windows Command Line",
   "short": "WINDOWS CLI",
+  "tags": ["windows-cli"],
   "version": 1,
   "rounds_include_labs": true,
   "exam": { "questions": 20, "minutes": 20, "pass_percent": 70 },
@@ -35,11 +36,13 @@
       "concepts": [
         {
           "id": "1.1.ipconfig",
-          "title": "ipconfig"
+          "title": "ipconfig",
+          "topics": ["network.interfaces"]
         },
         {
           "id": "1.1.physical-address",
-          "title": "The physical address"
+          "title": "The physical address",
+          "topics": ["network.mac-address"]
         }
       ]
     },
@@ -50,11 +53,13 @@
       "concepts": [
         {
           "id": "2.1.listening-ports",
-          "title": "Listening ports"
+          "title": "Listening ports",
+          "topics": ["network.listening-ports"]
         },
         {
           "id": "2.1.connections",
-          "title": "Connections"
+          "title": "Connections",
+          "topics": ["network.connections"]
         }
       ]
     },
@@ -65,11 +70,13 @@
       "concepts": [
         {
           "id": "3.1.nslookup",
-          "title": "nslookup"
+          "title": "nslookup",
+          "topics": ["network.dns-lookup"]
         },
         {
           "id": "3.1.ping",
-          "title": "ping"
+          "title": "ping",
+          "topics": ["network.ping"]
         }
       ]
     },
@@ -80,11 +87,13 @@
       "concepts": [
         {
           "id": "4.1.curl-headers",
-          "title": "curl headers"
+          "title": "curl headers",
+          "topics": ["network.http-headers"]
         },
         {
           "id": "4.1.reading-files",
-          "title": "Reading files"
+          "title": "Reading files",
+          "topics": ["windows.reading-files"]
         }
       ]
     }

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the browser version into dist/web/ (git-ignored) and dist/cybersec-terminal-web.zip.
 #   tools/export.sh                              everything
-#   tools/export.sh --without PACK [PACK ...]    leave packs out (folder names under packs/); those tracks
+#   tools/export.sh --without PACK [PACK ...]    leave packs out (folder names under packs/, and their bank files); those tracks
 #                                                show as "coming soon". The zip gets a "-reduced" suffix.
 # Godot: $GODOT if set, else nix-shell (NixOS), else `godot` on PATH. Needs Godot 4.6.3 and its web export
 # templates (Editor > Manage Export Templates, or the nix steps below), once:
@@ -30,6 +30,10 @@ if [ "${1:-}" = "--without" ]; then
   for pack in "$@"; do
     [ -d "packs/$pack" ] || { echo "no such pack folder: packs/$pack" >&2; exit 1; }
     FILTER="packs/$pack/*, $FILTER"
+    # the pack's questions live in bank/items/<pack tag>_*.json: leave those out too
+    for tag in $(python3 -c 'import json,sys; print(" ".join(json.load(open("packs/%s/pack.json" % sys.argv[1])).get("tags", [])))' "$pack"); do
+      FILTER="bank/items/${tag}_*, $FILTER"
+    done
   done
   cp export_presets.cfg export_presets.cfg.bak
   trap 'mv -f export_presets.cfg.bak export_presets.cfg' EXIT

@@ -4,9 +4,7 @@
     "difficulty": 2,
     "lab": "lab-office-01",
     "id": "win-m-03",
-    "concept_ids": [
-      "2.1.listening-ports"
-    ],
+    "tags": ["network.listening-ports", "windows-cli", "public"],
     "stem": "Remote Desktop (TCP 3389) is listening on this workstation. Which process id owns that listener?",
     "answer": {
       "accept": [
@@ -18,9 +16,7 @@
   {
     "id": "win-r-01",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.listening-ports"
-    ],
+    "tags": ["network.listening-ports", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "This is part of a Windows workstation's netstat output. What does the line for port 3389 tell you?",
     "show": {
@@ -56,9 +52,7 @@
   {
     "id": "win-q-lis-1",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.listening-ports"
-    ],
+    "tags": ["network.listening-ports", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "Port 445 is listening on all interfaces. What is it, and who owns it?",
     "show": {
@@ -92,45 +86,9 @@
     "explain": "445 is SMB (Windows file sharing). PID 4 is the System process. SMB exposed to the network is a common target for worms and lateral movement."
   },
   {
-    "id": "win-q-lis-2",
-    "type": "mcq",
-    "concept_ids": [
-      "2.1.listening-ports"
-    ],
-    "difficulty": 1,
-    "stem": "What does the -o option add to netstat -an?",
-    "options": [
-      {
-        "id": "a",
-        "text": "The name of the user account that opened each connection",
-        "why": "-o adds the process ID, not a user name."
-      },
-      {
-        "id": "b",
-        "text": "The ID of the process that owns each connection (PID)"
-      },
-      {
-        "id": "c",
-        "text": "Only the connections that are open, hiding listeners",
-        "why": "-o does not filter; it adds a column."
-      },
-      {
-        "id": "d",
-        "text": "The amount of traffic sent over each connection",
-        "why": "netstat does not show traffic volume here."
-      }
-    ],
-    "answer": [
-      "b"
-    ],
-    "explain": "netstat -ano shows addresses and ports as numbers, all states, plus the PID. Look the PID up in Task Manager or tasklist to find the program."
-  },
-  {
     "id": "win-q-lis-3",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.listening-ports"
-    ],
+    "tags": ["network.listening-ports", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "Why does 0.0.0.0:3389 LISTENING deserve a hardening note?",
     "show": {
@@ -166,9 +124,7 @@
   {
     "id": "win-q-con-1",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.connections"
-    ],
+    "tags": ["network.connections", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "Which line shows this PC talking LDAP to the domain controller (dc-01, 192.168.10.5)?",
     "show": {
@@ -204,9 +160,7 @@
   {
     "id": "win-q-con-2",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.connections"
-    ],
+    "tags": ["network.connections", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "The connection to 192.168.10.20:445 is ESTABLISHED. What is it?",
     "show": {
@@ -242,9 +196,7 @@
   {
     "id": "win-q-con-3",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.connections"
-    ],
+    "tags": ["network.connections", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "What does TIME_WAIT mean for the connection to 192.168.10.60:80?",
     "show": {
@@ -276,39 +228,5 @@
       "b"
     ],
     "explain": "TIME_WAIT is normal after a connection closes. It does not mean anything is wrong."
-  },
-  {
-    "id": "win-q-con-4",
-    "type": "mcq",
-    "concept_ids": [
-      "2.1.connections"
-    ],
-    "difficulty": 1,
-    "stem": "What does the -n option do for netstat?",
-    "options": [
-      {
-        "id": "a",
-        "text": "It shows only new connections and hides the ones that are already old",
-        "why": "-n does not filter by age."
-      },
-      {
-        "id": "b",
-        "text": "It hides the process IDs and the owning program names",
-        "why": "PIDs come from -o."
-      },
-      {
-        "id": "c",
-        "text": "It shows addresses and ports as numbers, with no name lookups"
-      },
-      {
-        "id": "d",
-        "text": "It shows only network statistics, not connections",
-        "why": "Statistics are -s."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "-n keeps output fast and unambiguous: you see real addresses and port numbers, not names."
   }
 ]

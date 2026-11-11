@@ -4,9 +4,7 @@
     "difficulty": 3,
     "lab": "lab-dmz-01",
     "id": "lin-m-05",
-    "concept_ids": [
-      "2.1.forward-lookup"
-    ],
+    "tags": ["network.dns-lookup", "linux-cli", "public"],
     "stem": "analyst-ws asks a DNS server whenever it looks up a name. Which host is that DNS server? (Give its host name; the lookup tools show its address.)",
     "answer": {
       "accept": [
@@ -21,9 +19,7 @@
     "difficulty": 2,
     "lab": "lab-dmz-01",
     "id": "lin-m-06",
-    "concept_ids": [
-      "2.1.record-types"
-    ],
+    "tags": ["network.dns-record-types", "linux-cli", "public"],
     "stem": "www.corp.local is an alias, not a server of its own. Which host name does it really point to?",
     "answer": {
       "accept": [
@@ -38,9 +34,7 @@
     "difficulty": 2,
     "lab": "lab-dmz-01",
     "id": "lin-m-07",
-    "concept_ids": [
-      "2.1.reverse-lookup"
-    ],
+    "tags": ["network.dns-reverse-lookup", "linux-cli", "public"],
     "stem": "An unknown device at 10.20.0.30 showed up in a scan. What host name does DNS give for that address (a reverse lookup)?",
     "answer": {
       "accept": [
@@ -53,9 +47,7 @@
   {
     "id": "lin-r-02",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.record-types"
-    ],
+    "tags": ["network.dns-record-types", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Read the DNS answer below. What does it tell you about www.corp.local?",
     "show": {
@@ -91,9 +83,7 @@
   {
     "id": "lin-q-fwd-1",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.forward-lookup"
-    ],
+    "tags": ["network.dns-lookup", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What address does this lookup return for web-03?",
     "show": {
@@ -129,9 +119,7 @@
   {
     "id": "lin-q-fwd-2",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.forward-lookup"
-    ],
+    "tags": ["network.dns-lookup", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "In this dig output, what does the line in the ANSWER SECTION tell you?",
     "show": {
@@ -167,9 +155,7 @@
   {
     "id": "lin-q-fwd-3",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.forward-lookup"
-    ],
+    "tags": ["network.dns-lookup", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "Which line of this dig output shows the DNS server that answered?",
     "show": {
@@ -205,9 +191,7 @@
   {
     "id": "lin-q-fwd-4",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.forward-lookup"
-    ],
+    "tags": ["network.dns-lookup", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What does the +short option do for dig?",
     "show": {
@@ -243,9 +227,7 @@
   {
     "id": "lin-q-rec-1",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.record-types"
-    ],
+    "tags": ["network.dns-record-types", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "What does this TXT record publish?",
     "show": {
@@ -279,79 +261,9 @@
     "explain": "SPF is published as a TXT record. v=spf1 ip4:10.20.0.0/24 -all means mail from that range is allowed and everything else should be rejected. It helps against forged senders."
   },
   {
-    "id": "lin-q-rec-2",
-    "type": "mcq",
-    "concept_ids": [
-      "2.1.record-types"
-    ],
-    "difficulty": 1,
-    "stem": "Which DNS record type maps a name to an IPv4 address?",
-    "options": [
-      {
-        "id": "a",
-        "text": "AAAA",
-        "why": "AAAA holds an IPv6 address."
-      },
-      {
-        "id": "b",
-        "text": "A"
-      },
-      {
-        "id": "c",
-        "text": "PTR",
-        "why": "PTR maps an address back to a name (reverse lookup)."
-      },
-      {
-        "id": "d",
-        "text": "CNAME",
-        "why": "CNAME makes one name an alias of another."
-      }
-    ],
-    "answer": [
-      "b"
-    ],
-    "explain": "A = IPv4 address, AAAA = IPv6 address, CNAME = alias, PTR = reverse, MX = mail, NS = name servers, TXT = free text such as SPF."
-  },
-  {
-    "id": "lin-q-rec-3",
-    "type": "mcq",
-    "concept_ids": [
-      "2.1.record-types"
-    ],
-    "difficulty": 1,
-    "stem": "Which record type tells other servers where to deliver email for a domain?",
-    "options": [
-      {
-        "id": "a",
-        "text": "TXT",
-        "why": "TXT can carry mail policy such as SPF, but it does not say where to deliver mail."
-      },
-      {
-        "id": "b",
-        "text": "PTR",
-        "why": "PTR is for reverse lookups."
-      },
-      {
-        "id": "c",
-        "text": "MX"
-      },
-      {
-        "id": "d",
-        "text": "A",
-        "why": "A maps a name to an address; it does not mark a mail server."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "MX (mail exchanger) records name the servers that accept mail for the domain, with a priority."
-  },
-  {
     "id": "lin-q-rev-1",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.reverse-lookup"
-    ],
+    "tags": ["network.dns-reverse-lookup", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "What does the answer say about 10.20.0.30?",
     "show": {
@@ -385,45 +297,9 @@
     "explain": "A reverse lookup (dig -x) asks for the PTR record of an address. Here it returns printer-01.corp.local."
   },
   {
-    "id": "lin-q-rev-2",
-    "type": "mcq",
-    "concept_ids": [
-      "2.1.reverse-lookup"
-    ],
-    "difficulty": 1,
-    "stem": "Why would an analyst run a reverse lookup on an unknown address found in a scan?",
-    "options": [
-      {
-        "id": "a",
-        "text": "The name its owner gave it hints at what the device is"
-      },
-      {
-        "id": "b",
-        "text": "It shows which user is currently logged in to the device",
-        "why": "DNS records name addresses, not users."
-      },
-      {
-        "id": "c",
-        "text": "It lists every open port and the version of each service",
-        "why": "That is what a port scan does."
-      },
-      {
-        "id": "d",
-        "text": "It proves the device is safe because it has a name",
-        "why": "A name says nothing about safety, and PTR records can be wrong."
-      }
-    ],
-    "answer": [
-      "a"
-    ],
-    "explain": "Names like printer-01 or cam-01 tell you a lot quickly. Remember it is only a hint: whoever controls the zone controls the name."
-  },
-  {
     "id": "lin-q-rev-3",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.reverse-lookup"
-    ],
+    "tags": ["network.dns-reverse-lookup", "linux-cli", "public"],
     "difficulty": 2,
     "stem": "The answer below shows 10.0.20.10.in-addr.arpa for the address 10.20.0.10. Why are the numbers backwards?",
     "show": {
@@ -459,9 +335,7 @@
   {
     "id": "lin-q-rev-4",
     "type": "mcq",
-    "concept_ids": [
-      "2.1.reverse-lookup"
-    ],
+    "tags": ["network.dns-reverse-lookup", "linux-cli", "public"],
     "difficulty": 1,
     "stem": "Which record type does a reverse lookup return?",
     "show": {

@@ -46,7 +46,7 @@ func _first_of_each(entries: Array) -> Array:
 
 
 func _see(concept: String, box: int, due_offset: int) -> void:
-	p.progress()["concepts"][concept] = {"box": box, "seen": 1, "hits": 1, "misses": 0,
+	p.topic_bucket()[Support.topic_of(concept)] = {"box": box, "seen": 1, "hits": 1, "misses": 0,
 			"last_day": 19990, "due_day": Mastery.day_of(Support.T0) + due_offset}
 
 

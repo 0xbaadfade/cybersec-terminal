@@ -2,6 +2,9 @@
   "id": "my-first-pack",
   "title": "My First Pack",
   "short": "MY PACK",
+  "tags": [
+    "my-first-pack"
+  ],
   "version": 1,
   "exam": {
     "questions": 6,
@@ -23,11 +26,17 @@
       "concepts": [
         {
           "id": "1.1.passwords",
-          "title": "Password storage and strength"
+          "title": "Password storage and strength",
+          "topics": [
+            "accounts.passwords"
+          ]
         },
         {
           "id": "1.1.mfa",
-          "title": "Multi-factor authentication"
+          "title": "Multi-factor authentication",
+          "topics": [
+            "accounts.mfa"
+          ]
         }
       ]
     }

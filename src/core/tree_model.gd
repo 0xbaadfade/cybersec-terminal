@@ -75,7 +75,8 @@ func _visit(id: String) -> void:
 # --- figures and states -------------------------------------------------------
 
 ## Whole percent of the track's concepts at `known` or better (the measure a
-## requirement uses): 100 for a stub, 0 for a track with no pack or no progress.
+## requirement uses): 100 for a stub, 0 for a track with no pack or no progress. Mastery is shared, so a track the learner
+## has not opened still counts what its topics already have from another track.
 func progress(id: String) -> int:
 	var t := catalog.track(id)
 	if t.is_empty():
@@ -83,12 +84,11 @@ func progress(id: String) -> int:
 	if t["stub"]:
 		return 100
 	var pack := catalog.pack_for(id)
-	if pack == null or pack.concepts.is_empty() or not profile.has_track(id):
+	if pack == null or pack.concepts.is_empty():
 		return 0
-	var view := profile.view(id)
 	var known := 0
 	for cid in pack.concepts:
-		var tier := Mastery.tier(view, cid)
+		var tier := Mastery.tier_of(profile, pack.topics_of(cid))
 		if tier == Mastery.TIER_KNOWN or tier == Mastery.TIER_MASTERED:
 			known += 1
 	return known * 100 / pack.concepts.size()

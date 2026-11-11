@@ -28,7 +28,7 @@ static func list_lines(pack: Pack, profile: Profile) -> Array:
 	var out: Array = []
 	var met := 0
 	for cid in pack.concepts:
-		if Mastery.seen(profile, cid) > 0:
+		if Mastery.seen_of(profile, pack.topics_of(cid)) > 0:
 			met += 1
 	out.append(_l("CODEX  //  %d concepts, %d met.  codex <number or id> for detail" % [pack.concepts.size(), met], Lines.S_ACCENT))
 	var ids: Array = pack.concepts.keys()
@@ -42,8 +42,8 @@ static func list_lines(pack: Pack, profile: Profile) -> Array:
 				out.append(_l(""))
 				out.append(_l("%s  %s" % [d["id"], d["title"]]))
 				header_done = true
-			var rec := Mastery.record(profile, cid)
-			var tier := Mastery.tier(profile, cid)
+			var rec := Mastery.totals_of(profile, pack.topics_of(cid))
+			var tier := Mastery.tier_of(profile, pack.topics_of(cid))
 			out.append(_l("  %2d  %s %s %s hits %d  misses %d" % [
 					i + 1, cid.rpad(22), (pack.concepts[cid]["title"] as String).rpad(46), tier.rpad(9),
 					int(rec.get("hits", 0)), int(rec.get("misses", 0))], STYLE_BY_TIER[tier]))
@@ -55,13 +55,14 @@ static func detail_lines(pack: Pack, profile: Profile, key: String, today: int) 
 	if cid == "":
 		return [_l("No single concept matches '%s'. Type codex for the list." % key, Lines.S_ERROR)]
 	var out: Array = []
-	var tier := Mastery.tier(profile, cid)
+	var topics := pack.topics_of(cid)
+	var tier := Mastery.tier_of(profile, topics)
 	out.append(_l("%s  //  %s" % [cid, pack.concepts[cid]["title"]], Lines.S_ACCENT))
 	if tier == Mastery.TIER_UNSEEN:
 		out.append(_l("tier: unseen", Lines.S_DIM))
 	else:
-		var due := Mastery.due_day(profile, cid)
-		out.append(_l("tier: %s (box %d)   next review: %s" % [tier, Mastery.box(profile, cid),
+		var due := Mastery.due_day_of(profile, topics)
+		out.append(_l("tier: %s (box %d)   next review: %s" % [tier, Mastery.box_of(profile, topics),
 				"due now" if due <= today else Time.get_date_string_from_unix_time(due * 86400)]))
 	out.append(_l(""))
 	var entry: Dictionary = pack.codex.get(cid, {})

@@ -4,9 +4,7 @@
     "difficulty": 3,
     "lab": "lab-office-01",
     "id": "win-m-04",
-    "concept_ids": [
-      "3.1.nslookup"
-    ],
+    "tags": ["network.dns-lookup", "windows-cli", "public"],
     "stem": "Which DNS server answers this Windows workstation's lookups? Give its host name. (nslookup names the server it asked.)",
     "answer": {
       "accept": [
@@ -19,9 +17,7 @@
   {
     "id": "win-q-dns-1",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.nslookup"
-    ],
+    "tags": ["network.dns-lookup", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "Which server answered this lookup?",
     "show": {
@@ -57,9 +53,7 @@
   {
     "id": "win-q-dns-2",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.nslookup"
-    ],
+    "tags": ["network.dns-lookup", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "What does the Aliases line mean?",
     "show": {
@@ -95,9 +89,7 @@
   {
     "id": "win-q-dns-3",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.nslookup"
-    ],
+    "tags": ["network.dns-lookup", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "What kind of lookup is this, and what does it return?",
     "show": {
@@ -131,45 +123,9 @@
     "explain": "Giving nslookup an IP address asks for its PTR record, mapping an address back to a name."
   },
   {
-    "id": "win-q-dns-4",
-    "type": "mcq",
-    "concept_ids": [
-      "3.1.nslookup"
-    ],
-    "difficulty": 1,
-    "stem": "Which server does nslookup ask by default?",
-    "options": [
-      {
-        "id": "a",
-        "text": "The default gateway, since routers forward every request",
-        "why": "The gateway forwards packets; it is not necessarily a DNS server."
-      },
-      {
-        "id": "b",
-        "text": "The first host that answers a ping on the local network",
-        "why": "nslookup does not search for servers by pinging."
-      },
-      {
-        "id": "c",
-        "text": "The DNS server configured on the PC, shown by ipconfig /all"
-      },
-      {
-        "id": "d",
-        "text": "The DHCP server, always, whatever the PC is configured to use",
-        "why": "Only if that is what the PC was configured to use."
-      }
-    ],
-    "answer": [
-      "c"
-    ],
-    "explain": "nslookup uses the configured resolver unless you name another, as in nslookup fs-01 192.168.10.5."
-  },
-  {
     "id": "win-q-ping-1",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.ping"
-    ],
+    "tags": ["network.ping", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "Both pings below timed out. Is print-01 definitely down?",
     "show": {
@@ -205,9 +161,7 @@
   {
     "id": "win-q-ping-2",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.ping"
-    ],
+    "tags": ["network.ping", "windows-cli", "public"],
     "difficulty": 2,
     "stem": "What does TTL=128 in the replies suggest about dc-01?",
     "show": {
@@ -241,45 +195,9 @@
     "explain": "Different systems start with different TTLs (commonly 64 for Linux, 128 for Windows, 255 for network gear). It is a hint only; it can be changed."
   },
   {
-    "id": "win-q-ping-3",
-    "type": "mcq",
-    "concept_ids": [
-      "3.1.ping"
-    ],
-    "difficulty": 1,
-    "stem": "On Windows, which ping option sets the number of echo requests?",
-    "options": [
-      {
-        "id": "a",
-        "text": "-c count",
-        "why": "-c is the Linux option."
-      },
-      {
-        "id": "b",
-        "text": "-n count"
-      },
-      {
-        "id": "c",
-        "text": "-l count",
-        "why": "-l sets the payload size in bytes."
-      },
-      {
-        "id": "d",
-        "text": "-w count",
-        "why": "-w is the timeout per reply in milliseconds."
-      }
-    ],
-    "answer": [
-      "b"
-    ],
-    "explain": "ping -n 4 dc-01 sends four requests. Windows sends four by default; Linux ping runs until stopped."
-  },
-  {
     "id": "win-q-ping-4",
     "type": "mcq",
-    "concept_ids": [
-      "3.1.ping"
-    ],
+    "tags": ["network.ping", "windows-cli", "public"],
     "difficulty": 1,
     "stem": "Which line summarises packet loss?",
     "show": {

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "win-q-file-2",
+    "type": "mcq",
+    "tags": ["windows.reading-files", "windows-cli", "public"],
+    "difficulty": 1,
+    "stem": "Which Windows command prints the contents of a text file, like cat on Linux?",
+    "options": [
+      {
+        "id": "a",
+        "text": "hostname",
+        "why": "That prints the computer's name."
+      },
+      {
+        "id": "b",
+        "text": "ipconfig",
+        "why": "That shows network settings."
+      },
+      {
+        "id": "c",
+        "text": "netstat",
+        "why": "That shows connections."
+      },
+      {
+        "id": "d",
+        "text": "type"
+      }
+    ],
+    "answer": [
+      "d"
+    ],
+    "explain": "type readme.txt prints the file. The Linux counterpart is cat."
+  },
+  {
+    "id": "win-q-file-3",
+    "type": "mcq",
+    "tags": ["windows.reading-files", "windows-cli", "public"],
+    "difficulty": 1,
+    "stem": "Which Windows command searches text for a string, like grep on Linux?",
+    "options": [
+      {
+        "id": "a",
+        "text": "findstr"
+      },
+      {
+        "id": "b",
+        "text": "hostname",
+        "why": "That prints the computer's name."
+      },
+      {
+        "id": "c",
+        "text": "ipconfig",
+        "why": "That shows network settings."
+      },
+      {
+        "id": "d",
+        "text": "netstat",
+        "why": "That shows connections."
+      }
+    ],
+    "answer": [
+      "a"
+    ],
+    "explain": "findstr prints the lines that contain a string, for example: findstr DHCP readme.txt."
+  }
+]
